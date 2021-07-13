@@ -1,0 +1,80 @@
+# Table of content
+# Learn more at https://jupyterbook.org/customize/toc.html
+#
+
+- title: Startseite
+  file: Readme
+
+- title: Text mit LaTeX
+  file: LaTeX/LaTeX_Uebersicht
+  numbered: 3
+  sections:
+  - title: Einführung
+    file: LaTeX/Einfuehrung
+
+- title: Literatur mit Zotero
+  file: Zotero/Zotero_Uebersicht
+  
+- title: Grafiken mit Inkscape
+  file: Inkscape/Inkscape_Uebersicht.md
+
+  numbered: 3
+  chapters:
+  - title: Grundlagen
+    file: Inkscape/Grundlagen/Grundlagen.md 
+    
+    sections:
+    - title: Voreinstellungen
+      file: Inkscape/Grundlagen/Voreinstellungen.md
+    - title: Erstellung Solarzelle
+      file: Inkscape/Grundlagen/Erstellung-Solarzelle.md
+    - title: Erstellung Sonne
+      file: Inkscape/Grundlagen/Erstellung-Sonne.md
+    - title: Beschriftungen
+      file: Inkscape/Grundlagen/Beschriftung.md
+    - title: Export als Pixelgrafik
+      file: Inkscape/Grundlagen/Export.md
+    - title: Übungsbeispiele
+      file: Inkscape/Grundlagen/Uebungen.md
+
+  - title: Advanced
+    file: Inkscape/Advanced/Advanced.md
+    sections:
+    - title: Tricks & Tipps
+      file: Inkscape/Advanced/Inkscape_(Advanced).md
+    - title: Übungsbeispiele
+      file: Inkscape/Advanced/Uebungen.md
+
+  - title: Weiterführendes Material (Links)
+    file: Inkscape/Links.md
+
+- title: Datenvisualisierung mit Python
+  file: Python/Python_Uebersicht.ipynb
+  numbered: 3
+  sections:
+  - title: Jupyter Notebooks
+    file: Python/01-JupyterNotebooks
+  - title: Biegebalken
+    file: Python/02-Biegebalken_solved
+  - title: Kraftmessung
+    file: Python/03-Kraftmessung_solved
+  - title: Klimawandel
+    file: Python/04-Klimawandel_solved
+  - title: API Unterschiede
+    file: Python/05-API.ipynb
+  - title: Subplots
+    file: Python/06-Subplots
+  - title: RKI Corona Zahlen
+    file: Python/07-RKI-Corona
+  - title: Weiterführendes Material
+    file: Python/Links
+    
+- title: Hinweise zum Schreiben von Abschlussarbeiten
+  file: Hinweise_Abschlussarbeiten/Hinweise_Uebersicht.md
+  
+  numbered: 3
+  sections:
+  - title: Software
+    file: Hinweise_Abschlussarbeiten/Software
+  - title: Formatierung
+    file: Hinweise_Abschlussarbeiten/Formatierung
