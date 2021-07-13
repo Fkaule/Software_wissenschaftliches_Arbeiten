@@ -1,0 +1,641 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Implementing an exercise</title>
+    
+  <link rel="stylesheet" href="../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.e7340bb3dbd8dde6db86f25597f54a1b.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/Logo.png" class="logo" alt="logo">
+  
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../Readme.html">
+   Startseite
+  </a>
+ </li>
+</ul>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../LaTeX/LaTeX_Uebersicht.html">
+   Text mit LaTeX
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../LaTeX/Einfuehrung.html">
+     1. Einführung
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../Zotero/Zotero_Uebersicht.html">
+   Literatur mit Zotero
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../Inkscape/Inkscape_Uebersicht.html">
+   Grafiken mit Inkscape
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../../Inkscape/Grundlagen/Grundlagen.html">
+     1. Grundlagen
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../Inkscape/Grundlagen/Voreinstellungen.html">
+       1.1. Voreinstellungen
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../Inkscape/Grundlagen/Erstellung-Solarzelle.html">
+       1.2. Erstellung Solarzelle
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../Inkscape/Grundlagen/Erstellung-Sonne.html">
+       1.3. Erstellung Sonne
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../Inkscape/Grundlagen/Beschriftung.html">
+       1.4. Beschriftungen
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../Inkscape/Grundlagen/Export.html">
+       1.5. Export als Pixelgrafik
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../Inkscape/Grundlagen/Uebungen.html">
+       1.6. Übungsbeispiele
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../../Inkscape/Advanced/Advanced.html">
+     2. Advanced
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../Inkscape/Advanced/Inkscape_%28Advanced%29.html">
+       2.1. Tricks &amp; Tipps
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../Inkscape/Advanced/Uebungen.html">
+       2.2. Übungsbeispiele
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Inkscape/Links.html">
+     3. Weiterführendes Material (Links)
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../Python/Python_Uebersicht.html">
+   Datenvisualisierung mit Python
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/01-JupyterNotebooks.html">
+     1. Jupyter Notebooks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/02-Biegebalken_solved.html">
+     2. Biegebalken
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/03-Kraftmessung_solved.html">
+     3. Kraftmessung
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/04-Klimawandel_solved.html">
+     4. Klimawandel
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/05-API.html">
+     5. API Unterschiede
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/06-Subplots.html">
+     6. Subplots
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/07-RKI-Corona.html">
+     7. RKI Corona Zahlen
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Links.html">
+     8. Weiterführendes Material
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../Hinweise_Abschlussarbeiten/Hinweise_Uebersicht.html">
+   Hinweise zum Schreiben von Abschlussarbeiten
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Hinweise_Abschlussarbeiten/Software.html">
+     1. Software
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Hinweise_Abschlussarbeiten/Formatierung.html">
+     2. Formatierung
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/learntools/core/README.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/Fkaule/Software_wissenschaftliches_Arbeiten"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/Fkaule/Software_wissenschaftliches_Arbeiten/issues/new?title=Issue%20on%20page%20%2Flearntools/core/README.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Implementing an exercise
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#writing-an-exercise-notebook">
+   Writing an exercise notebook
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#setup-code">
+     Setup code
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#interacting-with-problems">
+     Interacting with problems
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#problem-starter-code">
+     Problem starter code
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#writing-an-exercise-module-defining-problems">
+   Writing an exercise module - defining Problems
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#hints">
+     Hints
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#solutions">
+     Solutions
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#checking">
+     Checking
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#no-checking-code-interaction-thoughtexperiment">
+       No checking / code interaction?
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         ThoughtExperiment
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#checking-one-or-more-variables-against-static-expected-values-equalitycheckproblem">
+       Checking one or more variables against static expected values?
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         EqualityCheckProblem
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#checking-the-implementation-of-a-function-functionproblem">
+       Checking the implementation of a function?
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         FunctionProblem
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#else-codingproblem">
+       else:
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         CodingProblem
+        </span>
+       </code>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#custom-interactions">
+     Custom interactions
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-note-on-injected-arguments">
+     A note on injected arguments
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bind-exercises">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       bind_exercises
+      </span>
+     </code>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#interaction-progress-tracking">
+   Interaction/Progress Tracking
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <p>The easiest way to get started implementing exercises using the <code class="docutils literal notranslate"><span class="pre">learntools.core</span></code> API is probably to look at some examples and emulate them. There are a number of exercises of various types implemented in <code class="docutils literal notranslate"><span class="pre">learntools.python</span></code> - you can see them in action in the “testing” notebooks in <code class="docutils literal notranslate"><span class="pre">learntools/python/nbs/</span></code>. But below is a bit of a more formal introduction.</p>
+<div class="section" id="implementing-an-exercise">
+<h1>Implementing an exercise<a class="headerlink" href="#implementing-an-exercise" title="Permalink to this headline">¶</a></h1>
+<p>I’ll be using the term “exercise” to refer to a hands-on interactive notebook containing 1 or more “problems”.</p>
+<p>To implement an exercise, you’ll need to do the following:</p>
+<ol class="simple">
+<li><p>Create a python module for your exercise. It should contain definitions for one or more Problem subclasses, and end with a call to <code class="docutils literal notranslate"><span class="pre">learntools.core.bind_exercises</span></code>.</p></li>
+<li><p>Create a notebook. It should begin with a code cell containing a few lines of boilerplate setup code. For each problem, there should probably be some markdown cell(s) describing the problem, then some starter code including some (possibly commented) calls to the check/hint/solution methods of the corresponding Problem(View) object.</p></li>
+<li><p>(Optional but recommended) Make a fork of the above notebook for testing.</p></li>
+</ol>
+<p>(You can do 1 and 2 in any order, or interleave work on them. I’m going to start by describing 2 in more detail.)</p>
+</div>
+<div class="section" id="writing-an-exercise-notebook">
+<h1>Writing an exercise notebook<a class="headerlink" href="#writing-an-exercise-notebook" title="Permalink to this headline">¶</a></h1>
+<p>Closing the loop between Kernels and updated learntools code is a fairly tedious process. My recommended workflow is to develop exercise notebooks locally then upload to kernels as a final step.</p>
+<div class="section" id="setup-code">
+<h2>Setup code<a class="headerlink" href="#setup-code" title="Permalink to this headline">¶</a></h2>
+<p>Your notebook should begin with a code cell having some boilerplate setup code that looks like…</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">learntools.core</span> <span class="kn">import</span> <span class="n">binder</span>
+<span class="n">binder</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="nb">globals</span><span class="p">())</span>
+<span class="kn">from</span> <span class="nn">learntools.spam.spam_exercise</span> <span class="kn">import</span> <span class="o">*</span>
+</pre></div>
+</div>
+<p>This will import variables like <code class="docutils literal notranslate"><span class="pre">q1,</span> <span class="pre">q2,</span> <span class="pre">q3</span></code>… (you can use the <code class="docutils literal notranslate"><span class="pre">var_format</span></code> kwarg to <code class="docutils literal notranslate"><span class="pre">bind_exercises</span></code> to get variables of a different format e.g. <code class="docutils literal notranslate"><span class="pre">step_n</span></code>, <code class="docutils literal notranslate"><span class="pre">problem_n</span></code>, etc.). Each variable corresponds to a problem defined in your exercise module (technically it refers to an object of type <code class="docutils literal notranslate"><span class="pre">ProblemView</span></code>).</p>
+</div>
+<div class="section" id="interacting-with-problems">
+<h2>Interacting with problems<a class="headerlink" href="#interacting-with-problems" title="Permalink to this headline">¶</a></h2>
+<p>A standard problem can be interacted with in up to three ways:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">q1.check()</span></code>, checks the student’s code. It will display a message corresponding to one of three outcomes: correct, incorrect, or not attempted (if we can detect that the starter code hasn’t been touched).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">q1.hint()</span></code>, displays a hint. In some cases (if you define a <code class="docutils literal notranslate"><span class="pre">_hints</span></code> list of more than 1 element in your <code class="docutils literal notranslate"><span class="pre">Problem</span></code>), the student will be prompted to call <code class="docutils literal notranslate"><span class="pre">q1.hint(2)</span></code>, <code class="docutils literal notranslate"><span class="pre">q1.hint(3)</span></code>, etc. if they need further hints.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">q1.solution()</span></code> displays the solution to question 1. This may be just in the form of a code snippet,or may also include some (markdown) explanatory prose.</p></li>
+</ul>
+</div>
+<div class="section" id="problem-starter-code">
+<h2>Problem starter code<a class="headerlink" href="#problem-starter-code" title="Permalink to this headline">¶</a></h2>
+<p>After any markdown describing the cell, I recommend having a code cell with starter code for the problem, ending with a call to <code class="docutils literal notranslate"><span class="pre">qn.check()</span></code>. e.g.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pi</span> <span class="o">=</span> <span class="mf">3.14159</span> <span class="c1"># approximate</span>
+<span class="n">diameter</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="c1"># Create a variable called &#39;radius&#39; equal to half the diameter</span>
+
+<span class="c1"># Create a variable called &#39;area&#39;, using the formula for the area of</span>
+<span class="c1"># a circle: pi times the radius squared</span>
+<span class="n">q1</span><span class="o">.</span><span class="n">check</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>I recommend following that with one or two code cells with commented-out calls to <code class="docutils literal notranslate"><span class="pre">q1.hint()</span></code> and <code class="docutils literal notranslate"><span class="pre">q1.solution()</span></code>.</p>
+</div>
+</div>
+<div class="section" id="writing-an-exercise-module-defining-problems">
+<h1>Writing an exercise module - defining Problems<a class="headerlink" href="#writing-an-exercise-module-defining-problems" title="Permalink to this headline">¶</a></h1>
+<p>The majority of the work in writing an exercise module is defining a <code class="docutils literal notranslate"><span class="pre">learntools.core.Problem</span></code> subclass for each of your problems. Your <code class="docutils literal notranslate"><span class="pre">Problem</span></code> is essentially responsible for taking care of the three forms of interaction described above - checking code, hinting, and showing solutions.</p>
+<div class="section" id="hints">
+<h2>Hints<a class="headerlink" href="#hints" title="Permalink to this headline">¶</a></h2>
+<p>All problems may define a <code class="docutils literal notranslate"><span class="pre">_hint</span></code> class attribute containing a markdown string.</p>
+<p>You may instead specify a list of markdown strings in <code class="docutils literal notranslate"><span class="pre">_hints</span></code>. If you do this, then when the student calls <code class="docutils literal notranslate"><span class="pre">qn.hint()</span></code>, they’ll see the first hint, and a prompt like “if you’d like another hint, call <code class="docutils literal notranslate"><span class="pre">qn.hint(2)</span></code>”.</p>
+<p>Hints are optional. If none is defined and the student tries to call <code class="docutils literal notranslate"><span class="pre">qn.hint()</span></code>, they’ll see a message like “Sorry, no hints available for this question”.</p>
+</div>
+<div class="section" id="solutions">
+<h2>Solutions<a class="headerlink" href="#solutions" title="Permalink to this headline">¶</a></h2>
+<p>All problems should define a <code class="docutils literal notranslate"><span class="pre">_solution</span></code> class attribute. If your solution is just in the form of code, you can create a <code class="docutils literal notranslate"><span class="pre">learntools.core.CodeSolution</span></code>, passing the source to its constructor. This will render it in a code block with Python syntax highlighting.</p>
+<p>If the solution is more than a couple lines, you might want to actually write it out in a separate module. If you do this, check out the <code class="docutils literal notranslate"><span class="pre">CodeSolution.load()</span></code> helper (see <code class="docutils literal notranslate"><span class="pre">learntools/python/ex7.py</span></code> for an example of it in use).</p>
+<p>Otherwise, <code class="docutils literal notranslate"><span class="pre">_solution</span></code> should be a markdown string.</p>
+</div>
+<div class="section" id="checking">
+<h2>Checking<a class="headerlink" href="#checking" title="Permalink to this headline">¶</a></h2>
+<p>This is the aspect of problem definition with the most potential for complication. There are a number of abstract <code class="docutils literal notranslate"><span class="pre">Problem</span></code> subclasses defined in <code class="docutils literal notranslate"><span class="pre">learntools/core/problem.py</span></code> (you’ll rarely write a concrete <code class="docutils literal notranslate"><span class="pre">Problem</span></code> subclass that inherits directly from <code class="docutils literal notranslate"><span class="pre">Problem</span></code>). What distinguishes these abstract subclasses is mostly how they approach checking. Below is a rundown of those subclasses.</p>
+<div class="section" id="no-checking-code-interaction-thoughtexperiment">
+<h3>No checking / code interaction? <code class="docutils literal notranslate"><span class="pre">ThoughtExperiment</span></code><a class="headerlink" href="#no-checking-code-interaction-thoughtexperiment" title="Permalink to this headline">¶</a></h3>
+<p>A <code class="docutils literal notranslate"><span class="pre">ThoughtExperiment</span></code> has a solution (and probably a hint), but no checking logic. If the student calls <code class="docutils literal notranslate"><span class="pre">qn.check()</span></code>, they’ll get an appropriate failure message.</p>
+<p>(Occasionally you may want to implement a problem without checking but which has some code interaction, in which case you’d inherit from <code class="docutils literal notranslate"><span class="pre">CodingProblem</span></code>. See <code class="docutils literal notranslate"><span class="pre">BlackjackProblem</span></code> in the python track for an example. See also the ‘custom interactions’ section below.)</p>
+</div>
+<div class="section" id="checking-one-or-more-variables-against-static-expected-values-equalitycheckproblem">
+<h3>Checking one or more variables against static expected values? <code class="docutils literal notranslate"><span class="pre">EqualityCheckProblem</span></code><a class="headerlink" href="#checking-one-or-more-variables-against-static-expected-values-equalitycheckproblem" title="Permalink to this headline">¶</a></h3>
+<p>A <code class="docutils literal notranslate"><span class="pre">EqualityCheckProblem</span></code> has a variable name (<code class="docutils literal notranslate"><span class="pre">_var</span></code>) or names (<code class="docutils literal notranslate"><span class="pre">_vars</span></code>), and corresponding expected values, <code class="docutils literal notranslate"><span class="pre">_expected</span></code>.</p>
+<p>In the common case where the problem involves defining a single variable, <code class="docutils literal notranslate"><span class="pre">_expected</span></code> can be a simple scalar value rather than a list of length 1. Otherwise, <code class="docutils literal notranslate"><span class="pre">_expected</span></code> should be a list of values of the same length as <code class="docutils literal notranslate"><span class="pre">_vars</span></code> and in the same order.</p>
+<p>When the student calls <code class="docutils literal notranslate"><span class="pre">qn.check()</span></code> we’ll say their answer is correct iff it matches <code class="docutils literal notranslate"><span class="pre">_expected</span></code> (within some tolerance, in the case of floats). By default, the failure message will tell them the first value whose variable was wrong as well as the offending value - it will not tell them the expected value.</p>
+</div>
+<div class="section" id="checking-the-implementation-of-a-function-functionproblem">
+<h3>Checking the implementation of a function? <code class="docutils literal notranslate"><span class="pre">FunctionProblem</span></code><a class="headerlink" href="#checking-the-implementation-of-a-function-functionproblem" title="Permalink to this headline">¶</a></h3>
+<p>A <code class="docutils literal notranslate"><span class="pre">FunctionProblem</span></code> should have a <code class="docutils literal notranslate"><span class="pre">_var</span></code> member with the name of the function the student is to implement.</p>
+<p>It should define a <code class="docutils literal notranslate"><span class="pre">_test_cases</span></code> member, containing a list of (input, expected-output) pairs, where input may be a scalar (for unary functions) or tuple of args.</p>
+</div>
+<div class="section" id="else-codingproblem">
+<h3>else: <code class="docutils literal notranslate"><span class="pre">CodingProblem</span></code><a class="headerlink" href="#else-codingproblem" title="Permalink to this headline">¶</a></h3>
+<p>The above abstract classes provide convenient shortcuts for defining a problem class without having to explicitly implement the checking logic. When they aren’t up to the task, you can always implement a <code class="docutils literal notranslate"><span class="pre">check</span></code> method on your <code class="docutils literal notranslate"><span class="pre">Problem</span></code> subclass. See the docstring for <code class="docutils literal notranslate"><span class="pre">Problem.check</span></code> for the semantics of this method.</p>
+<p>If you’re overriding <code class="docutils literal notranslate"><span class="pre">Problem.check</span></code>, you will probably want to inherit from <code class="docutils literal notranslate"><span class="pre">CodingProblem</span></code>.</p>
+<p>A common use case is a problem where the student has to create or modify one or more variables, but correctness can’t be reduced to an equality check. In this case, you can implement <code class="docutils literal notranslate"><span class="pre">check</span></code> to do more granular inspection of those variables - e.g. asserting that a DataFrame has a column of a certain name, or that a numpy array has a certain shape, or that a model has been fit.</p>
+</div>
+</div>
+<div class="section" id="custom-interactions">
+<h2>Custom interactions<a class="headerlink" href="#custom-interactions" title="Permalink to this headline">¶</a></h2>
+<p>Occasionally you may want to attach some custom functionality to your problem which can be invoked by the student in the exercise notebook. See for example the <code class="docutils literal notranslate"><span class="pre">VariableSwap</span></code> question in the Python track, with its <code class="docutils literal notranslate"><span class="pre">store_original_ids</span></code> method.</p>
+<p>Any methods of your <code class="docutils literal notranslate"><span class="pre">Problem</span></code> not marked with a leading underscore (which are taken to be for internal use) will be callable by the user. e.g. if you define a <code class="docutils literal notranslate"><span class="pre">spam</span></code> method, the user will be able to invoke <code class="docutils literal notranslate"><span class="pre">qn.spam()</span></code> in the exercise notebook.</p>
+</div>
+<div class="section" id="a-note-on-injected-arguments">
+<h2>A note on injected arguments<a class="headerlink" href="#a-note-on-injected-arguments" title="Permalink to this headline">¶</a></h2>
+<p>All <code class="docutils literal notranslate"><span class="pre">CodingProblem</span></code> subclasses define a <code class="docutils literal notranslate"><span class="pre">_var</span></code> or <code class="docutils literal notranslate"><span class="pre">_vars</span></code> to indicate the names of the variables (from the exercise notebook’s namespace) which are of interest to this problem. The standard methods <code class="docutils literal notranslate"><span class="pre">check</span></code> and <code class="docutils literal notranslate"><span class="pre">check_whether_attempted</span></code> will receive the values of those variables as arguments when called. If any of the variables are undefined (or if a <code class="docutils literal notranslate"><span class="pre">_default_values</span></code> member is defined, and all current values match those) any call to <code class="docutils literal notranslate"><span class="pre">check()</span></code> will be aborted, and the user will get an Incorrect/NotAttempted message with a hopefully-useful message about which variables they still need to define.</p>
+<p>If you define a custom method on your problem which you’d like to also receive injected arguments when called, mark it with the <code class="docutils literal notranslate"><span class="pre">&#64;injected</span></code> decorator, defined in <code class="docutils literal notranslate"><span class="pre">learntools.core.problem</span></code>.</p>
+</div>
+<div class="section" id="bind-exercises">
+<h2><code class="docutils literal notranslate"><span class="pre">bind_exercises</span></code><a class="headerlink" href="#bind-exercises" title="Permalink to this headline">¶</a></h2>
+<p>Exercise notebooks end with some boilerplate that looks something like…</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">qvars</span> <span class="o">=</span> <span class="n">bind_exercises</span><span class="p">(</span><span class="nb">globals</span><span class="p">(),</span> <span class="p">[</span>
+    <span class="n">JimmySlots</span><span class="p">,</span>
+    <span class="n">LuigiAnalysis</span><span class="p">,</span>
+    <span class="n">BlackjackCmp</span><span class="p">,</span>
+    <span class="p">],</span>
+<span class="p">)</span>
+<span class="n">__all__</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">qvars</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The net effect of this is to instantiate instances of the given problem classes, assign them to a regularly named sequence of variables (e.g. q1, q2, q3), and make it so that <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">my_exercise_module</span> <span class="pre">import</span> <span class="pre">*</span></code> imports precisely those auto-generated variables. You can check out <code class="docutils literal notranslate"><span class="pre">bind_exercises</span></code> and its docstring if you want more of the gory details.</p>
+</div>
+</div>
+<div class="section" id="interaction-progress-tracking">
+<h1>Interaction/Progress Tracking<a class="headerlink" href="#interaction-progress-tracking" title="Permalink to this headline">¶</a></h1>
+<p>For the most part, you shouldn’t need to worry about this when creating problems/exercises.</p>
+<p>One consideration: by default, a problem ‘counts’ for the purposes of progress tracking iff it’s not a <code class="docutils literal notranslate"><span class="pre">ThoughtExperiment</span></code>. To explicitly control this (e.g. if you have a non-checkable <code class="docutils literal notranslate"><span class="pre">CodingProblem</span></code>), set the class attribute <code class="docutils literal notranslate"><span class="pre">_counts_for_points</span></code>.</p>
+<p>Set <code class="docutils literal notranslate"><span class="pre">_bonus</span> <span class="pre">=</span> <span class="pre">True</span></code> to mark a problem as being a bonus (i.e. the user doesn’t need to get the question right in order to pass this exercise and earn a checkmark).</p>
+<p>Sending tracking events is managed at the <code class="docutils literal notranslate"><span class="pre">ProblemView</span></code> layer. See <code class="docutils literal notranslate"><span class="pre">problem_view.py</span></code> and <code class="docutils literal notranslate"><span class="pre">tracking.py</span></code> for details.</p>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./learntools\core"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Felix Kaule / Stephan Schoenfelder<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>

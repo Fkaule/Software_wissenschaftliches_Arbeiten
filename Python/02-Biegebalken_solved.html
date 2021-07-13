@@ -417,7 +417,18 @@
         
               <div>
                 
-  <div class="section" id="berechnungen-und-erste-grafische-darstellung-am-beispiel-von-biegebalken">
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">&#39;../&#39;</span><span class="p">))</span>
+<span class="kn">from</span> <span class="nn">learntools_HTWK.core</span> <span class="kn">import</span> <span class="n">binder</span><span class="p">;</span><span class="n">binder</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="nb">globals</span><span class="p">())</span>
+<span class="kn">from</span> <span class="nn">learntools_HTWK.python.ex1</span> <span class="kn">import</span> <span class="o">*</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="berechnungen-und-erste-grafische-darstellung-am-beispiel-von-biegebalken">
 <h1><span class="section-number">2. </span>Berechnungen und erste grafische Darstellung am Beispiel von Biegebalken<a class="headerlink" href="#berechnungen-und-erste-grafische-darstellung-am-beispiel-von-biegebalken" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="beispiel-1-zweiseitig-gelagerter-balken-mit-linienlast">
 <h2><span class="section-number">2.1. </span>Beispiel 1: zweiseitig gelagerter Balken mit Linienlast<a class="headerlink" href="#beispiel-1-zweiseitig-gelagerter-balken-mit-linienlast" title="Permalink to this headline">¶</a></h2>
@@ -437,7 +448,7 @@
 <span class="n">L</span> <span class="o">=</span> <span class="mf">1000.0</span> <span class="c1"># mm</span>
 <span class="n">b</span> <span class="o">=</span> <span class="mf">30.0</span> <span class="c1"># mm</span>
 <span class="n">h</span> <span class="o">=</span> <span class="mf">30.0</span> <span class="c1"># mm</span>
-<span class="n">q0</span> <span class="o">=</span> <span class="mf">1000.0</span> <span class="c1"># N</span>
+<span class="n">q</span> <span class="o">=</span> <span class="mf">1000.0</span> <span class="c1"># N</span>
 <span class="n">E</span> <span class="o">=</span> <span class="mf">200000.0</span> <span class="c1"># MPa -&gt; N/mm^2</span>
 </pre></div>
 </div>
@@ -448,13 +459,17 @@
 \[I=\frac{b\,h^3}{12}\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">I</span> <span class="o">=</span> <span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="n">h</span><span class="o">**</span><span class="mi">3</span><span class="p">)</span><span class="o">/</span><span class="mi">12</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">I</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">I</span> <span class="o">=</span> 
+<span class="n">q0</span><span class="o">.</span><span class="n">check</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>67500.0
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Kommentar entfernen und ausführen um Hinweis oder Lösung zu bekommen</span>
+<span class="c1">#q0.hint()</span>
+<span class="c1">#q0.solution()</span>
 </pre></div>
 </div>
 </div>
@@ -464,13 +479,17 @@
 \[ u_{max}=\frac{5\,q\,L^4}{384\,E\,I} \]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">umax</span> <span class="o">=</span> <span class="p">(</span><span class="mi">5</span><span class="o">*</span><span class="n">q0</span><span class="o">*</span><span class="n">L</span><span class="o">**</span><span class="mi">3</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">384</span><span class="o">*</span><span class="n">E</span><span class="o">*</span><span class="n">I</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">umax</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">umax</span> <span class="o">=</span> 
+<span class="n">q1</span><span class="o">.</span><span class="n">check</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.9645061728395061
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Kommentar entfernen und ausführen um Hinweis oder Lösung zu bekommen</span>
+<span class="c1">#q1.hint()</span>
+<span class="c1">#q1.solution()</span>
 </pre></div>
 </div>
 </div>
@@ -510,11 +529,6 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>540000.0
-</pre></div>
-</div>
-</div>
 </div>
 <p><strong>Berechnung der maximalen Durchbiegung</strong></p>
 <div class="math notranslate nohighlight">
@@ -522,12 +536,16 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">umax</span><span class="o">=</span><span class="p">(</span><span class="n">F</span><span class="o">*</span><span class="n">L</span><span class="o">**</span><span class="mi">3</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="n">E</span><span class="o">*</span><span class="n">I</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">umax</span><span class="p">)</span>
+<span class="n">q2</span><span class="o">.</span><span class="n">check</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8.818342151675486
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Kommentar entfernen und ausführen um Hinweis oder Lösung zu bekommen</span>
+<span class="c1">#q2.hint()</span>
+<span class="c1">#q2.solution()</span>
 </pre></div>
 </div>
 </div>
@@ -553,11 +571,6 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.9645061728395061
-</pre></div>
-</div>
-</div>
 </div>
 <p>Definition der Länge <code class="docutils literal notranslate"><span class="pre">L</span></code> als <code class="docutils literal notranslate"><span class="pre">np.array</span></code> (Liste aus Werten)</p>
 <div class="cell docutils container">
@@ -565,11 +578,6 @@
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="n">L</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">250</span><span class="p">,</span><span class="mi">500</span><span class="p">,</span><span class="mi">750</span><span class="p">,</span><span class="mi">1000</span><span class="p">])</span> <span class="c1"># mm</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[   0  250  500  750 1000]
 </pre></div>
 </div>
 </div>
@@ -582,12 +590,8 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0.         0.01507041 0.12056327 0.40690104 0.96450617]
-</pre></div>
 </div>
-</div>
-</div>
+<p>Zum plotten benutzen wir nun <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> und plotten mit <code class="docutils literal notranslate"><span class="pre">plt.plot()</span></code> und beschriften die Label mit <code class="docutils literal notranslate"><span class="pre">plt.xlabel()</span></code> und <code class="docutils literal notranslate"><span class="pre">plt.ylabel()</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -596,9 +600,6 @@
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;maximale Verschiebung [mm]&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/02-Biegebalken_solved_22_0.png" src="../_images/02-Biegebalken_solved_22_0.png" />
 </div>
 </div>
 <p>Um die Werte zusätzlich als Punkte einzublenden kann:</p>
@@ -616,23 +617,12 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../_images/02-Biegebalken_solved_24_0.png" src="../_images/02-Biegebalken_solved_24_0.png" />
-</div>
 </div>
 <p>Um den Verlauf zu glätten sind mehr Punkte einzugeben, dafür ist <code class="docutils literal notranslate"><span class="pre">np.linspace()</span></code> sehr praktisch (wieder ohne die Punkte)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">L</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1000</span><span class="p">,</span><span class="mi">20</span><span class="p">)</span> <span class="c1"># mm</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[   0.           52.63157895  105.26315789  157.89473684  210.52631579
-  263.15789474  315.78947368  368.42105263  421.05263158  473.68421053
-  526.31578947  578.94736842  631.57894737  684.21052632  736.84210526
-  789.47368421  842.10526316  894.73684211  947.36842105 1000.        ]
 </pre></div>
 </div>
 </div>
@@ -647,9 +637,6 @@
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;maximale Verschiebung [mm]&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/02-Biegebalken_solved_27_0.png" src="../_images/02-Biegebalken_solved_27_0.png" />
 </div>
 </div>
 </div>
@@ -678,9 +665,6 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../_images/02-Biegebalken_solved_30_0.png" src="../_images/02-Biegebalken_solved_30_0.png" />
-</div>
 </div>
 </div>
 <div class="section" id="beide-beispiele-zusammen">
@@ -698,9 +682,6 @@
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;maximale Verschiebung [mm]&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/02-Biegebalken_solved_32_0.png" src="../_images/02-Biegebalken_solved_32_0.png" />
 </div>
 </div>
 </div>
@@ -758,9 +739,6 @@ in <code class="docutils literal notranslate"><span class="pre">plt.plot()</span
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../_images/02-Biegebalken_solved_34_0.png" src="../_images/02-Biegebalken_solved_34_0.png" />
-</div>
 </div>
 <p>wenn wir den Stil jetzt nicht zurücksetzen <code class="docutils literal notranslate"><span class="pre">plt.style.use('default')</span></code> wird dieser automatisch in dem nächsten plot verwendet.</p>
 <p>Nun stellen wir nur den vorderen Bereich der Länge von  <code class="docutils literal notranslate"><span class="pre">L=0</span></code> bis <code class="docutils literal notranslate"><span class="pre">L=200mm</span></code> dar: <br></p>
@@ -779,9 +757,6 @@ in <code class="docutils literal notranslate"><span class="pre">plt.plot()</span
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">);</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/02-Biegebalken_solved_36_0.png" src="../_images/02-Biegebalken_solved_36_0.png" />
 </div>
 </div>
 </div>
@@ -805,25 +780,6 @@ in <code class="docutils literal notranslate"><span class="pre">plt.plot()</span
 <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;Uebung1_detail.png&#39;</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">&#39;tight&#39;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">150</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/02-Biegebalken_solved_38_0.png" src="../_images/02-Biegebalken_solved_38_0.png" />
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="n">umax1</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;Beispiel 1&quot;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s2">&quot;-&quot;</span><span class="p">);</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="n">umax2</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;Beispiel 2&quot;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">);</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Länge [mm]&quot;</span><span class="p">);</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;maximale Verschiebung [mm]&quot;</span><span class="p">);</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">();</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">);</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;Uebung1_alles.png&#39;</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">&#39;tight&#39;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">150</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/02-Biegebalken_solved_39_0.png" src="../_images/02-Biegebalken_solved_39_0.png" />
 </div>
 </div>
 </div>

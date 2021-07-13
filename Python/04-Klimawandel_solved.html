@@ -484,122 +484,11 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Year</th>
-      <th>No_Smoothing</th>
-      <th>Lowess(5)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1880</td>
-      <td>-0.16</td>
-      <td>-0.08</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>1881</td>
-      <td>-0.07</td>
-      <td>-0.12</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>1882</td>
-      <td>-0.10</td>
-      <td>-0.16</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>1883</td>
-      <td>-0.16</td>
-      <td>-0.19</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>1884</td>
-      <td>-0.28</td>
-      <td>-0.23</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>136</th>
-      <td>2016</td>
-      <td>1.01</td>
-      <td>0.87</td>
-    </tr>
-    <tr>
-      <th>137</th>
-      <td>2017</td>
-      <td>0.92</td>
-      <td>0.91</td>
-    </tr>
-    <tr>
-      <th>138</th>
-      <td>2018</td>
-      <td>0.85</td>
-      <td>0.95</td>
-    </tr>
-    <tr>
-      <th>139</th>
-      <td>2019</td>
-      <td>0.98</td>
-      <td>0.98</td>
-    </tr>
-    <tr>
-      <th>140</th>
-      <td>2020</td>
-      <td>1.02</td>
-      <td>1.01</td>
-    </tr>
-  </tbody>
-</table>
-<p>141 rows × 3 columns</p>
-</div></div></div>
 </div>
 <p>Die Spalten können nun über den Namen des DataFrames und die jeweilige Spalte in eckigen Klammern mit Hochkommas verwendet werden, z.B.:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Temp_NASA</span><span class="p">[</span><span class="s2">&quot;Year&quot;</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0      1880
-1      1881
-2      1882
-3      1883
-4      1884
-       ... 
-136    2016
-137    2017
-138    2018
-139    2019
-140    2020
-Name: Year, Length: 141, dtype: int64
 </pre></div>
 </div>
 </div>
@@ -623,9 +512,6 @@ Name: Year, Length: 141, dtype: int64
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../_images/04-Klimawandel_solved_7_0.png" src="../_images/04-Klimawandel_solved_7_0.png" />
-</div>
 </div>
 </div>
 <div class="section" id="datenverarbeitung">
@@ -638,92 +524,11 @@ Name: Year, Length: 141, dtype: int64
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Year</th>
-      <th>No_Smoothing</th>
-      <th>Lowess(5)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>count</th>
-      <td>141.000000</td>
-      <td>141.000000</td>
-      <td>141.000000</td>
-    </tr>
-    <tr>
-      <th>mean</th>
-      <td>1950.000000</td>
-      <td>0.050213</td>
-      <td>0.050213</td>
-    </tr>
-    <tr>
-      <th>std</th>
-      <td>40.847277</td>
-      <td>0.356620</td>
-      <td>0.345703</td>
-    </tr>
-    <tr>
-      <th>min</th>
-      <td>1880.000000</td>
-      <td>-0.480000</td>
-      <td>-0.400000</td>
-    </tr>
-    <tr>
-      <th>25%</th>
-      <td>1915.000000</td>
-      <td>-0.200000</td>
-      <td>-0.220000</td>
-    </tr>
-    <tr>
-      <th>50%</th>
-      <td>1950.000000</td>
-      <td>-0.070000</td>
-      <td>-0.040000</td>
-    </tr>
-    <tr>
-      <th>75%</th>
-      <td>1985.000000</td>
-      <td>0.230000</td>
-      <td>0.220000</td>
-    </tr>
-    <tr>
-      <th>max</th>
-      <td>2020.000000</td>
-      <td>1.020000</td>
-      <td>1.010000</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
 </div>
 <p><strong>Maximum bestimmen</strong> (Beispiel: stärkster Tempetaturunterschied)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Temp_NASA</span><span class="p">[</span><span class="s2">&quot;No_Smoothing&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.02
 </pre></div>
 </div>
 </div>
@@ -739,24 +544,11 @@ Name: Year, Length: 141, dtype: int64
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>140
-</pre></div>
-</div>
-</div>
 </div>
 <p>mit dem <code class="docutils literal notranslate"><span class="pre">.loc</span></code> Befehl wird die Tabelle mit nun gefunden <code class="docutils literal notranslate"><span class="pre">index</span></code> ausgegeben werden</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Temp_NASA</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">index_max</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Year            2020.00
-No_Smoothing       1.02
-Lowess(5)          1.01
-Name: 140, dtype: float64
 </pre></div>
 </div>
 </div>
@@ -768,101 +560,6 @@ Name: 140, dtype: float64
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Year</th>
-      <th>No_Smoothing</th>
-      <th>Lowess(5)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>29</th>
-      <td>1909</td>
-      <td>-0.48</td>
-      <td>-0.40</td>
-    </tr>
-    <tr>
-      <th>24</th>
-      <td>1904</td>
-      <td>-0.46</td>
-      <td>-0.30</td>
-    </tr>
-    <tr>
-      <th>37</th>
-      <td>1917</td>
-      <td>-0.45</td>
-      <td>-0.29</td>
-    </tr>
-    <tr>
-      <th>31</th>
-      <td>1911</td>
-      <td>-0.43</td>
-      <td>-0.38</td>
-    </tr>
-    <tr>
-      <th>30</th>
-      <td>1910</td>
-      <td>-0.42</td>
-      <td>-0.40</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>135</th>
-      <td>2015</td>
-      <td>0.90</td>
-      <td>0.83</td>
-    </tr>
-    <tr>
-      <th>137</th>
-      <td>2017</td>
-      <td>0.92</td>
-      <td>0.91</td>
-    </tr>
-    <tr>
-      <th>139</th>
-      <td>2019</td>
-      <td>0.98</td>
-      <td>0.98</td>
-    </tr>
-    <tr>
-      <th>136</th>
-      <td>2016</td>
-      <td>1.01</td>
-      <td>0.87</td>
-    </tr>
-    <tr>
-      <th>140</th>
-      <td>2020</td>
-      <td>1.02</td>
-      <td>1.01</td>
-    </tr>
-  </tbody>
-</table>
-<p>141 rows × 3 columns</p>
-</div></div></div>
 </div>
 <p>mit <code class="docutils literal notranslate"><span class="pre">ascending=False</span></code> wird absteigend sortiert</p>
 <div class="cell docutils container">
@@ -871,101 +568,6 @@ Name: 140, dtype: float64
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Year</th>
-      <th>No_Smoothing</th>
-      <th>Lowess(5)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>140</th>
-      <td>2020</td>
-      <td>1.02</td>
-      <td>1.01</td>
-    </tr>
-    <tr>
-      <th>136</th>
-      <td>2016</td>
-      <td>1.01</td>
-      <td>0.87</td>
-    </tr>
-    <tr>
-      <th>139</th>
-      <td>2019</td>
-      <td>0.98</td>
-      <td>0.98</td>
-    </tr>
-    <tr>
-      <th>137</th>
-      <td>2017</td>
-      <td>0.92</td>
-      <td>0.91</td>
-    </tr>
-    <tr>
-      <th>135</th>
-      <td>2015</td>
-      <td>0.90</td>
-      <td>0.83</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>30</th>
-      <td>1910</td>
-      <td>-0.42</td>
-      <td>-0.40</td>
-    </tr>
-    <tr>
-      <th>31</th>
-      <td>1911</td>
-      <td>-0.43</td>
-      <td>-0.38</td>
-    </tr>
-    <tr>
-      <th>37</th>
-      <td>1917</td>
-      <td>-0.45</td>
-      <td>-0.29</td>
-    </tr>
-    <tr>
-      <th>24</th>
-      <td>1904</td>
-      <td>-0.46</td>
-      <td>-0.30</td>
-    </tr>
-    <tr>
-      <th>29</th>
-      <td>1909</td>
-      <td>-0.48</td>
-      <td>-0.40</td>
-    </tr>
-  </tbody>
-</table>
-<p>141 rows × 3 columns</p>
-</div></div></div>
 </div>
 <p>mit <code class="docutils literal notranslate"><span class="pre">.head(Anzahl)</span></code> können wir angeben wieviele Zeilen (vom <strong>Kopf</strong> beginnend) <strong>angezeigt</strong> werden. Mit <code class="docutils literal notranslate"><span class="pre">.tail(Anzahl)</span></code> erfolgt die ausgabe der letzten Werte mit der jeweiligen Anzahl</p>
 <p><strong>WICHTIG</strong>: Der Dataframe <code class="docutils literal notranslate"><span class="pre">Temp_NASA</span></code> wird dadurch nicht verändert, es handelt sich nur um eine Anzeige!</p>
@@ -975,94 +577,6 @@ Name: 140, dtype: float64
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Year</th>
-      <th>No_Smoothing</th>
-      <th>Lowess(5)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>140</th>
-      <td>2020</td>
-      <td>1.02</td>
-      <td>1.01</td>
-    </tr>
-    <tr>
-      <th>136</th>
-      <td>2016</td>
-      <td>1.01</td>
-      <td>0.87</td>
-    </tr>
-    <tr>
-      <th>139</th>
-      <td>2019</td>
-      <td>0.98</td>
-      <td>0.98</td>
-    </tr>
-    <tr>
-      <th>137</th>
-      <td>2017</td>
-      <td>0.92</td>
-      <td>0.91</td>
-    </tr>
-    <tr>
-      <th>135</th>
-      <td>2015</td>
-      <td>0.90</td>
-      <td>0.83</td>
-    </tr>
-    <tr>
-      <th>138</th>
-      <td>2018</td>
-      <td>0.85</td>
-      <td>0.95</td>
-    </tr>
-    <tr>
-      <th>134</th>
-      <td>2014</td>
-      <td>0.74</td>
-      <td>0.78</td>
-    </tr>
-    <tr>
-      <th>130</th>
-      <td>2010</td>
-      <td>0.72</td>
-      <td>0.65</td>
-    </tr>
-    <tr>
-      <th>125</th>
-      <td>2005</td>
-      <td>0.68</td>
-      <td>0.62</td>
-    </tr>
-    <tr>
-      <th>133</th>
-      <td>2013</td>
-      <td>0.68</td>
-      <td>0.74</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
 </div>
 <p><strong>Aufgabe</strong>: Wie viele 10 stärksten (positiven) Abweichungen lagen in den letzten 10 Jahren?</p>
 <p>Ein möglicher Weg:</p>
@@ -1079,105 +593,6 @@ Name: 140, dtype: float64
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Year</th>
-      <th>No_Smoothing</th>
-      <th>Lowess(5)</th>
-      <th>last 10 years?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>140</th>
-      <td>2020</td>
-      <td>1.02</td>
-      <td>1.01</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>136</th>
-      <td>2016</td>
-      <td>1.01</td>
-      <td>0.87</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>139</th>
-      <td>2019</td>
-      <td>0.98</td>
-      <td>0.98</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>137</th>
-      <td>2017</td>
-      <td>0.92</td>
-      <td>0.91</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>135</th>
-      <td>2015</td>
-      <td>0.90</td>
-      <td>0.83</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>138</th>
-      <td>2018</td>
-      <td>0.85</td>
-      <td>0.95</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>134</th>
-      <td>2014</td>
-      <td>0.74</td>
-      <td>0.78</td>
-      <td>True</td>
-    </tr>
-    <tr>
-      <th>130</th>
-      <td>2010</td>
-      <td>0.72</td>
-      <td>0.65</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>125</th>
-      <td>2005</td>
-      <td>0.68</td>
-      <td>0.62</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>133</th>
-      <td>2013</td>
-      <td>0.68</td>
-      <td>0.74</td>
-      <td>True</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
 </div>
 <p>In den NASA Originaldaten gibt es bereits eine Glättung. Diese können wir z.B. durch einen rollenden Mittelwert selbst erzeugen.</p>
 <p>Dazu benutzen wir die Funktion <code class="docutils literal notranslate"><span class="pre">.rolling(Anzahl,</span> <span class="pre">center=True).mean()</span></code> (mit <code class="docutils literal notranslate"><span class="pre">center=true</span></code> wird das Label auf die Mitte gesetzt)</p>
@@ -1188,101 +603,6 @@ Name: 140, dtype: float64
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Year</th>
-      <th>No_Smoothing</th>
-      <th>Lowess(5)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1880</td>
-      <td>-0.16</td>
-      <td>-0.08</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>1881</td>
-      <td>-0.07</td>
-      <td>-0.12</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>1882</td>
-      <td>-0.10</td>
-      <td>-0.16</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>1883</td>
-      <td>-0.16</td>
-      <td>-0.19</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>1884</td>
-      <td>-0.28</td>
-      <td>-0.23</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>136</th>
-      <td>2016</td>
-      <td>1.01</td>
-      <td>0.87</td>
-    </tr>
-    <tr>
-      <th>137</th>
-      <td>2017</td>
-      <td>0.92</td>
-      <td>0.91</td>
-    </tr>
-    <tr>
-      <th>138</th>
-      <td>2018</td>
-      <td>0.85</td>
-      <td>0.95</td>
-    </tr>
-    <tr>
-      <th>139</th>
-      <td>2019</td>
-      <td>0.98</td>
-      <td>0.98</td>
-    </tr>
-    <tr>
-      <th>140</th>
-      <td>2020</td>
-      <td>1.02</td>
-      <td>1.01</td>
-    </tr>
-  </tbody>
-</table>
-<p>141 rows × 3 columns</p>
-</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1291,113 +611,6 @@ Name: 140, dtype: float64
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Year</th>
-      <th>No_Smoothing</th>
-      <th>Lowess(5)</th>
-      <th>Rollender Mittelwert (5)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1880</td>
-      <td>-0.16</td>
-      <td>-0.08</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>1881</td>
-      <td>-0.07</td>
-      <td>-0.12</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>1882</td>
-      <td>-0.10</td>
-      <td>-0.16</td>
-      <td>-0.154</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>1883</td>
-      <td>-0.16</td>
-      <td>-0.19</td>
-      <td>-0.188</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>1884</td>
-      <td>-0.28</td>
-      <td>-0.23</td>
-      <td>-0.236</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>136</th>
-      <td>2016</td>
-      <td>1.01</td>
-      <td>0.87</td>
-      <td>0.884</td>
-    </tr>
-    <tr>
-      <th>137</th>
-      <td>2017</td>
-      <td>0.92</td>
-      <td>0.91</td>
-      <td>0.932</td>
-    </tr>
-    <tr>
-      <th>138</th>
-      <td>2018</td>
-      <td>0.85</td>
-      <td>0.95</td>
-      <td>0.956</td>
-    </tr>
-    <tr>
-      <th>139</th>
-      <td>2019</td>
-      <td>0.98</td>
-      <td>0.98</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>140</th>
-      <td>2020</td>
-      <td>1.02</td>
-      <td>1.01</td>
-      <td>NaN</td>
-    </tr>
-  </tbody>
-</table>
-<p>141 rows × 4 columns</p>
-</div></div></div>
 </div>
 <p>Eine weitere Variante der Glättung ist die <strong>LO</strong>cally <strong>WE</strong>ighted <strong>S</strong>catter-plot <strong>S</strong>moother (LOWESS). Diese wurde scheinbar auch von der NASA verwendet. Eine genauere Erklärung zur Methode findet ihr <a class="reference external" href="https://youtu.be/b7oryuMP3r8">hier</a>.</p>
 <div class="cell docutils container">
@@ -1414,125 +627,6 @@ Name: 140, dtype: float64
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Year</th>
-      <th>No_Smoothing</th>
-      <th>Lowess(5)</th>
-      <th>Rollender Mittelwert (5)</th>
-      <th>Lowess(own)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1880</td>
-      <td>-0.16</td>
-      <td>-0.08</td>
-      <td>NaN</td>
-      <td>-0.079969</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>1881</td>
-      <td>-0.07</td>
-      <td>-0.12</td>
-      <td>NaN</td>
-      <td>-0.118416</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>1882</td>
-      <td>-0.10</td>
-      <td>-0.16</td>
-      <td>-0.154</td>
-      <td>-0.157072</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>1883</td>
-      <td>-0.16</td>
-      <td>-0.19</td>
-      <td>-0.188</td>
-      <td>-0.194413</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>1884</td>
-      <td>-0.28</td>
-      <td>-0.23</td>
-      <td>-0.236</td>
-      <td>-0.231481</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>136</th>
-      <td>2016</td>
-      <td>1.01</td>
-      <td>0.87</td>
-      <td>0.884</td>
-      <td>0.873468</td>
-    </tr>
-    <tr>
-      <th>137</th>
-      <td>2017</td>
-      <td>0.92</td>
-      <td>0.91</td>
-      <td>0.932</td>
-      <td>0.910102</td>
-    </tr>
-    <tr>
-      <th>138</th>
-      <td>2018</td>
-      <td>0.85</td>
-      <td>0.95</td>
-      <td>0.956</td>
-      <td>0.945015</td>
-    </tr>
-    <tr>
-      <th>139</th>
-      <td>2019</td>
-      <td>0.98</td>
-      <td>0.98</td>
-      <td>NaN</td>
-      <td>0.976779</td>
-    </tr>
-    <tr>
-      <th>140</th>
-      <td>2020</td>
-      <td>1.02</td>
-      <td>1.01</td>
-      <td>NaN</td>
-      <td>1.006761</td>
-    </tr>
-  </tbody>
-</table>
-<p>141 rows × 5 columns</p>
-</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1552,9 +646,6 @@ Name: 140, dtype: float64
 <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">();</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/04-Klimawandel_solved_31_0.png" src="../_images/04-Klimawandel_solved_31_0.png" />
 </div>
 </div>
 <p>Die Verwendung des rollenden Mittelwertes hat das Problem, dass dabei immer Werte fehlen (Anfang/Ende). Die gewählten Mit den gewählten Parametern für das LOWESS sind die Ergebnisse ähnlich zur Original Glättung</p>
@@ -1579,125 +670,6 @@ Name: 140, dtype: float64
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Year</th>
-      <th>Land_Annual</th>
-      <th>Lowess(5)</th>
-      <th>Ocean_Annual</th>
-      <th>Lowess(5).1</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1880</td>
-      <td>-0.56</td>
-      <td>-0.45</td>
-      <td>-0.05</td>
-      <td>0.01</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>1881</td>
-      <td>-0.37</td>
-      <td>-0.49</td>
-      <td>0.01</td>
-      <td>-0.02</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>1882</td>
-      <td>-0.46</td>
-      <td>-0.53</td>
-      <td>0.00</td>
-      <td>-0.06</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>1883</td>
-      <td>-0.54</td>
-      <td>-0.57</td>
-      <td>-0.06</td>
-      <td>-0.09</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>1884</td>
-      <td>-0.82</td>
-      <td>-0.61</td>
-      <td>-0.15</td>
-      <td>-0.12</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>136</th>
-      <td>2016</td>
-      <td>1.47</td>
-      <td>1.27</td>
-      <td>0.70</td>
-      <td>0.62</td>
-    </tr>
-    <tr>
-      <th>137</th>
-      <td>2017</td>
-      <td>1.36</td>
-      <td>1.33</td>
-      <td>0.64</td>
-      <td>0.64</td>
-    </tr>
-    <tr>
-      <th>138</th>
-      <td>2018</td>
-      <td>1.21</td>
-      <td>1.40</td>
-      <td>0.60</td>
-      <td>0.65</td>
-    </tr>
-    <tr>
-      <th>139</th>
-      <td>2019</td>
-      <td>1.42</td>
-      <td>1.45</td>
-      <td>0.68</td>
-      <td>0.67</td>
-    </tr>
-    <tr>
-      <th>140</th>
-      <td>2020</td>
-      <td>1.58</td>
-      <td>1.51</td>
-      <td>0.67</td>
-      <td>0.67</td>
-    </tr>
-  </tbody>
-</table>
-<p>141 rows × 5 columns</p>
-</div></div></div>
 </div>
 </div>
 <div class="section" id="id2">
@@ -1717,9 +689,6 @@ Name: 140, dtype: float64
 <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">();</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/04-Klimawandel_solved_38_0.png" src="../_images/04-Klimawandel_solved_38_0.png" />
 </div>
 </div>
 </div>
@@ -1753,89 +722,6 @@ Name: 140, dtype: float64
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Jahr</th>
-      <th>Jahresmitteltemperatur [°C]</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>1</th>
-      <td>1881</td>
-      <td>7.3352</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>1882</td>
-      <td>8.3661</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>1883</td>
-      <td>7.9099</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>1884</td>
-      <td>8.5892</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>1885</td>
-      <td>7.7726</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>136</th>
-      <td>2016</td>
-      <td>9.5000</td>
-    </tr>
-    <tr>
-      <th>137</th>
-      <td>2017</td>
-      <td>9.6000</td>
-    </tr>
-    <tr>
-      <th>138</th>
-      <td>2018</td>
-      <td>10.5000</td>
-    </tr>
-    <tr>
-      <th>139</th>
-      <td>2019</td>
-      <td>10.3000</td>
-    </tr>
-    <tr>
-      <th>140</th>
-      <td>2020</td>
-      <td>10.4000</td>
-    </tr>
-  </tbody>
-</table>
-<p>140 rows × 2 columns</p>
-</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1846,101 +732,6 @@ Name: 140, dtype: float64
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Jahr</th>
-      <th>Jahresmitteltemperatur [°C]</th>
-      <th>Jahresmitteltemperaturabweichung [°C]</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>1</th>
-      <td>1881</td>
-      <td>7.3352</td>
-      <td>-0.482663</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>1882</td>
-      <td>8.3661</td>
-      <td>0.548237</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>1883</td>
-      <td>7.9099</td>
-      <td>0.092037</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>1884</td>
-      <td>8.5892</td>
-      <td>0.771337</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>1885</td>
-      <td>7.7726</td>
-      <td>-0.045263</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>136</th>
-      <td>2016</td>
-      <td>9.5000</td>
-      <td>1.682137</td>
-    </tr>
-    <tr>
-      <th>137</th>
-      <td>2017</td>
-      <td>9.6000</td>
-      <td>1.782137</td>
-    </tr>
-    <tr>
-      <th>138</th>
-      <td>2018</td>
-      <td>10.5000</td>
-      <td>2.682137</td>
-    </tr>
-    <tr>
-      <th>139</th>
-      <td>2019</td>
-      <td>10.3000</td>
-      <td>2.482137</td>
-    </tr>
-    <tr>
-      <th>140</th>
-      <td>2020</td>
-      <td>10.4000</td>
-      <td>2.582137</td>
-    </tr>
-  </tbody>
-</table>
-<p>140 rows × 3 columns</p>
-</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1951,113 +742,6 @@ Name: 140, dtype: float64
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Jahr</th>
-      <th>Jahresmitteltemperatur [°C]</th>
-      <th>Jahresmitteltemperaturabweichung [°C]</th>
-      <th>Lowess(own)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>1</th>
-      <td>1881</td>
-      <td>7.3352</td>
-      <td>-0.482663</td>
-      <td>0.208028</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>1882</td>
-      <td>8.3661</td>
-      <td>0.548237</td>
-      <td>0.179543</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>1883</td>
-      <td>7.9099</td>
-      <td>0.092037</td>
-      <td>0.132242</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>1884</td>
-      <td>8.5892</td>
-      <td>0.771337</td>
-      <td>0.070696</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>1885</td>
-      <td>7.7726</td>
-      <td>-0.045263</td>
-      <td>-0.005329</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>136</th>
-      <td>2016</td>
-      <td>9.5000</td>
-      <td>1.682137</td>
-      <td>2.021745</td>
-    </tr>
-    <tr>
-      <th>137</th>
-      <td>2017</td>
-      <td>9.6000</td>
-      <td>1.782137</td>
-      <td>2.172035</td>
-    </tr>
-    <tr>
-      <th>138</th>
-      <td>2018</td>
-      <td>10.5000</td>
-      <td>2.682137</td>
-      <td>2.314417</td>
-    </tr>
-    <tr>
-      <th>139</th>
-      <td>2019</td>
-      <td>10.3000</td>
-      <td>2.482137</td>
-      <td>2.461835</td>
-    </tr>
-    <tr>
-      <th>140</th>
-      <td>2020</td>
-      <td>10.4000</td>
-      <td>2.582137</td>
-      <td>2.614470</td>
-    </tr>
-  </tbody>
-</table>
-<p>140 rows × 4 columns</p>
-</div></div></div>
 </div>
 </div>
 <div class="section" id="id4">
@@ -2085,9 +769,6 @@ Name: 140, dtype: float64
 <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">();</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/04-Klimawandel_solved_48_0.png" src="../_images/04-Klimawandel_solved_48_0.png" />
 </div>
 </div>
 </div>
@@ -2124,9 +805,6 @@ Folgen und Handlungsmöglichkeiten. Halle (Saale).</p>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../_images/04-Klimawandel_solved_52_0.png" src="../_images/04-Klimawandel_solved_52_0.png" />
-</div>
 </div>
 <p>Ausgabe der Temperaturdifferenz im Jahr 2020</p>
 <div class="cell docutils container">
@@ -2135,46 +813,6 @@ Folgen und Handlungsmöglichkeiten. Halle (Saale).</p>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Year</th>
-      <th>No_Smoothing</th>
-      <th>Lowess(5)</th>
-      <th>Rollender Mittelwert (5)</th>
-      <th>Lowess(own)</th>
-      <th>Lowess(own3)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>140</th>
-      <td>2020</td>
-      <td>1.02</td>
-      <td>1.01</td>
-      <td>NaN</td>
-      <td>1.006761</td>
-      <td>1.172505</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2182,44 +820,6 @@ Folgen und Handlungsmöglichkeiten. Halle (Saale).</p>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Jahr</th>
-      <th>Jahresmitteltemperatur [°C]</th>
-      <th>Jahresmitteltemperaturabweichung [°C]</th>
-      <th>Lowess(own)</th>
-      <th>Lowess(own2)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>140</th>
-      <td>2020</td>
-      <td>10.4</td>
-      <td>2.582137</td>
-      <td>2.61447</td>
-      <td>2.164246</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
 </div>
 <p><strong>Zusatzaufgabe</strong> : Bestimmen Sie den linearen Anstieg für die Temperaturwerte  von Deutschland (LOWESS mit frac=1)</p>
 <div class="cell docutils container">
@@ -2243,20 +843,11 @@ Folgen und Handlungsmöglichkeiten. Halle (Saale).</p>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../_images/04-Klimawandel_solved_57_0.png" src="../_images/04-Klimawandel_solved_57_0.png" />
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Temperaturanstieg pro Jahr (von 1981 bis 2020): </span><span class="si">{</span><span class="n">model</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">°C/Jahr&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Temperaturanstieg seit Beginn der Messung: </span><span class="si">{</span><span class="p">(</span><span class="n">y_model</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">y_model</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">°C&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Temperaturanstieg pro Jahr (von 1981 bis 2020): 0.012°C/Jahr
-Temperaturanstieg seit Beginn der Messung: 1.611°C
 </pre></div>
 </div>
 </div>
@@ -2269,11 +860,6 @@ Temperaturanstieg seit Beginn der Messung: 1.611°C
 <span class="n">model</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">polyfit</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="c1"># 1. Wert = Anstieg , 2. Wert = Schnittpunkt mit y-Achse</span>
 <span class="n">y_model</span> <span class="o">=</span> <span class="n">model</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="n">model</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Temperaturanstieg pro Jahr (von 1980 bis 2020): </span><span class="si">{</span><span class="n">model</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">°C/Jahr&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Temperaturanstieg pro Jahr (von 1980 bis 2020): 0.045°C/Jahr
 </pre></div>
 </div>
 </div>
@@ -2290,9 +876,6 @@ Temperaturanstieg seit Beginn der Messung: 1.611°C
 <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">();</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/04-Klimawandel_solved_61_0.png" src="../_images/04-Klimawandel_solved_61_0.png" />
 </div>
 </div>
 </div>
@@ -2329,9 +912,6 @@ Quelle : <a class="reference external" href="https://www.umweltbundesamt.de/date
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../_images/04-Klimawandel_solved_67_0.png" src="../_images/04-Klimawandel_solved_67_0.png" />
-</div>
 </div>
 </div>
 </div>
@@ -2353,76 +933,6 @@ Quelle : <a class="reference external" href="https://www.umweltbundesamt.de/date
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Jahr</th>
-      <th>Mauna Loa, Hawaii</th>
-      <th>Schauinsland</th>
-      <th>Zugspitze</th>
-      <th>Welttrend WMO</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1957.500000</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>1957.583333</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>1957.666667</td>
-      <td>315.70</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>1957.750000</td>
-      <td>317.45</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>1957.833333</td>
-      <td>317.51</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2440,9 +950,6 @@ Quelle : <a class="reference external" href="https://www.umweltbundesamt.de/date
 <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">();</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/04-Klimawandel_solved_70_0.png" src="../_images/04-Klimawandel_solved_70_0.png" />
 </div>
 </div>
 </div>
@@ -2470,9 +977,6 @@ Quelle : <a class="reference external" href="https://www.umweltbundesamt.de/date
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../_images/04-Klimawandel_solved_72_0.png" src="../_images/04-Klimawandel_solved_72_0.png" />
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2492,9 +996,6 @@ Quelle : <a class="reference external" href="https://www.umweltbundesamt.de/date
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../_images/04-Klimawandel_solved_73_0.png" src="../_images/04-Klimawandel_solved_73_0.png" />
-</div>
 </div>
 <p>Wenn wir die Einträge sortieren möchten, müssen wir die Listen in ein <code class="docutils literal notranslate"><span class="pre">pandas</span></code> <code class="docutils literal notranslate"><span class="pre">dataframe</span></code> einfügen</p>
 <div class="cell docutils container">
@@ -2505,70 +1006,6 @@ Quelle : <a class="reference external" href="https://www.umweltbundesamt.de/date
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Name</th>
-      <th>Anteil</th>
-      <th>Anteil [%]</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Kohlendioxid (CO₂)</td>
-      <td>2076</td>
-      <td>66.093601</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Methan (CH₄)</td>
-      <td>516</td>
-      <td>16.427889</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Lachgas (N₂O)</td>
-      <td>202</td>
-      <td>6.431073</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Dichlordifluormethan (CFC-12)</td>
-      <td>161</td>
-      <td>5.125756</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Trichlorfluormethan (CFC-11)</td>
-      <td>57</td>
-      <td>1.814709</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>15 weitere Treibhausgase</td>
-      <td>129</td>
-      <td>4.106972</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2577,70 +1014,6 @@ Quelle : <a class="reference external" href="https://www.umweltbundesamt.de/date
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Name</th>
-      <th>Anteil</th>
-      <th>Anteil [%]</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Kohlendioxid (CO₂)</td>
-      <td>2076</td>
-      <td>66.093601</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Methan (CH₄)</td>
-      <td>516</td>
-      <td>16.427889</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Lachgas (N₂O)</td>
-      <td>202</td>
-      <td>6.431073</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Dichlordifluormethan (CFC-12)</td>
-      <td>161</td>
-      <td>5.125756</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>15 weitere Treibhausgase</td>
-      <td>129</td>
-      <td>4.106972</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Trichlorfluormethan (CFC-11)</td>
-      <td>57</td>
-      <td>1.814709</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2654,9 +1027,6 @@ Quelle : <a class="reference external" href="https://www.umweltbundesamt.de/date
 <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">set_axisbelow</span><span class="p">(</span><span class="kc">True</span><span class="p">);</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/04-Klimawandel_solved_77_0.png" src="../_images/04-Klimawandel_solved_77_0.png" />
 </div>
 </div>
 </div>
