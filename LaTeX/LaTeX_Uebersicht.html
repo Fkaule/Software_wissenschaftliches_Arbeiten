@@ -307,11 +307,11 @@
         aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
     <div class="dropdown-buttons sourcebuttons">
         <a class="repository-button"
-            href="https://github.com/Fkaule/Software_wissenschaftliches_Arbeiten/tree/main"><button type="button" class="btn btn-secondary topbarbtn"
+            href="https://github.com/Fkaule/Software_wissenschaftliches_Arbeiten"><button type="button" class="btn btn-secondary topbarbtn"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/Fkaule/Software_wissenschaftliches_Arbeiten/tree/main/issues/new?title=Issue%20on%20page%20%2FLaTeX/LaTeX_Uebersicht.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/Fkaule/Software_wissenschaftliches_Arbeiten/issues/new?title=Issue%20on%20page%20%2FLaTeX/LaTeX_Uebersicht.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -343,9 +343,51 @@
   <div class="section" id="text-mit-latex">
 <h1>Text mit LaTeX<a class="headerlink" href="#text-mit-latex" title="Permalink to this headline">¶</a></h1>
 <p>Für das Verfassen längerer Texte bietet sich <strong>LaTeX</strong> (gesprochen <strong>LateCH</strong>, da der letzte Buchstabe ein griechisches Chi darstellt) an. Dabei handelt es sich um eine <strong>Markup language</strong>, ähnlich wie HTML, in der man den Text als einfaches Textdokument mit entsprechenden Befehlen “programmiert”.</p>
-<div class="figure align-default" id="beispiel">
-<a class="reference internal image-reference" href="../_images/Beispiel.png"><img alt="../_images/Beispiel.png" src="../_images/Beispiel.png" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Beispiel für eine Seite die mit LaTeX erstellt wurde</span><a class="headerlink" href="#beispiel" title="Permalink to this image">¶</a></p>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header docutils">
+<p class="card-text">Input</p>
+</div>
+<div class="card-body docutils">
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+
+<span class="k">\section</span><span class="nb">{</span>Überschrift<span class="nb">}</span>
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+
+<span class="k">\subsection</span><span class="nb">{</span>Unterüberschrift<span class="nb">}</span>
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+
+<span class="k">\subsubsection</span><span class="nb">{</span>Unterunterüberschrift<span class="nb">}</span>
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+
+<span class="k">\paragraph</span><span class="nb">{</span>Letzte Chance<span class="nb">}</span>
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header docutils">
+<p class="card-text">Output</p>
+</div>
+<div class="card-body docutils">
+<a class="reference internal image-reference" href="../_images/Example.png" id="output"><img alt="../_images/Example.png" id="output" src="../_images/Example.png" style="width: 300px;" /></a>
+</div>
+</div>
+</div>
+</div>
 </div>
 <p>Für den Einstieg ist die webbasierte LaTeX-Umgebung <span class="xref myst">www.overleaf.com</span> zu empfehlen. Man kann sich kostenfrei registrieren und ohne Installation und viel Hilfe und Vorlagen einarbeiten. Auch eine Installation auf den eigenen Rechner kann für alle Plattformen, Win, Mac, Linux, erfolgen.</p>
 <p>Allgemeine Hinweise zum Erstellung von wissenschaftlichen Arbeiten finden Sie hier:</p>
