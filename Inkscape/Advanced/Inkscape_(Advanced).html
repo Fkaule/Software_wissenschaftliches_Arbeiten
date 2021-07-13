@@ -1,0 +1,1089 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2.1. Advanced Inkscape Tipps</title>
+    
+  <link rel="stylesheet" href="../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.e7340bb3dbd8dde6db86f25597f54a1b.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="2.2. Übungsbeispiele" href="Uebungen.html" />
+    <link rel="prev" title="2. Inkscape Advanced" href="Advanced.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/Logo.png" class="logo" alt="logo">
+  
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../Readme.html">
+   Startseite
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../LaTeX/LaTeX_Uebersicht.html">
+   Text mit LaTeX
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../LaTeX/Einfuehrung.html">
+     1. Einführung
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../Zotero/Zotero_Uebersicht.html">
+   Literatur mit Zotero
+  </a>
+ </li>
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="../Inkscape_Uebersicht.html">
+   Grafiken mit Inkscape
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../Grundlagen/Grundlagen.html">
+     1. Grundlagen
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Grundlagen/Voreinstellungen.html">
+       1.1. Voreinstellungen
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Grundlagen/Erstellung-Solarzelle.html">
+       1.2. Erstellung Solarzelle
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Grundlagen/Erstellung-Sonne.html">
+       1.3. Erstellung Sonne
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Grundlagen/Beschriftung.html">
+       1.4. Beschriftungen
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Grundlagen/Export.html">
+       1.5. Export als Pixelgrafik
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Grundlagen/Uebungen.html">
+       1.6. Übungsbeispiele
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2 current active collapsible-parent">
+    <a class="reference internal" href="Advanced.html">
+     2. Advanced
+    </a>
+    <ul class="current collapse-ul">
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       2.1. Tricks &amp; Tipps
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="Uebungen.html">
+       2.2. Übungsbeispiele
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Links.html">
+     3. Weiterführendes Material (Links)
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../Python/Python_Uebersicht.html">
+   Datenvisualisierung mit Python
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/01-JupyterNotebooks.html">
+     1. Jupyter Notebooks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/02-Biegebalken_solved.html">
+     2. Biegebalken
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/03-Kraftmessung_solved.html">
+     3. Kraftmessung
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/04-Klimawandel_solved.html">
+     4. Klimawandel
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/05-API.html">
+     5. API Unterschiede
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/06-Subplots.html">
+     6. Subplots
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/07-RKI-Corona.html">
+     7. RKI Corona Zahlen
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Python/Links.html">
+     8. Weiterführendes Material
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../../Hinweise_Abschlussarbeiten/Hinweise_Uebersicht.html">
+   Hinweise zum Schreiben von Abschlussarbeiten
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Hinweise_Abschlussarbeiten/Software.html">
+     1. Software
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Hinweise_Abschlussarbeiten/Formatierung.html">
+     2. Formatierung
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/Inkscape/Advanced/Inkscape_(Advanced).md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/Fkaule/Python_for_Engineers/tree/main"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/Fkaule/Python_for_Engineers/tree/main/issues/new?title=Issue%20on%20page%20%2FInkscape/Advanced/Inkscape_(Advanced).html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#unterschied-objekt-pfad">
+   2.1.1. Unterschied
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     Objekt
+    </span>
+   </code>
+   /
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     Pfad
+    </span>
+   </code>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#objekt-in-pfad-umwandeln">
+     Objekt in Pfad umwandeln
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pfadecken-anstiege">
+     Pfadecken / Anstiege
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#boolsche-operationen">
+     Boolsche Operationen
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pfadkontur-erweitern">
+     Pfadkontur erweitern
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#selektionsmoglichkeiten">
+   2.1.2. Selektionsmöglichkeiten
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mit-maus-selektionslinie-zeichnen">
+     Mit Maus Selektionslinie zeichnen
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#gleiche-auswahlen">
+     Gleiche auswählen
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pfadeffekte-bemaszung">
+   2.1.3. Pfadeffekte (Bemaßung)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#maszeinheiten-auf-dem-monitor-einstellen">
+   2.1.4. Maßeinheiten auf dem Monitor einstellen
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objekte-einfugen-an-originalpositon-fur-kopie-in-andere-ebene">
+   2.1.5. Objekte einfügen an Originalpositon (für Kopie in andere Ebene)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bezier-pen">
+   2.1.6. Bezier-Pen
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#textanpassungen">
+   2.1.7. Textanpassungen
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pixelgrafiken-automatisch-in-vektor-umwandeln">
+   2.1.8. Pixelgrafiken automatisch in Vektor umwandeln
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ausschneidemaske-pixelbilder-croppen">
+   2.1.9. Ausschneidemaske (Pixelbilder croppen)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#musterfullung">
+   2.1.10. Musterfüllung
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#eigene-muster-erstellen">
+     Eigene Muster erstellen
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gradient">
+   2.1.11. Gradient
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#text-mit-hintergrund">
+   2.1.12. Text mit Hintergrund
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gitter-3d">
+   2.1.13. Gitter 3D
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objekt-in-isometrische-ansicht-verformen">
+   2.1.14. Objekt in isometrische Ansicht verformen
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#kantenverrundung">
+   2.1.15. Kantenverrundung
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#templates">
+   2.1.16. Templates
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#latex-in-inkscape">
+   2.1.17.
+   <span class="math notranslate nohighlight">
+    \(\LaTeX\)
+   </span>
+   in Inkscape
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hilfslinien">
+   2.1.18. Hilfslinien
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#hilfslinien-aus-objektrand">
+     Hilfslinien aus Objektrand
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rontgen-sicht">
+   2.1.19. Röntgen Sicht
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ubertragen-von-stil-farbe-linie-dicke-auf-andere">
+   2.1.20. Übertragen von Stil (Farbe/Linie/Dicke) auf andere
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#clone-erstellen">
+   2.1.21. Clone erstellen
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#batch-export">
+   2.1.22. Batch Export
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="advanced-inkscape-tipps">
+<h1><span class="section-number">2.1. </span>Advanced Inkscape Tipps<a class="headerlink" href="#advanced-inkscape-tipps" title="Permalink to this headline">¶</a></h1>
+<p><a id='ObjectVsPath'></a></p>
+<div class="section" id="unterschied-objekt-pfad">
+<h2><span class="section-number">2.1.1. </span>Unterschied <code class="docutils literal notranslate"><span class="pre">Objekt</span></code> / <code class="docutils literal notranslate"><span class="pre">Pfad</span></code><a class="headerlink" href="#unterschied-objekt-pfad" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="objekt-in-pfad-umwandeln">
+<h3>Objekt in Pfad umwandeln<a class="headerlink" href="#objekt-in-pfad-umwandeln" title="Permalink to this headline">¶</a></h3>
+<p>In der Menüleiste unter <code class="docutils literal notranslate"><span class="pre">Pfad</span></code> → <code class="docutils literal notranslate"><span class="pre">Objekt</span> <span class="pre">in</span> <span class="pre">Pfad</span> <span class="pre">umwandeln</span></code> ( oder <code class="docutils literal notranslate"><span class="pre">Shift</span></code> + <code class="docutils literal notranslate"><span class="pre">Str</span></code> + <code class="docutils literal notranslate"><span class="pre">C</span></code> ) können Objekte in Pfade umgewandelt werden</p>
+<a class="reference internal image-reference" href="../../_images/Untitled1.png"><img alt="../../_images/Untitled1.png" class="align-center" src="../../_images/Untitled1.png" style="width: 300px;" /></a>
+<br>
+</div>
+<div class="section" id="pfadecken-anstiege">
+<h3>Pfadecken / Anstiege<a class="headerlink" href="#pfadecken-anstiege" title="Permalink to this headline">¶</a></h3>
+<p>Zeichnen Sie mit dem <code class="docutils literal notranslate"><span class="pre">Rechtecktool</span></code> ein Rechteck und benutzen Sie das <code class="docutils literal notranslate"><span class="pre">Edit</span> <span class="pre">Path</span> <span class="pre">by</span> <span class="pre">Nodes</span></code> Tool um die Ecken abzurunden</p>
+<p>Konvertieren Sie das Rechteck mit dem abgerundeten Ecken in einen Pfad</p>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Rechteck Objekt ohne Kantenverrundung</p></th>
+<th class="head"><p>Rechteck Objekt mit Kantenverrundung</p></th>
+<th class="head"><p>Rechteck Pfad mit einzelnen Knotenpunkten und Anstiegen</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><a class="reference internal image-reference" href="../../_images/Untitled_11.png"><img alt="../../_images/Untitled_11.png" src="../../_images/Untitled_11.png" style="width: 200px;" /></a>
+</td>
+<td><a class="reference internal image-reference" href="../../_images/Untitled_21.png"><img alt="../../_images/Untitled_21.png" src="../../_images/Untitled_21.png" style="width: 200px;" /></a>
+</td>
+<td><a class="reference internal image-reference" href="../../_images/Untitled_31.png"><img alt="../../_images/Untitled_31.png" src="../../_images/Untitled_31.png" style="width: 200px;" /></a>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Durch die Überführung eines <strong>Objektes</strong> <strong>in einen Pfad</strong>, gehen <strong>Objekteigenschaften verloren und können nicht wieder zurück transformiert werden.</strong></p>
+<p>An den <strong>Eckpunkten entstehen Knoten (<strong>ggf. mit Anstiegen</strong>).</strong></p>
+<p><strong>Linien</strong> und <strong>Objektkonturen</strong> können auch in Pfade umgewandelt werden.</p>
+<p>In unserem Fall geht also die Option verloren, die Verrundung an dem Rechteck zu ändern.</p>
+<p>Versuchen Sie nun die Verrundung an dem Pfad wieder zu entfernen, so dass das Rechteck aussieht wie vorher</p>
+<p><strong>Variante 1</strong>: <strong>Ausrichten Tool</strong> mit <strong>Knoten</strong></p>
+<a class="reference internal image-reference" href="../../_images/Untitled_41.png"><img alt="../../_images/Untitled_41.png" class="align-center" src="../../_images/Untitled_41.png" style="width: 300px;" /></a>
+<br>
+<a class="reference internal image-reference" href="../../_images/Untitled_51.png"><img alt="../../_images/Untitled_51.png" class="align-center" src="../../_images/Untitled_51.png" style="width: 300px;" /></a>
+<br>
+<p><strong>Variante 2</strong>: Position der Knoten über Fenster oben definieren</p>
+<a class="reference internal image-reference" href="../../_images/Untitled_71.png"><img alt="../../_images/Untitled_71.png" class="align-right" src="../../_images/Untitled_71.png" style="width: 30px;" /></a>
+<a class="reference internal image-reference" href="../../_images/Untitled_61.png"><img alt="../../_images/Untitled_61.png" class="align-center" src="../../_images/Untitled_61.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/Pfadpunkte_Vektor.gif"><img alt="../../_images/Pfadpunkte_Vektor.gif" class="align-center" src="../../_images/Pfadpunkte_Vektor.gif" style="width: 400px;" /></a>
+<ul class="simple">
+<li><p>An jedem Knoten kann der Anstieg geändert werden.</p></li>
+<li><p>Soll der Anstieg entfernt werden, so muss der Kreis wieder auf den Punkt geführt werden (zum snapping müssen mindestens die zwei Sachen rechts aktiviert sein)</p></li>
+</ul>
+<p><strong>Variante 3</strong>: Verwendung der <strong>Optionen</strong> in der <code class="docutils literal notranslate"><span class="pre">Tool-Control-Bar</span></code></p>
+<ul class="simple">
+<li><p>Die Optionen sind auch hilfreich um z.B. in einer beliebigen Form einen stetigen Übergang zu erzeugen (mit <code class="docutils literal notranslate"><span class="pre">Symmetric</span> <span class="pre">nodes</span></code>)</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/Pfadpunkte_Vektor4.gif"><img alt="../../_images/Pfadpunkte_Vektor4.gif" class="align-center" src="../../_images/Pfadpunkte_Vektor4.gif" style="width: 300px;" /></a>
+<a class="reference internal image-reference" href="../../_images/Untitled_8.png"><img alt="../../_images/Untitled_8.png" class="align-center" src="../../_images/Untitled_8.png" style="width: 500px;" /></a>
+<p><a class="reference external" href="https://inkscape-manuals.readthedocs.io/en/latest/interface.html">Bild aus Inkscape Dokumentation</a>
+<br></p>
+<p>Wollen wir nun gezielt ein Anstieg am Knotenpunkt erstellen, so gibt es hier zwei Möglichkeiten</p>
+<p><strong>Variante 1</strong>: <strong>Am Punkt</strong> direkt einstellen mit <code class="docutils literal notranslate"><span class="pre">Shift</span></code> + <code class="docutils literal notranslate"><span class="pre">Ziehen</span> <span class="pre">in</span> <span class="pre">gewünschte</span> <span class="pre">Richtung</span></code></p>
+<a class="reference internal image-reference" href="../../_images/Pfadpunkte_Vektor2.gif"><img alt="../../_images/Pfadpunkte_Vektor2.gif" class="align-center" src="../../_images/Pfadpunkte_Vektor2.gif" style="width: 400px;" /></a>
+<p><strong>Variante 2</strong>: <strong>Linie verformen</strong></p>
+<a class="reference internal image-reference" href="../../_images/Pfadpunkte_Vektor3.gif"><img alt="../../_images/Pfadpunkte_Vektor3.gif" class="align-center" src="../../_images/Pfadpunkte_Vektor3.gif" style="width: 400px;" /></a>
+<p>Wollen wir einen stetigen Übergang zur Nachbarlinie, so empfiehlt sich die Variante über die <code class="docutils literal notranslate"><span class="pre">Tool-Control-Bar</span></code>:</p>
+<p><strong>Variante 3</strong>: Verwendung der <strong>Optionen</strong> in der <code class="docutils literal notranslate"><span class="pre">Tool-Control-Bar</span></code></p>
+<a class="reference internal image-reference" href="../../_images/Pfadpunkte_Vektor5.gif"><img alt="../../_images/Pfadpunkte_Vektor5.gif" class="align-center" src="../../_images/Pfadpunkte_Vektor5.gif" style="width: 400px;" /></a>
+<p><a id='BoolscheOperationen'></a></p>
+</div>
+<div class="section" id="boolsche-operationen">
+<h3>Boolsche Operationen<a class="headerlink" href="#boolsche-operationen" title="Permalink to this headline">¶</a></h3>
+<p>Auf <strong>Objekten</strong> und <strong>Pfaden</strong> sind <code class="docutils literal notranslate"><span class="pre">Boolsche</span> <span class="pre">Operationen</span></code> möglich. Wird dies auf Objekten angewandt, so werden diese automatisch zum Pfad umgewandelt.</p>
+<p>Die <strong>Boolsche Operation</strong> wird immer auf das <strong>darunterliegende Objekt</strong> angewandt. (siehe Roten Kreis im Beispiel unten)</p>
+<a class="reference internal image-reference" href="../../_images/Untitled_9.png"><img alt="../../_images/Untitled_9.png" class="align-center" src="../../_images/Untitled_9.png" style="width: 300px;" /></a>
+<a class="reference internal image-reference" href="../../_images/Bolean.png"><img alt="../../_images/Bolean.png" class="align-center" src="../../_images/Bolean.png" style="width: 500px;" /></a>
+<p><br><br></p>
+<p>Linien und Objektkonturen können ebenfalls in Pfade umgewandelt werden.</p>
+<a class="reference internal image-reference" href="../../_images/Untitled_111.png"><img alt="../../_images/Untitled_111.png" class="align-center" src="../../_images/Untitled_111.png" style="width: 300px;" /></a>
+<br>
+<p>Möchte man eine Linie (also mit Dickeneigenschaft) von einem Objekt abziehen, so muss die Linie vorher über <code class="docutils literal notranslate"><span class="pre">Kontur</span> <span class="pre">in</span> <span class="pre">Pfad</span></code> umwandeln umgewandelt werden.</p>
+<p><strong>DIVISION MIT LINIE ALS <code class="docutils literal notranslate"><span class="pre">KONTUR</span></code></strong></p>
+<p>Wird der <code class="docutils literal notranslate"><span class="pre">Kreis</span></code> durch eine <code class="docutils literal notranslate"><span class="pre">Linie</span></code> (mit Kontur) geschnitten, so entstehen am Schnittpunkt zwischen dem Kreisaußenkanten und der Linie neue Knoten</p>
+<a class="reference internal image-reference" href="../../_images/Bolean2.gif"><img alt="../../_images/Bolean2.gif" class="align-center" src="../../_images/Bolean2.gif" style="width: 400px;" /></a>
+<br>
+<p><strong>DIVISION MIT LINIE ALS <code class="docutils literal notranslate"><span class="pre">PFAD</span></code></strong></p>
+<p>Wird die <code class="docutils literal notranslate"><span class="pre">Linie</span></code> in ein <code class="docutils literal notranslate"><span class="pre">Pfad</span></code> <strong>umgewandelt</strong>, so kann diese nun vom Kreis abgezogen werden.</p>
+<a class="reference internal image-reference" href="../../_images/Bolean3.gif"><img alt="../../_images/Bolean3.gif" class="align-center" src="../../_images/Bolean3.gif" style="width: 400px;" /></a>
+<br>
+<div class="tip admonition">
+<p class="admonition-title">ToDo:</p>
+<p>Erstellen Sie nun die Sonne aus unserem ersten Praktikum mit Hilfe der <strong>boolschen Operationen</strong></p>
+</div>
+<p>Sie müssen ggf. <strong>Gruppierungen aufheben</strong> und Objekte über <code class="docutils literal notranslate"><span class="pre">Pfad</span> <span class="pre">vereinigen</span></code> “neu zusammen führen” um diese mit einmal von einem anderen Objekt abzuziehen.</p>
+<p>Wenn Sie <code class="docutils literal notranslate"><span class="pre">ALT</span></code> + <code class="docutils literal notranslate"><span class="pre">Maustaste</span> <span class="pre">gedrückt</span></code> halten können Sie darüber nur Objekte selektieren die Sie dabei berühren</p>
+<a class="reference internal image-reference" href="../../_images/Selektion_Drag.gif"><img alt="../../_images/Selektion_Drag.gif" class="align-center" src="../../_images/Selektion_Drag.gif" style="width: 400px;" /></a>
+<br>
+<p>finale Ergebnis mit Sonne als ein  Pfad (alle zusammen mit <code class="docutils literal notranslate"><span class="pre">Vereinigung</span></code> zusammengeführt)</p>
+<a class="reference internal image-reference" href="../../_images/Untitled_12.png"><img alt="../../_images/Untitled_12.png" class="align-center" src="../../_images/Untitled_12.png" style="width: 400px;" /></a>
+<br>
+<p>Auf diesen Pfad kann wiederum auch eine Kontur angebracht werden</p>
+<a class="reference internal image-reference" href="../../_images/Untitled_13.png"><img alt="../../_images/Untitled_13.png" class="align-center" src="../../_images/Untitled_13.png" style="width: 400px;" /></a>
+<br>
+</div>
+<div class="section" id="pfadkontur-erweitern">
+<h3>Pfadkontur erweitern<a class="headerlink" href="#pfadkontur-erweitern" title="Permalink to this headline">¶</a></h3>
+<p>Durch die Konvertierung zum Pfad haben wir nun die Eigenschaft verloren die Dicke der Linie einfach zu ändern. Wollen wir trotzdem die Dicke ändern gibt es eine Option die auch für Pfade funktioniert, <strong>jedoch nur in alle Richtungen gleichzeitig.</strong></p>
+<a class="reference internal image-reference" href="../../_images/Untitled_14.png"><img alt="../../_images/Untitled_14.png" class="align-center" src="../../_images/Untitled_14.png" style="width: 300px;" /></a>
+<br> 
+<a class="reference internal image-reference" href="../../_images/Erweitern_Original.png"><img alt="../../_images/Erweitern_Original.png" class="align-center" src="../../_images/Erweitern_Original.png" style="width: 300px;" /></a>
+<br>
+<a class="reference internal image-reference" href="../../_images/Erweitern_Erweitern.png"><img alt="../../_images/Erweitern_Erweitern.png" class="align-center" src="../../_images/Erweitern_Erweitern.png" style="width: 300px;" /></a>
+<br>
+<p>Der Pfad wird um eine <strong>feste Breite erweitert</strong></p>
+<a class="reference internal image-reference" href="../../_images/Erweitern_Schrumpfen.png"><img alt="../../_images/Erweitern_Schrumpfen.png" class="align-center" src="../../_images/Erweitern_Schrumpfen.png" style="width: 300px;" /></a>
+<br>
+<p>Der Pfad wird um eine <strong>feste Breite geschrumpft</strong></p>
+<a class="reference internal image-reference" href="../../_images/Erweitern_DynVersatz.gif"><img alt="../../_images/Erweitern_DynVersatz.gif" class="align-center" src="../../_images/Erweitern_DynVersatz.gif" style="width: 300px;" /></a>
+<br>
+<p>Der Versatz lässt sich dynamisch in beide Richtungen (Erweitern ↔ Schrumpfen)</p>
+<a class="reference internal image-reference" href="../../_images/Erweitern_VerbVersatz.gif"><img alt="../../_images/Erweitern_VerbVersatz.gif" class="align-center" src="../../_images/Erweitern_VerbVersatz.gif" style="width: 400px;" /></a>
+<br>
+<p>Der Versatz lässt sich dynamisch nur erweitern</p>
+<p><a id='Selektionsmöglichkeiten'></a></p>
+</div>
+</div>
+<div class="section" id="selektionsmoglichkeiten">
+<h2><span class="section-number">2.1.2. </span>Selektionsmöglichkeiten<a class="headerlink" href="#selektionsmoglichkeiten" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="mit-maus-selektionslinie-zeichnen">
+<h3>Mit Maus Selektionslinie zeichnen<a class="headerlink" href="#mit-maus-selektionslinie-zeichnen" title="Permalink to this headline">¶</a></h3>
+<p>Wenn Sie <code class="docutils literal notranslate"><span class="pre">ALT</span></code> + <code class="docutils literal notranslate"><span class="pre">Maustaste</span> <span class="pre">gedrückt</span></code> halten können Sie darüber nur Objekte selektieren die Sie dabei berühren</p>
+<a class="reference internal image-reference" href="../../_images/Selektion_Drag.gif"><img alt="../../_images/Selektion_Drag.gif" class="align-center" src="../../_images/Selektion_Drag.gif" style="width: 400px;" /></a>
+<br>
+</div>
+<div class="section" id="gleiche-auswahlen">
+<h3>Gleiche auswählen<a class="headerlink" href="#gleiche-auswahlen" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="../../_images/Untitled_15.png"><img alt="../../_images/Untitled_15.png" class="align-center" src="../../_images/Untitled_15.png" style="width: 400px;" /></a>
+<br>
+<a class="reference internal image-reference" href="../../_images/Untitled_16.png"><img alt="../../_images/Untitled_16.png" class="align-center" src="../../_images/Untitled_16.png" style="width: 400px;" /></a>
+<br>
+<p>Beispiel Auswahl Referenz</p>
+<a class="reference internal image-reference" href="../../_images/Untitled_17.png"><img alt="../../_images/Untitled_17.png" class="align-center" src="../../_images/Untitled_17.png" style="width: 400px;" /></a>
+<br>
+<a class="reference internal image-reference" href="../../_images/Untitled_18.png"><img alt="../../_images/Untitled_18.png" class="align-center" src="../../_images/Untitled_18.png" style="width: 400px;" /></a>
+<br>
+<p>Ergebnis für <code class="docutils literal notranslate"><span class="pre">Füllung</span> <span class="pre">und</span> <span class="pre">Kontur</span></code></p>
+<p><a id='Pfadeffekte'></a></p>
+</div>
+</div>
+<div class="section" id="pfadeffekte-bemaszung">
+<h2><span class="section-number">2.1.3. </span>Pfadeffekte (Bemaßung)<a class="headerlink" href="#pfadeffekte-bemaszung" title="Permalink to this headline">¶</a></h2>
+<p>Ich habe bisher nicht viel mit Pfadeffekten gearbeitet, was mir jedoch sehr praktisch erscheint ist der Effekt <code class="docutils literal notranslate"><span class="pre">Bemaßung</span></code></p>
+<a class="reference internal image-reference" href="../../_images/Untitled_19.png"><img alt="../../_images/Untitled_19.png" class="align-center" src="../../_images/Untitled_19.png" style="width: 300px;" /></a>
+<br>
+<a class="reference internal image-reference" href="../../_images/Untitled_20.png"><img alt="../../_images/Untitled_20.png" class="align-center" src="../../_images/Untitled_20.png" style="width: 300px;" /></a>
+<br>
+<p>Pfadeffekte hinzufügen durch Anklicken des Pfades und dann das <code class="docutils literal notranslate"><span class="pre">+</span></code> Symbol im Pfadeffekte Menü (Rechts)</p>
+<div class="figure align-default" id="untitled-21">
+<a class="reference internal image-reference" href="../../_images/Untitled_211.png"><img alt="../../_images/Untitled_211.png" src="../../_images/Untitled_211.png" style="width: 800px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2.1 </span><span class="caption-text">Übersicht über die Pfadeffekte</span><a class="headerlink" href="#untitled-21" title="Permalink to this image">¶</a></p>
+</div>
+<p>Hier müssen Sie mal etwas mit den Einstellungen spielen und schauen wie Ihnen die Darstellung am besten gefällt</p>
+<a class="reference internal image-reference" href="../../_images/Untitled_22.png"><img alt="../../_images/Untitled_22.png" class="align-center" src="../../_images/Untitled_22.png" style="width: 400px;" /></a>
+<br>
+<p>Hilfreich ist es sicher die <strong>Genauigkeit der Bemaßung</strong> einzustellen und <strong>Liniensegmente auszuschließen (über die Segementindizes, welche eingeblendet werden können</strong>)</p>
+<a class="reference internal image-reference" href="../../_images/Untitled_23.png"><img alt="../../_images/Untitled_23.png" class="align-center" src="../../_images/Untitled_23.png" style="width: 400px;" /></a>
+<br>
+<p>Anzeige der Segmentenummer die zum Ausschließen der Bemaßung verwendet werden kann</p>
+<a class="reference internal image-reference" href="../../_images/Untitled_24.png"><img alt="../../_images/Untitled_24.png" class="align-center" src="../../_images/Untitled_24.png" style="width: 400px;" /></a>
+<br>
+<p>Die Bemaßung gibt immer die Größe des Objektes und nicht der Kontur wieder</p>
+<p>Bemaßung ohne Kontur:</p>
+<a class="reference internal image-reference" href="../../_images/Untitled_25.png"><img alt="../../_images/Untitled_25.png" class="align-center" src="../../_images/Untitled_25.png" style="width: 400px;" /></a>
+<br>
+<p>Bemaßung mit Kontur (Kontur wird in Bemaßung nicht Berücksichtigt, in der Größe oben jedoch schon):</p>
+<a class="reference internal image-reference" href="../../_images/Untitled_26.png"><img alt="../../_images/Untitled_26.png" class="align-center" src="../../_images/Untitled_26.png" style="width: 400px;" /></a>
+<br>
+<p>Wollen Sie mit Kontur arbeiten und trotzdem über die obere Leiste die Größe ändern, so müssen Sie für die Größenänderung die Kontur kurz wieder ausschalten</p>
+<p>Falls jemand ein anderen sinnvollen Pfadeffekt kennt, bitte gerne Bescheid geben!</p>
+</div>
+<div class="section" id="maszeinheiten-auf-dem-monitor-einstellen">
+<h2><span class="section-number">2.1.4. </span>Maßeinheiten auf dem Monitor einstellen<a class="headerlink" href="#maszeinheiten-auf-dem-monitor-einstellen" title="Permalink to this headline">¶</a></h2>
+<p>Wenn Sie die Darstellung auf dem Monitor mit den realen Maßen abgleichen wollen, können Sie z.B. über <code class="docutils literal notranslate"><span class="pre">Einstellungen</span></code> ( Menüleiste: <code class="docutils literal notranslate"><span class="pre">Bearbeiten</span></code> → <code class="docutils literal notranslate"><span class="pre">Einstellungen</span></code> oder <code class="docutils literal notranslate"><span class="pre">Shift</span></code> + <code class="docutils literal notranslate"><span class="pre">Str</span></code> + <code class="docutils literal notranslate"><span class="pre">P</span></code> ) unter <code class="docutils literal notranslate"><span class="pre">Benutzeroberfläche</span></code> unter <code class="docutils literal notranslate"><span class="pre">Zoom</span> <span class="pre">Korrektur</span></code> den Wert genau einstellen in dem Sie z.B. ein Linieal an Ihren Monitor halten.</p>
+<a class="reference internal image-reference" href="../../_images/Untitled_27.png"><img alt="../../_images/Untitled_27.png" class="align-center" src="../../_images/Untitled_27.png" style="width: 600px;" /></a>
+<br>
+<p>Damit dies auch wirklich klappt müssen Sie noch den <strong>Zoom auf 100%:</strong></p>
+<p>→ rechts unten in der Ecke oder die Taste <code class="docutils literal notranslate"><span class="pre">1</span></code> auf der Tastatur drücken</p>
+<a class="reference internal image-reference" href="../../_images/Untitled_28.png"><img alt="../../_images/Untitled_28.png" class="align-center" src="../../_images/Untitled_28.png" style="width: 200px;" /></a>
+<br>
+</div>
+<div class="section" id="objekte-einfugen-an-originalpositon-fur-kopie-in-andere-ebene">
+<h2><span class="section-number">2.1.5. </span>Objekte einfügen an Originalpositon (für Kopie in andere Ebene)<a class="headerlink" href="#objekte-einfugen-an-originalpositon-fur-kopie-in-andere-ebene" title="Permalink to this headline">¶</a></h2>
+<p>Hilfreich um den Inhalt von einer Ebene in eine andere zu kopieren ohne die Position zu ändern</p>
+<ul class="simple">
+<li><p><strong>Einfügen</strong> an <strong>Mausposition</strong> : <code class="docutils literal notranslate"><span class="pre">STR</span></code> +  <code class="docutils literal notranslate"><span class="pre">V</span></code></p></li>
+<li><p><strong>Einfügen</strong> an <strong>Originalposition</strong>:  <code class="docutils literal notranslate"><span class="pre">STR</span></code> +  <code class="docutils literal notranslate"><span class="pre">ALT</span></code> + <code class="docutils literal notranslate"><span class="pre">V</span></code></p></li>
+</ul>
+<p><a id='Bezier'></a></p>
+</div>
+<div class="section" id="bezier-pen">
+<h2><span class="section-number">2.1.6. </span>Bezier-Pen<a class="headerlink" href="#bezier-pen" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-default" id="untitled-29">
+<a class="reference internal image-reference" href="../../_images/Untitled_29.png"><img alt="../../_images/Untitled_29.png" src="../../_images/Untitled_29.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2.2 </span><span class="caption-text"><a class="reference external" href="https://inkscape-manuals.readthedocs.io/en/latest/interface.html">Bild aus Inkscape Dokumentation</a></span><a class="headerlink" href="#untitled-29" title="Permalink to this image">¶</a></p>
+</div>
+<p>Durch <code class="docutils literal notranslate"><span class="pre">linke</span> <span class="pre">Maustaste</span> <span class="pre">gedrückt</span> <span class="pre">halten</span></code> + <code class="docutils literal notranslate"><span class="pre">Mausbewegung</span></code> entsteht eine Kurve</p>
+<p><code class="docutils literal notranslate"><span class="pre">Rechte</span> <span class="pre">Maustaste</span></code> beendet den Modus</p>
+<p><a id='Textanpassungen'></a></p>
+</div>
+<div class="section" id="textanpassungen">
+<h2><span class="section-number">2.1.7. </span>Textanpassungen<a class="headerlink" href="#textanpassungen" title="Permalink to this headline">¶</a></h2>
+<p>Um <strong>Platz bei Beschriftungen zu sparen</strong>, aber auch weil ich es <strong>optisch ansprechender</strong> finde,  verringere ich oft den <strong><code class="docutils literal notranslate"><span class="pre">vertikalen</span> <span class="pre">Zeilenabstand</span></code></strong> und den <strong><code class="docutils literal notranslate"><span class="pre">horizontalen</span> <span class="pre">Zeichenabstand</span></code></strong>.</p>
+<a class="reference internal image-reference" href="../../_images/Untitled_30.png"><img alt="../../_images/Untitled_30.png" class="align-center" src="../../_images/Untitled_30.png" style="width: 700px;" /></a>
+<br>
+<a class="reference internal image-reference" href="../../_images/Texteinstellungen.png"><img alt="../../_images/Texteinstellungen.png" class="align-center" src="../../_images/Texteinstellungen.png" style="width: 700px;" /></a>
+<br>
+<p><a id='Pixel2Vektor'></a></p>
+</div>
+<div class="section" id="pixelgrafiken-automatisch-in-vektor-umwandeln">
+<h2><span class="section-number">2.1.8. </span>Pixelgrafiken automatisch in Vektor umwandeln<a class="headerlink" href="#pixelgrafiken-automatisch-in-vektor-umwandeln" title="Permalink to this headline">¶</a></h2>
+<p>Um eine Pixelgrafik in eine Vektorgrafik umzuwandeln, muss die Pixelgrafik ausgewählt sein. Anschließend in der <code class="docutils literal notranslate"><span class="pre">Menüleiste</span></code>: <code class="docutils literal notranslate"><span class="pre">Pfad</span></code> → <code class="docutils literal notranslate"><span class="pre">Bitmap</span> <span class="pre">nachzeichnen</span></code></p>
+<a class="reference internal image-reference" href="../../_images/Untitled_311.png"><img alt="../../_images/Untitled_311.png" class="align-center" src="../../_images/Untitled_311.png" style="width: 400px;" /></a>
+<br>
+<div class="figure align-default" id="untitled-32">
+<a class="reference internal image-reference" href="../../_images/Untitled_32.png"><img alt="../../_images/Untitled_32.png" src="../../_images/Untitled_32.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2.3 </span><span class="caption-text">Quelle:  <a class="reference external" href="https://pixabay.com/de/photos/nebel-nadelwald-fichte-wald-gr%C3%BCn-3622519/">https://pixabay.com/de/photos/nebel-nadelwald-fichte-wald-grün-3622519/</a></span><a class="headerlink" href="#untitled-32" title="Permalink to this image">¶</a></p>
+</div>
+<p>Für das Beispiel habe ich auf <code class="docutils literal notranslate"><span class="pre">Mehrere</span> <span class="pre">Scans</span></code> (damit mehrere Farben erkannt werden), anschließend <code class="docutils literal notranslate"><span class="pre">Farben</span></code> ausgewählt und dann <code class="docutils literal notranslate"><span class="pre">4</span></code> (Anzahl der Farben) eingestellt und mit <code class="docutils literal notranslate"><span class="pre">Aktualisieren</span></code> die Vorschau aktualisieren.</p>
+<p>Der Algorithmus arbeitet besonders gut bei großen Unterschieden in Helligkeiten und Farben wie in diesem Beispiel</p>
+<a class="reference internal image-reference" href="../../_images/Untitled_33.png"><img alt="../../_images/Untitled_33.png" class="align-center" src="../../_images/Untitled_33.png" style="width: 600px;" /></a>
+<br>
+<p>Durch <code class="docutils literal notranslate"><span class="pre">Ok</span></code> wird anschließend das Vektorbild über das Pixelbild gezeichnet. Dabei entsteht eine Gruppe aus der Anzahl der Farben (<strong>Auflösen der Gruppe</strong> mit <code class="docutils literal notranslate"><span class="pre">Str</span></code> + <code class="docutils literal notranslate"><span class="pre">Shift</span></code> + <code class="docutils literal notranslate"><span class="pre">G</span></code>).</p>
+<a class="reference internal image-reference" href="../../_images/Pixel2Vektor1.png"><img alt="../../_images/Pixel2Vektor1.png" class="align-center" src="../../_images/Pixel2Vektor1.png" style="width: 600px;" /></a>
+<br>
+<p>Bei einfarbigen Pixelgrafiken wie Logos klappt es auch sehr gut, wobei hier der <code class="docutils literal notranslate"><span class="pre">Einmalige</span> <span class="pre">Scan</span></code> ausreicht.</p>
+<div class="figure align-default" id="inkscape-logo">
+<a class="reference internal image-reference" href="../../_images/Inkscape_Logo.png"><img alt="../../_images/Inkscape_Logo.png" src="../../_images/Inkscape_Logo.png" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2.4 </span><span class="caption-text">Inkscape Logo (png)</span><a class="headerlink" href="#inkscape-logo" title="Permalink to this image">¶</a></p>
+</div>
+<a class="reference internal image-reference" href="../../_images/Untitled_34.png"><img alt="../../_images/Untitled_34.png" class="align-center" src="../../_images/Untitled_34.png" style="width: 400px;" /></a>
+<br>
+<p>Als <code class="docutils literal notranslate"><span class="pre">.png</span></code> gespeichert (vor der Umwandlung):</p>
+<a class="reference internal image-reference" href="../../_images/Inkscape_Logo_Pixel.png"><img alt="../../_images/Inkscape_Logo_Pixel.png" class="align-center" src="../../_images/Inkscape_Logo_Pixel.png" style="width: 300px;" /></a>
+<br> 
+<p>Als <code class="docutils literal notranslate"><span class="pre">.svg</span></code> gespeichert (nach der Umwandlung):</p>
+<a class="reference internal image-reference" href="../../_images/Inkscape_Logo_Vektor.svg"><img alt="../../_images/Inkscape_Logo_Vektor.svg" class="align-center" src="../../_images/Inkscape_Logo_Vektor.svg" width="300px" /></a>
+<br> 
+<p><a id='Pixelcrop'></a></p>
+</div>
+<div class="section" id="ausschneidemaske-pixelbilder-croppen">
+<h2><span class="section-number">2.1.9. </span>Ausschneidemaske (Pixelbilder croppen)<a class="headerlink" href="#ausschneidemaske-pixelbilder-croppen" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://pixabay.com/de/photos/schule-tafel-leer-schiefertafel-3258934/">Beispielbild</a></p>
+<p>Mit der <strong>Maske wird</strong> ein <strong>darüberliegendes Objekt</strong> (hier ein grünes Rechteck mit 50% Transparenz damit man besser sieht was darunter liegt) <strong>das darunterliegende Objekt</strong> (in unserem Fall ein Pixelbild) <strong>ausgeschnitten.</strong></p>
+<p>Die Farbe &amp; Transparenz der Maske haben keinen Einfluss, <strong>nur die</strong> <strong>Form ist entscheidend.</strong></p>
+<div class="figure align-default" id="untitled-35">
+<a class="reference internal image-reference" href="../../_images/Untitled_35.png"><img alt="../../_images/Untitled_35.png" src="../../_images/Untitled_35.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2.5 </span><span class="caption-text">Beispielbild mit grüner Maske darüber (mit der ausgeschnitten werden soll)</span><a class="headerlink" href="#untitled-35" title="Permalink to this image">¶</a></p>
+</div>
+<p><strong>Beide Objekte selektieren</strong> (und in gewünschter Reihenfolge anordnen) und danach in der Menüleiste: <code class="docutils literal notranslate"><span class="pre">Objekt</span></code> → <code class="docutils literal notranslate"><span class="pre">Ausschneidepfad</span></code> → <code class="docutils literal notranslate"><span class="pre">Setzen</span></code></p>
+<a class="reference internal image-reference" href="../../_images/Untitled_36.png"><img alt="../../_images/Untitled_36.png" class="align-center" src="../../_images/Untitled_36.png" style="width: 400px;" /></a>
+<br>
+<p>Ergebnis ist nun ein ausgeschnittenes Bild:</p>
+<a class="reference internal image-reference" href="../../_images/Untitled_37.png"><img alt="../../_images/Untitled_37.png" class="align-center" src="../../_images/Untitled_37.png" style="width: 400px;" /></a>
+<br>
+<p><strong>Die Maske und das darunterliegende Objekt sind jedoch weiterhin vorhanden</strong> und können über die Menüleiste: <code class="docutils literal notranslate"><span class="pre">Objekt</span></code> → <code class="docutils literal notranslate"><span class="pre">Ausschneidepfad</span></code> → <code class="docutils literal notranslate"><span class="pre">Freigeben</span></code> wieder zurück geholt werden (wenn man z.B. die Maske anpassen möchte)</p>
+<a class="reference internal image-reference" href="../../_images/Untitled_38.png"><img alt="../../_images/Untitled_38.png" class="align-center" src="../../_images/Untitled_38.png" style="width: 400px;" /></a>
+<br>
+<p>Neben dem <code class="docutils literal notranslate"><span class="pre">Ausschneidepfad</span></code> gibt es noch die <code class="docutils literal notranslate"><span class="pre">Maske</span></code> die prinzipiell sehr ähnlich funktioniert, jedoch auch Transparenz in der Maske berücksichtigt.</p>
+<p>Ich habe jedoch bisher keinen Anwendungsfall dafür gefunden.</p>
+<a class="reference internal image-reference" href="../../_images/Untitled_39.png"><img alt="../../_images/Untitled_39.png" class="align-center" src="../../_images/Untitled_39.png" style="width: 400px;" /></a>
+<br>
+<p><a id='Musterfüllung'></a></p>
+</div>
+<div class="section" id="musterfullung">
+<h2><span class="section-number">2.1.10. </span>Musterfüllung<a class="headerlink" href="#musterfullung" title="Permalink to this headline">¶</a></h2>
+<p>Gerade für technische Darstellung möchte man manchmal statt einer Farbfüllung eine Musterfüllung verwenden.</p>
+<a class="reference internal image-reference" href="../../_images/Untitled_40.png"><img alt="../../_images/Untitled_40.png" class="align-center" src="../../_images/Untitled_40.png" style="width: 400px;" /></a>
+<br>
+<p>Dies ist in Inkscape ohne Probleme möglich, das Problem ist nur, dass die vorgegeben Füllung auf den <strong>ersten Blick für technische Zwecke nicht sehr nützlich</strong> sind.</p>
+<a class="reference internal image-reference" href="../../_images/Untitled_411.png"><img alt="../../_images/Untitled_411.png" class="align-center" src="../../_images/Untitled_411.png" style="width: 400px;" /></a>
+<br>
+<p>Die Muster können jedoch durch in <strong>Größe</strong>, <strong>Position</strong> und <strong>vor allem Orientierung</strong> geändert werden. D<strong>adurch können die Muster mit dem Namen</strong> <code class="docutils literal notranslate"><span class="pre">Streifen</span></code> <strong>mit einer Veränderung des Winkels gut verwendet werden</strong>.</p>
+<a class="reference internal image-reference" href="../../_images/Untitled_42.png"><img alt="../../_images/Untitled_42.png" class="align-center" src="../../_images/Untitled_42.png" style="width: 150px;" /></a>
+<br>
+<p>Um das Muster zu ändern muss dies mit dem <code class="docutils literal notranslate"><span class="pre">Edit</span> <span class="pre">Path</span> <span class="pre">by</span> <span class="pre">Nodes</span> <span class="pre">Tool</span></code>  angepasst werden, wobei mit dem Kreis der Winkel und mit dem Rechteck die Größe geändert werden kann</p>
+<div class="figure align-default" id="musterfuellung">
+<a class="reference internal image-reference" href="../../_images/Musterfuellung.gif"><img alt="../../_images/Musterfuellung.gif" src="../../_images/Musterfuellung.gif" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2.6 </span><span class="caption-text">Veränderung der Musterfüllung mit <code class="docutils literal notranslate"><span class="pre">Edit</span> <span class="pre">Path</span> <span class="pre">by</span> <span class="pre">Nodes</span> <span class="pre">Tool</span></code></span><a class="headerlink" href="#musterfuellung" title="Permalink to this image">¶</a></p>
+</div>
+<p>Will man nun noch die Farbe des Musters verändern muss man einen kleinen Umweg gehen.</p>
+<p>Das Objekt auswählen und in der <code class="docutils literal notranslate"><span class="pre">Menüleiste</span></code>: <code class="docutils literal notranslate"><span class="pre">Erweiterung</span></code> → <code class="docutils literal notranslate"><span class="pre">Farbe</span></code> → <code class="docutils literal notranslate"><span class="pre">Farbe</span> <span class="pre">ersetzen</span></code> anklicken.</p>
+<a class="reference internal image-reference" href="../../_images/Untitled_43.png"><img alt="../../_images/Untitled_43.png" class="align-center" src="../../_images/Untitled_43.png" style="width: 400px;" /></a>
+<br>
+<p>Anschließend die <code class="docutils literal notranslate"><span class="pre">zu</span> <span class="pre">ersetzende</span> <span class="pre">Farbe</span></code> und die <code class="docutils literal notranslate"><span class="pre">Neue</span> <span class="pre">Farbe</span></code> wählen.</p>
+<p>Es werden dann ebenfalls die <strong>Konturen</strong> (wenn diese schwarz waren) in der Farbe angepasst. Dies kann jedoch leicht geändert werden indem die Konturfarbe einfach neu definiert wird.</p>
+<a class="reference internal image-reference" href="../../_images/Untitled_44.png"><img alt="../../_images/Untitled_44.png" class="align-center" src="../../_images/Untitled_44.png" style="width: 300px;" /></a>
+<br>
+<p>Als zu ersetzende Farbe schwarz auswählen.
+ℹ️Ansonsten die <strong>Pipette</strong> verwenden um den Farbton zu treffen</p>
+<a class="reference internal image-reference" href="../../_images/Untitled_45.png"><img alt="../../_images/Untitled_45.png" class="align-center" src="../../_images/Untitled_45.png" style="width: 300px;" /></a>
+<br>
+<p>Um Grautöne zu erhalten die Sättigung auf 0, den Alphawert auf 100 und über die Helligkeit den Grauton auswählen</p>
+<p>So könnte es z.B. aussehen:</p>
+<a class="reference internal image-reference" href="../../_images/Untitled_46.png"><img alt="../../_images/Untitled_46.png" class="align-center" src="../../_images/Untitled_46.png" style="width: 400px;" /></a>
+<br>
+<div class="section" id="eigene-muster-erstellen">
+<h3>Eigene Muster erstellen<a class="headerlink" href="#eigene-muster-erstellen" title="Permalink to this headline">¶</a></h3>
+<p>Wer doch gerne sein eigenes Muster erstellen möchte, kann dies auch tun über die <code class="docutils literal notranslate"><span class="pre">Menüleiste</span></code>: <code class="docutils literal notranslate"><span class="pre">Muster</span></code> → <code class="docutils literal notranslate"><span class="pre">Objekte</span> <span class="pre">in</span> <span class="pre">Füllmuster</span> <span class="pre">umwandeln</span></code></p>
+<p>Bei der Erstellung des Musters z.B. wie unten zu sehen bei Linien die in quer gehen daran denken, dass in den Ecken das Muster auch gefüllt sein muss</p>
+<a class="reference internal image-reference" href="../../_images/Untitled_47.png"><img alt="../../_images/Untitled_47.png" class="align-center" src="../../_images/Untitled_47.png" style="width: 600px;" /></a>
+<br>
+</div>
+</div>
+<div class="section" id="gradient">
+<h2><span class="section-number">2.1.11. </span>Gradient<a class="headerlink" href="#gradient" title="Permalink to this headline">¶</a></h2>
+<p>Wenn überhaupt würde ich nur Gradienten mit <strong>geringem Helligkeitsunterschied</strong> empfehlen</p>
+<p>Mit dem <code class="docutils literal notranslate"><span class="pre">Gradient</span> <span class="pre">Tool</span></code> kann eine Gradient-Füllung direkt in dem Objekt gezeichnet werden.</p>
+<p>Jedem Punkt kann (z.B. durch <code class="docutils literal notranslate"><span class="pre">Edit</span> <span class="pre">Path</span> <span class="pre">by</span> <span class="pre">Nodes</span> <span class="pre">Tool</span></code> angeklickt und eine Farbe zugeordnet werden (nicht in der Animation dargestellt)</p>
+<div class="figure align-default" id="id1">
+<a class="reference internal image-reference" href="../../_images/Gradient.gif"><img alt="../../_images/Gradient.gif" src="../../_images/Gradient.gif" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2.7 </span><span class="caption-text">Gardienten erstellen</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p>In Füllung und Kontur können zudem noch ein Radialer Gradient eingestellt werden:</p>
+<a class="reference internal image-reference" href="../../_images/Untitled_48.png"><img alt="../../_images/Untitled_48.png" class="align-center" src="../../_images/Untitled_48.png" style="width: 400px;" /></a>
+<br>
+<p>Radialer Gradient</p>
+<p><a id='TextBG'></a></p>
+</div>
+<div class="section" id="text-mit-hintergrund">
+<h2><span class="section-number">2.1.12. </span>Text mit Hintergrund<a class="headerlink" href="#text-mit-hintergrund" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="../../_images/Untitled_49.png"><img alt="../../_images/Untitled_49.png" class="align-center" src="../../_images/Untitled_49.png" style="width: 400px;" /></a>
+<br>
+<p>Wird ein Text auf Grund des Hintergrundes nicht mehr gut sichtbar, so empfiehlt es sich, diesen durch eine zusätzliche Hintergrundfüllung besser sichtbar zu machen. In Inkscape gibt es dazu ein Extra Filter der den Vorteil besitzt, dass sich die Box dann automatisch dem Text anpasst, wenn dieser geändert wird.</p>
+<a class="reference internal image-reference" href="../../_images/Untitled_50.png"><img alt="../../_images/Untitled_50.png" class="align-center" src="../../_images/Untitled_50.png" style="width: 500px;" /></a>
+<br>
+<p>a) Text auswählen. Danach unter <code class="docutils literal notranslate"><span class="pre">Filter</span></code> → <code class="docutils literal notranslate"><span class="pre">Füllung</span> <span class="pre">und</span> <span class="pre">Transparrenz</span></code> → <code class="docutils literal notranslate"><span class="pre">Hintergrund</span> <span class="pre">füllen</span></code></p>
+<a class="reference internal image-reference" href="../../_images/Untitled_511.png"><img alt="../../_images/Untitled_511.png" class="align-center" src="../../_images/Untitled_511.png" style="width: 200px;" /></a>
+<br>
+<p>b) <code class="docutils literal notranslate"><span class="pre">Filter</span></code> → <code class="docutils literal notranslate"><span class="pre">Filtereditor</span></code></p>
+<a class="reference internal image-reference" href="../../_images/Untitled_52.png"><img alt="../../_images/Untitled_52.png" class="align-center" src="../../_images/Untitled_52.png" style="width: 600px;" /></a>
+<br>
+<p>c) <code class="docutils literal notranslate"><span class="pre">Füllen</span></code> auswählen und <code class="docutils literal notranslate"><span class="pre">Füllfarbe</span></code> und <code class="docutils literal notranslate"><span class="pre">Deckkraft</span></code> anpassen</p>
+<a class="reference internal image-reference" href="../../_images/Untitled_53.png"><img alt="../../_images/Untitled_53.png" class="align-center" src="../../_images/Untitled_53.png" style="width: 600px;" /></a>
+<br>
+<p>d) Unter <code class="docutils literal notranslate"><span class="pre">Allgemeine</span> <span class="pre">Filtereinstellung</span></code> kann die Position und Größe angepasst werden</p>
+<p><a id='Gitter3D'></a></p>
+</div>
+<div class="section" id="gitter-3d">
+<h2><span class="section-number">2.1.13. </span>Gitter 3D<a class="headerlink" href="#gitter-3d" title="Permalink to this headline">¶</a></h2>
+<p><strong>DOKUMENTENEINSTELLUNGEN</strong>
+(<code class="docutils literal notranslate"><span class="pre">SHIFT</span></code> + <code class="docutils literal notranslate"><span class="pre">STR</span></code> + <code class="docutils literal notranslate"><span class="pre">D</span></code>) oder (<code class="docutils literal notranslate"><span class="pre">Menu</span> <span class="pre">bar</span></code> → <code class="docutils literal notranslate"><span class="pre">Datei</span></code> →  <code class="docutils literal notranslate"><span class="pre">Dokumenteneinstellungen...</span></code>)</p>
+<p><strong>Reiter</strong>: <code class="docutils literal notranslate"><span class="pre">Gitter</span></code></p>
+<a class="reference internal image-reference" href="../../_images/Untitled_54.png"><img alt="../../_images/Untitled_54.png" class="align-center" src="../../_images/Untitled_54.png" style="width: 600px;" /></a>
+<br>
+<p><a id='IsoAnsichtErzeugen'></a></p>
+</div>
+<div class="section" id="objekt-in-isometrische-ansicht-verformen">
+<h2><span class="section-number">2.1.14. </span>Objekt in isometrische Ansicht verformen<a class="headerlink" href="#objekt-in-isometrische-ansicht-verformen" title="Permalink to this headline">¶</a></h2>
+<p>ggf. anpassen für andere Orientierung</p>
+<p>Ausgangskörper:</p>
+<a class="reference internal image-reference" href="../../_images/Untitled_55.png"><img alt="../../_images/Untitled_55.png" class="align-center" src="../../_images/Untitled_55.png" style="width: 300px;" /></a>
+<br>
+<p>isometrische Ansicht:</p>
+<a class="reference internal image-reference" href="../../_images/Untitled_56.png"><img alt="../../_images/Untitled_56.png" class="align-center" src="../../_images/Untitled_56.png" style="width: 300px;" /></a>
+<br>
+<p>Erstellung der isometrischen Ansicht:</p>
+<p>a) Größe in y auf 86,6% verringern</p>
+<a class="reference internal image-reference" href="../../_images/Untitled_57.png"><img alt="../../_images/Untitled_57.png" class="align-center" src="../../_images/Untitled_57.png" style="width: 300px;" /></a>
+<a class="reference internal image-reference" href="../../_images/Untitled_58.png"><img alt="../../_images/Untitled_58.png" class="align-center" src="../../_images/Untitled_58.png" style="width: 300px;" /></a>
+<br>
+<p>b) 30° horizontal scheren</p>
+<a class="reference internal image-reference" href="../../_images/Untitled_59.png"><img alt="../../_images/Untitled_59.png" class="align-center" src="../../_images/Untitled_59.png" style="width: 300px;" /></a>
+<a class="reference internal image-reference" href="../../_images/Untitled_60.png"><img alt="../../_images/Untitled_60.png" class="align-center" src="../../_images/Untitled_60.png" style="width: 300px;" /></a>
+<br>
+<p>c) 30° gegen den Uhrzeigersinn drehen</p>
+<a class="reference internal image-reference" href="../../_images/Untitled_611.png"><img alt="../../_images/Untitled_611.png" class="align-center" src="../../_images/Untitled_611.png" style="width: 300px;" /></a>
+<a class="reference internal image-reference" href="../../_images/Untitled_56.png"><img alt="../../_images/Untitled_56.png" class="align-center" src="../../_images/Untitled_56.png" style="width: 300px;" /></a>
+<br>
+</div>
+<div class="section" id="kantenverrundung">
+<h2><span class="section-number">2.1.15. </span>Kantenverrundung<a class="headerlink" href="#kantenverrundung" title="Permalink to this headline">¶</a></h2>
+<p>Wird wie in dem Beispiel oben für das Axonometrische Gitter eine Kontur mit größerer Dicke verwendet fällt auf, dass die Ecken überstehen. Um dies anzupasssen kann man unter <code class="docutils literal notranslate"><span class="pre">Füllung</span> <span class="pre">und</span> <span class="pre">Kontur</span></code> unter <code class="docutils literal notranslate"><span class="pre">Muster</span> <span class="pre">der</span> <span class="pre">Kontur</span></code> die Verbindungspunkte abrunden.</p>
+<p>Für <strong>Linien</strong> können ebenfalls die <strong>Endpunkte verrundet</strong> werden, wer das möchte.</p>
+<div class="figure align-default" id="untitled-62">
+<a class="reference internal image-reference" href="../../_images/Untitled_62.png"><img alt="../../_images/Untitled_62.png" src="../../_images/Untitled_62.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2.8 </span><span class="caption-text">Kantenverrundung</span><a class="headerlink" href="#untitled-62" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="templates">
+<h2><span class="section-number">2.1.16. </span>Templates<a class="headerlink" href="#templates" title="Permalink to this headline">¶</a></h2>
+<p>Es gibt eine Vielzahl an Vorlagen, interessant ist es jedoch vor allem eigene Vorlagen zu erstellen mit z.B. Symbolen die man immer wieder verwendet. Die müssen in <code class="docutils literal notranslate"><span class="pre">C:\Program</span> <span class="pre">Files\Inkscape\share\inkscape\templates</span></code> (für Windows) als Inkscape svg abgespeichert werden.</p>
+<a class="reference internal image-reference" href="../../_images/Untitled_63.png"><img alt="../../_images/Untitled_63.png" class="align-center" src="../../_images/Untitled_63.png" style="width: 300px;" /></a>
+<br>
+<a class="reference internal image-reference" href="../../_images/Untitled_64.png"><img alt="../../_images/Untitled_64.png" class="align-center" src="../../_images/Untitled_64.png" style="width: 300px;" /></a>
+<br>
+<p><a id='LaTeX'></a></p>
+</div>
+<div class="section" id="latex-in-inkscape">
+<h2><span class="section-number">2.1.17. </span><span class="math notranslate nohighlight">\(\LaTeX\)</span> in Inkscape<a class="headerlink" href="#latex-in-inkscape" title="Permalink to this headline">¶</a></h2>
+<p>Es gibt mehrere Möglichkeiten LaTeX in Inkscape einzubinden:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/textext/textext">TexText</a> (Erweiterung, Installation notwendig)</p></li>
+<li><p><a class="reference external" href="https://github.com/seebk/LaTeXText">LaTeXText</a> (Erweiterung, Installation notwendig, <code class="docutils literal notranslate"><span class="pre">nicht</span> <span class="pre">mehr</span> <span class="pre">weiterentwickelt</span></code>)</p></li>
+<li><p>vorinstallierte LaTeX Rendering (siehe unten)</p></li>
+<li><p><a class="reference external" href="https://latex2image.joeraut.com/">https://latex2image.joeraut.com/</a> (<code class="docutils literal notranslate"><span class="pre">Webtool</span></code> - als svg einfügen)</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/Untitled_65.png"><img alt="../../_images/Untitled_65.png" class="align-center" src="../../_images/Untitled_65.png" style="width: 500px;" /></a>
+<br>
+<a class="reference internal image-reference" href="../../_images/Untitled_66.png"><img alt="../../_images/Untitled_66.png" class="align-center" src="../../_images/Untitled_66.png" style="width: 300px;" /></a>
+<br>
+<a class="reference internal image-reference" href="../../_images/Untitled_67.png"><img alt="../../_images/Untitled_67.png" class="align-center" src="../../_images/Untitled_67.png" style="width: 300px;" /></a>
+<br>
+</div>
+<div class="section" id="hilfslinien">
+<h2><span class="section-number">2.1.18. </span>Hilfslinien<a class="headerlink" href="#hilfslinien" title="Permalink to this headline">¶</a></h2>
+<p>Zuerst in der Menüleiste über <code class="docutils literal notranslate"><span class="pre">Ansicht</span></code> die <code class="docutils literal notranslate"><span class="pre">Hilfslinien</span></code> <strong>anzeigen</strong></p>
+<a class="reference internal image-reference" href="../../_images/Untitled_68.png"><img alt="../../_images/Untitled_68.png" class="align-center" src="../../_images/Untitled_68.png" style="width: 300px;" /></a>
+<br>
+<p>Durch das Ziehen von dem Linie können die Hilfslinien erzeugt werden</p>
+<p>Aus den Ecken können auch 45° Linien gezogen werden</p>
+<div class="figure align-default" id="id2">
+<a class="reference internal image-reference" href="../../_images/Hilfslinien.gif"><img alt="../../_images/Hilfslinien.gif" src="../../_images/Hilfslinien.gif" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2.9 </span><span class="caption-text">Hilfslinien</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<p>Durch <strong>Doppelklick auf die Linie</strong> kann diese angepasst werden und z.B. auch der Winkel geändert werden.</p>
+<a class="reference internal image-reference" href="../../_images/Untitled_69.png"><img alt="../../_images/Untitled_69.png" class="align-center" src="../../_images/Untitled_69.png" style="width: 300px;" /></a>
+<br>
+<p>Zum <strong>Sperren der Hilfslinie</strong> das 🔐-Symbol in der linken oberen Ecke auswählen</p>
+<a class="reference internal image-reference" href="../../_images/Untitled_70.png"><img alt="../../_images/Untitled_70.png" class="align-center" src="../../_images/Untitled_70.png" style="width: 300px;" /></a>
+<br>
+<div class="section" id="hilfslinien-aus-objektrand">
+<h3>Hilfslinien aus Objektrand<a class="headerlink" href="#hilfslinien-aus-objektrand" title="Permalink to this headline">¶</a></h3>
+<p>Hilfslinien sind zum Beispiel hilfreich um Seitenränder darzustellen.</p>
+<p>Hier zum Beispiel erstellen wir ein 10mm Rand für eine DIN A4 Seite:</p>
+<ul class="simple">
+<li><p>Rechteck erstellen welches jeweils 10mm am Rand kleiner ist und dieses Mittig ausrichten</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/Untitled_711.png"><img alt="../../_images/Untitled_711.png" class="align-center" src="../../_images/Untitled_711.png" style="width: 800px;" /></a>
+<br>
+<ul class="simple">
+<li><p>Anschließend in Menüleiste <code class="docutils literal notranslate"><span class="pre">Objekt</span></code> → <code class="docutils literal notranslate"><span class="pre">Objekt</span> <span class="pre">zu</span> <span class="pre">Hilfslinien</span></code></p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/Untitled_72.png"><img alt="../../_images/Untitled_72.png" class="align-center" src="../../_images/Untitled_72.png" style="width: 300px;" /></a>
+<br>
+<div class="figure align-default" id="hilfslinie">
+<a class="reference internal image-reference" href="../../_images/Untitled_73.png"><img alt="../../_images/Untitled_73.png" src="../../_images/Untitled_73.png" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2.10 </span><span class="caption-text">Hilfslinie für 10mm Rand einer A4 Seite</span><a class="headerlink" href="#hilfslinie" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+<div class="section" id="rontgen-sicht">
+<h2><span class="section-number">2.1.19. </span>Röntgen Sicht<a class="headerlink" href="#rontgen-sicht" title="Permalink to this headline">¶</a></h2>
+<p>Will man bestimmte Objekte hinter anderen wiederfinden (z.B. um Sie zu selektieren) ist der Röntgenmodus sehr praktisch der in der <code class="docutils literal notranslate"><span class="pre">Menüleiste</span></code>: <code class="docutils literal notranslate"><span class="pre">Ansicht</span></code> → <code class="docutils literal notranslate"><span class="pre">Röntgenmodus</span></code> oder mit <code class="docutils literal notranslate"><span class="pre">Alt</span></code> + <code class="docutils literal notranslate"><span class="pre">6</span></code> angeschaltet werden kann</p>
+<a class="reference internal image-reference" href="../../_images/Untitled_73.png"><img alt="../../_images/Untitled_73.png" class="align-center" src="../../_images/Untitled_73.png" style="width: 300px;" /></a>
+<br>
+<div class="figure align-default" id="roentgenmodus">
+<a class="reference internal image-reference" href="../../_images/RoentgenModus.gif"><img alt="../../_images/RoentgenModus.gif" src="../../_images/RoentgenModus.gif" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2.11 </span><span class="caption-text">Röntgenmodus</span><a class="headerlink" href="#roentgenmodus" title="Permalink to this image">¶</a></p>
+</div>
+<p>Eine <strong>geteilte Ansicht</strong> kann über <code class="docutils literal notranslate"><span class="pre">Menüleiste</span></code>: <code class="docutils literal notranslate"><span class="pre">Ansicht</span></code> → <code class="docutils literal notranslate"><span class="pre">Geteilte</span> <span class="pre">Ansicht</span></code> oder mit <code class="docutils literal notranslate"><span class="pre">Str</span></code> + <code class="docutils literal notranslate"><span class="pre">6</span></code> erzeugt werden (der Übergang kann verschoben werden):</p>
+<a class="reference internal image-reference" href="../../_images/Untitled_75.png"><img alt="../../_images/Untitled_75.png" class="align-center" src="../../_images/Untitled_75.png" style="width: 500px;" /></a>
+<br>
+<p><a id='EigenschaftenUebertragen'></a></p>
+</div>
+<div class="section" id="ubertragen-von-stil-farbe-linie-dicke-auf-andere">
+<h2><span class="section-number">2.1.20. </span>Übertragen von Stil (Farbe/Linie/Dicke) auf andere<a class="headerlink" href="#ubertragen-von-stil-farbe-linie-dicke-auf-andere" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">STR</span></code> + <code class="docutils literal notranslate"><span class="pre">C</span></code> von zu kopierendem Stil</p>
+<p><code class="docutils literal notranslate"><span class="pre">STR</span></code> + <code class="docutils literal notranslate"><span class="pre">SHIFT</span></code> + <code class="docutils literal notranslate"><span class="pre">V</span></code> (Stil einfügen)</p>
+<p><a id='Clone'></a></p>
+</div>
+<div class="section" id="clone-erstellen">
+<h2><span class="section-number">2.1.21. </span>Clone erstellen<a class="headerlink" href="#clone-erstellen" title="Permalink to this headline">¶</a></h2>
+<p>Änderungen am Original werden auf alle Klone angewandt</p>
+<a class="reference internal image-reference" href="../../_images/Untitled_76.png"><img alt="../../_images/Untitled_76.png" class="align-center" src="../../_images/Untitled_76.png" style="width: 500px;" /></a>
+<br>
+<p><code class="docutils literal notranslate"><span class="pre">ALT</span></code> + <code class="docutils literal notranslate"><span class="pre">D</span></code> Klon erzeugen (<strong>funktioniert bei mir nicht</strong>)</p>
+<p><code class="docutils literal notranslate"><span class="pre">SHIFT</span></code> + <code class="docutils literal notranslate"><span class="pre">ALT</span></code> + <code class="docutils literal notranslate"><span class="pre">D</span></code> Klonverbindung auftrennten</p>
+<p><code class="docutils literal notranslate"><span class="pre">SHIFT</span></code> + <code class="docutils literal notranslate"><span class="pre">D</span></code> Original auswählen</p>
+<p>Die Skalierung des Klons wirkt sich nicht auf das Original aus, aber umgekehrt schon</p>
+<div class="figure align-default" id="klon">
+<a class="reference internal image-reference" href="../../_images/Klon.gif"><img alt="../../_images/Klon.gif" src="../../_images/Klon.gif" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2.12 </span><span class="caption-text">Arbeiten mit einem <code class="docutils literal notranslate"><span class="pre">Klon</span></code></span><a class="headerlink" href="#klon" title="Permalink to this image">¶</a></p>
+</div>
+<p><a id='BatchExport'></a></p>
+</div>
+<div class="section" id="batch-export">
+<h2><span class="section-number">2.1.22. </span>Batch Export<a class="headerlink" href="#batch-export" title="Permalink to this headline">¶</a></h2>
+<p>Wenn Sie mehrere Bilder gleichzeitig exportieren müssen, so müssen diese als Gruppe zusammengefasst werden und anschließend über die PNG-Export Option <code class="docutils literal notranslate"><span class="pre">Batch-Export</span></code> gespeichert werden:</p>
+<div class="figure align-default" id="untitled-77">
+<a class="reference internal image-reference" href="../../_images/Untitled_77.png"><img alt="../../_images/Untitled_77.png" src="../../_images/Untitled_77.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2.13 </span><span class="caption-text">Beispiel für Batch Export</span><a class="headerlink" href="#untitled-77" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-default" id="untitled-78">
+<a class="reference internal image-reference" href="../../_images/Untitled_78.png"><img alt="../../_images/Untitled_78.png" src="../../_images/Untitled_78.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2.14 </span><span class="caption-text">Einstellungen für Batch Export</span><a class="headerlink" href="#untitled-78" title="Permalink to this image">¶</a></p>
+</div>
+<p>Es werden dann drei <code class="docutils literal notranslate"><span class="pre">.png</span></code> Dateien erzeugt im Speicherort der <code class="docutils literal notranslate"><span class="pre">.svg</span></code></p>
+<div class="figure align-default" id="untitled-79">
+<a class="reference internal image-reference" href="../../_images/Untitled_79.png"><img alt="../../_images/Untitled_79.png" src="../../_images/Untitled_79.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2.15 </span><span class="caption-text">Output des Batch Export</span><a class="headerlink" href="#untitled-79" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./Inkscape\Advanced"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="Advanced.html" title="previous page"><span class="section-number">2. </span>Inkscape Advanced</a>
+    <a class='right-next' id="next-link" href="Uebungen.html" title="next page"><span class="section-number">2.2. </span>Übungsbeispiele</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Felix Kaule / Stephan Schoenfelder<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>

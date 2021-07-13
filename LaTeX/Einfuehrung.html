@@ -1,0 +1,949 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1. Einfuehrung</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e7340bb3dbd8dde6db86f25597f54a1b.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Literatur mit Zotero" href="../Zotero/Zotero_Uebersicht.html" />
+    <link rel="prev" title="Text mit LaTeX" href="LaTeX_Uebersicht.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/Logo.png" class="logo" alt="logo">
+  
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Readme.html">
+   Startseite
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="LaTeX_Uebersicht.html">
+   Text mit LaTeX
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     1. Einführung
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Zotero/Zotero_Uebersicht.html">
+   Literatur mit Zotero
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../Inkscape/Inkscape_Uebersicht.html">
+   Grafiken mit Inkscape
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../Inkscape/Grundlagen/Grundlagen.html">
+     1. Grundlagen
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Inkscape/Grundlagen/Voreinstellungen.html">
+       1.1. Voreinstellungen
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Inkscape/Grundlagen/Erstellung-Solarzelle.html">
+       1.2. Erstellung Solarzelle
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Inkscape/Grundlagen/Erstellung-Sonne.html">
+       1.3. Erstellung Sonne
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Inkscape/Grundlagen/Beschriftung.html">
+       1.4. Beschriftungen
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Inkscape/Grundlagen/Export.html">
+       1.5. Export als Pixelgrafik
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Inkscape/Grundlagen/Uebungen.html">
+       1.6. Übungsbeispiele
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../Inkscape/Advanced/Advanced.html">
+     2. Advanced
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Inkscape/Advanced/Inkscape_%28Advanced%29.html">
+       2.1. Tricks &amp; Tipps
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Inkscape/Advanced/Uebungen.html">
+       2.2. Übungsbeispiele
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Inkscape/Links.html">
+     3. Weiterführendes Material (Links)
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../Python/Python_Uebersicht.html">
+   Datenvisualisierung mit Python
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Python/01-JupyterNotebooks.html">
+     1. Jupyter Notebooks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Python/02-Biegebalken_solved.html">
+     2. Biegebalken
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Python/03-Kraftmessung_solved.html">
+     3. Kraftmessung
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Python/04-Klimawandel_solved.html">
+     4. Klimawandel
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Python/05-API.html">
+     5. API Unterschiede
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Python/06-Subplots.html">
+     6. Subplots
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Python/07-RKI-Corona.html">
+     7. RKI Corona Zahlen
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Python/Links.html">
+     8. Weiterführendes Material
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../Hinweise_Abschlussarbeiten/Hinweise_Uebersicht.html">
+   Hinweise zum Schreiben von Abschlussarbeiten
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Hinweise_Abschlussarbeiten/Software.html">
+     1. Software
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Hinweise_Abschlussarbeiten/Formatierung.html">
+     2. Formatierung
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/LaTeX/Einfuehrung.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/Fkaule/Python_for_Engineers/tree/main"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/Fkaule/Python_for_Engineers/tree/main/issues/new?title=Issue%20on%20page%20%2FLaTeX/Einfuehrung.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#links">
+   1.1. Links
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#nutzung-und-installation">
+   1.2. Nutzung und Installation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ein-erstes-hallo-welt">
+   1.3. Ein erstes “Hallo Welt”
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#documentclass-dokumentklassen">
+     1.3.1. \documentclass - Dokumentklassen
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dokumentstruktur">
+   1.4. Dokumentstruktur
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#seitenrander">
+     1.4.1. Seitenränder
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#absatze-und-zeilenumbruche">
+     1.4.2. Absätze und Zeilenumbrüche
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#uberschriftsebenen">
+     1.4.3. Überschriftsebenen
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#inhaltsverzeichnis">
+     1.4.4. Inhaltsverzeichnis
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bilder-einfugen">
+   1.5. Bilder einfügen
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#allgemeines">
+     1.5.1. Allgemeines
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bilderunterschriften-in-schick">
+     1.5.2. Bilderunterschriften in schick
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bilder-mit-latex-schrift">
+     1.5.3. Bilder mit LaTeX-Schrift
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ubung-zur-latex-schrift-in-bildern">
+   1.6. Übung zur LaTeX-Schrift in Bildern
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tabellen">
+   1.7. Tabellen
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mathematische-umgebungen">
+   1.8. Mathematische Umgebungen
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ubungen">
+     1.8.1. Übungen
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#literaturverzeichnis">
+   1.9. Literaturverzeichnis
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#literaturverwaltung-mit-zotero">
+     1.9.1. Literaturverwaltung mit Zotero
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#einbindung-der-literaturdatenbank-in-latex">
+     1.9.2. Einbindung der Literaturdatenbank in LaTeX
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#literatur-in-latex">
+     1.9.3. Literatur in LaTeX
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#verzeichnisse">
+   1.10. Verzeichnisse
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#symbolverzeichnis">
+     1.10.1. Symbolverzeichnis
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#titlepage">
+   1.11. Titlepage
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#befehle-definieren">
+   1.12. Befehle definieren
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="einfuehrung">
+<h1><span class="section-number">1. </span>Einfuehrung<a class="headerlink" href="#einfuehrung" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="links">
+<h2><span class="section-number">1.1. </span>Links<a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://www.overleaf.com/learn/latex/Main_Page">Documentation</a></p>
+</div>
+<div class="section" id="nutzung-und-installation">
+<h2><span class="section-number">1.2. </span>Nutzung und Installation<a class="headerlink" href="#nutzung-und-installation" title="Permalink to this headline">¶</a></h2>
+<p>Es gibt für LaTeX mittlerweile zwei prinzipielle Möglichkeiten:</p>
+<ul>
+<li><p>online im Webbrowser</p>
+<p><a class="reference external" href="https://www.overleaf.com/">Overleaf, Online LaTeX Editor</a></p>
+</li>
+<li><p>Installation auf dem eigenen Rechner</p>
+<ul>
+<li><p>Windows</p>
+<p><a class="reference external" href="https://miktex.org/">Home - MiKTeX.org</a></p>
+</li>
+<li><p>Mac</p>
+<p><a class="reference external" href="https://tug.org/mactex/">MacTeX - TeX Users Group</a></p>
+</li>
+<li><p>Linux</p>
+<p><a class="reference external" href="https://wiki.ubuntuusers.de/TeX_Live/">ubuntuusers.de</a></p>
+</li>
+</ul>
+</li>
+</ul>
+<p>Für uns ist im Moment die Nutzung online am einfachsten und sehr direkt umsetzbar. Daher bitte bei overleaf einen Account (kostenlos) anlegen. Dann kann es losgehen …</p>
+</div>
+<div class="section" id="ein-erstes-hallo-welt">
+<h2><span class="section-number">1.3. </span>Ein erstes “Hallo Welt”<a class="headerlink" href="#ein-erstes-hallo-welt" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+    Hallo Welt.
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+<div class="figure align-default" id="untitled">
+<a class="reference internal image-reference" href="../_images/Untitled3.png"><img alt="../_images/Untitled3.png" src="../_images/Untitled3.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1.1 </span><span class="caption-text">caption</span><a class="headerlink" href="#untitled" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="documentclass-dokumentklassen">
+<h3><span class="section-number">1.3.1. </span>\documentclass - Dokumentklassen<a class="headerlink" href="#documentclass-dokumentklassen" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">article</span></code> - für kleinere Texte, beinhaltet keine Kapitelüberschriften</p>
+<p><code class="docutils literal notranslate"><span class="pre">report</span></code> - Berichte, Abschlussarbeiten, beinhaltet Kapitelüberschriften</p>
+<p><code class="docutils literal notranslate"><span class="pre">book</span></code> - umfangreiche Texte, beinhaltet Kapitelüberschriften und ist standardmäßig zweiseitig</p>
+<p>Es gibt ähnliche Klassen, die zum modernen und weitverbreiteten KOMA-Skript gehören. Diese lauten dann:</p>
+<p><code class="docutils literal notranslate"><span class="pre">scrartcl</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">scrreprt</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">scrbook</span></code></p>
+<p>Wir werden im weiteren Verlauf vor allem auf <code class="docutils literal notranslate"><span class="pre">scrreprt</span></code> setzen, da diese Klasse nahe einer Abschlussarbeit kommt und damit gut zu uns passt.</p>
+<p>Es gibt noch weitere Klassen zum Schreiben von Briefen (dinbrief) o.ä., die wir hier aber nicht genauer betrachten wollen. Ist der Einstieg in LaTeX geschafft, kann man diese auch schnell selbst einbinden.</p>
+</div>
+</div>
+<div class="section" id="dokumentstruktur">
+<h2><span class="section-number">1.4. </span>Dokumentstruktur<a class="headerlink" href="#dokumentstruktur" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="seitenrander">
+<h3><span class="section-number">1.4.1. </span>Seitenränder<a class="headerlink" href="#seitenrander" title="Permalink to this headline">¶</a></h3>
+<p>TODO</p>
+</div>
+<div class="section" id="absatze-und-zeilenumbruche">
+<h3><span class="section-number">1.4.2. </span>Absätze und Zeilenumbrüche<a class="headerlink" href="#absatze-und-zeilenumbruche" title="Permalink to this headline">¶</a></h3>
+<p>Absätze dienen der Struktur des Fließtextes. Sie sind das einzige Mittel, um Fließtext umzubrechen. Manuelle Zeilenumbrüche führen zu schlechten Textbildern.</p>
+</div>
+<div class="section" id="uberschriftsebenen">
+<h3><span class="section-number">1.4.3. </span>Überschriftsebenen<a class="headerlink" href="#uberschriftsebenen" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>es gibt maximal drei nummerierte Ebenen für die Dokumentstruktur</p></li>
+<li><p>article-Klassen:</p></li>
+</ul>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span><span class="k">\section</span><span class="nb">{</span>Überschrift<span class="nb">}</span>
+<span class="k">\subsection</span><span class="nb">{</span>Unterüberschrift<span class="nb">}</span>
+<span class="k">\subsubsection</span><span class="nb">{</span>Unterunterüberschrift<span class="nb">}</span>
+<span class="k">\paragraph</span><span class="nb">{</span>Letzte Chance<span class="nb">}</span>
+</pre></div>
+</div>
+<div class="figure align-default" id="untitled-1">
+<a class="reference internal image-reference" href="../_images/Untitled_113.png"><img alt="../_images/Untitled_113.png" src="../_images/Untitled_113.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1.2 </span><span class="caption-text">caption</span><a class="headerlink" href="#untitled-1" title="Permalink to this image">¶</a></p>
+</div>
+<ul class="simple">
+<li><p>report/book-Klassen:</p></li>
+</ul>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span><span class="k">\chapter</span><span class="nb">{</span>Kapitelüberschrift<span class="nb">}</span>
+<span class="k">\section</span><span class="nb">{</span>Überschrift<span class="nb">}</span>
+<span class="k">\subsection</span><span class="nb">{</span>Unterüberschrift<span class="nb">}</span>
+<span class="k">\subsubsection</span><span class="nb">{</span>Unterunterüberschrift<span class="nb">}</span>
+<span class="k">\paragraph</span><span class="nb">{</span>Letzte Chance<span class="nb">}</span>
+</pre></div>
+</div>
+<div class="figure align-default" id="untitled-2">
+<a class="reference internal image-reference" href="../_images/Untitled_213.png"><img alt="../_images/Untitled_213.png" src="../_images/Untitled_213.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1.3 </span><span class="caption-text">caption</span><a class="headerlink" href="#untitled-2" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="inhaltsverzeichnis">
+<h3><span class="section-number">1.4.4. </span>Inhaltsverzeichnis<a class="headerlink" href="#inhaltsverzeichnis" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span><span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+
+<span class="c">%...</span>
+
+<span class="k">\tableofcontents</span> <span class="c">% Inhaltsverzeichnis</span>
+<span class="k">\listoffigures</span> <span class="c">% Abbildungsverzeichnis</span>
+</pre></div>
+</div>
+<div class="figure align-default" id="untitled-3">
+<a class="reference internal image-reference" href="../_images/Untitled_313.png"><img alt="../_images/Untitled_313.png" src="../_images/Untitled_313.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1.4 </span><span class="caption-text">caption</span><a class="headerlink" href="#untitled-3" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-default" id="untitled-4">
+<a class="reference internal image-reference" href="../_images/Untitled_413.png"><img alt="../_images/Untitled_413.png" src="../_images/Untitled_413.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1.5 </span><span class="caption-text">caption</span><a class="headerlink" href="#untitled-4" title="Permalink to this image">¶</a></p>
+</div>
+<p>weiter unten noch etwas mehr dazu …</p>
+</div>
+</div>
+<div class="section" id="bilder-einfugen">
+<h2><span class="section-number">1.5. </span>Bilder einfügen<a class="headerlink" href="#bilder-einfugen" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="allgemeines">
+<h3><span class="section-number">1.5.1. </span>Allgemeines<a class="headerlink" href="#allgemeines" title="Permalink to this headline">¶</a></h3>
+<p>Das Einfügen von Bildern ist in LaTeX besonders einfach und ungewohnt (wenn man Word gewohnt ist) zugleich. <strong>EINFACH</strong> - da LaTeX die Aufgabe übernimmt, das Bild vernünftig zum Text zu positionieren. <strong>UNGEWOHNT</strong> - da LaTEX die Aufgabe übernimmt, das Bild vernünftig zum Text zu positionieren. Daher der Rat: Erzwingen Sie nichts, sondern vertrauen Sie LaTeX.</p>
+<p>Generell gilt für eine gute Bildposition im wissenschaftlichen Text:</p>
+<ul>
+<li><p>Bilder werden nicht vom Text umflossen, sondern nehmen als Objekt die gesamte Textbreite ein</p></li>
+<li><p>Bilder sollten am unteren oder oberen Rand der Seite positioniert werden, um den Textfluss nicht zu stören.</p></li>
+<li><p>Bilder sollten, wenn möglich, die Textbreite nutzen. Eventuell auch mehrere Bilder in einer Abbildungsumgebung unterbringen, wenn es inhaltlich sinnvoll ist.</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span><span class="k">\documentclass</span>...
+
+<span class="k">\usepackage</span><span class="nb">{</span>graphicx<span class="nb">}</span> <span class="c">% Grafiken einbinden</span>
+
+<span class="c">%...</span>
+... Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat (s. Abb. <span class="k">\ref</span><span class="nb">{</span>fig:bildlabel<span class="nb">}</span>). 
+<span class="c">%</span>
+<span class="k">\begin</span><span class="nb">{</span>figure<span class="nb">}</span>[!h] <span class="c">%Postionsangabe</span>
+    <span class="k">\centering</span>
+    <span class="k">\includegraphics</span><span class="na">[width=60mm]</span><span class="nb">{</span>dependency.png<span class="nb">}</span>
+    <span class="k">\caption</span><span class="nb">{</span>Ein Bild zur Digitalisierung. Quelle: xkcd.com<span class="nb">}</span>
+    <span class="k">\label</span><span class="nb">{</span>fig:bildlabel<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>figure<span class="nb">}</span>
+<span class="c">%</span>
+Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+<span class="c">%...</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<div class="figure align-default" id="untitled-5">
+<a class="reference internal image-reference" href="../_images/Untitled_513.png"><img alt="../_images/Untitled_513.png" src="../_images/Untitled_513.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1.6 </span><span class="caption-text">caption</span><a class="headerlink" href="#untitled-5" title="Permalink to this image">¶</a></p>
+</div>
+<p>Die Befehle <code class="docutils literal notranslate"><span class="pre">\label</span></code> und <code class="docutils literal notranslate"><span class="pre">\ref</span></code> dienen hier zur Referenzierung des Bildes. Es wird ein eindeutiges Label vergeben, welches dann überall im Text als Referenz wieder abgerufen werden kann. Dieser Mechanismus gilt nicht für Abbildungen, sondern auch Tabellen, Gleichungen, etc.</p>
+<p>Mit der Positionsangabe <code class="docutils literal notranslate"><span class="pre">[!h]</span></code> kann man LaTeX Hinweise zu den Positionswünschen übermitteln. Möglich sind:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">h</span></code> - here - bitte versuche es genau an dieser Textstelle</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">t</span></code> - top - wenn möglich an Oberkante der Seite</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">b</span></code> - bottom - wenn möglich, an Unterkante der Seite</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">p</span></code> - page - nutze eine extra Seite für die Bilder</p></li>
+</ul>
+<p>Mit dem <code class="docutils literal notranslate"><span class="pre">!</span></code> erhöht man die Priorität seiner Forderung, man “zwingt” LaTeX zur Umsetzung.</p>
+</div>
+<div class="section" id="bilderunterschriften-in-schick">
+<h3><span class="section-number">1.5.2. </span>Bilderunterschriften in schick<a class="headerlink" href="#bilderunterschriften-in-schick" title="Permalink to this headline">¶</a></h3>
+<p>Natürlich kann man in LaTeX auch Dinge anpassen. Beispielsweise die Bildbeschriftung lässt sich über ein zusätzliches Package “caption” einstellen:</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span>...
+<span class="k">\usepackage</span><span class="nb">{</span>caption<span class="nb">}</span>
+<span class="k">\captionsetup</span><span class="nb">{</span>labelfont=bf,font=small,textfont=it<span class="nb">}</span>
+...
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+...
+</pre></div>
+</div>
+<p>vorher:</p>
+<div class="figure align-default" id="untitled-6">
+<a class="reference internal image-reference" href="../_images/Untitled_613.png"><img alt="../_images/Untitled_613.png" src="../_images/Untitled_613.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1.7 </span><span class="caption-text">caption</span><a class="headerlink" href="#untitled-6" title="Permalink to this image">¶</a></p>
+</div>
+<p>nachher (mit caption-Package):</p>
+<div class="figure align-default" id="untitled-7">
+<a class="reference internal image-reference" href="../_images/Untitled_713.png"><img alt="../_images/Untitled_713.png" src="../_images/Untitled_713.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1.8 </span><span class="caption-text">caption</span><a class="headerlink" href="#untitled-7" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="bilder-mit-latex-schrift">
+<h3><span class="section-number">1.5.3. </span>Bilder mit LaTeX-Schrift<a class="headerlink" href="#bilder-mit-latex-schrift" title="Permalink to this headline">¶</a></h3>
+<p>Verwendet man Vektorgrafiken als Bildformate, z.B. für Skizzen/Schemata, werden diese über das PDF-Dateiformat eingebunden. Dabei sind die Vorteile, dass</p>
+<ul class="simple">
+<li><p>die Bilder frei skalierbar sind, ohne unscharf zu werden und</p></li>
+<li><p>man im Prinzip auf jedes grafische Element zugreifen kann.</p></li>
+</ul>
+<p>Verwendet man Inkscape als Grafikprogramm, lassen sich aus den SVG-Dateien auch PDFs abspeichern. Dabei kann man im Speicherdialog die Textausgabe in eine LaTeX-Datei umleiten:</p>
+<div class="figure align-default" id="untitled-8">
+<a class="reference internal image-reference" href="../_images/Untitled_84.png"><img alt="../_images/Untitled_84.png" src="../_images/Untitled_84.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1.9 </span><span class="caption-text">caption</span><a class="headerlink" href="#untitled-8" title="Permalink to this image">¶</a></p>
+</div>
+<p><strong>Beispiel:</strong></p>
+<p>In Inkscape wurde die folgende Skizze erstellt (Dokumentgröße wurde mit 100mm x 100mm definiert):</p>
+<ul class="simple">
+<li><p>der Text hier ist als normaler Text eingefügt, wobei gleich die LaTeX-Notation für mathematische Zeichen angegeben wird</p></li>
+<li><p>der Text ist entsprechend eingefärbt, um die Bedeutung klarer zu machen (dies wird dann so übernommen)</p></li>
+<li><p>beim Abspeichern als PDF mit LaTeX-Ausgabe entstehen zwei Dateien:</p>
+<ul>
+<li><p><em>Skizze.pdf</em> (die eigentliche Skizze)</p></li>
+<li><p><em>Skizze.pdf_tex</em> (LaTeX-Datei mit Schrift und Einbindung der PDF)</p></li>
+</ul>
+</li>
+</ul>
+<div class="figure align-default" id="untitled-9">
+<a class="reference internal image-reference" href="../_images/Untitled_92.png"><img alt="../_images/Untitled_92.png" src="../_images/Untitled_92.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1.10 </span><span class="caption-text">caption</span><a class="headerlink" href="#untitled-9" title="Permalink to this image">¶</a></p>
+</div>
+<p>Das Bild wollen wir in LaTeX einbinden, so wie es erstellt wurde:</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span>...
+<span class="k">\usepackage</span><span class="nb">{</span>color<span class="nb">}</span> <span class="c">%Nutzung von Farbe</span>
+...
+<span class="k">\begin</span><span class="nb">{</span>figure<span class="nb">}</span>[!h]
+    <span class="k">\centering</span>
+    <span class="k">\input</span><span class="nb">{</span>Skizze.pdf<span class="nb">_</span>tex<span class="nb">}</span>
+    <span class="k">\caption</span><span class="nb">{</span>Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<span class="nb">}</span>
+    <span class="k">\label</span><span class="nb">{</span>fig:skizze<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>figure<span class="nb">}</span>
+...
+</pre></div>
+</div>
+<div class="figure align-default" id="untitled-10">
+<a class="reference internal image-reference" href="../_images/Untitled_101.png"><img alt="../_images/Untitled_101.png" src="../_images/Untitled_101.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1.11 </span><span class="caption-text">caption</span><a class="headerlink" href="#untitled-10" title="Permalink to this image">¶</a></p>
+</div>
+<p>⇒ die Schrift wurde durch LaTeX-Schrift, wie sie im Dokument verwendet wird, ersetzt</p>
+<p>Im nächsten Schritt wollen die Stärken dieses Vorgehens demonstrieren:</p>
+<ul class="simple">
+<li><p>das Bild wird in unterschiedlichen Größen nebeneinander eingefügt</p></li>
+<li><p>das Bild ist frei skalierbar (hier Verkleinerung auf <code class="docutils literal notranslate"><span class="pre">0.4\textwidth</span></code>), ohne Verluste</p></li>
+<li><p>die Schrift bleibt so groß, wie das Dokument es vorgibt und wird nicht mit skaliert (immer lesbar!)</p></li>
+</ul>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span>...
+<span class="k">\usepackage</span><span class="nb">{</span>color<span class="nb">}</span> <span class="c">%Nutzung von Farbe</span>
+...
+<span class="k">\begin</span><span class="nb">{</span>figure<span class="nb">}</span>[!h]
+    <span class="k">\centering</span>
+    <span class="k">\def\svgwidth</span><span class="nb">{</span>0.35<span class="k">\textwidth</span><span class="nb">}</span> <span class="c">% erstes Bild</span>
+    <span class="k">\input</span><span class="nb">{</span>Skizze.pdf<span class="nb">_</span>tex<span class="nb">}</span>
+    <span class="k">\def\svgwidth</span><span class="nb">{</span>0.55<span class="k">\textwidth</span><span class="nb">}</span> <span class="c">% zweites Bild</span>
+    <span class="k">\input</span><span class="nb">{</span>Skizze.pdf<span class="nb">_</span>tex<span class="nb">}</span>
+    <span class="k">\caption</span><span class="nb">{</span>Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<span class="nb">}</span>
+    <span class="k">\label</span><span class="nb">{</span>fig:skizze<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>figure<span class="nb">}</span>
+</pre></div>
+</div>
+<div class="figure align-default" id="untitled-11">
+<a class="reference internal image-reference" href="../_images/Untitled_114.png"><img alt="../_images/Untitled_114.png" src="../_images/Untitled_114.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1.12 </span><span class="caption-text">caption</span><a class="headerlink" href="#untitled-11" title="Permalink to this image">¶</a></p>
+</div>
+<p>⇒ das Bild wurde deutlich verkleinert, die Schrift bleibt genauso groß, wie es vom Dokument vorgegeben wird</p>
+</div>
+</div>
+<div class="section" id="ubung-zur-latex-schrift-in-bildern">
+<h2><span class="section-number">1.6. </span>Übung zur LaTeX-Schrift in Bildern<a class="headerlink" href="#ubung-zur-latex-schrift-in-bildern" title="Permalink to this headline">¶</a></h2>
+<p><strong>Aufgabe</strong></p>
+<p>Gegeben ist die folgende Grafik als PNG-Datei. Diese kann man einfach einbinden mit <code class="docutils literal notranslate"><span class="pre">\includegraphics{...}</span></code>.</p>
+<div class="figure align-default" id="skizze-ubungsbild">
+<a class="reference internal image-reference" href="../_images/Skizze-Ubungsbild.png"><img alt="../_images/Skizze-Ubungsbild.png" src="../_images/Skizze-Ubungsbild.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1.13 </span><span class="caption-text">caption</span><a class="headerlink" href="#skizze-ubungsbild" title="Permalink to this image">¶</a></p>
+</div>
+<p>Nutzen Sie bitte die SVG-Datei dazu im Inkscape und setzen Sie die Beschriftung neu mit Text, den Sie dann im LaTeX-Dokument wieder ersetzen!</p>
+<p><span class="xref myst">Skizze.svg</span></p>
+<p><a class="reference external" href="https://www.notion.so/L-sung-c2467712e9ba4581bbbf168b10f984d0">Lösung</a></p>
+</div>
+<div class="section" id="tabellen">
+<h2><span class="section-number">1.7. </span>Tabellen<a class="headerlink" href="#tabellen" title="Permalink to this headline">¶</a></h2>
+<p>Zugegeben, Tabellen sind nicht so einfach zu erstellen in LaTeX. Es ist weniger die Schwierigkeit, als mehr der Aufwand, den sie beim erstellen erzeugen. Aber es geht:</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span>... sunt in culpa qui officia deserunt mollit anim id est laborum (s. Tabelle <span class="k">\ref</span><span class="nb">{</span>tab:test<span class="nb">}</span>).
+<span class="c">%</span>
+<span class="k">\begin</span><span class="nb">{</span>table<span class="nb">}</span>[h]
+    <span class="k">\centering</span>
+    <span class="k">\caption</span><span class="nb">{</span>Tabellenbeschriftung<span class="nb">}</span>
+    
+		<span class="k">\begin</span><span class="nb">{</span>tabular<span class="nb">}{</span>|l|r|r|<span class="nb">}</span>
+    <span class="k">\hline</span>
+       awort  <span class="nb">&amp;</span> cwörter mehr <span class="nb">&amp;</span> das ist ein test.<span class="k">\\</span>
+       <span class="k">\hline</span>
+       bwort  <span class="nb">&amp;</span> dwörter mehr <span class="nb">&amp;</span> das ist ein test.<span class="k">\\</span>
+       <span class="k">\hline</span>
+    <span class="k">\end</span><span class="nb">{</span>tabular<span class="nb">}</span>
+    
+    <span class="k">\label</span><span class="nb">{</span>tab:test<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>table<span class="nb">}</span>
+</pre></div>
+</div>
+<div class="figure align-default" id="untitled-12">
+<a class="reference internal image-reference" href="../_images/Untitled_122.png"><img alt="../_images/Untitled_122.png" src="../_images/Untitled_122.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1.14 </span><span class="caption-text">caption</span><a class="headerlink" href="#untitled-12" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="mathematische-umgebungen">
+<h2><span class="section-number">1.8. </span>Mathematische Umgebungen<a class="headerlink" href="#mathematische-umgebungen" title="Permalink to this headline">¶</a></h2>
+<p>TODO</p>
+<p>Einheiten, Komma im deut., amsmath?</p>
+<p><a class="reference external" href="https://tobiw.de/tbdm/siunitx">Zahlen und Einheiten</a></p>
+<div class="section" id="ubungen">
+<h3><span class="section-number">1.8.1. </span>Übungen<a class="headerlink" href="#ubungen" title="Permalink to this headline">¶</a></h3>
+<p><strong>Aufgabe</strong></p>
+<p>Gegeben ist eine Gleichung von Wikipedia (<a class="reference external" href="https://de.wikipedia.org/wiki/Kontinuumsmechanik">https://de.wikipedia.org/wiki/Kontinuumsmechanik</a>).</p>
+<div class="figure align-default" id="untitled-13">
+<a class="reference internal image-reference" href="../_images/Untitled_132.png"><img alt="../_images/Untitled_132.png" src="../_images/Untitled_132.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1.15 </span><span class="caption-text">caption</span><a class="headerlink" href="#untitled-13" title="Permalink to this image">¶</a></p>
+</div>
+<p>Setzen Sie diese Gleichung ebenso in LaTeX.</p>
+<p><strong>Lösung</strong></p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span>... globale Energiebilanz:
+<span class="sb">\[</span><span class="nb"></span>
+<span class="nv">\frac</span><span class="nb">{</span><span class="nv">\mathrm</span><span class="nb">{d}}{</span><span class="nv">\mathrm</span><span class="nb">{d}t}</span><span class="nv">\int</span><span class="nb">_v</span><span class="nv">\rho</span><span class="nb"> u</span><span class="nv">\,\mathrm</span><span class="nb">{d}v</span>
+<span class="o">+</span><span class="nv">\frac</span><span class="nb">{</span><span class="nv">\mathrm</span><span class="nb">{d}}{</span><span class="nv">\mathrm</span><span class="nb">{d}t}</span><span class="nv">\int</span><span class="nb">_v</span><span class="nv">\frac</span><span class="nb">{</span><span class="nv">\rho</span><span class="nb">}{</span><span class="m">2</span><span class="nb">}</span><span class="nv">\vec</span><span class="nb">{v}</span><span class="nv">\cdot\vec</span><span class="nb">{v}</span><span class="nv">\,\mathrm</span><span class="nb">{d}v </span><span class="o">=</span><span class="nb"> </span>
+<span class="nv">\int</span><span class="nb">_v</span><span class="nv">\rho\vec</span><span class="nb">{k}</span><span class="nv">\cdot\vec</span><span class="nb">{v}</span><span class="nv">\,\mathrm</span><span class="nb">{d}v </span>
+<span class="o">+</span><span class="nb"> </span><span class="nv">\int</span><span class="nb">_a</span><span class="nv">\vec</span><span class="nb">{t}</span><span class="nv">\cdot\vec</span><span class="nb">{v}</span><span class="nv">\,\mathrm</span><span class="nb">{d}a </span>
+<span class="o">+</span><span class="nb"> </span><span class="nv">\int</span><span class="nb">_v</span><span class="nv">\rho</span><span class="nb"> r </span><span class="nv">\,\mathrm</span><span class="nb">{d}v </span>
+<span class="o">-</span><span class="nv">\int</span><span class="nb">_a</span><span class="nv">\vec</span><span class="nb">{n}</span><span class="nv">\cdot\vec</span><span class="nb">{q}</span><span class="nv">\,\mathrm</span><span class="nb">{d}a </span><span class="nv">\quad</span><span class="nb">.</span>
+<span class="s">\]</span>
+</pre></div>
+</div>
+<div class="figure align-default" id="untitled-14">
+<a class="reference internal image-reference" href="../_images/Untitled_142.png"><img alt="../_images/Untitled_142.png" src="../_images/Untitled_142.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1.16 </span><span class="caption-text">caption</span><a class="headerlink" href="#untitled-14" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+<div class="section" id="literaturverzeichnis">
+<h2><span class="section-number">1.9. </span>Literaturverzeichnis<a class="headerlink" href="#literaturverzeichnis" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="literaturverwaltung-mit-zotero">
+<h3><span class="section-number">1.9.1. </span>Literaturverwaltung mit Zotero<a class="headerlink" href="#literaturverwaltung-mit-zotero" title="Permalink to this headline">¶</a></h3>
+<p>Die HTWK Leipzig stellt für den Umgang mit Zotero selbst verschiedene Tutorial-Videos zur Verfügung:</p>
+<p><a class="reference external" href="https://bibliothek.htwk-leipzig.de/kurse-und-beratung/online-tutorials/online-zotero-kurs/"></a></p>
+</div>
+<div class="section" id="einbindung-der-literaturdatenbank-in-latex">
+<h3><span class="section-number">1.9.2. </span>Einbindung der Literaturdatenbank in LaTeX<a class="headerlink" href="#einbindung-der-literaturdatenbank-in-latex" title="Permalink to this headline">¶</a></h3>
+<p>Hinweis: In Overleaf lässt auch direkt der Zotero-Account verknüpfen, so dass Overleaf die BiB-Datei immer automatisch aktualisiert, wenn sich etwas in Zotero ändert. Dies ist aber wohl nur für Premium-Nutzer von Overleaf verfügbar, so dass wir hier nicht darauf eingehen.</p>
+<p>Ist die Datenbank in Zotero gefüllt, kann direkt aus der Bibliothek im Zotero eine BIBLaTeX-Datei erzeugt werden. Dazu unter <code class="docutils literal notranslate"><span class="pre">Datei</span> <span class="pre">&gt;</span> <span class="pre">&quot;Bibliothek</span> <span class="pre">exportieren...</span></code>” anklicken. Dann erhält man ein Dialogfenster:</p>
+<div class="figure align-default" id="untitled-15">
+<a class="reference internal image-reference" href="../_images/Untitled_152.png"><img alt="../_images/Untitled_152.png" src="../_images/Untitled_152.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1.17 </span><span class="caption-text">caption</span><a class="headerlink" href="#untitled-15" title="Permalink to this image">¶</a></p>
+</div>
+<p>In diesem Fenter als <code class="docutils literal notranslate"><span class="pre">Format</span> <span class="pre">&quot;BibLaTeX&quot;</span></code> auswählen, mit OK bestätigen und dann die Bib-Datei im Ordner der LaTeX-Datei mit gewünschten Namen abspeichern (z.B. “mybib.bib”).</p>
+</div>
+<div class="section" id="literatur-in-latex">
+<h3><span class="section-number">1.9.3. </span>Literatur in LaTeX<a class="headerlink" href="#literatur-in-latex" title="Permalink to this headline">¶</a></h3>
+<p>Es gibt verschiedene Literatur-Systeme in LaTeX. Wir nutzen BiBLaTeX, die moderne Form der Literaturreferenzierung. Dazu muss man</p>
+<ul class="simple">
+<li><p>das Package  <code class="docutils literal notranslate"><span class="pre">biblatex</span></code>laden</p></li>
+<li><p>die Bib-Datei einbinden mit <code class="docutils literal notranslate"><span class="pre">\addbibresource</span></code></p></li>
+<li><p>am Ende des Dokumentes das Literaturverzeichnis einbinden (mit Option im Inhaltsverzeichnis sichtbar zu machen) mit <code class="docutils literal notranslate"><span class="pre">\printbibliography[heading=bibintoc]</span></code></p></li>
+</ul>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span>...
+<span class="k">\usepackage</span><span class="nb">{</span>biblatex<span class="nb">}</span>
+<span class="k">\addbibresource</span><span class="nb">{</span>mybib.bib<span class="nb">}</span>
+
+...
+Text ... <span class="k">\cite</span><span class="nb">{</span>abcd<span class="nb">}</span> ... Text
+...
+<span class="k">\printbibliography</span><span class="na">[heading=bibintoc]</span>
+
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+<p>Dann kann man mit <code class="docutils literal notranslate"><span class="pre">\cite{KEY}</span></code> die Literaturreferenzen einfügen. Dabei ist der KEY der verwendete Schlüssel in der Bib-Datei. Dieser steht immer ganz oben im Bib-Eintrag (hier im Beispiel farblich markiert):</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span>@article<span class="nb">{</span>wallburg<span class="nb">_</span>material<span class="nb">_</span>2019,
+	title = <span class="nb">{</span>Material Removal Simulation in Sawing Processes of Photovoltaic Silicon<span class="nb">}</span>,
+	volume = <span class="nb">{</span>4<span class="nb">}</span>,
+	rights = <span class="nb">{</span>All rights reserved<span class="nb">}</span>,
+	issn = <span class="nb">{</span>2059-8521<span class="nb">}</span>,
+	url = <span class="nb">{</span>https://www.cambridge.org/core/product/identifier/S2059852119000951/type/journal<span class="nb">_</span>article<span class="nb">}</span>,
+	doi = <span class="nb">{</span>10.1557/adv.2019.95<span class="nb">}</span>,
+	abstract = <span class="nb">{</span>...<span class="nb">}</span>,
+	pages = <span class="nb">{</span>761--768<span class="nb">}</span>,
+	number = <span class="nb">{</span>13<span class="nb">}</span>,
+	journaltitle = <span class="nb">{{</span>MRS<span class="nb">}</span> Advances<span class="nb">}</span>,
+	shortjournal = <span class="nb">{{</span>MRS<span class="nb">}</span> Adv.<span class="nb">}</span>,
+	author = <span class="nb">{</span>Wallburg, F. and Kuna, M. and Schoenfelder, S.<span class="nb">}</span>,
+	urldate = <span class="nb">{</span>2019-08-13<span class="nb">}</span>,
+	date = <span class="nb">{</span>2019<span class="nb">}</span>,
+	langid = <span class="nb">{</span>english<span class="nb">}</span>,
+	file = <span class="nb">{</span>Wallburg et al. - 2019 - Material Removal Simulation in Sawing Processes of.pdf:.../Wallburg et al. - 2019 - Material Removal Simulation in Sawing Processes of.pdf:application/pdf<span class="nb">}</span>
+<span class="nb">}</span>
+</pre></div>
+</div>
+<p>Zitierung [1,2] und nicht [1][2]</p>
+<p>TODO</p>
+</div>
+</div>
+<div class="section" id="verzeichnisse">
+<h2><span class="section-number">1.10. </span>Verzeichnisse<a class="headerlink" href="#verzeichnisse" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="symbolverzeichnis">
+<h3><span class="section-number">1.10.1. </span>Symbolverzeichnis<a class="headerlink" href="#symbolverzeichnis" title="Permalink to this headline">¶</a></h3>
+<p>TODO</p>
+</div>
+</div>
+<div class="section" id="titlepage">
+<h2><span class="section-number">1.11. </span>Titlepage<a class="headerlink" href="#titlepage" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://www.overleaf.com/learn/latex/How_to_Write_a_Thesis_in_LaTeX_(Part_5):_Customising_Your_Title_Page_and_Abstract">Customising Your Title Page and Abstract</a></p>
+</div>
+<div class="section" id="befehle-definieren">
+<h2><span class="section-number">1.12. </span>Befehle definieren<a class="headerlink" href="#befehle-definieren" title="Permalink to this headline">¶</a></h2>
+<p>Todo</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./LaTeX"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="LaTeX_Uebersicht.html" title="previous page">Text mit LaTeX</a>
+    <a class='right-next' id="next-link" href="../Zotero/Zotero_Uebersicht.html" title="next page">Literatur mit Zotero</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Felix Kaule / Stephan Schoenfelder<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>

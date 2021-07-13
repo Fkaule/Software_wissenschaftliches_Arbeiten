@@ -1,0 +1,666 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2. Formatierung</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e7340bb3dbd8dde6db86f25597f54a1b.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="1. Software" href="Software.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/Logo.png" class="logo" alt="logo">
+  
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Readme.html">
+   Startseite
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../LaTeX/LaTeX_Uebersicht.html">
+   Text mit LaTeX
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../LaTeX/Einfuehrung.html">
+     1. Einführung
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Zotero/Zotero_Uebersicht.html">
+   Literatur mit Zotero
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../Inkscape/Inkscape_Uebersicht.html">
+   Grafiken mit Inkscape
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../Inkscape/Grundlagen/Grundlagen.html">
+     1. Grundlagen
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Inkscape/Grundlagen/Voreinstellungen.html">
+       1.1. Voreinstellungen
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Inkscape/Grundlagen/Erstellung-Solarzelle.html">
+       1.2. Erstellung Solarzelle
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Inkscape/Grundlagen/Erstellung-Sonne.html">
+       1.3. Erstellung Sonne
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Inkscape/Grundlagen/Beschriftung.html">
+       1.4. Beschriftungen
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Inkscape/Grundlagen/Export.html">
+       1.5. Export als Pixelgrafik
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Inkscape/Grundlagen/Uebungen.html">
+       1.6. Übungsbeispiele
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2 collapsible-parent">
+    <a class="reference internal" href="../Inkscape/Advanced/Advanced.html">
+     2. Advanced
+    </a>
+    <ul class="collapse-ul">
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Inkscape/Advanced/Inkscape_%28Advanced%29.html">
+       2.1. Tricks &amp; Tipps
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Inkscape/Advanced/Uebungen.html">
+       2.2. Übungsbeispiele
+      </a>
+     </li>
+    </ul>
+    <i class="fas fa-chevron-down">
+    </i>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Inkscape/Links.html">
+     3. Weiterführendes Material (Links)
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../Python/Python_Uebersicht.html">
+   Datenvisualisierung mit Python
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Python/01-JupyterNotebooks.html">
+     1. Jupyter Notebooks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Python/02-Biegebalken_solved.html">
+     2. Biegebalken
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Python/03-Kraftmessung_solved.html">
+     3. Kraftmessung
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Python/04-Klimawandel_solved.html">
+     4. Klimawandel
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Python/05-API.html">
+     5. API Unterschiede
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Python/06-Subplots.html">
+     6. Subplots
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Python/07-RKI-Corona.html">
+     7. RKI Corona Zahlen
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Python/Links.html">
+     8. Weiterführendes Material
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="Hinweise_Uebersicht.html">
+   Hinweise zum Schreiben von Abschlussarbeiten
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="Software.html">
+     1. Software
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     2. Formatierung
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/Hinweise_Abschlussarbeiten/Formatierung.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/Fkaule/Python_for_Engineers/tree/main"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/Fkaule/Python_for_Engineers/tree/main/issues/new?title=Issue%20on%20page%20%2FHinweise_Abschlussarbeiten/Formatierung.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#allgemein">
+   2.1. Allgemein
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rechtschreibung-und-ausdruck">
+   2.2. Rechtschreibung und Ausdruck
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#struktur-oder-gliederung">
+   2.3. Struktur oder Gliederung
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#abbildungen">
+   2.4. Abbildungen
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tabellen">
+   2.5. Tabellen
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mathematische-formeln">
+   2.6. Mathematische Formeln
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#literaturreferenzen">
+   2.7. Literaturreferenzen
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="formatierung">
+<h1><span class="section-number">2. </span>Formatierung<a class="headerlink" href="#formatierung" title="Permalink to this headline">¶</a></h1>
+<p>Es gibt in wissenschaftlichen Arbeiten sehr verschiedene Möglichkeiten der Darstellung. Dabei sollen hier nicht die Feinheiten der Randabstände vorgegeben werden, sondern vielmehr einige grundsätzliche Dinge angesprochen werden, die es zu beachten gilt.</p>
+<div class="section" id="allgemein">
+<h2><span class="section-number">2.1. </span>Allgemein<a class="headerlink" href="#allgemein" title="Permalink to this headline">¶</a></h2>
+<p><a id='Allgemein'></a></p>
+<p>Zum Layout der Arbeiten gibt es häufig Vorlagen/Vorgaben. Ohne Details festlegen zu wollen, ist generell zu empfehlen:</p>
+<ul class="simple">
+<li><p>sauberes Deckblatt mit Logos der Hochschule (und Unternehmen) sowie der notwendigen Informationen</p></li>
+<li><p>vernünftige Seitenränder (2-3cm) die ein gutes Gesamtbild der A4-Seite ergeben</p></li>
+<li><p>vernünftige Schriftgrößen (Times 12pt, Arial 11pt) mit ca. 1,5-zeiligen Abstand, klarer Abstand zwischen Absätzen bzw. Einzug der ersten Zeile beim Abstand (s. Beispiel)</p></li>
+<li><p>sauberes Schriftbild: keine farbigen Überschriften, nicht übertreiben mit fett und kursiv im Fließtext, seriös und sachlich</p></li>
+<li><p>Seitenzahlen in der Fußzeile</p></li>
+<li><p>Verzeichnisse:
+Inhalt - Pflicht,
+Abbildungs- und Tabellenverzeichnisse optional,
+Symbolverzeichnis wenn notwendig</p></li>
+<li><p>Gliederungsebenen im Inhaltsverzeichnis: Es gib maximal drei nummerierte Ebenen und eine vierte nicht nummerierte Ebene von Überschriften. Es wird maximal bis zu dritten Ebene im Inhaltsverzeichnis dargestellt.</p>
+<ul>
+<li><p>Beispiel</p></li>
+</ul>
+</li>
+</ul>
+<div class="figure align-default" id="untitled-1">
+<a class="reference internal image-reference" href="../_images/Untitled_1.png"><img alt="../_images/Untitled_1.png" src="../_images/Untitled_1.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2.18 </span><span class="caption-text">Text mit Überschriften</span><a class="headerlink" href="#untitled-1" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-default" id="untitled">
+<a class="reference internal image-reference" href="../_images/Untitled.png"><img alt="../_images/Untitled.png" src="../_images/Untitled.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2.19 </span><span class="caption-text">Literaturverzeichnis zum Text</span><a class="headerlink" href="#untitled" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="rechtschreibung-und-ausdruck">
+<h2><span class="section-number">2.2. </span>Rechtschreibung und Ausdruck<a class="headerlink" href="#rechtschreibung-und-ausdruck" title="Permalink to this headline">¶</a></h2>
+<p><a id='Rechtschreibung_Ausdruck'></a></p>
+<p>In der deutschen Sprache haben wir uns auf einige Regeln verständigt und diese im Duden zusammengefasst. Auch wenn es die allgemeine Auffassung gibt, dass Ingenieur*innen vor allem den technischen und weniger den sprachlichen Sachverstand mitbringen, möchte ich hier feststellen, dass dies Quatsch ist. Auch in den Ingenieurwissenschaften muss man in der Lage sein, Texte sauber, orthografisch richtig und mit einem passenden Ausdruck zu verfassen. Wie alles bedarf auch das der Übung, je nach eigener Begabung in unterschiedlichem Maße. Dazu folgende Punkte, die mir immer wieder auffallen:</p>
+<ul>
+<li><p>Man schreibt im Fließtext und unterteilt diesen in <strong>Absätze</strong>. Die Absätze fassen Sätze zum gleichen Gedanken, zum gleichen Thema zusammen. Wechselt das Thema, beginnt ein neuer Absatz. Aber nicht nach jedem einzelnen Satz! Und auch nicht erst nach drei Seiten!
+Faustregel für eine Absatzlänge:</p>
+<ul class="simple">
+<li><p>Ein Absatz besteht aus mindestens drei Sätzen über drei Zeilen.</p></li>
+<li><p>Und eine volle A4-Seite ohne einzigen Absatz ist eher ungewöhnlich.</p></li>
+</ul>
+</li>
+<li><p><strong>Kommasetzung</strong> ist nicht fakultativ!!! Es hat sich in den letzen Jahrzehnten dazu einiges geändert, aber es gibt sie noch, die Kommas … und sie retten weiterhin Leben (“Wir essen jetzt Kevin” und “Wir essen jetzt, Kevin”)</p></li>
+<li><p>Übrigens nutzt man das Komma in deutsch auch als Dezimaltrennzeichen. Daher nicht einfach Dezimalzahlen mit Punkt aus anderen Programmen übernehmen. Der Punkt wäre in deutsch das Tausender-Trennzeichen.</p></li>
+<li><p>In der modernen technischen Welt verwenden wir häufig <strong>englische Begriffe</strong> für Anlagen, Verfahren, etc. Bitte ruhig mal im Duden nachschauen, ob es das jeweilige Wort so schon in die deutsche Sprache wie “Download” geschafft hat. Wenn nicht, sollte man schauen, ob man nicht auch ein deutsches Wort findet.</p></li>
+<li><p>Wissenschaftliche Arbeiten sollten in <strong>unpersönlicher Schreibweise</strong> verfasst werden. Auch wenn man immer wieder andere Beispiele findet, empfehle ich diese Form, um eine sachliche Darstellung zu unterstreichen.</p></li>
+<li><p>Überschriften werden immer in Großschreibung begonnen</p>
+<p><a class="reference external" href="https://www.duden.de/sprachwissen/rechtschreibregeln/Gro%C3%9F-%20und%20Kleinschreibung#D86">Groß- und Klein­schrei­bung</a></p>
+</li>
+</ul>
+</div>
+<div class="section" id="struktur-oder-gliederung">
+<h2><span class="section-number">2.3. </span>Struktur oder Gliederung<a class="headerlink" href="#struktur-oder-gliederung" title="Permalink to this headline">¶</a></h2>
+<p><a id='Struktur_Gliederung'></a></p>
+<p>Wissenschaftliche Arbeiten gliedern sich im Wesentlichen immer gleich:</p>
+<ul class="simple">
+<li><p><strong>1. Einleitung</strong></p>
+<ul>
+<li><p>Die Einleitung dient der Einführung in das Thema und das Themengebiet. Es ist häufig viel zu kurz in studentischen Arbeiten verfasst.</p></li>
+<li><p>Bilder/Diagramme zur Erläuterung sollen verwendet werden, ja sogar eine Zusammenfassung zum <strong>Stand der Technik</strong>, der dann die <strong>Aufgabenstellung</strong> motiviert, die selbst noch einmal kurz erläutert wird</p></li>
+<li><p>häufig wird der Inhalt der Arbeit noch einmal kurz zusammengefasst - Was kommt in den nächsten Kapiteln?</p></li>
+<li><p>Umfang von 2-4 Seiten durchaus erwünscht</p></li>
+</ul>
+</li>
+<li><p><strong>2. Grundlagen</strong>/Stand der Technik</p>
+<ul>
+<li><p>Hier können noch mal die notwendigen grundlegenden Zusammenhänge des Themengebietes dargestellt werden. Formal gesehen ist das überflüssig, da es ja Stand der Technik ist und somit den Leser*innen zugänglich. Aber wenn man ehrlich ist, ist man nicht überall Experte und es ist hilfreich, wenn einem noch mal einige Dinge erläutert werden, die nicht in der allgemeinen Ingenieurausbildung in der Tiefe vorhanden sind.</p></li>
+<li><p>beschränken Sie es auf das Notwendigste - einfaches Lehrbuchwissen ist meist fehl am Platz, Zusammenhänge aus der Spezialliteratur nicht</p></li>
+<li><p>sollte nicht mehr als 20% des Umfangs der Arbeit ausmache</p></li>
+<li><p>Referenzieren Sie sauber die Literatur!</p></li>
+</ul>
+</li>
+<li><p><strong>3. Material und Methoden</strong></p>
+<ul>
+<li><p>Den Lesern muss erklärt werden, wie man bestimmte Versuche/Experimente/Modelle aufgebaut und durchgeführt hat, damit man verstehen kann, was im Details gemacht wurde und worauf man achtet, wenn man es ebenso durchführen möchte</p></li>
+<li><p>nochmal: es muss so erklärt werden, dass es ein anderer (Wissenschaftler/Ingenieur) ebenso aufbauen und durchführen kann! Wissenschaftliche Erkenntnis wird erst dann bestätigt, wenn sie wiederholbar ist. Daher in diesem Kapitel exakt arbeiten, ohne ins Geschwafel zu verfallen.</p></li>
+<li><p>hier können auch Literaturreferenzen zu Methodiken und Geräten/Software verwendet werden</p></li>
+</ul>
+</li>
+<li><p><strong>4. Ergebnisse</strong></p>
+<ul>
+<li><p>Hier beginnt das Herzstück Ihrer Arbeit. Hier werden Ihre, allein Ihre Ergebnisse vorgestellt.</p></li>
+<li><p>Hier wird nicht bewertet! … Ja, ich weiß, jetzt denkt man, was schreibt man denn da? “Nicht Bewerten” heißt nicht “Nicht Beschreiben”. Sie beschreiben die Ergebnisse, so dass der Leser durch diese von Ihnen geführt wird. Ein Diagramm beinhaltet sich alle wichtigen Erkenntnisse, aber nicht jeder wird diese sofort genauso erkennen wie Sie. Daher beschreiben Sie, was Sie in den Ergebnissen/Diagrammen sehen. Dabei können Sie auch Ausreißer oder Gründe für bestimmte Verläufe erklären. Aber Sie bewerten nicht, z.B. sie sagen hier noch nicht, ob die Ergebnisse auch zu den Erkenntnissen anderer Autoren passen (dies kommt in der Diskussion, nächstes Kapitel)</p></li>
+<li><p>in diesem Kapitel keine Literaturreferenzen mehr - hier gibt es nur Ihre Ergebnisse!</p></li>
+<li><p>man findet häufig in der Literatur, dass Autoren da Kapitel “Ergebnisse und Diskussion” nennen und auch so die Inhalte füllen. Dieses Vermischen klingt erst einmal logischer und ist auch einfacher zu schreiben (für Anfänger), aber es macht die Trennung zwischen Ihren Ergebnissen und der Bewertung dieser schwieriger, da dies unterschiedliche Ziele verfolgt.</p></li>
+</ul>
+</li>
+<li><p><strong>5. Diskussion</strong></p>
+<ul>
+<li><p>gehört ebenso zum Herzstück Ihrer Arbeit</p></li>
+<li><p>Jetzt kommt die Bewertung Ihre Ergebnisse:</p>
+<ul>
+<li><p>Vergleichen Sie diese zur Literatur (schön mit Referenzen arbeiten, wahrscheinlich einige aus der Einleitung den Grundlagen),</p></li>
+<li><p>Wie passt das in die Theorie/Modellvorstellung zum Problem?</p></li>
+<li><p>Welche Konsequenzen ergeben sich aus den Ergebnissen? Was kann man daraus schlussfolgern? Neue Modellansätze, etc.</p></li>
+</ul>
+</li>
+<li><p>Gliedern Sie diese Kapitel in weitere Überschriften, damit man die Themen klar erkennen kann. Dabei müssen Sie nicht genau der Beschreibung der Ergebnisse folgen, sondern können auch “quer” zu den Ergebnissen gliedern, so wie es am besten gelesen und verstanden werden kann.</p></li>
+<li><p>Hier dürfen sie (auch) “spinnen”. Teilen Sie Ihre Gedanken/Theorien dem Leser mit, damit dieser damit weiterarbeiten kann. Es muss wissenschaftlich sauber und nachvollziehbar sein, aber es darf auch mit Mut geschlussfolgert und in die Glaskugel interpretiert sein.</p></li>
+</ul>
+</li>
+<li><p><strong>6. Zusammenfassung und Ausblick</strong></p>
+<ul>
+<li><p>Die Überschrift sagt eigentlich schon alles: kurz das Problem, Vorgehen und Ergebnisse zusammenfassen und einen Ausblick geben</p></li>
+<li><p>Der Ausblick ist ganz wichtig. Zeigen Sie auf, welche nächsten Schritte getan werden sollten/müssen. Wiederum, lassen die Leser an Ihren Gedanken zum Thema teilhaben</p></li>
+<li><p>hier kommen keine Referenzen, Abbildungen oder ähnliches, nur Fließtext in Absätzen strukturiert</p></li>
+</ul>
+</li>
+<li><p><strong>Literatur</strong></p>
+<ul>
+<li><p>Das Literaturverzeichnis kommt am Ende der Arbeit und beinhaltet jegliche verwendete Referenz zur Literatur oder Stand der Technik, also Bücher, Artikel, Webseiten, etc.</p></li>
+<li><p>Der Fokus liegt auf Referenzen, die den Lesern auch zugänglich sein können. Ausgedruckte Vorlesungsskripte, die es nicht online gibt, können für Ihr Verständnis sehr geholfen haben, sind aber als Referenz kaum nachvollziehbar
+(aber Ausnahmen bestätigen auch hier die Regel, nicht übertreiben)</p></li>
+<li><p>Referenzen auf Webseiten sind ok, aber diese sollten nicht den überwiegenden Teil ausmachen. Auch wenn man vieles zu naturwissenschaftlichen Grundlagen oder den Ingenieurwissenschaften im Internet findet, ist die Quelle doch meist ein Buch.</p></li>
+<li><p>sauber und vollständige Referenzen (man muss mit diesen Angaben auch die Quellen finden)</p></li>
+</ul>
+</li>
+</ul>
+<p>Die Überschriften können dabei dem Thema entsprechend auch anders lauten, aber inhaltlich sollte genau diese Struktur zu finden sein.</p>
+<p>Achso, die Frage: Wie lang muss/darf die Arbeit sein?
+Es gibt eigentlich keine Seitenvorgabe. Schreiben Sie alles vollständig auf und fassen Sie sich so kurz und exakt wie möglich (kein Geschwafel). Je nachdem wie viel Sie am Thema gearbeitet und Ergebnisse erzeugt haben, wird sich passender ein Umfang einstellen. (mal als Hausnummer der Seitenzahlen aus der Erfahrung: oberer zweistelliger Bereich)</p>
+</div>
+<div class="section" id="abbildungen">
+<h2><span class="section-number">2.4. </span>Abbildungen<a class="headerlink" href="#abbildungen" title="Permalink to this headline">¶</a></h2>
+<p><a id='Abbildungen'></a></p>
+<p>Abbildungen sind gerade in ingenieurwissenschaftlichen Arbeiten essentiell, um Zusammenhänge oder auch Bauteile/Anlagen darstellen zu können. Weiterhin werden erfasste oder berechnete Daten in Diagrammen dargestellt. Dabei sind folgende Dinge zu beachten:</p>
+<ul class="simple">
+<li><p><strong>Bildgröße -</strong> Ein Bild sollte nicht mehr als ein 1/3 der Höhe des Textfeldes einnehmen, wobei aber die gesamte Textbreite ausgenutzt werden kann, diese aber nicht überschritten werden sollte</p></li>
+<li><p><strong>Bildinhalt</strong> - Ein Bild transportiert Informationen. Diese sind so zu strukturieren, dass die Leser diese möglichst einfach aufnehmen können. Also keine überladenen Diagramme (mit mehr als fünf Kurven), keine Anlagenfotos ohne Beschriftung der Baugruppen (Was sieht man da? Was ist wichtig zu erkennen?), keine Mikroskopaufnahmen ohne Beschriftung (ähnliche wie Anlagenfotos).</p></li>
+<li><p><strong>Bildbeschriftung</strong> - Die Bildbeschriftung, unterhalb oder neben der Abbildung, sollte so umfangreich sein, dass diese allein mit dem Bild, außerhalb der Arbeit, lesbar und verständlich ist. Die Unterschrift kann dabei mehrere Zeilen oder sogar mehrere Sätze umfassen. Knapp aber vollständig bitte.
+Referenzieren Sie die Quelle von Bildern, die nicht von Ihnen kommen (ggf. müsste auch die Freigabe des Rechteinhabers eingeholt werden)</p></li>
+<li><p><strong>Bildreferenz</strong> - Jedes Bild hat eine Referenz im Text (z.B. “s. Abb. 10”)! Noch mal anders: Es gibt kein Bild, welches nicht im Text erwähnt ist! D.h. es gibt kein “wie im <em>nachfolgenden</em> Bild …” und es gibt auch keine Bilder ohne Bezug im Text.</p></li>
+</ul>
+<p>Entsprechend einer konsistenten Darstellung von Skizzen oder Schemata in der Arbeit empfiehlt sich die eigene Anfertigung mit geeigneter Software. Dies kann durchaus auch künstlerische Fähigkeiten erfordern bzw. diese mit ein wenig Übung schulen.</p>
+<ul class="simple">
+<li><p><strong>Beispiel</strong></p></li>
+</ul>
+<div class="figure align-default" id="untitled-2">
+<a class="reference internal image-reference" href="../_images/Untitled_2.png"><img alt="../_images/Untitled_2.png" src="../_images/Untitled_2.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2.20 </span><span class="caption-text">Beispielabbildung mit zwei Abbildungen nebeneinander mit zugehöriger Bildbeschriftung</span><a class="headerlink" href="#untitled-2" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-default" id="untitled-3">
+<a class="reference internal image-reference" href="../_images/Untitled_3.png"><img alt="../_images/Untitled_3.png" src="../_images/Untitled_3.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2.21 </span><span class="caption-text">Beispielabbildung mit drei Abbildungen nebeneinander mit zugehöriger Bildbeschriftung</span><a class="headerlink" href="#untitled-3" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-default" id="untitled-4">
+<a class="reference internal image-reference" href="../_images/Untitled_4.png"><img alt="../_images/Untitled_4.png" src="../_images/Untitled_4.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2.22 </span><span class="caption-text">Beispielabbildung mit einer Abbildung mit zugehöriger Bildbeschriftung</span><a class="headerlink" href="#untitled-4" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="tabellen">
+<h2><span class="section-number">2.5. </span>Tabellen<a class="headerlink" href="#tabellen" title="Permalink to this headline">¶</a></h2>
+<p><a id='Tabellen'></a></p>
+<p>Tabellen sind ähnlich wie Abbildungen zu betrachten und es treffen im Wesentlichen die gleichen Aussagen zu. Allerdings gibt es kleine Unterschiede bzw. Zusätzen:</p>
+<ul class="simple">
+<li><p>die Tabellenbeschriftung erfolgt nicht unter der Tabelle, sondern über dieser!</p></li>
+<li><p>Tabellen werden in der Referenz im Text nicht abgekürzt, also “s. Tabelle 12” und nicht “s. Tab. 12”</p></li>
+<li><p>die verwendete Schriftart in Tabellen sollte der Größe des allgemeinen Fließtextes entsprechen bzw. maximal 1-2 pt kleiner sein.</p></li>
+</ul>
+</div>
+<div class="section" id="mathematische-formeln">
+<h2><span class="section-number">2.6. </span>Mathematische Formeln<a class="headerlink" href="#mathematische-formeln" title="Permalink to this headline">¶</a></h2>
+<p><a id='MathematischeFormeln'></a></p>
+<p>In den Ingenieurwissenschaften geht es ohne mathematische Formeln nicht. Meist muss man in der Darstellung der Grundlagen schon ran und die wesentlichen Gleichungen einführen. Dazu folgende Bemerkungen:</p>
+<ul class="simple">
+<li><p>Optisch ansprechende Formeln und Gleichungen werden in LaTeX gesetzt. Selbst wenn man ein anderes Textverarbeitungsprogramm verwendet, könnt man die LaTeX-Formeln als Bild erzeugen und darin verwenden. Am besten ist natürlich, man schreibt gleich in LaTeX.</p></li>
+<li><p>Gleichungen werden leicht vom umgebenden Text abgesetzt zentriert dargestellt.</p></li>
+<li><p>Multiplikationszeichen werden häufig nicht extra dargestellt. Generell empfiehlt sich der Blick in die Literatur, wie andere Autoren in dem jeweiligen Bereich die Gleichungen darstellen.</p></li>
+<li><p>Alle verwendeten Variablen müssen im umgebenden Text bei erstmaliger Verwendung erklärt werden. Selbst wenn es ein Symbolverzeichnis für die Arbeit gibt, ist von dieser Regel nicht abzuweichen, damit der Lesefluss nicht gestört wird. Denken Sie an die Dramaturgie Ihrer Arbeit: In Buch und Film werden Charaktere auch beim ersten Erscheinen (indirekt) vorgestellt.</p></li>
+<li><p>Variablen sind eindeutig zu verwenden. Ein “a” kann z.B. nicht in der einen Gleichung ein Beschleunigung sein und in einer anderen eine Länge. Darauf ist besonders zu achten, wenn man Gleichungen aus verschiedenen Quellen verwendet.</p></li>
+<li><p>Gleichungen sollten generell nummeriert werden, wenn man sie später noch einmal referenzieren möchte. Die Gleichungsnummer wird dazu in geschweiften Klammern am rechten Rand des Textbereiches angegeben.</p></li>
+<li><p>Gleichungen werden, im Gegensatz zu Tabellen und Abbildungen, nur nachfolgend referenziert. D.h. es kann keine Referenz vor der ersten Darstellung der Gleichung geben, sondern nur nachfolgend, wenn man noch mal Bezug darauf nehmen möchte. Letztendlich ist eine Gleichung ja kein extra Objekt wie ein Abbildung, sondern sie wird wie Text gebildet, nur eben in der mathematischen Sprache.</p></li>
+<li><p><strong>Beispiel</strong></p></li>
+</ul>
+<div class="figure align-default" id="untitled-5">
+<a class="reference internal image-reference" href="../_images/Untitled_5.png"><img alt="../_images/Untitled_5.png" src="../_images/Untitled_5.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2.23 </span><span class="caption-text">Beispiel für die Verwendung von mathematischen Formeln</span><a class="headerlink" href="#untitled-5" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="literaturreferenzen">
+<h2><span class="section-number">2.7. </span>Literaturreferenzen<a class="headerlink" href="#literaturreferenzen" title="Permalink to this headline">¶</a></h2>
+<p><a id='Literaturreferenzen'></a></p>
+<p>Zu Literaturquellen gehören Bücher, Dokumente, Webseiten aller Art. Wichtig ist dabei, dass die Leser diese Quellen auch einsehen können. Auch wenn dies nicht immer gelingt, sollte der Anspruch diesbezüglich hoch sein. Sicherlich müssen nicht alle allgemein bekannten Zusammenhänge mit Quelle belegt sein, z.B. sind die Energieerhaltungssätze sicher allgemein bekannt. Aber gerade die Aussagen zum Stand der Technik sollten sauber referenziert werden.</p>
+<p>Selbst Gespräche könnten, wenn auch selten, als Quelle verwendet werden. Dies sollten dann aber tatsächlich Expertengespräche sein mit den Lesern bekannten Experten im Fachgebiet. Dies kann man nutzen, um den Zusammenhang der eigenen Aussagen noch einmal besser darzustellen. Man würde diese mit “private communication” referenzieren.</p>
+<p>Wie referenziert man? In den Ingenieurwissenschaften hat sich eine numerischer Referenzierungstyp in eckigen Klammern etabliert (s. Beispiele). D.h. es wird jeder Quelle eine Nummer zugewiesen, die dann als Referenz verwendet werden kann. Dabei kann das Literaturverzeichnis in</p>
+<ul class="simple">
+<li><p>alphabetischer Reihenfolgen der Referenzen oder</p></li>
+<li><p>in der Reihenfolge des Erscheinen im Text</p></li>
+</ul>
+<p>sortiert werden. Im ersten Fall ist das Literaturverzeichnis einfacher zu lesen, wenn man Autoren sucht. Allerdings beginnt dann die erste Referenz im Text nicht mit [1]. Genau andersherum sind Vor- und Nachteil bei der zweiten Variante zu verstehen. Verwendet man eingebundene Datenbanksysteme (wie bei LaTeX mit BibTeX möglich) kann dies aber jederzeit gewechselt und dann nach Geschmack entschieden werden.</p>
+<p>Die Referenzen erfolgen direkt nach Nennung eines Autoren oder eines Bezuges (z.B. bei Normen) oder am Satzende, <em>vor dem Punkt (um den Fließtext und den nächsten Satz nicht zu stören)</em>, wenn sich die Referenz auf die Aussage im Satz bezieht. Bezieht sich die Literaturquelle oder die -quellen auf einen ganzen Absatz, werden diese nach dem letzten Satz, <em>hinter dem Punkt</em>, genannt. Dazu folgen hier Beispiele.</p>
+<ul class="simple">
+<li><p><strong>Beispiele</strong></p></li>
+</ul>
+<div class="figure align-default" id="untitled-6">
+<a class="reference internal image-reference" href="../_images/Untitled_6.png"><img alt="../_images/Untitled_6.png" src="../_images/Untitled_6.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2.24 </span><span class="caption-text">Beispiel für ein Literaturverzweis im Text</span><a class="headerlink" href="#untitled-6" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-default" id="untitled-7">
+<a class="reference internal image-reference" href="../_images/Untitled_7.png"><img alt="../_images/Untitled_7.png" src="../_images/Untitled_7.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2.25 </span><span class="caption-text">zugehörigeres Literaturverzeichnis</span><a class="headerlink" href="#untitled-7" title="Permalink to this image">¶</a></p>
+</div>
+<hr class="docutils" />
+<p><strong>zu tun:</strong>…</p>
+<ul class="simple">
+<li><p>Hinweise zur Darstellung des wissenschaftlichen Inhalts</p>
+<ul>
+<li><p>In diesem Abschnitt geht es einige Hinweise zur Darstellung des Inhaltes der wissenschaftlichen Arbeit.</p></li>
+</ul>
+</li>
+<li><p>Zeitmanagement</p>
+<ul>
+<li><p>Doku soviel wie Ergebnisse</p></li>
+</ul>
+</li>
+<li><p>Gute Diagramme erzeugen</p>
+<ul>
+<li><p>fitten, excel smoothing, bild von xkcd</p></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./Hinweise_Abschlussarbeiten"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="Software.html" title="previous page"><span class="section-number">1. </span>Software</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Felix Kaule / Stephan Schoenfelder<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>
