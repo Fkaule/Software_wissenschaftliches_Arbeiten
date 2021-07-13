@@ -21,8 +21,8 @@ latex:
 
 # Information about where the book exists on the web
 repository:
-  url: https://github.com/Fkaule/Software_wissenschaftliches_Arbeiten/tree/main  # Online location of your book
-#  path_to_book: docs  # Optional path to your book, relative to the repository root
+  url: https://github.com/Fkaule/Software_wissenschaftliches_Arbeiten  # Online location of your book
+  #path_to_book: gh-pages  # Optional path to your book, relative to the repository root
   branch: main  # Which branch of the repository should be used when creating links (optional)
 
 # Add GitHub buttons to your book
@@ -37,6 +37,9 @@ html:
 #    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
 #        All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>
 #    </div>
+
+launch_buttons:
+  jupyterhub_url: "https://jupyterhub.fim.htwk-leipzig.de"
 
 parse:
   myst_extended_syntax: true
