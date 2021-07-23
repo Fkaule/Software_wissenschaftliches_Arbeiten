@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>3. Kraft-Weg Messungen</title>
+    <title>2. Kraft-Weg Messungen</title>
     
   <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -55,8 +55,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="4. Plots zum Klimawandel" href="04-Klimawandel_solved.html" />
-    <link rel="prev" title="2. Berechnungen und erste grafische Darstellung am Beispiel von Biegebalken" href="02-Biegebalken_solved.html" />
+    <link rel="next" title="3. Plots zum Klimawandel" href="04-Klimawandel_solved.html" />
+    <link rel="prev" title="1. Einführung in Jupyter Notebooks" href="01-JupyterNotebooks.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -193,39 +193,34 @@
      1. Jupyter Notebooks
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="02-Biegebalken_solved.html">
-     2. Biegebalken
-    </a>
-   </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     3. Kraftmessung
+     2. Kraftmessung
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="04-Klimawandel_solved.html">
-     4. Klimawandel
+     3. Klimawandel
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="05-API.html">
-     5. API Unterschiede
+     4. API Unterschiede
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="06-Subplots.html">
-     6. Subplots
+     5. Subplots
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="07-RKI-Corona.html">
-     7. RKI Corona Zahlen
+     6. RKI Corona Zahlen
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Links.html">
-     8. Weiterführendes Material
+     7. Weiterführendes Material
     </a>
    </li>
   </ul>
@@ -363,12 +358,12 @@
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#aufgabe-a-kraft-weg-verlauf">
-   3.1. Aufgabe a) Kraft-Weg-Verlauf
+   2.1. Aufgabe a) Kraft-Weg-Verlauf
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#aufgabe-b-differenz-zwischen-probe1-und-probe2">
-   3.2. Aufgabe b) Differenz zwischen Probe1 und Probe2
+   2.2. Aufgabe b) Differenz zwischen Probe1 und Probe2
   </a>
  </li>
 </ul>
@@ -384,9 +379,9 @@
               <div>
                 
   <div class="section" id="kraft-weg-messungen">
-<h1><span class="section-number">3. </span>Kraft-Weg Messungen<a class="headerlink" href="#kraft-weg-messungen" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">2. </span>Kraft-Weg Messungen<a class="headerlink" href="#kraft-weg-messungen" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="aufgabe-a-kraft-weg-verlauf">
-<h2><span class="section-number">3.1. </span>Aufgabe a) Kraft-Weg-Verlauf<a class="headerlink" href="#aufgabe-a-kraft-weg-verlauf" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.1. </span>Aufgabe a) Kraft-Weg-Verlauf<a class="headerlink" href="#aufgabe-a-kraft-weg-verlauf" title="Permalink to this headline">¶</a></h2>
 <p><strong>Aufgabe a)</strong>: Stellen Sie die die Kräfte von Probe 1 und Probe 2 über die Weg in einer Abbildung dar</p>
 <table class="colwidths-auto table">
 <thead>
@@ -455,9 +450,9 @@
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
-<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">40</span><span class="p">])</span>
-<span class="n">y1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span><span class="mi">18</span><span class="p">,</span><span class="mi">24</span><span class="p">,</span><span class="mi">28</span><span class="p">,</span><span class="mi">30</span><span class="p">])</span>
-<span class="n">y2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">40</span><span class="p">])</span>
+<span class="n">Weg</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">40</span><span class="p">])</span>
+<span class="n">Kraft_Probe1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span><span class="mi">18</span><span class="p">,</span><span class="mi">24</span><span class="p">,</span><span class="mi">28</span><span class="p">,</span><span class="mi">30</span><span class="p">])</span>
+<span class="n">Kraft_Probe2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">40</span><span class="p">])</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y1</span><span class="p">,</span><span class="n">marker</span><span class="o">=</span><span class="s2">&quot;s&quot;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;Probe1&quot;</span><span class="p">);</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y2</span><span class="p">,</span><span class="n">marker</span><span class="o">=</span><span class="s2">&quot;s&quot;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;Probe1&quot;</span><span class="p">);</span>
@@ -475,7 +470,7 @@
 </div>
 </div>
 <div class="section" id="aufgabe-b-differenz-zwischen-probe1-und-probe2">
-<h2><span class="section-number">3.2. </span>Aufgabe b) Differenz zwischen Probe1 und Probe2<a class="headerlink" href="#aufgabe-b-differenz-zwischen-probe1-und-probe2" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.2. </span>Aufgabe b) Differenz zwischen Probe1 und Probe2<a class="headerlink" href="#aufgabe-b-differenz-zwischen-probe1-und-probe2" title="Permalink to this headline">¶</a></h2>
 <p><strong>Aufgabe b)</strong>: Stellen Sie nun die Differenz aus beiden Kraftmessungen dar</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -523,8 +518,8 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="02-Biegebalken_solved.html" title="previous page"><span class="section-number">2. </span>Berechnungen und erste grafische Darstellung am Beispiel von Biegebalken</a>
-    <a class='right-next' id="next-link" href="04-Klimawandel_solved.html" title="next page"><span class="section-number">4. </span>Plots zum Klimawandel</a>
+    <a class='left-prev' id="prev-link" href="01-JupyterNotebooks.html" title="previous page"><span class="section-number">1. </span>Einführung in Jupyter Notebooks</a>
+    <a class='right-next' id="next-link" href="04-Klimawandel_solved.html" title="next page"><span class="section-number">3. </span>Plots zum Klimawandel</a>
 
         </div>
         
