@@ -53,6 +53,8 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Literatur mit Zotero" href="../Zotero/Zotero_Uebersicht.html" />
@@ -778,8 +780,26 @@ Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nul
 </div>
 <div class="section" id="mathematische-umgebungen">
 <h2><span class="section-number">1.8. </span>Mathematische Umgebungen<a class="headerlink" href="#mathematische-umgebungen" title="Permalink to this headline">¶</a></h2>
-<p>TODO</p>
-<p>Einheiten, Komma im deut., amsmath?</p>
+<ul class="simple">
+<li><p>Verwendung von Formelzeichen durch Einbettung mit <span class="math notranslate nohighlight">\( Zeichen: z.B. \)</span>\alpha$</p></li>
+<li><p>Gleichungen zwischen <code class="docutils literal notranslate"><span class="pre">\begin{equation}</span></code> und <code class="docutils literal notranslate"><span class="pre">\end{equation}</span></code></p></li>
+</ul>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span><span class="k">\begin</span><span class="nb">{</span>equation<span class="nb">}</span>
+    f(x,<span class="k">\mu</span>,<span class="k">\sigma</span><span class="nb">^</span>2)=<span class="k">\frac</span><span class="nb">{</span>1<span class="nb">}{</span><span class="k">\sqrt</span><span class="nb">{</span>2<span class="k">\pi</span> <span class="k">\sigma</span><span class="nb">^</span>2<span class="nb">}}</span>e<span class="nb">^{</span>-<span class="k">\frac</span><span class="nb">{</span>(x-<span class="k">\mu</span>)<span class="nb">^</span>2<span class="nb">}{</span>2<span class="k">\sigma</span><span class="nb">^</span>2<span class="nb">}}</span>
+    <span class="k">\label</span><span class="nb">{</span>equ:glg1<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>equation<span class="nb">}</span>
+</pre></div>
+</div>
+<p>Mathematische Objekte:</p>
+<ul class="simple">
+<li><p>griechische Buchstaben z.B. <code class="docutils literal notranslate"><span class="pre">\alpha</span></code> oder pi mit <code class="docutils literal notranslate"><span class="pre">\pi</span></code></p></li>
+<li><p>Quadratwurzel <code class="docutils literal notranslate"><span class="pre">\sqrt{}</span></code> .. kubische Wurzel <code class="docutils literal notranslate"><span class="pre">\sqrt[3]{}</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">\sin()</span></code> ,  <code class="docutils literal notranslate"><span class="pre">\cos()</span></code> …`</p></li>
+<li><p>Brüche mit <code class="docutils literal notranslate"><span class="pre">\frac{}{}</span></code></p></li>
+<li><p>hochstellen mit <code class="docutils literal notranslate"><span class="pre">^</span></code></p></li>
+<li><p>tiefstellen mit <code class="docutils literal notranslate"><span class="pre">_</span></code></p></li>
+<li><p>Zahlen mit Einheiten mit <code class="docutils literal notranslate"><span class="pre">\mathrm{}</span></code> und halbes Leerzeichen <code class="docutils literal notranslate"><span class="pre">\,</span></code> und Komma mit <code class="docutils literal notranslate"><span class="pre">{,}</span></code> eingrenzen  also z.B. <code class="docutils literal notranslate"><span class="pre">15{,}4\,\mathrm{mm}</span></code></p></li>
+</ul>
 <p><a class="reference external" href="https://tobiw.de/tbdm/siunitx">Zahlen und Einheiten</a></p>
 <div class="section" id="ubungen">
 <h3><span class="section-number">1.8.1. </span>Übungen<a class="headerlink" href="#ubungen" title="Permalink to this headline">¶</a></h3>

@@ -370,9 +370,25 @@ caption
 
 ## Mathematische Umgebungen
 
-TODO
+- Verwendung von Formelzeichen durch Einbettung mit $ Zeichen: z.B. $\alpha$
 
-Einheiten, Komma im deut., amsmath?
+- Gleichungen zwischen `\begin{equation}` und `\end{equation}`  
+
+```latex
+\begin{equation}
+    f(x,\mu,\sigma^2)=\frac{1}{\sqrt{2\pi \sigma^2}}e^{-\frac{(x-\mu)^2}{2\sigma^2}}
+    \label{equ:glg1}
+\end{equation}
+```
+Mathematische Objekte:
+
+- griechische Buchstaben z.B. `\alpha` oder pi mit `\pi`
+- Quadratwurzel `\sqrt{}` .. kubische Wurzel `\sqrt[3]{}`
+- `\sin()` ,  `\cos()` ...`
+- Brüche mit `\frac{}{}`
+- hochstellen mit `^`
+- tiefstellen mit `_`
+- Zahlen mit Einheiten mit `\mathrm{}` und halbes Leerzeichen `\,` und Komma mit `{,}` eingrenzen  also z.B. `15{,}4\,\mathrm{mm}`
 
 [Zahlen und Einheiten](https://tobiw.de/tbdm/siunitx)
 
