@@ -400,8 +400,25 @@
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#bilder-mit-latex-schrift">
-     1.5.3. Bilder mit LaTeX-Schrift
+    <a class="reference internal nav-link" href="#bilder-mit-latex-schrift-mit-pdf-tex">
+     1.5.3. Bilder mit LaTeX-Schrift (mit
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       .pdf_tex
+      </span>
+     </code>
+     )
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bilder-mit-latex-schrift-mit-svg">
+     1.5.4. Bilder mit LaTeX-Schrift (mit
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       .svg
+      </span>
+     </code>
+     )
     </a>
    </li>
   </ul>
@@ -667,8 +684,8 @@ Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nul
 <p class="caption"><span class="caption-number">Fig. 1.8 </span><span class="caption-text">caption</span><a class="headerlink" href="#untitled-7" title="Permalink to this image">¶</a></p>
 </div>
 </div>
-<div class="section" id="bilder-mit-latex-schrift">
-<h3><span class="section-number">1.5.3. </span>Bilder mit LaTeX-Schrift<a class="headerlink" href="#bilder-mit-latex-schrift" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="bilder-mit-latex-schrift-mit-pdf-tex">
+<h3><span class="section-number">1.5.3. </span>Bilder mit LaTeX-Schrift (mit <code class="docutils literal notranslate"><span class="pre">.pdf_tex</span></code>)<a class="headerlink" href="#bilder-mit-latex-schrift-mit-pdf-tex" title="Permalink to this headline">¶</a></h3>
 <p>Verwendet man Vektorgrafiken als Bildformate, z.B. für Skizzen/Schemata, werden diese über das PDF-Dateiformat eingebunden. Dabei sind die Vorteile, dass</p>
 <ul class="simple">
 <li><p>die Bilder frei skalierbar sind, ohne unscharf zu werden und</p></li>
@@ -739,6 +756,21 @@ Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nul
 </div>
 <p>⇒ das Bild wurde deutlich verkleinert, die Schrift bleibt genauso groß, wie es vom Dokument vorgegeben wird</p>
 </div>
+<div class="section" id="bilder-mit-latex-schrift-mit-svg">
+<h3><span class="section-number">1.5.4. </span>Bilder mit LaTeX-Schrift (mit <code class="docutils literal notranslate"><span class="pre">.svg</span></code>)<a class="headerlink" href="#bilder-mit-latex-schrift-mit-svg" title="Permalink to this headline">¶</a></h3>
+<p>Analog können auch Inkscape-Grafiken mit der Dateiendung <code class="docutils literal notranslate"><span class="pre">.svg</span></code> direkt in LaTeX verwendet werden dafür ist folgender Code notwendig:</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span>...
+<span class="k">\usepackage</span><span class="nb">{</span>svg<span class="nb">}</span> <span class="c">%Einbindung von svg Grafiken</span>
+...
+<span class="k">\begin</span><span class="nb">{</span>figure<span class="nb">}</span>[!h] 
+    <span class="k">\centering</span>
+    <span class="k">\includesvg</span><span class="na">[width=120mm]</span><span class="nb">{</span>Beispiel.svg<span class="nb">}</span>
+    <span class="k">\caption</span><span class="nb">{</span>Beispiel Vektorgrafik mit LaTeX rendering<span class="nb">}</span>
+    <span class="k">\label</span><span class="nb">{</span>fig:Beispiel<span class="nb">_</span>Vektor<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>figure<span class="nb">}</span>
+</pre></div>
+</div>
+</div>
 </div>
 <div class="section" id="ubung-zur-latex-schrift-in-bildern">
 <h2><span class="section-number">1.6. </span>Übung zur LaTeX-Schrift in Bildern<a class="headerlink" href="#ubung-zur-latex-schrift-in-bildern" title="Permalink to this headline">¶</a></h2>
@@ -749,8 +781,10 @@ Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nul
 <p class="caption"><span class="caption-number">Fig. 1.13 </span><span class="caption-text">caption</span><a class="headerlink" href="#skizze-ubungsbild" title="Permalink to this image">¶</a></p>
 </div>
 <p>Nutzen Sie bitte die SVG-Datei dazu im Inkscape und setzen Sie die Beschriftung neu mit Text, den Sie dann im LaTeX-Dokument wieder ersetzen!</p>
-<p><span class="xref myst">Skizze.svg</span></p>
-<p><a class="reference external" href="https://www.notion.so/L-sung-c2467712e9ba4581bbbf168b10f984d0">Lösung</a></p>
+<div class="dropdown admonition">
+<p class="admonition-title">Für die Lösung auf den Button klicken zum aufklappen</p>
+<p><img alt="" src="../_images/Loesung_InkscapeLaTeX.png" /></p>
+</div>
 </div>
 <div class="section" id="tabellen">
 <h2><span class="section-number">1.7. </span>Tabellen<a class="headerlink" href="#tabellen" title="Permalink to this headline">¶</a></h2>

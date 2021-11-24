@@ -226,7 +226,7 @@ name: Untitled_7
 caption 
 ``` 
 
-### Bilder mit LaTeX-Schrift
+### Bilder mit LaTeX-Schrift (mit `.pdf_tex`)
 
 Verwendet man Vektorgrafiken als Bildformate, z.B. für Skizzen/Schemata, werden diese über das PDF-Dateiformat eingebunden. Dabei sind die Vorteile, dass 
 
@@ -317,6 +317,22 @@ caption
 
 ⇒ das Bild wurde deutlich verkleinert, die Schrift bleibt genauso groß, wie es vom Dokument vorgegeben wird
 
+### Bilder mit LaTeX-Schrift (mit `.svg`)
+
+Analog können auch Inkscape-Grafiken mit der Dateiendung `.svg` direkt in LaTeX verwendet werden dafür ist folgender Code notwendig:
+
+```latex
+...
+\usepackage{svg} %Einbindung von svg Grafiken
+...
+\begin{figure}[!h] 
+    \centering
+    \includesvg[width=120mm]{Beispiel.svg}
+    \caption{Beispiel Vektorgrafik mit LaTeX rendering}
+    \label{fig:Beispiel_Vektor}
+\end{figure}
+```
+
 ## Übung zur LaTeX-Schrift in Bildern
 
 **Aufgabe**
@@ -333,9 +349,12 @@ caption
 
 Nutzen Sie bitte die SVG-Datei dazu im Inkscape und setzen Sie die Beschriftung neu mit Text, den Sie dann im LaTeX-Dokument wieder ersetzen!
 
-[Skizze.svg](LaTeX%20-%20Einfu%CC%88hrung%2088cdbcecca5e453788674449011a98e6/Skizze.svg)
+```{admonition} Für die Lösung auf den Button klicken zum aufklappen
+:class: dropdown
 
-[Lösung](https://www.notion.so/L-sung-c2467712e9ba4581bbbf168b10f984d0)
+![](Einfuehrung/Loesung_InkscapeLaTeX.png)
+```
+
 
 ## Tabellen
 
