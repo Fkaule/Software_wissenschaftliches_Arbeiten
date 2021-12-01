@@ -400,26 +400,32 @@
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#bilder-mit-latex-schrift-mit-pdf-tex">
-     1.5.3. Bilder mit LaTeX-Schrift (mit
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       .pdf_tex
-      </span>
-     </code>
-     )
+    <a class="reference internal nav-link" href="#bilder-mit-latex-schrift">
+     1.5.3. Bilder mit LaTeX-Schrift
     </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#bilder-mit-latex-schrift-mit-svg">
-     1.5.4. Bilder mit LaTeX-Schrift (mit
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       .svg
-      </span>
-     </code>
-     )
-    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#mit-pdf-tex">
+       (mit
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         .pdf_tex
+        </span>
+       </code>
+       )
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#mit-svg">
+       mit
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         .svg
+        </span>
+       </code>
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -684,40 +690,46 @@ Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nul
 <p class="caption"><span class="caption-number">Fig. 1.8 </span><span class="caption-text">caption</span><a class="headerlink" href="#untitled-7" title="Permalink to this image">¶</a></p>
 </div>
 </div>
-<div class="section" id="bilder-mit-latex-schrift-mit-pdf-tex">
-<h3><span class="section-number">1.5.3. </span>Bilder mit LaTeX-Schrift (mit <code class="docutils literal notranslate"><span class="pre">.pdf_tex</span></code>)<a class="headerlink" href="#bilder-mit-latex-schrift-mit-pdf-tex" title="Permalink to this headline">¶</a></h3>
-<p>Verwendet man Vektorgrafiken als Bildformate, z.B. für Skizzen/Schemata, werden diese über das PDF-Dateiformat eingebunden. Dabei sind die Vorteile, dass</p>
-<ul class="simple">
-<li><p>die Bilder frei skalierbar sind, ohne unscharf zu werden und</p></li>
-<li><p>man im Prinzip auf jedes grafische Element zugreifen kann.</p></li>
-</ul>
-<p>Verwendet man Inkscape als Grafikprogramm, lassen sich aus den SVG-Dateien auch PDFs abspeichern. Dabei kann man im Speicherdialog die Textausgabe in eine LaTeX-Datei umleiten:</p>
-<div class="figure align-default" id="untitled-8">
-<a class="reference internal image-reference" href="../_images/Untitled_84.png"><img alt="../_images/Untitled_84.png" src="../_images/Untitled_84.png" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 1.9 </span><span class="caption-text">caption</span><a class="headerlink" href="#untitled-8" title="Permalink to this image">¶</a></p>
+<div class="section" id="bilder-mit-latex-schrift">
+<h3><span class="section-number">1.5.3. </span>Bilder mit LaTeX-Schrift<a class="headerlink" href="#bilder-mit-latex-schrift" title="Permalink to this headline">¶</a></h3>
+<p>Es gibt die Möglichkeit, dass in Inkscape erstellte Bild in LaTeX einzubinden und den Text von LaTeX rendern zu lassen. Damit wird die Schriftart und Größe mit dem Dokument übereinstimmen. Dabei gibt es zwei verschiedene Varianten:</p>
+<ol class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">.pdf_tex</span></code> (zwei Dateien: Bild als .pdf und Text als .pdf_tex)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.svg</span></code> (eine Datei)</p></li>
+</ol>
+<div class="figure align-default" id="latex-bild-inkscapeoriginal">
+<a class="reference internal image-reference" href="../_images/LaTeX-Bild-InkscapeOriginal.png"><img alt="../_images/LaTeX-Bild-InkscapeOriginal.png" src="../_images/LaTeX-Bild-InkscapeOriginal.png" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1.9 </span><span class="caption-text">So sieht die Grafik in Inkscape aus</span><a class="headerlink" href="#latex-bild-inkscapeoriginal" title="Permalink to this image">¶</a></p>
 </div>
-<p><strong>Beispiel:</strong></p>
-<p>In Inkscape wurde die folgende Skizze erstellt (Dokumentgröße wurde mit 100mm x 100mm definiert):</p>
+<div class="figure align-default" id="id1">
+<a class="reference internal image-reference" href="../_images/LaTeX-Bild-LaTeX_output.png"><img alt="../_images/LaTeX-Bild-LaTeX_output.png" src="../_images/LaTeX-Bild-LaTeX_output.png" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1.10 </span><span class="caption-text">So sieht die Grafik in LaTeX aus</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="mit-pdf-tex">
+<h4>(mit <code class="docutils literal notranslate"><span class="pre">.pdf_tex</span></code>)<a class="headerlink" href="#mit-pdf-tex" title="Permalink to this headline">¶</a></h4>
+<p><strong>Erstellen der Grafik:</strong></p>
 <ul class="simple">
-<li><p>der Text hier ist als normaler Text eingefügt, wobei gleich die LaTeX-Notation für mathematische Zeichen angegeben wird</p></li>
-<li><p>der Text ist entsprechend eingefärbt, um die Bedeutung klarer zu machen (dies wird dann so übernommen)</p></li>
-<li><p>beim Abspeichern als PDF mit LaTeX-Ausgabe entstehen zwei Dateien:</p>
-<ul>
-<li><p><em>Skizze.pdf</em> (die eigentliche Skizze)</p></li>
-<li><p><em>Skizze.pdf_tex</em> (LaTeX-Datei mit Schrift und Einbindung der PDF)</p></li>
+<li><p>Erstellen der Grafik mit Text, wobei LaTeX-Notation für mathematische Zeichen angegeben wird</p></li>
+<li><p>Anschließend wird die Abbildung als .pdf abspeichert …</p></li>
+<li><p>Im Speicherdialog die <code class="docutils literal notranslate"><span class="pre">Text</span> <span class="pre">in</span> <span class="pre">PDF</span> <span class="pre">weglassen</span> <span class="pre">und</span> <span class="pre">LaTeX</span> <span class="pre">Datei</span> <span class="pre">erstellen</span></code> auswählen</p></li>
 </ul>
-</li>
+<a class="reference internal image-reference" href="../_images/Untitled_84.png" id="untitled-8"><img alt="../_images/Untitled_84.png" id="untitled-8" src="../_images/Untitled_84.png" style="width: 500px;" /></a>
+<ul class="simple">
+<li><p>Die zwei erstellen Dateien (<code class="docutils literal notranslate"><span class="pre">.pdf_latex</span></code> und die <code class="docutils literal notranslate"><span class="pre">.pdf</span></code>) in dem Ordner wo sich die LaTeX Dokumente befinden kopieren</p></li>
 </ul>
+<p>In unserem Beispiel sieht die Grafik dan so aus:</p>
 <div class="figure align-default" id="untitled-9">
 <a class="reference internal image-reference" href="../_images/Untitled_92.png"><img alt="../_images/Untitled_92.png" src="../_images/Untitled_92.png" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 1.10 </span><span class="caption-text">caption</span><a class="headerlink" href="#untitled-9" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 1.11 </span><span class="caption-text">Original Inkscape Grafik</span><a class="headerlink" href="#untitled-9" title="Permalink to this image">¶</a></p>
 </div>
-<p>Das Bild wollen wir in LaTeX einbinden, so wie es erstellt wurde:</p>
+<p><strong>Einbinden in LaTeX:</strong></p>
+<p>Liegen die Datein im gleichen Ordner, erfolgt die Einbindung wie folgt:</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span>...
 <span class="k">\usepackage</span><span class="nb">{</span>color<span class="nb">}</span> <span class="c">%Nutzung von Farbe</span>
 ...
 <span class="k">\begin</span><span class="nb">{</span>figure<span class="nb">}</span>[!h]
     <span class="k">\centering</span>
+    <span class="k">\def\svgwidth</span><span class="nb">{</span>0.7<span class="k">\textwidth</span><span class="nb">}</span> 
     <span class="k">\input</span><span class="nb">{</span>Skizze.pdf<span class="nb">_</span>tex<span class="nb">}</span>
     <span class="k">\caption</span><span class="nb">{</span>Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<span class="nb">}</span>
     <span class="k">\label</span><span class="nb">{</span>fig:skizze<span class="nb">}</span>
@@ -725,17 +737,27 @@ Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nul
 ...
 </pre></div>
 </div>
+<p>Wenn die zwei Dateien z.B. wie hier in dem Ordner <code class="docutils literal notranslate"><span class="pre">Abbildungen</span></code> liegt, müsste dies wie folgt angegeben werden:</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span>...
+<span class="k">\usepackage</span><span class="nb">{</span>color<span class="nb">}</span> <span class="c">%Nutzung von Farbe</span>
+...
+<span class="k">\begin</span><span class="nb">{</span>figure<span class="nb">}</span>[!h]
+    <span class="k">\centering</span>
+    <span class="k">\def\svgwidth</span><span class="nb">{</span>0.7<span class="k">\textwidth</span><span class="nb">}</span> 
+    <span class="k">\graphicspath</span><span class="nb">{{</span>Abbildungen/<span class="nb">}}</span>
+    <span class="k">\input</span><span class="nb">{</span>Abbildungen/Skizze.pdf<span class="nb">_</span>tex<span class="nb">}</span>
+    <span class="k">\caption</span><span class="nb">{</span>Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<span class="nb">}</span>
+    <span class="k">\label</span><span class="nb">{</span>fig:skizze<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>figure<span class="nb">}</span>
+...
+</pre></div>
+</div>
+<p>So würde dann die Grafik aussehen:</p>
 <div class="figure align-default" id="untitled-10">
 <a class="reference internal image-reference" href="../_images/Untitled_101.png"><img alt="../_images/Untitled_101.png" src="../_images/Untitled_101.png" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 1.11 </span><span class="caption-text">caption</span><a class="headerlink" href="#untitled-10" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 1.12 </span><span class="caption-text">So würde das Bild in LaTeX aussehen</span><a class="headerlink" href="#untitled-10" title="Permalink to this image">¶</a></p>
 </div>
-<p>⇒ die Schrift wurde durch LaTeX-Schrift, wie sie im Dokument verwendet wird, ersetzt</p>
-<p>Im nächsten Schritt wollen die Stärken dieses Vorgehens demonstrieren:</p>
-<ul class="simple">
-<li><p>das Bild wird in unterschiedlichen Größen nebeneinander eingefügt</p></li>
-<li><p>das Bild ist frei skalierbar (hier Verkleinerung auf <code class="docutils literal notranslate"><span class="pre">0.4\textwidth</span></code>), ohne Verluste</p></li>
-<li><p>die Schrift bleibt so groß, wie das Dokument es vorgibt und wird nicht mit skaliert (immer lesbar!)</p></li>
-</ul>
+<p>Den Vorteil dieser Methode wird noch mal deutlich wenn man die Bilder skaliert und sieht wie die Schriftgröße dabei immer gleich bleibt:</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span>...
 <span class="k">\usepackage</span><span class="nb">{</span>color<span class="nb">}</span> <span class="c">%Nutzung von Farbe</span>
 ...
@@ -750,15 +772,20 @@ Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nul
 <span class="k">\end</span><span class="nb">{</span>figure<span class="nb">}</span>
 </pre></div>
 </div>
+<p>Dabei würde hier folgendes Bild erstellt  werden:</p>
 <div class="figure align-default" id="untitled-11">
 <a class="reference internal image-reference" href="../_images/Untitled_114.png"><img alt="../_images/Untitled_114.png" src="../_images/Untitled_114.png" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 1.12 </span><span class="caption-text">caption</span><a class="headerlink" href="#untitled-11" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 1.13 </span><span class="caption-text">Die Schriftgröße bleibt gleich, egal wie groß das Bild skaliert wird</span><a class="headerlink" href="#untitled-11" title="Permalink to this image">¶</a></p>
 </div>
-<p>⇒ das Bild wurde deutlich verkleinert, die Schrift bleibt genauso groß, wie es vom Dokument vorgegeben wird</p>
 </div>
-<div class="section" id="bilder-mit-latex-schrift-mit-svg">
-<h3><span class="section-number">1.5.4. </span>Bilder mit LaTeX-Schrift (mit <code class="docutils literal notranslate"><span class="pre">.svg</span></code>)<a class="headerlink" href="#bilder-mit-latex-schrift-mit-svg" title="Permalink to this headline">¶</a></h3>
-<p>Analog können auch Inkscape-Grafiken mit der Dateiendung <code class="docutils literal notranslate"><span class="pre">.svg</span></code> direkt in LaTeX verwendet werden dafür ist folgender Code notwendig:</p>
+<div class="section" id="mit-svg">
+<h4>mit <code class="docutils literal notranslate"><span class="pre">.svg</span></code><a class="headerlink" href="#mit-svg" title="Permalink to this headline">¶</a></h4>
+<p>In der zweiten Variante wird die Grafik direkt als <code class="docutils literal notranslate"><span class="pre">.svg</span></code> gespeichert (es wird also nur eine Datei erzeugt). Der Nachteil an dieser Variante ist, dass die Farben nicht übernommen werden und als <code class="docutils literal notranslate"><span class="pre">LaTeX-Notation</span></code> z.B. mit <code class="docutils literal notranslate"><span class="pre">$\color{red}text$</span></code> ausgegeben werden müssen.</p>
+<div class="figure align-default" id="id2">
+<a class="reference internal image-reference" href="../_images/LaTeXsvgInkscapeoriginal.png"><img alt="../_images/LaTeXsvgInkscapeoriginal.png" src="../_images/LaTeXsvgInkscapeoriginal.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1.14 </span><span class="caption-text">So sieht das original Inkscape Bild aus</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<p>In LaTeX sieht der Code dann wie folgt aus:</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span>...
 <span class="k">\usepackage</span><span class="nb">{</span>svg<span class="nb">}</span> <span class="c">%Einbindung von svg Grafiken</span>
 ...
@@ -770,6 +797,12 @@ Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nul
 <span class="k">\end</span><span class="nb">{</span>figure<span class="nb">}</span>
 </pre></div>
 </div>
+<p>So sieht es dann in LaTeX aus:</p>
+<div class="figure align-default" id="id3">
+<a class="reference internal image-reference" href="../_images/LaTeXsvgLaTeXOutput.png"><img alt="../_images/LaTeXsvgLaTeXOutput.png" src="../_images/LaTeXsvgLaTeXOutput.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1.15 </span><span class="caption-text">So sieht das original Inkscape Bild aus</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+</div>
 </div>
 </div>
 <div class="section" id="ubung-zur-latex-schrift-in-bildern">
@@ -778,7 +811,7 @@ Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nul
 <p>Gegeben ist die folgende Grafik als PNG-Datei. Diese kann man einfach einbinden mit <code class="docutils literal notranslate"><span class="pre">\includegraphics{...}</span></code>.</p>
 <div class="figure align-default" id="skizze-ubungsbild">
 <a class="reference internal image-reference" href="../_images/Skizze-Ubungsbild.png"><img alt="../_images/Skizze-Ubungsbild.png" src="../_images/Skizze-Ubungsbild.png" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 1.13 </span><span class="caption-text">caption</span><a class="headerlink" href="#skizze-ubungsbild" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 1.16 </span><span class="caption-text">caption</span><a class="headerlink" href="#skizze-ubungsbild" title="Permalink to this image">¶</a></p>
 </div>
 <p>Nutzen Sie bitte die SVG-Datei dazu im Inkscape und setzen Sie die Beschriftung neu mit Text, den Sie dann im LaTeX-Dokument wieder ersetzen!</p>
 <div class="dropdown admonition">
@@ -809,7 +842,7 @@ Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nul
 </div>
 <div class="figure align-default" id="untitled-12">
 <a class="reference internal image-reference" href="../_images/Untitled_122.png"><img alt="../_images/Untitled_122.png" src="../_images/Untitled_122.png" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 1.14 </span><span class="caption-text">caption</span><a class="headerlink" href="#untitled-12" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 1.17 </span><span class="caption-text">caption</span><a class="headerlink" href="#untitled-12" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="mathematische-umgebungen">
@@ -841,7 +874,7 @@ Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nul
 <p>Gegeben ist eine Gleichung von Wikipedia (<a class="reference external" href="https://de.wikipedia.org/wiki/Kontinuumsmechanik">https://de.wikipedia.org/wiki/Kontinuumsmechanik</a>).</p>
 <div class="figure align-default" id="untitled-13">
 <a class="reference internal image-reference" href="../_images/Untitled_132.png"><img alt="../_images/Untitled_132.png" src="../_images/Untitled_132.png" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 1.15 </span><span class="caption-text">caption</span><a class="headerlink" href="#untitled-13" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 1.18 </span><span class="caption-text">caption</span><a class="headerlink" href="#untitled-13" title="Permalink to this image">¶</a></p>
 </div>
 <p>Setzen Sie diese Gleichung ebenso in LaTeX.</p>
 <p><strong>Lösung</strong></p>
@@ -858,7 +891,7 @@ Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nul
 </div>
 <div class="figure align-default" id="untitled-14">
 <a class="reference internal image-reference" href="../_images/Untitled_142.png"><img alt="../_images/Untitled_142.png" src="../_images/Untitled_142.png" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 1.16 </span><span class="caption-text">caption</span><a class="headerlink" href="#untitled-14" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 1.19 </span><span class="caption-text">caption</span><a class="headerlink" href="#untitled-14" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </div>
@@ -875,7 +908,7 @@ Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nul
 <p>Ist die Datenbank in Zotero gefüllt, kann direkt aus der Bibliothek im Zotero eine BIBLaTeX-Datei erzeugt werden. Dazu unter <code class="docutils literal notranslate"><span class="pre">Datei</span> <span class="pre">&gt;</span> <span class="pre">&quot;Bibliothek</span> <span class="pre">exportieren...</span></code>” anklicken. Dann erhält man ein Dialogfenster:</p>
 <div class="figure align-default" id="untitled-15">
 <a class="reference internal image-reference" href="../_images/Untitled_152.png"><img alt="../_images/Untitled_152.png" src="../_images/Untitled_152.png" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 1.17 </span><span class="caption-text">caption</span><a class="headerlink" href="#untitled-15" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 1.20 </span><span class="caption-text">caption</span><a class="headerlink" href="#untitled-15" title="Permalink to this image">¶</a></p>
 </div>
 <p>In diesem Fenter als <code class="docutils literal notranslate"><span class="pre">Format</span> <span class="pre">&quot;BibLaTeX&quot;</span></code> auswählen, mit OK bestätigen und dann die Bib-Datei im Ordner der LaTeX-Datei mit gewünschten Namen abspeichern (z.B. “mybib.bib”).</p>
 </div>

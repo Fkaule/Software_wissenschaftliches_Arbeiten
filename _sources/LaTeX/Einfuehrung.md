@@ -226,42 +226,60 @@ name: Untitled_7
 caption 
 ``` 
 
-### Bilder mit LaTeX-Schrift (mit `.pdf_tex`)
+### Bilder mit LaTeX-Schrift 
 
-Verwendet man Vektorgrafiken als Bildformate, z.B. für Skizzen/Schemata, werden diese über das PDF-Dateiformat eingebunden. Dabei sind die Vorteile, dass 
+Es gibt die Möglichkeit, dass in Inkscape erstellte Bild in LaTeX einzubinden und den Text von LaTeX rendern zu lassen. Damit wird die Schriftart und Größe mit dem Dokument übereinstimmen. Dabei gibt es zwei verschiedene Varianten:
 
-- die Bilder frei skalierbar sind, ohne unscharf zu werden und
-- man im Prinzip auf jedes grafische Element zugreifen kann.
+1. `.pdf_tex` (zwei Dateien: Bild als .pdf und Text als .pdf_tex)
+1. `.svg` (eine Datei)
 
-Verwendet man Inkscape als Grafikprogramm, lassen sich aus den SVG-Dateien auch PDFs abspeichern. Dabei kann man im Speicherdialog die Textausgabe in eine LaTeX-Datei umleiten:
+```{figure} Einfuehrung/LaTeX-Bild-InkscapeOriginal.png 
+--- 
+width: 300px 
+name: LaTeX-Bild-InkscapeOriginal
+--- 
+So sieht die Grafik in Inkscape aus 
+``` 
 
-```{figure} Einfuehrung/Untitled_8.png 
+```{figure} Einfuehrung/LaTeX-Bild-LaTeX_output.png 
+--- 
+width: 300px 
+name: LaTeX-Bild-InkscapeOriginal
+--- 
+So sieht die Grafik in LaTeX aus 
+``` 
+
+
+#### (mit `.pdf_tex`)
+
+**Erstellen der Grafik:**
+
+- Erstellen der Grafik mit Text, wobei LaTeX-Notation für mathematische Zeichen angegeben wird
+- Anschließend wird die Abbildung als .pdf abspeichert ...
+- Im Speicherdialog die `Text in PDF weglassen und LaTeX Datei erstellen` auswählen 
+
+```{image} Einfuehrung/Untitled_8.png 
 --- 
 width: 500px 
 name: Untitled_8
---- 
-caption 
 ``` 
 
-**Beispiel:**
+- Die zwei erstellen Dateien (`.pdf_latex` und die `.pdf`) in dem Ordner wo sich die LaTeX Dokumente befinden kopieren
 
-In Inkscape wurde die folgende Skizze erstellt (Dokumentgröße wurde mit 100mm x 100mm definiert):
-
-- der Text hier ist als normaler Text eingefügt, wobei gleich die LaTeX-Notation für mathematische Zeichen angegeben wird
-- der Text ist entsprechend eingefärbt, um die Bedeutung klarer zu machen (dies wird dann so übernommen)
-- beim Abspeichern als PDF mit LaTeX-Ausgabe entstehen zwei Dateien:
-    - *Skizze.pdf* (die eigentliche Skizze)
-    - *Skizze.pdf_tex* (LaTeX-Datei mit Schrift und Einbindung der PDF)
+In unserem Beispiel sieht die Grafik dan so aus:
 
 ```{figure} Einfuehrung/Untitled_9.png 
 --- 
 width: 500px 
 name: Untitled_9
 --- 
-caption 
+Original Inkscape Grafik 
 ``` 
 
-Das Bild wollen wir in LaTeX einbinden, so wie es erstellt wurde:
+
+**Einbinden in LaTeX:**
+
+Liegen die Datein im gleichen Ordner, erfolgt die Einbindung wie folgt:
 
 ```latex
 ...
@@ -269,6 +287,7 @@ Das Bild wollen wir in LaTeX einbinden, so wie es erstellt wurde:
 ...
 \begin{figure}[!h]
     \centering
+    \def\svgwidth{0.7\textwidth} 
     \input{Skizze.pdf_tex}
     \caption{Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.}
     \label{fig:skizze}
@@ -276,21 +295,35 @@ Das Bild wollen wir in LaTeX einbinden, so wie es erstellt wurde:
 ...
 ```
 
+Wenn die zwei Dateien z.B. wie hier in dem Ordner `Abbildungen` liegt, müsste dies wie folgt angegeben werden:
+
+```latex
+...
+\usepackage{color} %Nutzung von Farbe
+...
+\begin{figure}[!h]
+    \centering
+    \def\svgwidth{0.7\textwidth} 
+    \graphicspath{{Abbildungen/}}
+    \input{Abbildungen/Skizze.pdf_tex}
+    \caption{Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.}
+    \label{fig:skizze}
+\end{figure}
+...
+```
+
+So würde dann die Grafik aussehen:
+
 ```{figure} Einfuehrung/Untitled_10.png 
 --- 
 width: 500px 
 name: Untitled_10
 --- 
-caption 
+So würde das Bild in LaTeX aussehen 
 ``` 
 
-⇒ die Schrift wurde durch LaTeX-Schrift, wie sie im Dokument verwendet wird, ersetzt
+Den Vorteil dieser Methode wird noch mal deutlich wenn man die Bilder skaliert und sieht wie die Schriftgröße dabei immer gleich bleibt:
 
-Im nächsten Schritt wollen die Stärken dieses Vorgehens demonstrieren:
-
-- das Bild wird in unterschiedlichen Größen nebeneinander eingefügt
-- das Bild ist frei skalierbar (hier Verkleinerung auf `0.4\textwidth`), ohne Verluste
-- die Schrift bleibt so groß, wie das Dokument es vorgibt und wird nicht mit skaliert (immer lesbar!)
 
 ```latex
 ...
@@ -307,19 +340,30 @@ Im nächsten Schritt wollen die Stärken dieses Vorgehens demonstrieren:
 \end{figure}
 ```
 
+Dabei würde hier folgendes Bild erstellt  werden:
+
 ```{figure} Einfuehrung/Untitled_11.png 
 --- 
 width: 500px 
 name: Untitled_11
 --- 
-caption 
+Die Schriftgröße bleibt gleich, egal wie groß das Bild skaliert wird 
 ``` 
 
-⇒ das Bild wurde deutlich verkleinert, die Schrift bleibt genauso groß, wie es vom Dokument vorgegeben wird
+####  mit `.svg`
 
-### Bilder mit LaTeX-Schrift (mit `.svg`)
+In der zweiten Variante wird die Grafik direkt als `.svg` gespeichert (es wird also nur eine Datei erzeugt). Der Nachteil an dieser Variante ist, dass die Farben nicht übernommen werden und als `LaTeX-Notation` z.B. mit `$\color{red}text$` ausgegeben werden müssen.  
 
-Analog können auch Inkscape-Grafiken mit der Dateiendung `.svg` direkt in LaTeX verwendet werden dafür ist folgender Code notwendig:
+```{figure} Einfuehrung/LaTeXsvgInkscapeoriginal.png
+--- 
+width: 500px 
+name: Untitled_11
+--- 
+So sieht das original Inkscape Bild aus
+``` 
+
+
+In LaTeX sieht der Code dann wie folgt aus:
 
 ```latex
 ...
@@ -332,6 +376,16 @@ Analog können auch Inkscape-Grafiken mit der Dateiendung `.svg` direkt in LaTeX
     \label{fig:Beispiel_Vektor}
 \end{figure}
 ```
+
+So sieht es dann in LaTeX aus:
+
+```{figure} Einfuehrung/LaTeXsvgLaTeXOutput.png
+--- 
+width: 500px 
+name: Untitled_11
+--- 
+So sieht das original Inkscape Bild aus
+``` 
 
 ## Übung zur LaTeX-Schrift in Bildern
 
