@@ -398,16 +398,6 @@
      2.3.3. Beide Beispiele zusammen
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#stylistische-anpassungen">
-     2.3.4. stylistische Anpassungen
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#datei-speichern">
-     2.3.5. Datei speichern
-    </a>
-   </li>
   </ul>
  </li>
 </ul>
@@ -652,7 +642,7 @@
 </div><div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">L</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1000</span><span class="p">,</span><span class="mi">20</span><span class="p">)</span> <span class="c1"># mm</span>
-<span class="n">umax1</span> <span class="o">=</span> <span class="p">(</span><span class="mi">5</span><span class="o">*</span><span class="n">q0</span><span class="o">*</span><span class="n">L</span><span class="o">**</span><span class="mi">3</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">384</span><span class="o">*</span><span class="n">E1</span><span class="o">*</span><span class="n">I1</span><span class="p">)</span>
+<span class="n">umax1</span> <span class="o">=</span> <span class="p">(</span><span class="mi">5</span><span class="o">*</span><span class="n">q0</span><span class="o">*</span><span class="n">L</span><span class="o">**</span><span class="mi">3</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">384</span><span class="o">*</span><span class="n">E</span><span class="o">*</span><span class="n">I</span><span class="p">)</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="n">umax1</span><span class="p">);</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Länge [mm]&quot;</span><span class="p">);</span>
@@ -707,103 +697,6 @@
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">();</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Länge [mm]&quot;</span><span class="p">);</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;maximale Verschiebung [mm]&quot;</span><span class="p">);</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="stylistische-anpassungen">
-<h3><span class="section-number">2.3.4. </span>stylistische Anpassungen<a class="headerlink" href="#stylistische-anpassungen" title="Permalink to this headline">¶</a></h3>
-<p><strong>Stil zurücksetzen</strong>: <br>
-wichtig um den Stil nicht ungewollt auf die nächsten Plots zu übertragen <br></p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">plt.style.use('default')</span></code></p></li>
-</ul>
-<p><strong>Schrift</strong>: <br>
-muss vor <code class="docutils literal notranslate"><span class="pre">plt.plot()</span></code> kommen <br></p>
-<ul class="simple">
-<li><p>Schriftgröße: <code class="docutils literal notranslate"><span class="pre">plt.rcParams.update({'font.size':</span> <span class="pre">20})</span></code></p></li>
-<li><p>Schriftart: <code class="docutils literal notranslate"><span class="pre">plt.rcParams['font.family']</span> <span class="pre">=</span> <span class="pre">'STIXGeneral'</span></code> <br>STIXGeneral = LaTeX Schrift</p></li>
-</ul>
-<p><strong>Bildgröße</strong>: <br></p>
-<ul class="simple">
-<li><p>für alle Texte <code class="docutils literal notranslate"><span class="pre">plt.figure(figsize=(8,5))</span></code>
-muss vor <code class="docutils literal notranslate"><span class="pre">plt.plot()</span></code> kommen <br>
-Größe in inces (Default: 6,4) <br></p></li>
-</ul>
-<p><strong>Gitter</strong>: <br></p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">plt.grid()</span></code></p></li>
-</ul>
-<p><strong>Titel</strong>: <br></p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">plt.title(&quot;Beispieltitel&quot;)</span></code></p></li>
-</ul>
-<p><strong>Linien</strong>: <br>
-in <code class="docutils literal notranslate"><span class="pre">plt.plot()</span></code><br>
-<a class="reference external" href="https://github.com/matplotlib/cheatsheets/blob/master/cheatsheets.pdf">Übersicht über alle Stile (matplotlib Cheat Sheet)</a></p>
-<ul class="simple">
-<li><p>Linienfarbe: <code class="docutils literal notranslate"><span class="pre">plt.plot(color=&quot;red&quot;)</span></code></p></li>
-<li><p>Liniendicke: <code class="docutils literal notranslate"><span class="pre">plt.plot(lw=2)</span></code> (lw = linewidth)</p></li>
-<li><p>Linienstil: <code class="docutils literal notranslate"><span class="pre">plt.plot(ls=&quot;--&quot;)</span></code> (ls = linestyle) <br></p></li>
-</ul>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#stil zurücksetzen</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;default&#39;</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span> <span class="c1"># Größe des Plots (in inches)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;font.family&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;STIXGeneral&#39;</span> <span class="c1"># Schriftart für den gesamten Plot</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;font.size&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">18</span><span class="p">;</span> <span class="c1"># Schriftgröße für den gesamten Plot</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="n">umax1</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;Beispiel 1&quot;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s2">&quot;-&quot;</span><span class="p">);</span> <span class="c1"># graph1 mit roter durchgezogener Linie</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="n">umax2</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;Beispiel 2&quot;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">);</span> <span class="c1"># graph2 mit blauer gestrichelter Linie </span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">();</span> <span class="c1"># Legende darstellen </span>
-<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">();</span> <span class="c1"># Raster darstellen</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Vergleich beider Modelle&quot;</span><span class="p">)</span> <span class="c1"># Titel hinzufuegen</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Länge [mm]&quot;</span><span class="p">);</span> <span class="c1"># x-Achse beschriften</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;maximale Verschiebung [mm]&quot;</span><span class="p">);</span>  <span class="c1"># y-Achse beschriften</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>wenn wir den Stil jetzt nicht zurücksetzen <code class="docutils literal notranslate"><span class="pre">plt.style.use('default')</span></code> wird dieser automatisch in dem nächsten plot verwendet.</p>
-<p>Nun stellen wir nur den vorderen Bereich der Länge von  <code class="docutils literal notranslate"><span class="pre">L=0</span></code> bis <code class="docutils literal notranslate"><span class="pre">L=200mm</span></code> dar: <br></p>
-<p><code class="docutils literal notranslate"><span class="pre">plt.xlim(0,200)</span></code></p>
-<p>für y-Achse analog:</p>
-<p><code class="docutils literal notranslate"><span class="pre">plt.ylim(0,0.1)</span></code></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">200</span><span class="p">);</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.1</span><span class="p">);</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="n">umax1</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;Beispiel 1&quot;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s2">&quot;-&quot;</span><span class="p">);</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="n">umax2</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;Beispiel 2&quot;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">);</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Länge [mm]&quot;</span><span class="p">);</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;maximale Verschiebung [mm]&quot;</span><span class="p">);</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">();</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">);</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="datei-speichern">
-<h3><span class="section-number">2.3.5. </span>Datei speichern<a class="headerlink" href="#datei-speichern" title="Permalink to this headline">¶</a></h3>
-<p>mit <code class="docutils literal notranslate"><span class="pre">plt.savefig('Dateiname.png',</span> <span class="pre">bbox_inches='tight',</span> <span class="pre">dpi=150)</span></code></p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">bbox_inches='tight'</span></code> sorgt dafür das die Beschriftungen immer mit im Bild gespeichert werden (können sonst manchmal abgeschnitten sein)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">dpi</span></code> regelt die Größe des Pixelbildes (dots per inch)</p></li>
-</ul>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">200</span><span class="p">);</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.1</span><span class="p">);</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="n">umax1</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;Beispiel 1&quot;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s2">&quot;-&quot;</span><span class="p">);</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="n">umax2</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;Beispiel 2&quot;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">);</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Länge [mm]&quot;</span><span class="p">);</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;maximale Verschiebung [mm]&quot;</span><span class="p">);</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">();</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">);</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;Uebung1_detail.png&#39;</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">&#39;tight&#39;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">150</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
