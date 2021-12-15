@@ -58,8 +58,10 @@
     file: Python/02-Biegebalken
   - title: Kraftmessung
     file: Python/03-Kraftmessung
+  - title: Plot Einstellungen
+    file: Python/03b-Ploteinstellungen
   - title: Klimawandel
-    file: Python/04-Klimawandel_solved
+    file: Python/04-Klimawandel
   - title: API Unterschiede
     file: Python/05-API.ipynb
   - title: Subplots
