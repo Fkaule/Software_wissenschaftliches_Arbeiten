@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>6. RKI Corona Plots</title>
+    <title>7. RKI Corona Plots</title>
     
   <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -55,8 +55,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="7. Weiterführendes Material (Links)" href="Links.html" />
-    <link rel="prev" title="5. Subplots" href="06-Subplots.html" />
+    <link rel="next" title="8. Weiterführendes Material (Links)" href="Links.html" />
+    <link rel="prev" title="6. Subplots" href="06-Subplots.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -194,33 +194,38 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="03-Kraftmessung_solved.html">
-     2. Kraftmessung
+    <a class="reference internal" href="02-Biegebalken.html">
+     2. Biegebalken
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="03-Kraftmessung.html">
+     3. Kraftmessung
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="04-Klimawandel_solved.html">
-     3. Klimawandel
+     4. Klimawandel
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="05-API.html">
-     4. API Unterschiede
+     5. API Unterschiede
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="06-Subplots.html">
-     5. Subplots
+     6. Subplots
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     6. RKI Corona Zahlen
+     7. RKI Corona Zahlen
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Links.html">
-     7. Weiterführendes Material
+     8. Weiterführendes Material
     </a>
    </li>
   </ul>
@@ -358,22 +363,22 @@
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#tages-inzidenz-pro-bundesland">
-   6.1. 7 Tages Inzidenz pro Bundesland
+   7.1. 7 Tages Inzidenz pro Bundesland
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#corona-inzidenz-am-letzten-tag">
-   6.2. Corona Inzidenz am letzten Tag
+   7.2. Corona Inzidenz am letzten Tag
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#leipzig">
-   6.3. Leipzig
+   7.3. Leipzig
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#aufgabe">
-   6.4. Aufgabe
+   7.4. Aufgabe
   </a>
  </li>
 </ul>
@@ -389,9 +394,9 @@
               <div>
                 
   <div class="section" id="rki-corona-plots">
-<h1><span class="section-number">6. </span>RKI Corona Plots<a class="headerlink" href="#rki-corona-plots" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">7. </span>RKI Corona Plots<a class="headerlink" href="#rki-corona-plots" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="tages-inzidenz-pro-bundesland">
-<h2><span class="section-number">6.1. </span>7 Tages Inzidenz pro Bundesland<a class="headerlink" href="#tages-inzidenz-pro-bundesland" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.1. </span>7 Tages Inzidenz pro Bundesland<a class="headerlink" href="#tages-inzidenz-pro-bundesland" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> 
@@ -583,7 +588,7 @@
 </div>
 </div>
 <div class="section" id="corona-inzidenz-am-letzten-tag">
-<h2><span class="section-number">6.2. </span>Corona Inzidenz am letzten Tag<a class="headerlink" href="#corona-inzidenz-am-letzten-tag" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.2. </span>Corona Inzidenz am letzten Tag<a class="headerlink" href="#corona-inzidenz-am-letzten-tag" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Bundeslaender_RM7_lastday</span><span class="o">=</span><span class="n">Bundeslaender_RM7</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">Bundeslaender_RM7</span><span class="p">[</span><span class="s2">&quot;Meldedatum&quot;</span><span class="p">]</span><span class="o">==</span><span class="n">Bundeslaender_RM7</span><span class="p">[</span><span class="s2">&quot;Meldedatum&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s2">&quot;7 Tage Indizdenz&quot;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -679,7 +684,7 @@
 </div>
 </div>
 <div class="section" id="leipzig">
-<h2><span class="section-number">6.3. </span>Leipzig<a class="headerlink" href="#leipzig" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.3. </span>Leipzig<a class="headerlink" href="#leipzig" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Leipzig</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/RKI_Corona_Leipzig.csv&quot;</span><span class="p">)</span>
@@ -763,7 +768,7 @@
 </div>
 </div>
 <div class="section" id="aufgabe">
-<h2><span class="section-number">6.4. </span>Aufgabe<a class="headerlink" href="#aufgabe" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.4. </span>Aufgabe<a class="headerlink" href="#aufgabe" title="Permalink to this headline">¶</a></h2>
 <p>Plotten Sie die Zahlen für Deutschland</p>
 <ol class="simple">
 <li><p>pandas Dataframe <code class="docutils literal notranslate"><span class="pre">Bundeslaender_RM7</span></code> für Bundesländer pro Tag aufsummieren (neuen Dataframe erzeugen)</p></li>
@@ -947,8 +952,8 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="06-Subplots.html" title="previous page"><span class="section-number">5. </span>Subplots</a>
-    <a class='right-next' id="next-link" href="Links.html" title="next page"><span class="section-number">7. </span>Weiterführendes Material (Links)</a>
+    <a class='left-prev' id="prev-link" href="06-Subplots.html" title="previous page"><span class="section-number">6. </span>Subplots</a>
+    <a class='right-next' id="next-link" href="Links.html" title="next page"><span class="section-number">8. </span>Weiterführendes Material (Links)</a>
 
         </div>
         

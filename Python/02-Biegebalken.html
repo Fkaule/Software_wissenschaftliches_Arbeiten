@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Berechnungen und erste grafische Darstellung am Beispiel von Biegebalken</title>
+    <title>2. Berechnungen und erste grafische Darstellung am Beispiel von Biegebalken</title>
     
   <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -57,6 +57,8 @@
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="3. Kraft-Weg Messungen" href="03-Kraftmessung.html" />
+    <link rel="prev" title="1. Einführung in Jupyter Notebooks" href="01-JupyterNotebooks.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -91,7 +93,7 @@
   </a>
  </li>
 </ul>
-<ul class="nav sidenav_l1">
+<ul class="current nav sidenav_l1">
  <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../LaTeX/LaTeX_Uebersicht.html">
    Text mit LaTeX
@@ -183,44 +185,49 @@
   <i class="fas fa-chevron-down">
   </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
+ <li class="toctree-l1 current active collapsible-parent">
   <a class="reference internal" href="Python_Uebersicht.html">
    Datenvisualisierung mit Python
   </a>
-  <ul class="collapse-ul">
+  <ul class="current collapse-ul">
    <li class="toctree-l2">
     <a class="reference internal" href="01-JupyterNotebooks.html">
      1. Jupyter Notebooks
     </a>
    </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     2. Biegebalken
+    </a>
+   </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="03-Kraftmessung_solved.html">
-     2. Kraftmessung
+    <a class="reference internal" href="03-Kraftmessung.html">
+     3. Kraftmessung
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="04-Klimawandel_solved.html">
-     3. Klimawandel
+     4. Klimawandel
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="05-API.html">
-     4. API Unterschiede
+     5. API Unterschiede
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="06-Subplots.html">
-     5. Subplots
+     6. Subplots
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="07-RKI-Corona.html">
-     6. RKI Corona Zahlen
+     7. RKI Corona Zahlen
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Links.html">
-     7. Weiterführendes Material
+     8. Weiterführendes Material
     </a>
    </li>
   </ul>
@@ -358,42 +365,42 @@
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#beispiel-1-zweiseitig-gelagerter-balken-mit-linienlast">
-   Beispiel 1: zweiseitig gelagerter Balken mit Linienlast
+   2.1. Beispiel 1: zweiseitig gelagerter Balken mit Linienlast
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#beispiel-2-einseitig-eingespannter-balken-mit-einzelkraft">
-   Beispiel 2: einseitig eingespannter Balken mit Einzelkraft
+   2.2. Beispiel 2: einseitig eingespannter Balken mit Einzelkraft
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#darstellung-der-durchbiegung-in-abhangigkeit-der-lange">
-   Darstellung der Durchbiegung in Abhängigkeit der Länge
+   2.3. Darstellung der Durchbiegung in Abhängigkeit der Länge
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id1">
-     Beispiel 1: zweiseitig gelagerter Balken mit Linienlast
+     2.3.1. Beispiel 1: zweiseitig gelagerter Balken mit Linienlast
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id2">
-     Beispiel 2: einseitig eingespannter Balken mit Einzelkraft
+     2.3.2. Beispiel 2: einseitig eingespannter Balken mit Einzelkraft
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#beide-beispiele-zusammen">
-     Beide Beispiele zusammen
+     2.3.3. Beide Beispiele zusammen
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#stylistische-anpassungen">
-     stylistische Anpassungen
+     2.3.4. stylistische Anpassungen
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#datei-speichern">
-     Datei speichern
+     2.3.5. Datei speichern
     </a>
    </li>
   </ul>
@@ -424,9 +431,9 @@
 </div>
 </div>
 <div class="section" id="berechnungen-und-erste-grafische-darstellung-am-beispiel-von-biegebalken">
-<h1>Berechnungen und erste grafische Darstellung am Beispiel von Biegebalken<a class="headerlink" href="#berechnungen-und-erste-grafische-darstellung-am-beispiel-von-biegebalken" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">2. </span>Berechnungen und erste grafische Darstellung am Beispiel von Biegebalken<a class="headerlink" href="#berechnungen-und-erste-grafische-darstellung-am-beispiel-von-biegebalken" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="beispiel-1-zweiseitig-gelagerter-balken-mit-linienlast">
-<h2>Beispiel 1: zweiseitig gelagerter Balken mit Linienlast<a class="headerlink" href="#beispiel-1-zweiseitig-gelagerter-balken-mit-linienlast" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.1. </span>Beispiel 1: zweiseitig gelagerter Balken mit Linienlast<a class="headerlink" href="#beispiel-1-zweiseitig-gelagerter-balken-mit-linienlast" title="Permalink to this headline">¶</a></h2>
 <p><strong>Aufgabe</strong>: Berechnen Sie die maximale Durchbiegung</p>
 <p><img alt="" src="../_images/Balkenbiegung1.png" /></p>
 <ul class="simple">
@@ -473,7 +480,7 @@
 </div>
 <p><strong>Berechnung der maximalen Durchbiegung</strong></p>
 <div class="math notranslate nohighlight">
-\[ u_{max}=\frac{5\,q\,L^4}{384\,E\,I} \]</div>
+\[ u_{max}=\frac{5\,q\,L^3}{384\,E\,I} \]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Lösung hier eintragen</span>
@@ -495,7 +502,7 @@
 </div>
 </div>
 <div class="section" id="beispiel-2-einseitig-eingespannter-balken-mit-einzelkraft">
-<h2>Beispiel 2: einseitig eingespannter Balken mit Einzelkraft<a class="headerlink" href="#beispiel-2-einseitig-eingespannter-balken-mit-einzelkraft" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.2. </span>Beispiel 2: einseitig eingespannter Balken mit Einzelkraft<a class="headerlink" href="#beispiel-2-einseitig-eingespannter-balken-mit-einzelkraft" title="Permalink to this headline">¶</a></h2>
 <p><strong>Aufgabe</strong>: Berechnen Sie die maximale Durchbiegung</p>
 <p><img alt="" src="../_images/Balkenbiegung2.png" /></p>
 <ul class="simple">
@@ -553,10 +560,11 @@
 </div>
 </div>
 <div class="section" id="darstellung-der-durchbiegung-in-abhangigkeit-der-lange">
-<h2>Darstellung der Durchbiegung in Abhängigkeit der Länge<a class="headerlink" href="#darstellung-der-durchbiegung-in-abhangigkeit-der-lange" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.3. </span>Darstellung der Durchbiegung in Abhängigkeit der Länge<a class="headerlink" href="#darstellung-der-durchbiegung-in-abhangigkeit-der-lange" title="Permalink to this headline">¶</a></h2>
 <p><strong>Aufgabe</strong>: Stellen Sie die maximale Durchbiegung in Abhängigkeit der Länge für beide Beispiele dar</p>
 <div class="section" id="id1">
-<h3>Beispiel 1: zweiseitig gelagerter Balken mit Linienlast<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.3.1. </span>Beispiel 1: zweiseitig gelagerter Balken mit Linienlast<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p><img alt="" src="../_images/Balkenbiegung1.png" /></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Variablen</span>
@@ -642,7 +650,8 @@
 </div>
 </div>
 <div class="section" id="id2">
-<h3>Beispiel 2: einseitig eingespannter Balken mit Einzelkraft<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.3.2. </span>Beispiel 2: einseitig eingespannter Balken mit Einzelkraft<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p><img alt="" src="../_images/Balkenbiegung2.png" /></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Variablen</span>
@@ -669,7 +678,7 @@
 </div>
 </div>
 <div class="section" id="beide-beispiele-zusammen">
-<h3>Beide Beispiele zusammen<a class="headerlink" href="#beide-beispiele-zusammen" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.3.3. </span>Beide Beispiele zusammen<a class="headerlink" href="#beide-beispiele-zusammen" title="Permalink to this headline">¶</a></h3>
 <ol class="simple">
 <li><p>Bezeichnung über <code class="docutils literal notranslate"><span class="pre">label</span></code>=</p></li>
 <li><p>Legende anzeigen mit <code class="docutils literal notranslate"><span class="pre">plt.legend()</span></code></p></li>
@@ -687,7 +696,7 @@
 </div>
 </div>
 <div class="section" id="stylistische-anpassungen">
-<h3>stylistische Anpassungen<a class="headerlink" href="#stylistische-anpassungen" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.3.4. </span>stylistische Anpassungen<a class="headerlink" href="#stylistische-anpassungen" title="Permalink to this headline">¶</a></h3>
 <p><strong>Stil zurücksetzen</strong>: <br>
 wichtig um den Stil nicht ungewollt auf die nächsten Plots zu übertragen <br></p>
 <ul class="simple">
@@ -762,7 +771,7 @@ in <code class="docutils literal notranslate"><span class="pre">plt.plot()</span
 </div>
 </div>
 <div class="section" id="datei-speichern">
-<h3>Datei speichern<a class="headerlink" href="#datei-speichern" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.3.5. </span>Datei speichern<a class="headerlink" href="#datei-speichern" title="Permalink to this headline">¶</a></h3>
 <p>mit <code class="docutils literal notranslate"><span class="pre">plt.savefig('Dateiname.png',</span> <span class="pre">bbox_inches='tight',</span> <span class="pre">dpi=150)</span></code></p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">bbox_inches='tight'</span></code> sorgt dafür das die Beschriftungen immer mit im Bild gespeichert werden (können sonst manchmal abgeschnitten sein)</p></li>
@@ -812,6 +821,8 @@ in <code class="docutils literal notranslate"><span class="pre">plt.plot()</span
         
         <div class='prev-next-bottom'>
             
+    <a class='left-prev' id="prev-link" href="01-JupyterNotebooks.html" title="previous page"><span class="section-number">1. </span>Einführung in Jupyter Notebooks</a>
+    <a class='right-next' id="next-link" href="03-Kraftmessung.html" title="next page"><span class="section-number">3. </span>Kraft-Weg Messungen</a>
 
         </div>
         
