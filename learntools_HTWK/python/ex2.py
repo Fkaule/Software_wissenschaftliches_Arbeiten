@@ -234,7 +234,7 @@ class Plot_2(CodingProblem):
             
 class Plot_3(CodingProblem):
     _var = 'plt'
-    _hint = "Ziehen Sie für die y Koordinaten die Liste Kraft_Probe1 von der Liste Kraft_Probe2 ab "
+    _hint = "Ziehen Sie für die y Koordinaten die Liste Kraft_Probe1 von der Liste Kraft_Probe2 ab und teilen Sie durch Kraft_Probe1 und multiplizieren Sie dies mit 100"
     _solution = CS(
     """
     plt.plot(Weg,(Kraft_Probe1-Kraft_Probe2)/Kraft_Probe1*100,marker="s",label="Differenz Probe1-Probe2");
