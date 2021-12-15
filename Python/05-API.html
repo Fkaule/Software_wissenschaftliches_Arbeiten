@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>5. API Unterschied</title>
+    <title>6. API Unterschied</title>
     
   <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -55,8 +55,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="6. Subplots" href="06-Subplots.html" />
-    <link rel="prev" title="4. Plots zum Klimawandel" href="04-Klimawandel_solved.html" />
+    <link rel="next" title="7. Subplots" href="06-Subplots.html" />
+    <link rel="prev" title="5. Plots zum Klimawandel" href="04-Klimawandel.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -204,28 +204,33 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="04-Klimawandel_solved.html">
-     4. Klimawandel
+    <a class="reference internal" href="03b-Ploteinstellungen.html">
+     4. Plot Einstellungen
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="04-Klimawandel.html">
+     5. Klimawandel
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     5. API Unterschiede
+     6. API Unterschiede
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="06-Subplots.html">
-     6. Subplots
+     7. Subplots
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="07-RKI-Corona.html">
-     7. RKI Corona Zahlen
+     8. RKI Corona Zahlen
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Links.html">
-     8. Weiterführendes Material
+     9. Weiterführendes Material
     </a>
    </li>
   </ul>
@@ -363,17 +368,17 @@
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#pyplot-api-state-based">
-   5.1. pyplot-API (state-based)
+   6.1. pyplot-API (state-based)
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#object-oriented-api">
-   5.2. object-oriented API
+   6.2. object-oriented API
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#aufgabe">
-   5.3. Aufgabe
+   6.3. Aufgabe
   </a>
  </li>
 </ul>
@@ -389,10 +394,10 @@
               <div>
                 
   <div class="section" id="api-unterschied">
-<h1><span class="section-number">5. </span>API Unterschied<a class="headerlink" href="#api-unterschied" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">6. </span>API Unterschied<a class="headerlink" href="#api-unterschied" title="Permalink to this headline">¶</a></h1>
 <p>Es gibt zwei verschiedene Ansätze</p>
 <div class="section" id="pyplot-api-state-based">
-<h2><span class="section-number">5.1. </span>pyplot-API (state-based)<a class="headerlink" href="#pyplot-api-state-based" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.1. </span>pyplot-API (state-based)<a class="headerlink" href="#pyplot-api-state-based" title="Permalink to this headline">¶</a></h2>
 <p>Einsteigerfreundliche Weg und chronologisches Aufrufen der Befehle was eher an MATLAB oder Mathematica erinnert</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -417,7 +422,7 @@
 </div>
 </div>
 <div class="section" id="object-oriented-api">
-<h2><span class="section-number">5.2. </span>object-oriented API<a class="headerlink" href="#object-oriented-api" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.2. </span>object-oriented API<a class="headerlink" href="#object-oriented-api" title="Permalink to this headline">¶</a></h2>
 <p>Definition eines Figures (fig) (Das Bild was angezeigt bzw. gespeichert werden kann). Innerhalb des Figures werden Axes (ax) definiert. Ein Figure kann mehrere Axes beinhalten. Axes  ist nur ein Name für die Plots die innerhalb des Figures erstellt werden (hat nichts mit den Achsen zu tun).</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">fig,</span> <span class="pre">ax</span> <span class="pre">=</span> <span class="pre">plt.subplots()</span></code> hinzufügen</p></li>
@@ -454,7 +459,7 @@
 </div>
 </div>
 <div class="section" id="aufgabe">
-<h2><span class="section-number">5.3. </span>Aufgabe<a class="headerlink" href="#aufgabe" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.3. </span>Aufgabe<a class="headerlink" href="#aufgabe" title="Permalink to this headline">¶</a></h2>
 <p>wandeln Sie folgenden Code in den object-orientierten Ansatz um</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -526,8 +531,8 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="04-Klimawandel_solved.html" title="previous page"><span class="section-number">4. </span>Plots zum Klimawandel</a>
-    <a class='right-next' id="next-link" href="06-Subplots.html" title="next page"><span class="section-number">6. </span>Subplots</a>
+    <a class='left-prev' id="prev-link" href="04-Klimawandel.html" title="previous page"><span class="section-number">5. </span>Plots zum Klimawandel</a>
+    <a class='right-next' id="next-link" href="06-Subplots.html" title="next page"><span class="section-number">7. </span>Subplots</a>
 
         </div>
         

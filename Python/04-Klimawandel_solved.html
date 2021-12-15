@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>4. Plots zum Klimawandel</title>
+    <title>Plots zum Klimawandel</title>
     
   <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -55,8 +55,6 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="5. API Unterschied" href="05-API.html" />
-    <link rel="prev" title="3. Kraft-Weg Messungen" href="03-Kraftmessung.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -91,7 +89,7 @@
   </a>
  </li>
 </ul>
-<ul class="current nav sidenav_l1">
+<ul class="nav sidenav_l1">
  <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="../LaTeX/LaTeX_Uebersicht.html">
    Text mit LaTeX
@@ -183,11 +181,11 @@
   <i class="fas fa-chevron-down">
   </i>
  </li>
- <li class="toctree-l1 current active collapsible-parent">
+ <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="Python_Uebersicht.html">
    Datenvisualisierung mit Python
   </a>
-  <ul class="current collapse-ul">
+  <ul class="collapse-ul">
    <li class="toctree-l2">
     <a class="reference internal" href="01-JupyterNotebooks.html">
      1. Jupyter Notebooks
@@ -203,29 +201,34 @@
      3. Kraftmessung
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     4. Klimawandel
+   <li class="toctree-l2">
+    <a class="reference internal" href="03b-Ploteinstellungen.html">
+     4. Plot Einstellungen
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="04-Klimawandel.html">
+     5. Klimawandel
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="05-API.html">
-     5. API Unterschiede
+     6. API Unterschiede
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="06-Subplots.html">
-     6. Subplots
+     7. Subplots
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="07-RKI-Corona.html">
-     7. RKI Corona Zahlen
+     8. RKI Corona Zahlen
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Links.html">
-     8. Weiterführendes Material
+     9. Weiterführendes Material
     </a>
    </li>
   </ul>
@@ -363,95 +366,95 @@
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#global-durchschnittstemperatur-land-und-ozean-zusammen">
-   4.1. Global: Durchschnittstemperatur (Land und Ozean zusammen)
+   Global: Durchschnittstemperatur (Land und Ozean zusammen)
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#daten-importieren">
-     4.1.1. Daten importieren
+     Daten importieren
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#daten-plotten">
-     4.1.2. Daten plotten
+     Daten plotten
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#datenverarbeitung">
-     4.1.3. Datenverarbeitung
+     Datenverarbeitung
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#global-durchschnittstemperatur-land-ozean-getrennt">
-   4.2. Global: Durchschnittstemperatur (Land + Ozean getrennt)
+   Global: Durchschnittstemperatur (Land + Ozean getrennt)
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id1">
-     4.2.1. Daten importieren
+     Daten importieren
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id2">
-     4.2.2. Daten plotten
+     Daten plotten
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#deutschland-durchschnittstemperatur-land">
-   4.3. Deutschland: Durchschnittstemperatur (Land)
+   Deutschland: Durchschnittstemperatur (Land)
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id3">
-     4.3.1. Daten importieren
+     Daten importieren
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#daten-aufbereiten">
-     4.3.2. Daten aufbereiten
+     Daten aufbereiten
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id4">
-     4.3.3. Daten plotten
+     Daten plotten
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#vergleich-mit-abbildung-aus-leoplodina-factsheet">
-     4.3.4. Vergleich mit Abbildung aus Leoplodina Factsheet
+     Vergleich mit Abbildung aus Leoplodina Factsheet
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#treibhausgasemissionen">
-   4.4. Treibhausgasemissionen
+   Treibhausgasemissionen
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#daten-imortieren">
-     4.4.1. Daten imortieren
+     Daten imortieren
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id5">
-     4.4.2. Daten Plotten
+     Daten Plotten
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#vergleich-zweier-co2-messtationen">
-   4.5. Vergleich zweier CO2 Messtationen
+   Vergleich zweier CO2 Messtationen
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#ubersicht-treibhausgase">
-   4.6. Übersicht Treibhausgase
+   Übersicht Treibhausgase
   </a>
  </li>
 </ul>
@@ -467,13 +470,13 @@
               <div>
                 
   <div class="section" id="plots-zum-klimawandel">
-<h1><span class="section-number">4. </span>Plots zum Klimawandel<a class="headerlink" href="#plots-zum-klimawandel" title="Permalink to this headline">¶</a></h1>
+<h1>Plots zum Klimawandel<a class="headerlink" href="#plots-zum-klimawandel" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="global-durchschnittstemperatur-land-und-ozean-zusammen">
-<h2><span class="section-number">4.1. </span>Global: Durchschnittstemperatur (Land und Ozean zusammen)<a class="headerlink" href="#global-durchschnittstemperatur-land-und-ozean-zusammen" title="Permalink to this headline">¶</a></h2>
+<h2>Global: Durchschnittstemperatur (Land und Ozean zusammen)<a class="headerlink" href="#global-durchschnittstemperatur-land-und-ozean-zusammen" title="Permalink to this headline">¶</a></h2>
 <p>Wir wollen nun die globalen Temperaturen visualisieren und greifen dazu auf die Daten der <a class="reference external" href="https://data.giss.nasa.gov/gistemp/graphs_v4/">NASA</a> zurück.</p>
 <p>Es werden somit Daten von Dateien (online oder offline) eingelesen mit der Python Bilbiothek <code class="docutils literal notranslate"><span class="pre">pandas</span></code></p>
 <div class="section" id="daten-importieren">
-<h3><span class="section-number">4.1.1. </span>Daten importieren<a class="headerlink" href="#daten-importieren" title="Permalink to this headline">¶</a></h3>
+<h3>Daten importieren<a class="headerlink" href="#daten-importieren" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -606,7 +609,7 @@ Name: Year, Length: 141, dtype: int64
 </div>
 </div>
 <div class="section" id="daten-plotten">
-<h3><span class="section-number">4.1.2. </span>Daten plotten<a class="headerlink" href="#daten-plotten" title="Permalink to this headline">¶</a></h3>
+<h3>Daten plotten<a class="headerlink" href="#daten-plotten" title="Permalink to this headline">¶</a></h3>
 <p><strong>Aufgabe a)</strong> Plotten Sie die Spalte <code class="docutils literal notranslate"><span class="pre">No_Smoothing</span></code> (Werte) und <code class="docutils literal notranslate"><span class="pre">Lowess(5)</span></code> (Glättung) über die (Jahre) mit der Spalte <code class="docutils literal notranslate"><span class="pre">Year</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -629,7 +632,7 @@ Name: Year, Length: 141, dtype: int64
 </div>
 </div>
 <div class="section" id="datenverarbeitung">
-<h3><span class="section-number">4.1.3. </span>Datenverarbeitung<a class="headerlink" href="#datenverarbeitung" title="Permalink to this headline">¶</a></h3>
+<h3>Datenverarbeitung<a class="headerlink" href="#datenverarbeitung" title="Permalink to this headline">¶</a></h3>
 <p>Die Bibliothek <code class="docutils literal notranslate"><span class="pre">pandas</span></code> ist sehr umfangreich und wird viel zur Datenverarbeitung genutzt. Im folgenden dazu einige Beispiele</p>
 <p><strong>alle Spalten analysieren (Anzahl/Mittelwert/Min/Max/Percentile)</strong></p>
 <div class="cell docutils container">
@@ -1561,10 +1564,10 @@ Name: 140, dtype: float64
 </div>
 </div>
 <div class="section" id="global-durchschnittstemperatur-land-ozean-getrennt">
-<h2><span class="section-number">4.2. </span>Global: Durchschnittstemperatur (Land + Ozean getrennt)<a class="headerlink" href="#global-durchschnittstemperatur-land-ozean-getrennt" title="Permalink to this headline">¶</a></h2>
+<h2>Global: Durchschnittstemperatur (Land + Ozean getrennt)<a class="headerlink" href="#global-durchschnittstemperatur-land-ozean-getrennt" title="Permalink to this headline">¶</a></h2>
 <p><strong>Aufgabe b)</strong> Stellen Sie die Kurven für die Erwärmung an Landoberfläche und an der Ozeanoberfläche grafisch dar und beschriften Sie das Diagramm entsprechend</p>
 <div class="section" id="id1">
-<h3><span class="section-number">4.2.1. </span>Daten importieren<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<h3>Daten importieren<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">link</span> <span class="o">=</span> <span class="s2">&quot;https://data.giss.nasa.gov/gistemp/graphs_v4/graph_data/Temperature_Anomalies_over_Land_and_over_Ocean/graph.csv&quot;</span>
@@ -1701,7 +1704,7 @@ Name: 140, dtype: float64
 </div>
 </div>
 <div class="section" id="id2">
-<h3><span class="section-number">4.2.2. </span>Daten plotten<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<h3>Daten plotten<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;default&#39;</span><span class="p">)</span>
@@ -1725,10 +1728,10 @@ Name: 140, dtype: float64
 </div>
 </div>
 <div class="section" id="deutschland-durchschnittstemperatur-land">
-<h2><span class="section-number">4.3. </span>Deutschland: Durchschnittstemperatur (Land)<a class="headerlink" href="#deutschland-durchschnittstemperatur-land" title="Permalink to this headline">¶</a></h2>
+<h2>Deutschland: Durchschnittstemperatur (Land)<a class="headerlink" href="#deutschland-durchschnittstemperatur-land" title="Permalink to this headline">¶</a></h2>
 <p>Beim <a class="reference external" href="https://www.umweltbundesamt.de/daten/klima/trends-der-lufttemperatur#2020-bisher-zweitwarmstes-jahr-in-deutschland">Umweltbundesamt</a> gibt es aktuelle Zahlen zur Erwärmung der Luftemperatur in Deutschland. Die Werte befinden sich in <a class="reference external" href="https://www.umweltbundesamt.de/sites/default/files/medien/384/bilder/dateien/3-bis-8_abb-tab_tmt_2021-05-12.xlsx">dieser Exceltabelle</a>, welche mit dem Befehl <code class="docutils literal notranslate"><span class="pre">pd.read_excel()</span></code> eingelesen werden kann, wobei hierbei der Name des ExcelSheets und die verwendenten Spaltennummern angegeben werden können.</p>
 <div class="section" id="id3">
-<h3><span class="section-number">4.3.1. </span>Daten importieren<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<h3>Daten importieren<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Einlesen</span>
@@ -1743,7 +1746,7 @@ Name: 140, dtype: float64
 </div>
 </div>
 <div class="section" id="daten-aufbereiten">
-<h3><span class="section-number">4.3.2. </span>Daten aufbereiten<a class="headerlink" href="#daten-aufbereiten" title="Permalink to this headline">¶</a></h3>
+<h3>Daten aufbereiten<a class="headerlink" href="#daten-aufbereiten" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Daten aufbereiten</span>
@@ -2061,7 +2064,7 @@ Name: 140, dtype: float64
 </div>
 </div>
 <div class="section" id="id4">
-<h3><span class="section-number">4.3.3. </span>Daten plotten<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<h3>Daten plotten<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
 <p><strong>Aufgabe c)</strong> Stellen Sie folgende Daten zusammen dar:</p>
 <ul class="simple">
 <li><p>global: Land+Ozean (geglättet) &lt;- NASA</p></li>
@@ -2092,7 +2095,7 @@ Name: 140, dtype: float64
 </div>
 </div>
 <div class="section" id="vergleich-mit-abbildung-aus-leoplodina-factsheet">
-<h3><span class="section-number">4.3.4. </span>Vergleich mit Abbildung aus Leoplodina Factsheet<a class="headerlink" href="#vergleich-mit-abbildung-aus-leoplodina-factsheet" title="Permalink to this headline">¶</a></h3>
+<h3>Vergleich mit Abbildung aus Leoplodina Factsheet<a class="headerlink" href="#vergleich-mit-abbildung-aus-leoplodina-factsheet" title="Permalink to this headline">¶</a></h3>
 <p>Vergleichen wir diese Darstellung nun mal mit einer aus dem <a class="reference external" href="https://doi.org/10.26164/leopoldina_03_00327">Factsheet der Leopoldina</a>:</p>
 <p>Nationale Akademie der Wissenschaften Leopoldina (2021): Klimawandel: Ursachen,
 Folgen und Handlungsmöglichkeiten. Halle (Saale).</p>
@@ -2298,11 +2301,11 @@ Temperaturanstieg seit Beginn der Messung: 1.611°C
 </div>
 </div>
 <div class="section" id="treibhausgasemissionen">
-<h2><span class="section-number">4.4. </span>Treibhausgasemissionen<a class="headerlink" href="#treibhausgasemissionen" title="Permalink to this headline">¶</a></h2>
+<h2>Treibhausgasemissionen<a class="headerlink" href="#treibhausgasemissionen" title="Permalink to this headline">¶</a></h2>
 <p>Zunächst stellen wir die Treibhausgas-Konzentrationen dar <br>
 Quelle : <a class="reference external" href="https://www.umweltbundesamt.de/daten/klima/atmosphaerische-treibhausgas-konzentrationen#beitrag-langlebiger-treibhausgase-zum-treibhauseffekt">Umweltbundesamt</a></p>
 <div class="section" id="daten-imortieren">
-<h3><span class="section-number">4.4.1. </span>Daten imortieren<a class="headerlink" href="#daten-imortieren" title="Permalink to this headline">¶</a></h3>
+<h3>Daten imortieren<a class="headerlink" href="#daten-imortieren" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">link</span> <span class="o">=</span> <span class="s2">&quot;https://www.umweltbundesamt.de/sites/default/files/medien/384/bilder/dateien/6_abb_treibhausgas-gesamt-konz_2020-06-03.xlsx&quot;</span>
@@ -2315,7 +2318,7 @@ Quelle : <a class="reference external" href="https://www.umweltbundesamt.de/date
 </div>
 </div>
 <div class="section" id="id5">
-<h3><span class="section-number">4.4.2. </span>Daten Plotten<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<h3>Daten Plotten<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
 <p><strong>Aufgabe d)</strong> Stellen Sie die Treibhausgasemissionen über die Jahre dar</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2336,7 +2339,7 @@ Quelle : <a class="reference external" href="https://www.umweltbundesamt.de/date
 </div>
 </div>
 <div class="section" id="vergleich-zweier-co2-messtationen">
-<h2><span class="section-number">4.5. </span>Vergleich zweier CO2 Messtationen<a class="headerlink" href="#vergleich-zweier-co2-messtationen" title="Permalink to this headline">¶</a></h2>
+<h2>Vergleich zweier CO2 Messtationen<a class="headerlink" href="#vergleich-zweier-co2-messtationen" title="Permalink to this headline">¶</a></h2>
 <p>Auf der Seite vom Umweltbundesamt findet man auch CO2 Messwerte verschiedener Messtationen: <br>
 Quelle : <a class="reference external" href="https://www.umweltbundesamt.de/daten/klima/atmosphaerische-treibhausgas-konzentrationen#kohlendioxid-">Umweltbundesamt</a></p>
 <p><a class="reference external" href="https://gaw.kishou.go.jp/publications/global_mean_mole_fractions#content2">Quelle Welttrend WMO</a> <br>
@@ -2447,7 +2450,7 @@ Quelle : <a class="reference external" href="https://www.umweltbundesamt.de/date
 </div>
 </div>
 <div class="section" id="ubersicht-treibhausgase">
-<h2><span class="section-number">4.6. </span>Übersicht Treibhausgase<a class="headerlink" href="#ubersicht-treibhausgase" title="Permalink to this headline">¶</a></h2>
+<h2>Übersicht Treibhausgase<a class="headerlink" href="#ubersicht-treibhausgase" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="https://www.umweltbundesamt.de/daten/klima/atmosphaerische-treibhausgas-konzentrationen#beitrag-langlebiger-treibhausgase-zum-treibhauseffekt">Quelle: Umweltbundesamt</a></p>
 <p>Excel-Tabelle: https://www.umweltbundesamt.de/sites/default/files/medien/384/bilder/dateien/5_abb_beitrag-treibhauseffekt-co2-thg_2021-05-26.xlsx</p>
 <p>Quelle Daten: NOAA Earth System Research Laboratory, The NOAA annual greenhouse gas index (AGGI), https://www.esrl.noaa.gov/gmd/aggi/aggi.html</p>
@@ -2687,8 +2690,6 @@ Quelle : <a class="reference external" href="https://www.umweltbundesamt.de/date
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="03-Kraftmessung.html" title="previous page"><span class="section-number">3. </span>Kraft-Weg Messungen</a>
-    <a class='right-next' id="next-link" href="05-API.html" title="next page"><span class="section-number">5. </span>API Unterschied</a>
 
         </div>
         
