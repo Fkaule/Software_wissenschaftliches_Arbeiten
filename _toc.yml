@@ -55,9 +55,9 @@
   - title: Jupyter Notebooks
     file: Python/01-JupyterNotebooks
   - title: Biegebalken
-    file: Python/02-Biegebalken_solved
+    file: Python/02-Biegebalken
   - title: Kraftmessung
-    file: Python/03-Kraftmessung_solved
+    file: Python/03-Kraftmessung
   - title: Klimawandel
     file: Python/04-Klimawandel_solved
   - title: API Unterschiede
