@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>4. Wichtige Einstellungen für die Plots</title>
+    <title>4. Allgemeine Ploteinstellungen</title>
     
   <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -56,7 +56,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="5. Plots zum Klimawandel" href="04-Klimawandel.html" />
-    <link rel="prev" title="3. Kraft-Weg Messungen" href="03-Kraftmessung.html" />
+    <link rel="prev" title="3. Übungsaufgaben: Kraft-Weg Messungen" href="03-Kraftmessung.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -195,22 +195,22 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="02-Biegebalken.html">
-     2. Biegebalken
+     2. Erste Berechnungen und Visualiserung
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="03-Kraftmessung.html">
-     3. Kraftmessung
+     3. Übungsaufgaben 1
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     4. Plot Einstellungen
+     4. Allgemeine Ploteinstellungen
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="04-Klimawandel.html">
-     5. Klimawandel
+     5. Daten einlesen und verarbeiten
     </a>
    </li>
    <li class="toctree-l2">
@@ -367,53 +367,48 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#bibliothek-einladen">
-   4.1. Bibliothek einladen
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#daten-einlesen">
-   4.2. Daten einlesen
+  <a class="reference internal nav-link" href="#bibliothek-einladen-und-beispieldaten">
+   4.1. Bibliothek einladen und Beispieldaten
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#datei-speichern">
-   4.3. Datei speichern
+   4.2. Datei speichern
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#bildgrosze">
-   4.4. Bildgröße
+   4.3. Bildgröße
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#schriftart-und-schriftgrosze">
-   4.5. Schriftart und Schriftgröße
+   4.4. Schriftart und Schriftgröße
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#stile-zurucksetzen-und-stilarten">
-   4.6. Stile (zurücksetzen und Stilarten)
+   4.5. Stile (zurücksetzen und Stilarten)
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#gitter">
-   4.7. Gitter
+   4.6. Gitter
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#linien-marker">
-   4.8. Linien &amp; Marker
+   4.7. Linien &amp; Marker
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#wertebereiche-x-y-achse">
-   4.9. Wertebereiche (x,y - Achse)
+   4.8. Wertebereiche (x,y - Achse)
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#legende">
-   4.10. Legende
+   4.9. Legende
   </a>
  </li>
 </ul>
@@ -428,10 +423,10 @@
         
               <div>
                 
-  <div class="section" id="wichtige-einstellungen-fur-die-plots">
-<h1><span class="section-number">4. </span>Wichtige Einstellungen für die Plots<a class="headerlink" href="#wichtige-einstellungen-fur-die-plots" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="bibliothek-einladen">
-<h2><span class="section-number">4.1. </span>Bibliothek einladen<a class="headerlink" href="#bibliothek-einladen" title="Permalink to this headline">¶</a></h2>
+  <div class="section" id="allgemeine-ploteinstellungen">
+<h1><span class="section-number">4. </span>Allgemeine Ploteinstellungen<a class="headerlink" href="#allgemeine-ploteinstellungen" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="bibliothek-einladen-und-beispieldaten">
+<h2><span class="section-number">4.1. </span>Bibliothek einladen und Beispieldaten<a class="headerlink" href="#bibliothek-einladen-und-beispieldaten" title="Permalink to this headline">¶</a></h2>
 <p>Bibliotheken die man verwenden möchte muss man immer wieder einladen. In unserem Fall ist dies erstmal <code class="docutils literal notranslate"><span class="pre">numpy</span></code> (für Daten) und <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> (zum plotten)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -441,10 +436,7 @@
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="daten-einlesen">
-<h2><span class="section-number">4.2. </span>Daten einlesen<a class="headerlink" href="#daten-einlesen" title="Permalink to this headline">¶</a></h2>
-<p>Wir verwenden erneut die Daten aus unserer Kraftmessung</p>
+<p>Als Beispieldaten verwenden wir erneut die Daten aus unserer Kraftmessung</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Weg</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">40</span><span class="p">])</span>
@@ -456,7 +448,7 @@
 </div>
 </div>
 <div class="section" id="datei-speichern">
-<h2><span class="section-number">4.3. </span>Datei speichern<a class="headerlink" href="#datei-speichern" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.2. </span>Datei speichern<a class="headerlink" href="#datei-speichern" title="Permalink to this headline">¶</a></h2>
 <p>mit <code class="docutils literal notranslate"><span class="pre">plt.savefig('Dateiname.png',</span> <span class="pre">bbox_inches='tight',</span> <span class="pre">dpi=150)</span></code></p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">bbox_inches='tight'</span></code> sorgt dafür das die Beschriftungen immer mit im Bild gespeichert werden (können sonst manchmal abgeschnitten sein)</p></li>
@@ -476,7 +468,7 @@
 </div>
 </div>
 <div class="section" id="bildgrosze">
-<h2><span class="section-number">4.4. </span>Bildgröße<a class="headerlink" href="#bildgrosze" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.3. </span>Bildgröße<a class="headerlink" href="#bildgrosze" title="Permalink to this headline">¶</a></h2>
 <p><strong>muss vor <code class="docutils literal notranslate"><span class="pre">plt.plot()</span></code> kommen</strong></p>
 <p><code class="docutils literal notranslate"><span class="pre">plt.figure(figsize=(8,5))</span></code> … Größe in inces in x,y-Richtung (Default: 6,4)</p>
 <div class="cell docutils container">
@@ -493,7 +485,7 @@
 </div>
 </div>
 <div class="section" id="schriftart-und-schriftgrosze">
-<h2><span class="section-number">4.5. </span>Schriftart und Schriftgröße<a class="headerlink" href="#schriftart-und-schriftgrosze" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.4. </span>Schriftart und Schriftgröße<a class="headerlink" href="#schriftart-und-schriftgrosze" title="Permalink to this headline">¶</a></h2>
 <p><strong>muss vor <code class="docutils literal notranslate"><span class="pre">plt.plot()</span></code> kommen</strong></p>
 <ul class="simple">
 <li><p>Schriftgröße: <code class="docutils literal notranslate"><span class="pre">plt.rcParams.update({'font.size':</span> <span class="pre">20})</span></code></p></li>
@@ -514,7 +506,7 @@
 </div>
 </div>
 <div class="section" id="stile-zurucksetzen-und-stilarten">
-<h2><span class="section-number">4.6. </span>Stile (zurücksetzen und Stilarten)<a class="headerlink" href="#stile-zurucksetzen-und-stilarten" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.5. </span>Stile (zurücksetzen und Stilarten)<a class="headerlink" href="#stile-zurucksetzen-und-stilarten" title="Permalink to this headline">¶</a></h2>
 <p>Führen wir nun erneut den plot <strong>ohne die Befehle für Schriftgröße und Schriftart aus</strong>, stellen wir fest, dass diese <strong>Einstellungen trotzdem weiterhin da sind</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -569,7 +561,7 @@ Die Liste aller Stiltypen erhält man mit <code class="docutils literal notransl
 </div>
 </div>
 <div class="section" id="gitter">
-<h2><span class="section-number">4.7. </span>Gitter<a class="headerlink" href="#gitter" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.6. </span>Gitter<a class="headerlink" href="#gitter" title="Permalink to this headline">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">plt.grid()</span></code> für ein Gitter hinzu</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -587,7 +579,7 @@ Die Liste aller Stiltypen erhält man mit <code class="docutils literal notransl
 </div>
 </div>
 <div class="section" id="linien-marker">
-<h2><span class="section-number">4.8. </span>Linien &amp; Marker<a class="headerlink" href="#linien-marker" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.7. </span>Linien &amp; Marker<a class="headerlink" href="#linien-marker" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="https://github.com/matplotlib/cheatsheets/">Übersicht über alle Stile (matplotlib Cheat Sheet)</a></p>
 <p><strong>Marker (Datenpunkte)</strong>
 in <code class="docutils literal notranslate"><span class="pre">plt.plot()</span></code><br></p>
@@ -618,7 +610,7 @@ in <code class="docutils literal notranslate"><span class="pre">plt.plot()</span
 </div>
 </div>
 <div class="section" id="wertebereiche-x-y-achse">
-<h2><span class="section-number">4.9. </span>Wertebereiche (x,y - Achse)<a class="headerlink" href="#wertebereiche-x-y-achse" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.8. </span>Wertebereiche (x,y - Achse)<a class="headerlink" href="#wertebereiche-x-y-achse" title="Permalink to this headline">¶</a></h2>
 <p>mit <code class="docutils literal notranslate"><span class="pre">plt.xlim()</span></code> und <code class="docutils literal notranslate"><span class="pre">plt.ylim()</span></code> werden die Wertebereiche gesetzt:</p>
 <p>Beispiele:</p>
 <ul class="simple">
@@ -661,7 +653,7 @@ in <code class="docutils literal notranslate"><span class="pre">plt.plot()</span
 </div>
 </div>
 <div class="section" id="legende">
-<h2><span class="section-number">4.10. </span>Legende<a class="headerlink" href="#legende" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.9. </span>Legende<a class="headerlink" href="#legende" title="Permalink to this headline">¶</a></h2>
 <p>mit <code class="docutils literal notranslate"><span class="pre">plt.legend()</span></code> wird die Legende angezeigt, wobei die Bezeichnung im jeweiligen über <code class="docutils literal notranslate"><span class="pre">label</span></code> ( plt.plot(label=””) ) realisiert wird</p>
 <p>weitere Einstellungen für die Legende:</p>
 <p><strong>Position der Legende</strong> mit <code class="docutils literal notranslate"><span class="pre">loc</span></code>: z.B. <code class="docutils literal notranslate"><span class="pre">upper</span> <span class="pre">right</span></code></p>
@@ -719,7 +711,7 @@ in <code class="docutils literal notranslate"><span class="pre">plt.plot()</span
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="03-Kraftmessung.html" title="previous page"><span class="section-number">3. </span>Kraft-Weg Messungen</a>
+    <a class='left-prev' id="prev-link" href="03-Kraftmessung.html" title="previous page"><span class="section-number">3. </span>Übungsaufgaben: Kraft-Weg Messungen</a>
     <a class='right-next' id="next-link" href="04-Klimawandel.html" title="next page"><span class="section-number">5. </span>Plots zum Klimawandel</a>
 
         </div>
