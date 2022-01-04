@@ -54,9 +54,9 @@
   sections:
   - title: Einführung in Jupyter Notebooks
     file: Python/01-JupyterNotebooks
-  - title: Erste Berechnungen und Visualiserung
+  - title: Erste Berechnungen und Visualisierung
     file: Python/02-Biegebalken
-  - title: Übungsaufgaben: Kraft-Weg Messungen 
+  - title: Übungsaufgaben Kraft-Weg Messungen 
     file: Python/03-Kraftmessung
   - title: Allgemeine Ploteinstellungen
     file: Python/03b-Ploteinstellungen
