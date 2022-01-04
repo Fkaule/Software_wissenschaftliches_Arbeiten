@@ -195,7 +195,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="02-Biegebalken.html">
-     2. Erste Berechnungen und Visualiserung
+     2. Erste Berechnungen und Visualisierung
     </a>
    </li>
    <li class="toctree-l2">
@@ -397,8 +397,8 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#linien-marker">
-   4.7. Linien &amp; Marker
+  <a class="reference internal nav-link" href="#linien-punkte-marker-farben">
+   4.7. Linien, Punkte (Marker) &amp; Farben
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -577,9 +577,10 @@ Die Liste aller Stiltypen erhält man mit <code class="docutils literal notransl
 </div>
 </div>
 </div>
+<p><a id='LinienPunkteFarben'></a></p>
 </div>
-<div class="section" id="linien-marker">
-<h2><span class="section-number">4.7. </span>Linien &amp; Marker<a class="headerlink" href="#linien-marker" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="linien-punkte-marker-farben">
+<h2><span class="section-number">4.7. </span>Linien, Punkte (Marker) &amp; Farben<a class="headerlink" href="#linien-punkte-marker-farben" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="https://github.com/matplotlib/cheatsheets/">Übersicht über alle Stile (matplotlib Cheat Sheet)</a></p>
 <p><strong>Marker (Datenpunkte)</strong>
 in <code class="docutils literal notranslate"><span class="pre">plt.plot()</span></code><br></p>
@@ -590,9 +591,14 @@ in <code class="docutils literal notranslate"><span class="pre">plt.plot()</span
 <p><strong>Linien</strong>
 in <code class="docutils literal notranslate"><span class="pre">plt.plot()</span></code><br></p>
 <ul class="simple">
-<li><p>Linienfarbe: <code class="docutils literal notranslate"><span class="pre">plt.plot(c=&quot;red&quot;)</span></code> (c = color)</p></li>
 <li><p>Liniendicke: <code class="docutils literal notranslate"><span class="pre">plt.plot(lw=2)</span></code> (lw = linewidth)</p></li>
 <li><p>Linienstil: <code class="docutils literal notranslate"><span class="pre">plt.plot(ls=&quot;--&quot;)</span></code> (ls = linestyle) (Beispiele: <code class="docutils literal notranslate"><span class="pre">-</span></code> , <code class="docutils literal notranslate"><span class="pre">:</span></code> , <code class="docutils literal notranslate"><span class="pre">-</span></code> , <code class="docutils literal notranslate"><span class="pre">-.</span></code>)</p></li>
+</ul>
+<p><strong>Farben + Deckkraft (Linien + Marker)</strong>
+in <code class="docutils literal notranslate"><span class="pre">plt.plot()</span></code><br></p>
+<ul class="simple">
+<li><p>Farbe: <code class="docutils literal notranslate"><span class="pre">plt.plot(c=&quot;red&quot;)</span></code> (c = color)</p></li>
+<li><p>Deckkraft: <code class="docutils literal notranslate"><span class="pre">plt.plot(alpha=0.5&quot;)</span></code> (0.25 = 25% Deckkraft = 75% Durchsichtig)</p></li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">

@@ -195,7 +195,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="02-Biegebalken.html">
-     2. Erste Berechnungen und Visualiserung
+     2. Erste Berechnungen und Visualisierung
     </a>
    </li>
    <li class="toctree-l2">
@@ -476,7 +476,20 @@
         
               <div>
                 
-  <div class="section" id="daten-einlesen-und-verarbeiten">
+  <p>Darunter liegende Zeile ausführen (für Kontrolle der Lösung + Hinweise + Lösung )</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">&#39;../&#39;</span><span class="p">))</span>
+<span class="kn">from</span> <span class="nn">learntools.core</span> <span class="kn">import</span> <span class="n">binder</span><span class="p">;</span><span class="n">binder</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="nb">globals</span><span class="p">())</span>
+<span class="kn">from</span> <span class="nn">learntools</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">learntools_HTWK.python.ex3</span> <span class="kn">import</span> <span class="o">*</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="daten-einlesen-und-verarbeiten">
 <h1><span class="section-number">5. </span>Daten einlesen und verarbeiten<a class="headerlink" href="#daten-einlesen-und-verarbeiten" title="Permalink to this headline">¶</a></h1>
 <p><em>In diesem Teil geht es darum Daten aus Dateien einzulesen, diese zu verarbeiten und dann zu visualisieren</em>
 <br><br>
@@ -513,19 +526,23 @@
 </div>
 <div class="section" id="daten-plotten">
 <h3><span class="section-number">5.1.2. </span>Daten plotten<a class="headerlink" href="#daten-plotten" title="Permalink to this headline">¶</a></h3>
-<p><strong>Aufgabe a)</strong> Plotten Sie die Spalte <code class="docutils literal notranslate"><span class="pre">No_Smoothing</span></code> (Werte) und <code class="docutils literal notranslate"><span class="pre">Lowess(5)</span></code> (Glättung) über die (Jahre) mit der Spalte <code class="docutils literal notranslate"><span class="pre">Year</span></code></p>
+<p><strong>Aufgabe a)</strong></p>
+<ul class="simple">
+<li><p>Plotten Sie die Spalte <code class="docutils literal notranslate"><span class="pre">No_Smoothing</span></code> (Werte) und <code class="docutils literal notranslate"><span class="pre">Lowess(5)</span></code> (Glättung) über die (Jahre) mit der Spalte <code class="docutils literal notranslate"><span class="pre">Year</span></code>.</p></li>
+<li><p>Passen Sie ihren Plot mit Hilfe der Einstellungen für Linien und Marker soweit an, dass die Kurve der Glättung (<code class="docutils literal notranslate"><span class="pre">Lowess(5)</span></code>) von den Jahresdaten gut zu unterscheiden ist.</p></li>
+</ul>
+<p>Hinweis: <a class="reference external" href="03b-Ploteinstellungen.html#LinienPunkteFarben">Einstellungen für Linien und Punkte</a></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;default&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;font.size&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">14</span><span class="p">;</span>
-<span class="c1">#</span>
-<span class="c1"># Code here</span>
-<span class="c1">#</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">();</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">();</span>
+<span class="c1"># Lösung hier</span>
+
+
+<span class="c1"># Kontrolle der Lösung</span>
+<span class="n">q1</span><span class="o">.</span><span class="n">check</span><span class="p">()</span>
+<span class="c1">#q1.hint()</span>
+<span class="c1">#q1.solution()</span>
 </pre></div>
 </div>
 </div>
