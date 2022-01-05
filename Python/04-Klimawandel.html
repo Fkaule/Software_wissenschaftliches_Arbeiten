@@ -380,6 +380,18 @@
     <a class="reference internal nav-link" href="#daten-plotten">
      5.1.2. Daten plotten
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#q1-aufgabe">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         q1
+        </span>
+       </code>
+       ) Aufgabe
+      </a>
+     </li>
+    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#datenverarbeitung">
@@ -407,6 +419,18 @@
     <a class="reference internal nav-link" href="#id2">
      5.2.2. Daten plotten
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#q2-aufgabe">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         q2
+        </span>
+       </code>
+       ) Aufgabe
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -429,6 +453,18 @@
     <a class="reference internal nav-link" href="#id4">
      5.3.3. Daten plotten
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#q3-aufgabe">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         q3
+        </span>
+       </code>
+       ) Aufgabe
+      </a>
+     </li>
+    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#vergleich-mit-abbildung-aus-leoplodina-factsheet">
@@ -451,6 +487,18 @@
     <a class="reference internal nav-link" href="#id5">
      5.4.2. Daten Plotten
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#q4-aufgabe">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         q4
+        </span>
+       </code>
+       ) Aufgabe
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -458,6 +506,19 @@
   <a class="reference internal nav-link" href="#vergleich-zweier-co2-messtationen">
    5.5. Vergleich zweier CO2 Messtationen
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#q5-aufgabe">
+     5.5.1.
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       q5
+      </span>
+     </code>
+     ) Aufgabe
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#ubersicht-treibhausgase">
@@ -526,7 +587,8 @@
 </div>
 <div class="section" id="daten-plotten">
 <h3><span class="section-number">5.1.2. </span>Daten plotten<a class="headerlink" href="#daten-plotten" title="Permalink to this headline">¶</a></h3>
-<p><strong>Aufgabe a)</strong></p>
+<div class="section" id="q1-aufgabe">
+<h4><code class="docutils literal notranslate"><span class="pre">q1</span></code>) Aufgabe<a class="headerlink" href="#q1-aufgabe" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
 <li><p>Plotten Sie die Spalte <code class="docutils literal notranslate"><span class="pre">No_Smoothing</span></code> (Werte) und <code class="docutils literal notranslate"><span class="pre">Lowess(5)</span></code> (Glättung) über die (Jahre) mit der Spalte <code class="docutils literal notranslate"><span class="pre">Year</span></code>.</p></li>
 <li><p>Passen Sie ihren Plot mit Hilfe der Einstellungen für Linien und Marker soweit an, dass die Kurve der Glättung (<code class="docutils literal notranslate"><span class="pre">Lowess(5)</span></code>) von den Jahresdaten gut zu unterscheiden ist.</p></li>
@@ -544,6 +606,7 @@
 <span class="c1">#q1.hint()</span>
 <span class="c1">#q1.solution()</span>
 </pre></div>
+</div>
 </div>
 </div>
 </div>
@@ -609,6 +672,7 @@
 <div class="section" id="glattung">
 <h3><span class="section-number">5.1.4. </span>Glättung<a class="headerlink" href="#glattung" title="Permalink to this headline">¶</a></h3>
 <p>Die von der NASA verwendete Glättung ist die <strong>LO</strong>cally <strong>WE</strong>ighted <strong>S</strong>catter-plot <strong>S</strong>moother (LOWESS). Dabei wird in einem lokal zu definierenden Bereich eine lineare Regression durchgeführt. Eine genauere Erklärung zur Methode findet ihr <a class="reference external" href="https://youtu.be/b7oryuMP3r8">hier</a>.</p>
+<p>Wir benutzen nun diese Methode und erstellen eine neue Spalte <code class="docutils literal notranslate"><span class="pre">Lowess(own)</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">statsmodels.nonparametric.smoothers_lowess</span> <span class="kn">import</span> <span class="n">lowess</span>
@@ -617,6 +681,7 @@
 </div>
 </div>
 </div>
+<p>Ausgabe der Tabelle (<code class="docutils literal notranslate"><span class="pre">Temp_NASA</span></code>) mit der neuen Spalte <code class="docutils literal notranslate"><span class="pre">Lowess(own)</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Temp_NASA</span>
@@ -624,6 +689,7 @@
 </div>
 </div>
 </div>
+<p>Wir plotten nun unsere eigene Glättung gegenüber der bereits vorhandenen</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -632,7 +698,7 @@
 
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;font.size&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">14</span><span class="p">;</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Jahresmitteltemperaturabweichung [°C]&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Jahresmitteltemperaturabweichung [K]&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Temp_NASA</span><span class="p">[</span><span class="s2">&quot;Year&quot;</span><span class="p">],</span><span class="n">Temp_NASA</span><span class="p">[</span><span class="s2">&quot;No_Smoothing&quot;</span><span class="p">],</span> <span class="n">ls</span><span class="o">=</span><span class="s2">&quot;-&quot;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s2">&quot;s&quot;</span><span class="p">,</span> <span class="n">ms</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;tab:gray&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Werte&quot;</span><span class="p">);</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Temp_NASA</span><span class="p">[</span><span class="s2">&quot;Year&quot;</span><span class="p">],</span><span class="n">Temp_NASA</span><span class="p">[</span><span class="s2">&quot;Lowess(5)&quot;</span><span class="p">],</span> <span class="n">lw</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>  <span class="n">color</span><span class="o">=</span><span class="s2">&quot;tab:blue&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Glättung (NASA)&quot;</span><span class="p">);</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Temp_NASA</span><span class="p">[</span><span class="s2">&quot;Year&quot;</span><span class="p">],</span><span class="n">Temp_NASA</span><span class="p">[</span><span class="s2">&quot;Lowess(own)&quot;</span><span class="p">],</span><span class="n">ls</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>  <span class="n">color</span><span class="o">=</span><span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;eigene Glättung (LOWESS f=1/14)&quot;</span><span class="p">);</span>
@@ -643,12 +709,12 @@
 </div>
 </div>
 </div>
-<p>Die Verwendung des rollenden Mittelwertes hat das Problem, dass dabei immer Werte fehlen (Anfang/Ende). Die gewählten Mit den gewählten Parametern für das LOWESS sind die Ergebnisse ähnlich zur Original Glättung</p>
+<p>Die Glättung scheint gut mit der von NASA durchgeführten übereinzustimmen</p>
 </div>
 </div>
 <div class="section" id="global-durchschnittstemperatur-land-ozean-getrennt">
 <h2><span class="section-number">5.2. </span>Global: Durchschnittstemperatur (Land + Ozean getrennt)<a class="headerlink" href="#global-durchschnittstemperatur-land-ozean-getrennt" title="Permalink to this headline">¶</a></h2>
-<p><strong>Aufgabe b)</strong> Stellen Sie die Kurven für die Erwärmung an Landoberfläche und an der Ozeanoberfläche grafisch dar und beschriften Sie das Diagramm entsprechend</p>
+<p>Nun schauen wir uns die Daten an in denen die Temperaturen für die Landmasse und den Ozean getrennt ausgegeben werden</p>
 <div class="section" id="id1">
 <h3><span class="section-number">5.2.1. </span>Daten importieren<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
@@ -669,18 +735,23 @@
 </div>
 <div class="section" id="id2">
 <h3><span class="section-number">5.2.2. </span>Daten plotten<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="q2-aufgabe">
+<h4><code class="docutils literal notranslate"><span class="pre">q2</span></code>) Aufgabe<a class="headerlink" href="#q2-aufgabe" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Stellen Sie die Kurven für die Erwärmung an Landoberfläche und an der Ozeanoberfläche mit jeweils den Jahreswerten und den geglätteten Werten grafisch dar</p></li>
+<li><p>Tipp: Verwenden Sie für Land und Ozean jeweils die gleiche Farbe und reduzieren Sie die Sichtbarkeit der nicht geglätteten Werte zur besseren Übersicht</p></li>
+<li><p>Beschriften Sie das Diagramm entsprechend</p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;default&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Lösung hier</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;font.size&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">14</span><span class="p">;</span>
-<span class="c1">#</span>
-<span class="c1"># Code here</span>
-<span class="c1">#</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">();</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">();</span>
+
+<span class="c1"># Kontrolle der Lösung</span>
+<span class="n">q2</span><span class="o">.</span><span class="n">check</span><span class="p">()</span>
+<span class="c1">#q2.solution()</span>
 </pre></div>
+</div>
 </div>
 </div>
 </div>
@@ -706,31 +777,48 @@
 </div>
 <div class="section" id="daten-aufbereiten">
 <h3><span class="section-number">5.3.2. </span>Daten aufbereiten<a class="headerlink" href="#daten-aufbereiten" title="Permalink to this headline">¶</a></h3>
+<p>In den Daten befindet sich einige <code class="docutils literal notranslate"><span class="pre">NaN</span></code> Werte (<strong>N</strong>ot <strong>a</strong> <strong>N</strong>umber), die wir mit der Funktion <code class="docutils literal notranslate"><span class="pre">.dropna(inplace=True)</span></code> entfernen</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Daten aufbereiten</span>
 <span class="n">Temp_GER</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># Zeilen mit &quot;NaN&quot; Werte rausschmeissen und dataframe speichern </span>
-<span class="n">Temp_GER</span><span class="p">[</span><span class="s2">&quot;Jahr&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Temp_GER</span><span class="p">[</span><span class="s2">&quot;Jahr&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span> <span class="c1"># Spalte &quot;Jahr&quot; als integer definieren</span>
-<span class="n">Temp_GER</span>
 </pre></div>
 </div>
 </div>
 </div>
+<p>Als nächstes definieren wir die Spalte “Jahr” als integer</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Temperaturabweichung berechnen (Abweichung von Mittelwert der Temperatur zwischen 1881 und 1900)</span>
-<span class="n">mean_GER1881_1910</span> <span class="o">=</span> <span class="n">Temp_GER</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">Temp_GER</span><span class="p">[</span><span class="s2">&quot;Jahr&quot;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">1910</span><span class="p">,</span><span class="s2">&quot;Jahresmitteltemperatur [°C]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-<span class="n">Temp_GER</span><span class="p">[</span><span class="s2">&quot;Jahresmitteltemperaturabweichung [°C]&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Temp_GER</span><span class="p">[</span><span class="s2">&quot;Jahresmitteltemperatur [°C]&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="n">mean_GER1881_1910</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Temp_GER</span><span class="p">[</span><span class="s2">&quot;Jahr&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Temp_GER</span><span class="p">[</span><span class="s2">&quot;Jahr&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span> <span class="c1"># Spalte &quot;Jahr&quot; als integer definieren</span>
+<span class="n">Temp_GER</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Nun berechnen wir die Temperaturabweichung. Dafür verwenden wir die Abweichung von <strong>Mittelwert der Temperatur zwischen 1881 und 1900</strong> welche wir zunächst bestimmen. Dafür verwenden wir die Funktion <code class="docutils literal notranslate"><span class="pre">.loc()</span></code> und können damit angeben welche Zeilen wir haben haben wollen (die zwischen 1910 und 1985) und können dann von der Spalte <code class="docutils literal notranslate"><span class="pre">Jahresmitteltemperatur</span> <span class="pre">[°C]</span></code> den Mittelwert bestimmen mit <code class="docutils literal notranslate"><span class="pre">.mean()</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mean_GER1881_1910</span> <span class="o">=</span> <span class="n">Temp_GER</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">Temp_GER</span><span class="p">[</span><span class="s2">&quot;Jahr&quot;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">1910</span><span class="p">,</span><span class="s2">&quot;Jahresmitteltemperatur [°C]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">mean_GER1881_1910</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Wir ziehen von der Spalte <code class="docutils literal notranslate"><span class="pre">Jahresmitteltemperatur</span> <span class="pre">[°C]</span></code> den nun berechneten Wert <code class="docutils literal notranslate"><span class="pre">mean_GER1881_1910</span></code> und nennen diese neue Spalte <code class="docutils literal notranslate"><span class="pre">Jahresmitteltemperaturabweichung</span> <span class="pre">[K]</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Temp_GER</span><span class="p">[</span><span class="s2">&quot;Jahresmitteltemperaturabweichung [K]&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Temp_GER</span><span class="p">[</span><span class="s2">&quot;Jahresmitteltemperatur [°C]&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="n">mean_GER1881_1910</span>
 <span class="n">Temp_GER</span>
 </pre></div>
 </div>
 </div>
 </div>
+<p>als nächstes verwenden wir nun wieder die lowess Glättung die wir bereits bei den NASA Daten verwenden haben. Die neue Spalte nennen wir <code class="docutils literal notranslate"><span class="pre">Lowess(own)</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Glättung</span>
 <span class="kn">from</span> <span class="nn">statsmodels.nonparametric.smoothers_lowess</span> <span class="kn">import</span> <span class="n">lowess</span>
-<span class="n">Temp_GER</span><span class="p">[</span><span class="s2">&quot;Lowess(own)&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">lowess</span><span class="p">(</span><span class="n">Temp_GER</span><span class="p">[</span><span class="s2">&quot;Jahresmitteltemperaturabweichung [°C]&quot;</span><span class="p">],</span><span class="n">Temp_GER</span><span class="p">[</span><span class="s2">&quot;Jahr&quot;</span><span class="p">],</span> <span class="n">frac</span><span class="o">=</span><span class="mi">1</span><span class="o">/</span><span class="mi">14</span><span class="p">)[:,</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">Temp_GER</span><span class="p">[</span><span class="s2">&quot;Lowess(own)&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">lowess</span><span class="p">(</span><span class="n">Temp_GER</span><span class="p">[</span><span class="s2">&quot;Jahresmitteltemperaturabweichung [K]&quot;</span><span class="p">],</span><span class="n">Temp_GER</span><span class="p">[</span><span class="s2">&quot;Jahr&quot;</span><span class="p">],</span> <span class="n">frac</span><span class="o">=</span><span class="mi">1</span><span class="o">/</span><span class="mi">14</span><span class="p">)[:,</span><span class="mi">1</span><span class="p">]</span>
 <span class="n">Temp_GER</span>
 </pre></div>
 </div>
@@ -739,25 +827,28 @@
 </div>
 <div class="section" id="id4">
 <h3><span class="section-number">5.3.3. </span>Daten plotten<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
-<p><strong>Aufgabe c)</strong> Stellen Sie folgende Daten zusammen dar:</p>
+<div class="section" id="q3-aufgabe">
+<h4><code class="docutils literal notranslate"><span class="pre">q3</span></code>) Aufgabe<a class="headerlink" href="#q3-aufgabe" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
-<li><p>global: Land+Ozean (geglättet) &lt;- NASA</p></li>
+<li><p>Stellen Sie folgende Daten zusammen dar:</p>
+<ol class="simple">
 <li><p>global: Land (geglättet) &lt;- NASA</p></li>
 <li><p>Deutschland: Land (Werte) &lt;- DWD</p></li>
 <li><p>Deutschland: Land (geglättet) &lt;- DWD</p></li>
+</ol>
+</li>
+<li><p>Verwenden Sie eine entsprechende Formatierung und beschriften Sie das Diagramm</p></li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;default&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Lösung hier</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;font.size&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">14</span><span class="p">;</span>
-<span class="c1">#</span>
-<span class="c1"># Code here</span>
-<span class="c1">#</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">);</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">();</span>
+
+<span class="c1"># Kontrolle der Lösung</span>
+<span class="n">q3</span><span class="o">.</span><span class="n">check</span><span class="p">()</span>
+<span class="c1">#q3.solution()</span>
 </pre></div>
+</div>
 </div>
 </div>
 </div>
@@ -773,7 +864,7 @@ Folgen und Handlungsmöglichkeiten. Halle (Saale).</p>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Glättung</span>
 <span class="kn">from</span> <span class="nn">statsmodels.nonparametric.smoothers_lowess</span> <span class="kn">import</span> <span class="n">lowess</span>
-<span class="n">Temp_GER</span><span class="p">[</span><span class="s2">&quot;Lowess(own2)&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">lowess</span><span class="p">(</span><span class="n">Temp_GER</span><span class="p">[</span><span class="s2">&quot;Jahresmitteltemperaturabweichung [°C]&quot;</span><span class="p">],</span><span class="n">Temp_GER</span><span class="p">[</span><span class="s2">&quot;Jahr&quot;</span><span class="p">],</span> <span class="n">frac</span><span class="o">=</span><span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">)[:,</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">Temp_GER</span><span class="p">[</span><span class="s2">&quot;Lowess(own2)&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">lowess</span><span class="p">(</span><span class="n">Temp_GER</span><span class="p">[</span><span class="s2">&quot;Jahresmitteltemperaturabweichung [K]&quot;</span><span class="p">],</span><span class="n">Temp_GER</span><span class="p">[</span><span class="s2">&quot;Jahr&quot;</span><span class="p">],</span> <span class="n">frac</span><span class="o">=</span><span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">)[:,</span><span class="mi">1</span><span class="p">]</span>
 <span class="n">Temp_GER_Lowess_own2_mean_untill_1910</span> <span class="o">=</span> <span class="n">Temp_GER</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">Temp_GER</span><span class="p">[</span><span class="s2">&quot;Jahr&quot;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">1910</span><span class="p">,</span><span class="s2">&quot;Lowess(own2)&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
 <span class="n">Temp_GER</span><span class="p">[</span><span class="s2">&quot;Lowess(own2)&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Temp_GER</span><span class="p">[</span><span class="s2">&quot;Lowess(own2)&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="n">Temp_GER_Lowess_own2_mean_untill_1910</span>
 
@@ -786,9 +877,9 @@ Folgen und Handlungsmöglichkeiten. Halle (Saale).</p>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;font.size&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">14</span><span class="p">;</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Jahresmitteltemperaturabweichung [°C]&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Temp_NASA</span><span class="p">[</span><span class="s2">&quot;Year&quot;</span><span class="p">],</span><span class="n">Temp_NASA</span><span class="p">[</span><span class="s2">&quot;Lowess(own3)&quot;</span><span class="p">],</span> <span class="n">lw</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>  <span class="n">color</span><span class="o">=</span><span class="s2">&quot;tab:red&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;global: Land+Ozean (eigene Glättung) [NASA]&quot;</span><span class="p">);</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Temp_GER</span><span class="p">[</span><span class="s2">&quot;Jahr&quot;</span><span class="p">],</span><span class="n">Temp_GER</span><span class="p">[</span><span class="s2">&quot;Lowess(own2)&quot;</span><span class="p">],</span> <span class="n">ls</span><span class="o">=</span><span class="s2">&quot;-&quot;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;gray&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Deutschland Land (LOWESS) [DWD]&quot;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Jahresmitteltemperaturabweichung [K]&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Temp_NASA</span><span class="p">[</span><span class="s2">&quot;Year&quot;</span><span class="p">],</span><span class="n">Temp_NASA</span><span class="p">[</span><span class="s2">&quot;Lowess(own3)&quot;</span><span class="p">],</span> <span class="n">lw</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>  <span class="n">color</span><span class="o">=</span><span class="s2">&quot;tab:red&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;global: Land+Ozean (eigene Glättung frac=1/3) [NASA]&quot;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Temp_GER</span><span class="p">[</span><span class="s2">&quot;Jahr&quot;</span><span class="p">],</span><span class="n">Temp_GER</span><span class="p">[</span><span class="s2">&quot;Lowess(own2)&quot;</span><span class="p">],</span> <span class="n">ls</span><span class="o">=</span><span class="s2">&quot;-&quot;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;gray&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Deutschland Land (Glättung frac=1/3) [DWD]&quot;</span><span class="p">);</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">);</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">();</span>
@@ -811,23 +902,35 @@ Folgen und Handlungsmöglichkeiten. Halle (Saale).</p>
 </div>
 </div>
 </div>
-<p>Eine weitere Variante den Temperaturanstieg zu berechnen wäre eine einfache lineare Regression:</p>
+<p>Eine weitere Variante den Temperaturanstieg zu berechnen wäre eine einfache lineare Regression. Dafür verwenden wir die <code class="docutils literal notranslate"><span class="pre">numpy</span></code> Funtion <code class="docutils literal notranslate"><span class="pre">np.polyfit</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
 <span class="n">x</span><span class="o">=</span><span class="n">Temp_GER</span><span class="p">[</span><span class="s2">&quot;Jahr&quot;</span><span class="p">]</span>
 <span class="n">y</span><span class="o">=</span><span class="n">Temp_GER</span><span class="p">[</span><span class="s2">&quot;Jahresmitteltemperatur [°C]&quot;</span><span class="p">]</span>
 <span class="n">model</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">polyfit</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="c1"># 1. Wert = Anstieg , 2. Wert = Schnittpunkt mit y-Achse</span>
-<span class="n">y_model</span> <span class="o">=</span> <span class="n">model</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="n">model</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;default&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;font.size&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">14</span><span class="p">;</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Jahresmitteltemperaturabweichung [°C]&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Temp_GER</span><span class="p">[</span><span class="s2">&quot;Jahr&quot;</span><span class="p">],</span><span class="n">Temp_GER</span><span class="p">[</span><span class="s2">&quot;Jahresmitteltemperatur [°C]&quot;</span><span class="p">],</span> <span class="n">ls</span><span class="o">=</span><span class="s2">&quot;-&quot;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">marker</span><span class="o">=</span><span class="s2">&quot;s&quot;</span><span class="p">,</span> <span class="n">ms</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;gray&quot;</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Deutschland Land (Werte) [DWD]&quot;</span><span class="p">);</span>
+<span class="n">model</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Die Werte werden als Array gespeichert. Mit eckigen Klammern können wir auf das erste Element model[0] (Python Zählweise beginnt immer bei 0) und das zweite Element mit model[1].
+Mit den Werten können wir nun eine Geradengleichung erstellen</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y_model</span> <span class="o">=</span> <span class="n">model</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="n">model</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Nun stellen wir dies grafisch dar:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Temp_GER</span><span class="p">[</span><span class="s2">&quot;Jahr&quot;</span><span class="p">],</span><span class="n">Temp_GER</span><span class="p">[</span><span class="s2">&quot;Jahresmitteltemperatur [°C]&quot;</span><span class="p">],</span> <span class="n">ls</span><span class="o">=</span><span class="s2">&quot;-&quot;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">marker</span><span class="o">=</span><span class="s2">&quot;s&quot;</span><span class="p">,</span> <span class="n">ms</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;gray&quot;</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Deutschland Land (Werte) [DWD]&quot;</span><span class="p">);</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y_model</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s2">&quot;-&quot;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;tab:blue&quot;</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;lineare Regression (y=</span><span class="si">{</span><span class="n">model</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">*x+</span><span class="si">{</span><span class="n">model</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Jahresmitteltemperaturabweichung [K]&quot;</span><span class="p">)</span>
+
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">);</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">();</span>
 </pre></div>
@@ -843,6 +946,7 @@ Folgen und Handlungsmöglichkeiten. Halle (Saale).</p>
 </div>
 </div>
 <p><strong>Vorsicht</strong>: Die lineare Regression bezieht hier den ganzen Zeitraum mit ein, betrachten wir für den Temperaturgradienten nur die Daten von 1980 bis 2020:</p>
+<p>Wir machen dies also erneut, aber nur mit den Daten ab 1980:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="o">=</span><span class="n">Temp_GER</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">Temp_GER</span><span class="p">[</span><span class="s2">&quot;Jahr&quot;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">1980</span><span class="p">,</span><span class="s2">&quot;Jahr&quot;</span><span class="p">]</span>
@@ -854,14 +958,12 @@ Folgen und Handlungsmöglichkeiten. Halle (Saale).</p>
 </div>
 </div>
 </div>
+<p>Visualisierung:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;default&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;font.size&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">14</span><span class="p">;</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Jahresmitteltemperaturabweichung [°C]&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Temp_GER</span><span class="p">[</span><span class="s2">&quot;Jahr&quot;</span><span class="p">],</span><span class="n">Temp_GER</span><span class="p">[</span><span class="s2">&quot;Jahresmitteltemperatur [°C]&quot;</span><span class="p">],</span> <span class="n">ls</span><span class="o">=</span><span class="s2">&quot;-&quot;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">marker</span><span class="o">=</span><span class="s2">&quot;s&quot;</span><span class="p">,</span> <span class="n">ms</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;gray&quot;</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Deutschland Land (Werte) [DWD]&quot;</span><span class="p">);</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Temp_GER</span><span class="p">[</span><span class="s2">&quot;Jahr&quot;</span><span class="p">],</span><span class="n">Temp_GER</span><span class="p">[</span><span class="s2">&quot;Jahresmitteltemperatur [°C]&quot;</span><span class="p">],</span> <span class="n">ls</span><span class="o">=</span><span class="s2">&quot;-&quot;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">marker</span><span class="o">=</span><span class="s2">&quot;s&quot;</span><span class="p">,</span> <span class="n">ms</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;gray&quot;</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Deutschland Land (Werte) [DWD]&quot;</span><span class="p">);</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y_model</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s2">&quot;-&quot;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;tab:blue&quot;</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;lineare Regression (y=</span><span class="si">{</span><span class="n">model</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">*x+</span><span class="si">{</span><span class="n">model</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Jahresmitteltemperaturabweichung [K]&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">);</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">();</span>
 </pre></div>
@@ -889,18 +991,23 @@ Quelle : <a class="reference external" href="https://www.umweltbundesamt.de/date
 </div>
 <div class="section" id="id5">
 <h3><span class="section-number">5.4.2. </span>Daten Plotten<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
-<p><strong>Aufgabe d)</strong> Stellen Sie die Treibhausgasemissionen über die Jahre dar</p>
+<div class="section" id="q4-aufgabe">
+<h4><code class="docutils literal notranslate"><span class="pre">q4</span></code>) Aufgabe<a class="headerlink" href="#q4-aufgabe" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Stellen Sie die Treibhausgasemissionen über die Jahre dar</p></li>
+<li><p>Verwenden Sie eine entsprechende Formatierung und beschriften Sie das Diagramm</p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;default&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Lösung hier</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;font.size&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">14</span><span class="p">;</span>
-<span class="c1">#</span>
-<span class="c1"># Code here</span>
-<span class="c1">#</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">();</span>
+
+<span class="c1"># Kontrolle der Lösung</span>
+<span class="n">q4</span><span class="o">.</span><span class="n">check</span><span class="p">()</span>
+<span class="c1">#q4.hint()</span>
+<span class="c1">#q4.solution()</span>
 </pre></div>
+</div>
 </div>
 </div>
 </div>
@@ -913,7 +1020,6 @@ Quelle : <a class="reference external" href="https://www.umweltbundesamt.de/date
 <p><a class="reference external" href="https://gaw.kishou.go.jp/publications/global_mean_mole_fractions#content2">Quelle Welttrend WMO</a> <br>
 <a class="reference external" href="https://www.esrl.noaa.gov/gmd/ccgg/trends/data.html">Quelle Mauna Loa</a> <br>
 <a class="reference external" href="http://www.uba.de/gaw">Quelle Schauinsland  und Zugspitze</a></p>
-<p><strong>Aufgabe e)</strong> Stellen Sie die CO2 Werte aller Messtationen und dem WMO Trend zusammen dar</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">link</span><span class="o">=</span><span class="s2">&quot;https://www.umweltbundesamt.de/sites/default/files/medien/384/bilder/dateien/2-4_abb_langzeitreihen-konz_2021-05-26.xlsx&quot;</span>
@@ -925,18 +1031,22 @@ Quelle : <a class="reference external" href="https://www.umweltbundesamt.de/date
 </div>
 </div>
 </div>
+<div class="section" id="q5-aufgabe">
+<h3><span class="section-number">5.5.1. </span><code class="docutils literal notranslate"><span class="pre">q5</span></code>) Aufgabe<a class="headerlink" href="#q5-aufgabe" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Stellen Sie die CO2 Werte aller Messtationen und dem WMO Trend zusammen dar</p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;default&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Lösung hier</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;font.size&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">14</span><span class="p">;</span>
-<span class="c1">#</span>
-<span class="c1"># Code here</span>
-<span class="c1">#</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">();</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">();</span>
+
+<span class="c1"># Kontrolle der Lösung</span>
+<span class="n">q5</span><span class="o">.</span><span class="n">check</span><span class="p">()</span>
+<span class="c1">#q5.hint()</span>
+<span class="c1">#q5.solution()</span>
 </pre></div>
+</div>
 </div>
 </div>
 </div>
@@ -955,13 +1065,28 @@ Quelle : <a class="reference external" href="https://www.umweltbundesamt.de/date
 <span class="n">Bezeichnung</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="s2">&quot;Kohlendioxid (CO₂)&quot;</span><span class="p">,</span><span class="s2">&quot;Methan (CH₄)&quot;</span><span class="p">,</span><span class="s2">&quot;Lachgas (N₂O)&quot;</span><span class="p">,</span><span class="s2">&quot;Dichlordifluormethan (CFC-12)&quot;</span><span class="p">,</span><span class="s2">&quot;Trichlorfluormethan (CFC-11)&quot;</span><span class="p">,</span><span class="s2">&quot;15 weitere Treibhausgase&quot;</span><span class="p">])</span>
 
 <span class="c1"># Plot</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">4</span><span class="p">));</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;font.size&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">14</span><span class="p">;</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">Bezeichnung</span><span class="p">,</span><span class="n">Beitrag_Prozent</span><span class="p">);</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Anteil [%]&#39;</span><span class="p">);</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Beitrag zum Treibhauseffekt durch verschiedene Treibhausgase&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Da die Beschriftung so nicht lesbar ist können wir Sie über die Funktion <code class="docutils literal notranslate"><span class="pre">plt.xticks(rotation=30,</span> <span class="pre">ha='right')</span></code> um 30° drehen. Weiterhin fügen wir ein Grid für die y-Achse ein und setzen dies hinter den plot.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">Bezeichnung</span><span class="p">,</span><span class="n">Beitrag_Prozent</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Anteil [%]&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Beitrag zum Treibhauseffekt durch verschiedene Treibhausgase&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">);</span>
+
+<span class="c1"># Beschriftung x Ticks um 30° drehen</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">);</span>
+
+<span class="c1"># Grid für y-Achse einstellen</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">);</span>
+
+<span class="c1"># Grid hinter Balkendiagramm</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">set_axisbelow</span><span class="p">(</span><span class="kc">True</span><span class="p">);</span>
 </pre></div>
 </div>
@@ -970,14 +1095,7 @@ Quelle : <a class="reference external" href="https://www.umweltbundesamt.de/date
 <p>Mit <code class="docutils literal notranslate"><span class="pre">plt.hbar()</span></code> wird das Balkendiagramm horizontal ausgerichtet</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Daten</span>
-<span class="n">Beitrag</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2076</span><span class="p">,</span><span class="mi">516</span><span class="p">,</span><span class="mi">202</span><span class="p">,</span><span class="mi">161</span><span class="p">,</span><span class="mi">57</span><span class="p">,</span><span class="mi">129</span><span class="p">])</span>
-<span class="n">Beitrag_Prozent</span> <span class="o">=</span> <span class="n">Beitrag</span><span class="o">/</span><span class="n">Beitrag</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">*</span><span class="mi">100</span>
-<span class="n">Bezeichnung</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="s2">&quot;Kohlendioxid (CO₂)&quot;</span><span class="p">,</span><span class="s2">&quot;Methan (CH₄)&quot;</span><span class="p">,</span><span class="s2">&quot;Lachgas (N₂O)&quot;</span><span class="p">,</span><span class="s2">&quot;Dichlordifluormethan (CFC-12)&quot;</span><span class="p">,</span><span class="s2">&quot;Trichlorfluormethan (CFC-11)&quot;</span><span class="p">,</span><span class="s2">&quot;15 weitere Treibhausgase&quot;</span><span class="p">])</span>
-
-<span class="c1"># Plot</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;font.size&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">14</span><span class="p">;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Plot</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">barh</span><span class="p">(</span><span class="n">Bezeichnung</span><span class="p">,</span><span class="n">Beitrag_Prozent</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Anteil [%]&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Beitrag zum Treibhauseffekt durch verschiedene Treibhausgase&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">);</span>
@@ -997,19 +1115,27 @@ Quelle : <a class="reference external" href="https://www.umweltbundesamt.de/date
 </div>
 </div>
 </div>
+<p>Wenn wir den Dataframe jetzt so einfach ausführen ist die Sortiertung wieder weg:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">THG_Anteil</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s2">&quot;Anteil [%]&quot;</span><span class="p">,</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">THG_Anteil</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Deshalb müssen wir den Dataframe neu speichern wenn wir die Sortierung dauerhaft in der Tabelle haben wollen</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">THG_Anteil</span> <span class="o">=</span> <span class="n">THG_Anteil</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s2">&quot;Anteil [%]&quot;</span><span class="p">,</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="n">THG_Anteil</span>
 </pre></div>
 </div>
 </div>
 </div>
+<p>Beim erneuten Ausführen des plots hat sich dadurch jetzt auch die Reihenfolge geändert:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Plot</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;font.size&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">14</span><span class="p">;</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">barh</span><span class="p">(</span><span class="n">THG_Anteil</span><span class="p">[</span><span class="s2">&quot;Name&quot;</span><span class="p">],</span><span class="n">THG_Anteil</span><span class="p">[</span><span class="s2">&quot;Anteil [%]&quot;</span><span class="p">])</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Anteil [%]&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Beitrag zum Treibhauseffekt durch verschiedene Treibhausgase&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">);</span>
