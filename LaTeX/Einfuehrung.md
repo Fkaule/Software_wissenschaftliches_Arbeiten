@@ -2,7 +2,7 @@
 
 ## Links
 
-[Documentation](https://www.overleaf.com/learn/latex/Main_Page)
+[Overleaf Documentation (englisch)](https://www.overleaf.com/learn/latex/Main_Page)
 
 ## Nutzung und Installation
 
@@ -13,53 +13,55 @@ Es gibt für LaTeX mittlerweile zwei prinzipielle Möglichkeiten:
     [Overleaf, Online LaTeX Editor](https://www.overleaf.com/)
 
 - Installation auf dem eigenen Rechner
-    - Windows
-
-        [Home - MiKTeX.org](https://miktex.org/)
-
-    - Mac
-
-        [MacTeX - TeX Users Group](https://tug.org/mactex/)
-
-    - Linux
-
-        [ubuntuusers.de](https://wiki.ubuntuusers.de/TeX_Live/)
+    - Windows [Home - MiKTeX.org](https://miktex.org/)
+    - Windows [Tex Live](https://www.tug.org/texlive/)
+    - Mac [MacTeX - TeX Users Group](https://tug.org/mactex/)
+    - Linux [ubuntuusers.de](https://wiki.ubuntuusers.de/TeX_Live/)
 
 Für uns ist im Moment die Nutzung online am einfachsten und sehr direkt umsetzbar. Daher bitte bei overleaf einen Account (kostenlos) anlegen. Dann kann es losgehen ...
 
 ## Ein erstes "Hallo Welt"
 
+
+
+````{panels}
+Input
+^^^
 ```latex
 \documentclass{article}
-
 \begin{document}
     Hallo Welt.
 \end{document}
 ```
-
-```{figure} Einfuehrung/Untitled.png 
---- 
-width: 500px 
-name: Untitled
---- 
-caption 
+---
+Output
+^^^
+```{image} Einfuehrung/Untitled.png 
 ``` 
+````
+
+- Es muss immer eine **Dokumenteklasse** definiert werden
+- Der eigentliche Inhalt (Texte & Bilder) stehen immer innerhalb von **\begin{document}** und **\end{document}**
+
 
 ### \documentclass - Dokumentklassen
 
-`article` - für kleinere Texte, beinhaltet keine Kapitelüberschriften
+```latex
+\documentclass{name}
+\begin{document}
+    ....
+\end{document}
+```
 
-`report` - Berichte, Abschlussarbeiten, beinhaltet Kapitelüberschriften
-
-`book` - umfangreiche Texte, beinhaltet Kapitelüberschriften und ist standardmäßig zweiseitig
+- name=`article` - für kleinere Texte, beinhaltet keine Kapitelüberschriften
+- name=`report` - Berichte, Abschlussarbeiten, beinhaltet Kapitelüberschriften
+- name=`book` - umfangreiche Texte, beinhaltet Kapitelüberschriften und ist standardmäßig zweiseitig
 
 Es gibt ähnliche Klassen, die zum modernen und weitverbreiteten KOMA-Skript gehören. Diese lauten dann:
 
-`scrartcl`
-
-`scrreprt`
-
-`scrbook`
+- name=`scrartcl`
+- name=`scrreprt`
+- name=`scrbook`
 
 Wir werden im weiteren Verlauf vor allem auf `scrreprt` setzen, da diese Klasse nahe einer Abschlussarbeit kommt und damit gut zu uns passt.
 
@@ -67,36 +69,33 @@ Es gibt noch weitere Klassen zum Schreiben von Briefen (dinbrief) o.ä., die wir
 
 ## Dokumentstruktur
 
-### Seitenränder
-
-TODO
-
-### Absätze und Zeilenumbrüche
-
-Absätze dienen der Struktur des Fließtextes. Sie sind das einzige Mittel, um Fließtext umzubrechen. Manuelle Zeilenumbrüche führen zu schlechten Textbildern.
-
 ### Überschriftsebenen
 
-- es gibt maximal drei nummerierte Ebenen für die Dokumentstruktur
-- article-Klassen:
+Es gibt maximal drei nummerierte Ebenen für die Dokumentstruktur:
 
+**article-Klassen** `\documentclass{article}`:
+
+````{panels}
+Input
+^^^
 ```latex
 \section{Überschrift}
 \subsection{Unterüberschrift}
 \subsubsection{Unterunterüberschrift}
 \paragraph{Letzte Chance}
 ```
-
-```{figure} Einfuehrung/Untitled_1.png 
---- 
-width: 500px 
-name: Untitled_1
---- 
-caption 
+---
+Output
+^^^
+```{image} Einfuehrung/Untitled_1.png 
 ``` 
+````
 
-- report/book-Klassen:
+**report/book-Klassen** `\documentclass{report}` oder `\documentclass{book}`:
 
+````{panels}
+Input
+^^^
 ```latex
 \chapter{Kapitelüberschrift}
 \section{Überschrift}
@@ -104,49 +103,42 @@ caption
 \subsubsection{Unterunterüberschrift}
 \paragraph{Letzte Chance}
 ```
-
-```{figure} Einfuehrung/Untitled_2.png 
---- 
-width: 500px 
-name: Untitled_2
---- 
-caption 
+---
+Output
+^^^
+```{image} Einfuehrung/Untitled_2.png 
 ``` 
+````
 
 ### Inhaltsverzeichnis
 
+
+````{panels}
+Input
+^^^
 ```latex
-\begin{document}
-
-%...
-
 \tableofcontents % Inhaltsverzeichnis
 \listoffigures % Abbildungsverzeichnis
 ```
-
-```{figure} Einfuehrung/Untitled_3.png 
---- 
-width: 500px 
-name: Untitled_3
---- 
-caption 
+---
+Output
+^^^
+```{image} Einfuehrung/Untitled_3.png 
 ``` 
-
-```{figure} Einfuehrung/Untitled_4.png 
---- 
-width: 500px 
-name: Untitled_4
---- 
-caption 
+```{image} Einfuehrung/Untitled_4.png 
 ``` 
+````
 
-weiter unten noch etwas mehr dazu ... 
 
 ## Bilder einfügen
 
 ### Allgemeines
 
-Das Einfügen von Bildern ist in LaTeX besonders einfach und ungewohnt (wenn man Word gewohnt ist) zugleich. **EINFACH** - da LaTeX die Aufgabe übernimmt, das Bild vernünftig zum Text zu positionieren. **UNGEWOHNT** - da LaTEX die Aufgabe übernimmt, das Bild vernünftig zum Text zu positionieren. Daher der Rat: Erzwingen Sie nichts, sondern vertrauen Sie LaTeX.
+Das Einfügen von Bildern ist in LaTeX besonders einfach und ungewohnt (wenn man Word gewohnt ist) zugleich. 
+
+**EINFACH** - da LaTeX die Aufgabe übernimmt, das Bild vernünftig zum Text zu positionieren. 
+
+**UNGEWOHNT** - da LaTEX die Aufgabe übernimmt, das Bild vernünftig zum Text zu positionieren. Daher der Rat: Erzwingen Sie nichts, sondern vertrauen Sie LaTeX.
 
 Generell gilt für eine gute Bildposition im wissenschaftlichen Text:
 
@@ -174,15 +166,15 @@ Generell gilt für eine gute Bildposition im wissenschaftlichen Text:
 
     ```
 
-```{figure} Einfuehrung/Untitled_5.png 
+```{image} Einfuehrung/Untitled_5.png 
 --- 
 width: 500px 
-name: Untitled_5
---- 
-caption 
+align: center
 ``` 
 
-Die Befehle `\label` und `\ref` dienen hier zur Referenzierung des Bildes. Es wird ein eindeutiges Label vergeben, welches dann überall im Text als Referenz wieder abgerufen werden kann. Dieser Mechanismus gilt nicht für Abbildungen, sondern auch Tabellen, Gleichungen, etc.
+Die Befehle `\label` und `\ref` dienen hier zur Referenzierung des Bildes. Es wird ein eindeutiges `Label` vergeben, welches dann überall im Text als Referenz wieder abgerufen werden kann. Dieser Mechanismus gilt nicht für Abbildungen, sondern auch Tabellen, Gleichungen, etc.
+
+Mit dem Befehl `\includegraphics[width=60mm]{dependency.png}` wird die Bilddatei `dependency.png` mit einer Breite von 60mm eingefügt. Die Datei liegt dabei im gleichen Verzeichnis wie die LaTeX Datei, es sind aber auch relative Pfade möglich (z.B. in einen Ordner Abbildungen  `\includegraphics{Abbildungen/dependency.png}`). Es können `.png` , `.jpg` und `.jpeg` standardmä
 
 Mit der Positionsangabe `[!h]` kann man LaTeX Hinweise zu den Positionswünschen übermitteln. Möglich sind:
 
@@ -197,6 +189,7 @@ Mit dem `!` erhöht man die Priorität seiner Forderung, man "zwingt" LaTeX zur 
 
 Natürlich kann man in LaTeX auch Dinge anpassen. Beispielsweise die Bildbeschriftung lässt sich über ein zusätzliches Package "caption" einstellen:
 
+
 ```latex
 ...
 \usepackage{caption}
@@ -206,208 +199,18 @@ Natürlich kann man in LaTeX auch Dinge anpassen. Beispielsweise die Bildbeschri
 ...
 ```
 
-vorher:
 
-```{figure} Einfuehrung/Untitled_6.png 
---- 
-width: 500px 
-name: Untitled_6
---- 
-caption 
+````{panels}
+Standardbildunterschrift:
+^^^
+```{image} Einfuehrung/Untitled_6.png 
 ``` 
-
-nachher (mit caption-Package):
-
-```{figure} Einfuehrung/Untitled_7.png 
---- 
-width: 500px 
-name: Untitled_7
---- 
-caption 
+---
+verbesserte Bildunterschrift (mit caption-Package)
+^^^
+```{image} Einfuehrung/Untitled_7.png 
 ``` 
-
-### Bilder mit LaTeX-Schrift 
-
-Es gibt die Möglichkeit, dass in Inkscape erstellte Bild in LaTeX einzubinden und den Text von LaTeX rendern zu lassen. Damit wird die Schriftart und Größe mit dem Dokument übereinstimmen. Dabei gibt es zwei verschiedene Varianten:
-
-1. `.pdf_tex` (zwei Dateien: Bild als .pdf und Text als .pdf_tex)
-1. `.svg` (eine Datei)
-
-```{figure} Einfuehrung/LaTeX-Bild-InkscapeOriginal.png 
---- 
-width: 300px 
-name: LaTeX-Bild-InkscapeOriginal
---- 
-So sieht die Grafik in Inkscape aus 
-``` 
-
-```{figure} Einfuehrung/LaTeX-Bild-LaTeX_output.png 
---- 
-width: 300px 
-name: LaTeX-Bild-InkscapeOriginal
---- 
-So sieht die Grafik in LaTeX aus 
-``` 
-
-
-#### (mit `.pdf_tex`)
-
-**Erstellen der Grafik:**
-
-- Erstellen der Grafik mit Text, wobei LaTeX-Notation für mathematische Zeichen angegeben wird
-- Anschließend wird die Abbildung als .pdf abspeichert ...
-- Im Speicherdialog die `Text in PDF weglassen und LaTeX Datei erstellen` auswählen 
-
-```{image} Einfuehrung/Untitled_8.png 
---- 
-width: 500px 
-name: Untitled_8
-``` 
-
-- Die zwei erstellen Dateien (`.pdf_latex` und die `.pdf`) in dem Ordner wo sich die LaTeX Dokumente befinden kopieren
-
-In unserem Beispiel sieht die Grafik dan so aus:
-
-```{figure} Einfuehrung/Untitled_9.png 
---- 
-width: 500px 
-name: Untitled_9
---- 
-Original Inkscape Grafik 
-``` 
-
-
-**Einbinden in LaTeX:**
-
-Liegen die Datein im gleichen Ordner, erfolgt die Einbindung wie folgt:
-
-```latex
-...
-\usepackage{color} %Nutzung von Farbe
-...
-\begin{figure}[!h]
-    \centering
-    \def\svgwidth{0.7\textwidth} 
-    \input{Skizze.pdf_tex}
-    \caption{Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.}
-    \label{fig:skizze}
-\end{figure}
-...
-```
-
-Wenn die zwei Dateien z.B. wie hier in dem Ordner `Abbildungen` liegt, müsste dies wie folgt angegeben werden:
-
-```latex
-...
-\usepackage{color} %Nutzung von Farbe
-...
-\begin{figure}[!h]
-    \centering
-    \def\svgwidth{0.7\textwidth} 
-    \graphicspath{{Abbildungen/}}
-    \input{Abbildungen/Skizze.pdf_tex}
-    \caption{Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.}
-    \label{fig:skizze}
-\end{figure}
-...
-```
-
-So würde dann die Grafik aussehen:
-
-```{figure} Einfuehrung/Untitled_10.png 
---- 
-width: 500px 
-name: Untitled_10
---- 
-So würde das Bild in LaTeX aussehen 
-``` 
-
-Den Vorteil dieser Methode wird noch mal deutlich wenn man die Bilder skaliert und sieht wie die Schriftgröße dabei immer gleich bleibt:
-
-
-```latex
-...
-\usepackage{color} %Nutzung von Farbe
-...
-\begin{figure}[!h]
-    \centering
-    \def\svgwidth{0.35\textwidth} % erstes Bild
-    \input{Skizze.pdf_tex}
-    \def\svgwidth{0.55\textwidth} % zweites Bild
-    \input{Skizze.pdf_tex}
-    \caption{Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.}
-    \label{fig:skizze}
-\end{figure}
-```
-
-Dabei würde hier folgendes Bild erstellt  werden:
-
-```{figure} Einfuehrung/Untitled_11.png 
---- 
-width: 500px 
-name: Untitled_11
---- 
-Die Schriftgröße bleibt gleich, egal wie groß das Bild skaliert wird 
-``` 
-
-####  mit `.svg`
-
-In der zweiten Variante wird die Grafik direkt als `.svg` gespeichert (es wird also nur eine Datei erzeugt). Der Nachteil an dieser Variante ist, dass die Farben nicht übernommen werden und als `LaTeX-Notation` z.B. mit `$\color{red}text$` ausgegeben werden müssen.  
-
-```{figure} Einfuehrung/LaTeXsvgInkscapeoriginal.png
---- 
-width: 500px 
-name: Untitled_11
---- 
-So sieht das original Inkscape Bild aus
-``` 
-
-
-In LaTeX sieht der Code dann wie folgt aus:
-
-```latex
-...
-\usepackage{svg} %Einbindung von svg Grafiken
-...
-\begin{figure}[!h] 
-    \centering
-    \includesvg[width=120mm]{Beispiel.svg}
-    \caption{Beispiel Vektorgrafik mit LaTeX rendering}
-    \label{fig:Beispiel_Vektor}
-\end{figure}
-```
-
-So sieht es dann in LaTeX aus:
-
-```{figure} Einfuehrung/LaTeXsvgLaTeXOutput.png
---- 
-width: 500px 
-name: Untitled_11
---- 
-So sieht das original Inkscape Bild aus
-``` 
-
-## Übung zur LaTeX-Schrift in Bildern
-
-**Aufgabe**
-
-Gegeben ist die folgende Grafik als PNG-Datei. Diese kann man einfach einbinden mit `\includegraphics{...}`.
-
-```{figure} Einfuehrung/Skizze-Ubungsbild.png 
---- 
-width: 500px 
-name: Skizze-Ubungsbild
---- 
-caption 
-``` 
-
-Nutzen Sie bitte die SVG-Datei dazu im Inkscape und setzen Sie die Beschriftung neu mit Text, den Sie dann im LaTeX-Dokument wieder ersetzen!
-
-```{admonition} Für die Lösung auf den Button klicken zum aufklappen
-:class: dropdown
-
-![](Einfuehrung/Loesung_InkscapeLaTeX.png)
-```
+````
 
 
 ## Tabellen
@@ -420,26 +223,38 @@ Zugegeben, Tabellen sind nicht so einfach zu erstellen in LaTeX. Es ist weniger 
 \begin{table}[h]
     \centering
     \caption{Tabellenbeschriftung}
-    
-		\begin{tabular}{|l|r|r|}
-    \hline
+    \begin{tabular}{|l|r|r|}
+       \hline
        awort  & cwörter mehr & das ist ein test.\\
        \hline
        bwort  & dwörter mehr & das ist ein test.\\
        \hline
     \end{tabular}
-    
     \label{tab:test}
 \end{table}
 ```
 
-```{figure} Einfuehrung/Untitled_12.png 
+```{image} Einfuehrung/Untitled_12.png 
 --- 
 width: 500px 
-name: Untitled_12
---- 
-caption 
+align: center
 ``` 
+
+- mit `&` werden die Inhalte zwischen den Spalten getrennt
+- mit `\\` wird ein Zeilenumbruch erzeugt
+- die vertikalen Linien in `\begin{tabular}{|l|r|r|}` sorgen dafür das vertikale Linien in der Tabelle erzeugt werden
+- ´\hline` führt dazu das eine horizontale Linie erzeugt wird
+
+## Übung (mathematische Umbgeung)
+
+Um das nun gesehene selbst anzuwenden übertragen wir nun den Text, Abbildungen und die Tabelle von folgender Seite auf ein eigenes LaTeX Dokument:
+
+[Der anthropogene Treibhauseffekt](https://www.klimanavigator.eu/dossier/artikel/011998/index.php)
+
+Hinweise:
+- Verwenden Sie `\label` und `\ref` für die Verweise auf die Abbildungen
+- Erstellen Sie Bildunterschriften und Tabellenüberschriften
+
 
 ## Mathematische Umgebungen
 
@@ -453,11 +268,12 @@ caption
     \label{equ:glg1}
 \end{equation}
 ```
+
 Mathematische Objekte:
 
 - griechische Buchstaben z.B. `\alpha` oder pi mit `\pi`
 - Quadratwurzel `\sqrt{}` .. kubische Wurzel `\sqrt[3]{}`
-- `\sin()` ,  `\cos()` ...`
+- `\sin()` ,  `\cos()` ...
 - Brüche mit `\frac{}{}`
 - hochstellen mit `^`
 - tiefstellen mit `_`
@@ -465,24 +281,25 @@ Mathematische Objekte:
 
 [Zahlen und Einheiten](https://tobiw.de/tbdm/siunitx)
 
-### Übungen
+## Übung (Text, Abbildungen, Tabelle)
 
 **Aufgabe**
 
 Gegeben ist eine Gleichung von Wikipedia ([https://de.wikipedia.org/wiki/Kontinuumsmechanik](https://de.wikipedia.org/wiki/Kontinuumsmechanik)). 
 
-```{figure} Einfuehrung/Untitled_13.png 
+```{image} Einfuehrung/Untitled_13.png 
 --- 
 width: 500px 
-name: Untitled_13
---- 
-caption 
+align: center
+
 ``` 
 
 Setzen Sie diese Gleichung ebenso in LaTeX.
 
 **Lösung**
 
+````{note} 
+:class: dropdown
 ```latex
 ... globale Energiebilanz:
 \[
@@ -494,14 +311,12 @@ Setzen Sie diese Gleichung ebenso in LaTeX.
 -\int_a\vec{n}\cdot\vec{q}\,\mathrm{d}a \quad.
 \]
 ```
-
-```{figure} Einfuehrung/Untitled_14.png 
+```{image} Einfuehrung/Untitled_14.png 
 --- 
 width: 500px 
-name: Untitled_14
---- 
-caption 
-``` 
+align: center
+```
+```` 
 
 ## Literaturverzeichnis
 
@@ -517,12 +332,10 @@ Hinweis: In Overleaf lässt auch direkt der Zotero-Account verknüpfen, so dass 
 
 Ist die Datenbank in Zotero gefüllt, kann direkt aus der Bibliothek im Zotero eine BIBLaTeX-Datei erzeugt werden. Dazu unter `Datei > "Bibliothek exportieren...`" anklicken. Dann erhält man ein Dialogfenster:
 
-```{figure} Einfuehrung/Untitled_15.png 
+```{image} Einfuehrung/Untitled_15.png 
 --- 
 width: 500px 
-name: Untitled_15
---- 
-caption 
+align: center
 ``` 
 
 In diesem Fenter als `Format "BibLaTeX"` auswählen, mit OK bestätigen und dann die Bib-Datei im Ordner der LaTeX-Datei mit gewünschten Namen abspeichern (z.B. "mybib.bib").
@@ -572,19 +385,3 @@ Dann kann man mit `\cite{KEY}` die Literaturreferenzen einfügen. Dabei ist der 
 ```
 
 Zitierung [1,2] und nicht [1][2]
-
-TODO
-
-## Verzeichnisse
-
-### Symbolverzeichnis
-
-TODO
-
-## Titlepage
-
-[Customising Your Title Page and Abstract](https://www.overleaf.com/learn/latex/How_to_Write_a_Thesis_in_LaTeX_(Part_5):_Customising_Your_Title_Page_and_Abstract)
-
-## Befehle definieren
-
-Todo
