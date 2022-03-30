@@ -43,8 +43,14 @@ Output
 
 ````
 
+## Was kann LaTeX?
 
-
+- LaTeX übernimmt das Layout, man kann sich auf das verfassen des Inhalts konzentrieren
+- Anpassung des Layouts durch Veränderung einer Variable (z.B. Dokumentenklasse oder Zitierstil)
+- Automatische Nummerierung von Kapitel, Abbildungen, Tabellen
+- Automatische Erstellung von Inhaltsverzeichnis, Quellenverzeichnis (und andere Verzeichnisse z.B. für Symbole, Abbildungen und Tabellen wenn gewünscht)
+- ideal für die Erstellung wissenschaftlicher Arbeiten
+- kostenlos und Plattformübergreifend verfügbar
 
 
 Für den Einstieg ist die webbasierte LaTeX-Umgebung [www.overleaf.com](overleaf.com) zu empfehlen. Man kann sich kostenfrei registrieren und ohne Installation und viel Hilfe und Vorlagen einarbeiten. Auch eine Installation auf den eigenen Rechner kann für alle Plattformen, Win, Mac, Linux, erfolgen.
