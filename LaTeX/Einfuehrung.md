@@ -4,16 +4,15 @@
 
 [Overleaf Documentation (englisch)](https://www.overleaf.com/learn/latex/Main_Page)
 
-## Nutzung und Installation
+## Editor
 
 Es gibt für LaTeX mittlerweile zwei prinzipielle Möglichkeiten:
 
 - online im Webbrowser
-
-    [Overleaf, Online LaTeX Editor](https://www.overleaf.com/)
+    - [Overleaf](https://www.overleaf.com/)
 
 - Installation auf dem eigenen Rechner
-    - Windows [Home - MiKTeX.org](https://miktex.org/)
+    - Windows [MiKTeX](https://miktex.org/)
     - Windows [Tex Live](https://www.tug.org/texlive/)
     - Mac [MacTeX - TeX Users Group](https://tug.org/mactex/)
     - Linux [ubuntuusers.de](https://wiki.ubuntuusers.de/TeX_Live/)
@@ -22,7 +21,7 @@ Für uns ist im Moment die Nutzung online am einfachsten und sehr direkt umsetzb
 
 ## Ein erstes "Hallo Welt"
 
-
+Nachfolgend erste und einfachste LaTeX Dokument. Es muss immer eine **Dokumenteklasse** definiert werden und der eigentliche Inhalt (in diesem Fall nur ein einfacher Text) steht immer innerhalb von **\begin{document}** und **\end{document}**
 
 ````{panels}
 Input
@@ -40,11 +39,17 @@ Output
 ``` 
 ````
 
-- Es muss immer eine **Dokumenteklasse** definiert werden
-- Der eigentliche Inhalt (Texte & Bilder) stehen immer innerhalb von **\begin{document}** und **\end{document}**
 
+# Präambel des Dokuments
 
-### \documentclass - Dokumentklassen
+Die Präambel beschreibt alles was vor `\begin{document}` steht. Dabei geht es um die **Grundeinstellungen** des Dokumentes. Konrekt wird folgendes definiert:
+
+1. Dokumentenklasse (Layout der Seite)
+2. Pakete (ermöglichen zusätzliche Funktionen)
+
+## Dokumentklassen
+
+Mit der Definition der Dokumentenklasse beginnt das LaTeX Dokument. Mit der Dokumenteklasse wird das **Layout** des Dokuments bestimmt.
 
 ```latex
 \documentclass{name}
@@ -67,9 +72,34 @@ Wir werden im weiteren Verlauf vor allem auf `scrreprt` setzen, da diese Klasse 
 
 Es gibt noch weitere Klassen zum Schreiben von Briefen (dinbrief) o.ä., die wir hier aber nicht genauer betrachten wollen. Ist der Einstieg in LaTeX geschafft, kann man diese auch schnell selbst einbinden.
 
-## Dokumentstruktur
 
-### Überschriftsebenen
+## sinnvolle Pakete (packages)
+
+In der Präambel nach der Dokumentenklasse können Pakete (packages) verwendet werden die bestimmte Funktionen hinzufügen. Dies kann z.B. eine automatische Silbentrennung sein. Diese Pakete werden mit dem Befehl `\usepackage[option]{name}` eingefügt: 
+
+```latex
+\documentclass{scrreprt}
+
+\usepackage[option]{name} 
+
+\begin{document}
+    ....
+\end{document}
+```
+
+Besonders sinnvolle packages sind hier zusammengefasst:
+
+```latex
+\usepackage[ngerman]{babel} % Neue deutsche Silbentrennung
+\usepackage[utf8]{inputenc} % Zeichenkodierung für UTF-8 (Unicode) falls Editor es unterstützt (bevorzugt)
+% \usepackage[latin1]{inputenc} % Zeichenkodierung unter Windows für Umlaute und Sonderzeichen falls kein UTF-8 im Editor
+\usepackage[T1]{fontenc} % Korrektes Trennen von Wörtern mit Umlauten und Akzenten.
+\usepackage{graphicx} % Grafiken einbinden
+```
+
+# Gliederung und Verzeichnisse
+
+## Überschriftsebenen
 
 Es gibt maximal drei nummerierte Ebenen für die Dokumentstruktur:
 
@@ -110,7 +140,7 @@ Output
 ``` 
 ````
 
-### Inhaltsverzeichnis
+## Inhaltsverzeichnis
 
 
 ````{panels}
@@ -130,9 +160,7 @@ Output
 ````
 
 
-## Bilder einfügen
-
-### Allgemeines
+# Abbildungen
 
 Das Einfügen von Bildern ist in LaTeX besonders einfach und ungewohnt (wenn man Word gewohnt ist) zugleich. 
 
@@ -146,25 +174,41 @@ Generell gilt für eine gute Bildposition im wissenschaftlichen Text:
 - Bilder sollten am unteren oder oberen Rand der Seite positioniert werden, um den Textfluss nicht zu stören.
 - Bilder sollten, wenn möglich, die Textbreite nutzen. Eventuell auch mehrere Bilder in einer Abbildungsumgebung unterbringen, wenn es inhaltlich sinnvoll ist.
 
-    ```latex
-    \documentclass...
+## Paket `graphicx`
 
-    \usepackage{graphicx} % Grafiken einbinden
+Um Bilder einzufügen muss das Paket `graphicx` verwendet werden. Dafür in die Präambel (vor `\begin{document}`) der Text `\usepackage{graphicx}` einfügt werden:
 
-    %...
-    ... Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat (s. Abb. \ref{fig:bildlabel}). 
-    %
-    \begin{figure}[!h] %Postionsangabe
-        \centering
-        \includegraphics[width=60mm]{dependency.png}
-        \caption{Ein Bild zur Digitalisierung. Quelle: xkcd.com}
-        \label{fig:bildlabel}
-    \end{figure}
-    %
-    Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    %...
+```latex
+\documentclass{scrreprt}
 
-    ```
+\usepackage{graphicx} 
+
+\begin{document}
+    ....
+\end{document}
+```
+
+## Abbildung einfügen
+
+Innerhalb der `document`-Umgebung (nach `\begin{document}`) können Bilder eingefügt werden. Dafür wird eine `figure`-Umgebung erstellt (mit `\begin{figure}` und `\end{figure}`). Innerhalb dieser Umgebung kann dann mit \includegraphics{bild.png} z.B. eine Datei `bild.png` eingefügt  werden. Konrekt wird dies am nachfolgenden Beispiel verdeutlicht:
+
+
+```latex
+\begin{document}
+%...
+... Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat (s. Abb. \ref{fig:bildlabel}). 
+%
+\begin{figure}[!h] %Postionsangabe
+    \centering
+    \includegraphics[width=60mm]{dependency.png}
+    \caption{Ein Bild zur Digitalisierung. Quelle: xkcd.com}
+    \label{fig:bildlabel}
+\end{figure}
+%
+Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+%...
+\end{document}
+```
 
 ```{image} Einfuehrung/Untitled_5.png 
 --- 
@@ -172,23 +216,36 @@ width: 500px
 align: center
 ``` 
 
-Die Befehle `\label` und `\ref` dienen hier zur Referenzierung des Bildes. Es wird ein eindeutiges `Label` vergeben, welches dann überall im Text als Referenz wieder abgerufen werden kann. Dieser Mechanismus gilt nicht für Abbildungen, sondern auch Tabellen, Gleichungen, etc.
+<br>
+Nachfolgend nun die Erklärungen zu den Befehlen:
 
-Mit dem Befehl `\includegraphics[width=60mm]{dependency.png}` wird die Bilddatei `dependency.png` mit einer Breite von 60mm eingefügt. Die Datei liegt dabei im gleichen Verzeichnis wie die LaTeX Datei, es sind aber auch relative Pfade möglich (z.B. in einen Ordner Abbildungen  `\includegraphics{Abbildungen/dependency.png}`). Es können `.png` , `.jpg` und `.jpeg` standardmä
+## Referenzierungen
+
+- `\label{label_name}` (innerhalb von der `figure`-Umgebung) erstellt ein label welches im Text (also außerhalb der `figure`-Umgebung) mit dem Befehl `\ref{label_name}` referenziert werden kann.  Es wird dann die zugehörige Nummer eingefügt.
+- `\includegraphics[width=60mm]{dependency.png}` wird die Bilddatei `dependency.png` mit einer Breite von 60mm eingefügt. Die Datei liegt dabei im gleichen Verzeichnis wie die LaTeX Datei, es sind aber auch relative Pfade möglich (z.B. in einen Ordner Abbildungen  `\includegraphics{Abbildungen/dependency.png}`). Es können Bilder mit der Dateieindung `.png` , `.jpg` und `.jpeg` standardmäßig verwendet werden.
+
+## Bildposition 
 
 Mit der Positionsangabe `[!h]` kann man LaTeX Hinweise zu den Positionswünschen übermitteln. Möglich sind:
 
-- `h` - here - bitte versuche es genau an dieser Textstelle
-- `t` - top - wenn möglich an Oberkante der Seite
-- `b` - bottom - wenn möglich, an Unterkante der Seite
-- `p` - page - nutze eine extra Seite für die Bilder
+    - `h` - here - bitte versuche es genau an dieser Textstelle
+    - `t` - top - wenn möglich an Oberkante der Seite
+    - `b` - bottom - wenn möglich, an Unterkante der Seite
+    - `p` - page - nutze eine extra Seite für die Bilder
+    - Mit dem `!` erhöht man die Priorität seiner Forderung, man "zwingt" LaTeX zur Umsetzung.
+    
 
-Mit dem `!` erhöht man die Priorität seiner Forderung, man "zwingt" LaTeX zur Umsetzung.
+## Bildgröße 
 
-### Bilderunterschriften in schick
+Die Bildgröße kann wie folgt beschrieben werden:
 
-Natürlich kann man in LaTeX auch Dinge anpassen. Beispielsweise die Bildbeschriftung lässt sich über ein zusätzliches Package "caption" einstellen:
+- `\includegraphics{bild.png}` : Originalbreite des Bildes wird verwendet
+- `\includegraphics[width=60mm]{bild.png}` : Die Breite wird auf 60mm festgelegt
+- `\includegraphics[width=0.25\textwidth]{bild.png}` : Die Breite wird auf 25% der Seitenbreite festgelegt
 
+## Bilderunterschriften 
+
+Mit `\caption{...}` wird die Bildunterschrift definiert. Um die Bildunterschrift optisch ansprechender zu gestalten wird kann das Paket `caption` verwendet werden mit den Optionen `labelfont=bf,font=small,textfont=it` 
 
 ```latex
 ...
@@ -199,53 +256,299 @@ Natürlich kann man in LaTeX auch Dinge anpassen. Beispielsweise die Bildbeschri
 ...
 ```
 
+Hier der Unterschied zwischen der Standardvariante und der verbesserten Variante:
 
-````{panels}
-Standardbildunterschrift:
-^^^
+````{tabbed} Bildunterschrift Standard
 ```{image} Einfuehrung/Untitled_6.png 
 ``` 
----
-verbesserte Bildunterschrift (mit caption-Package)
-^^^
+````
+
+````{tabbed} Bildunterschrift verbessert (mit caption-Paket)
 ```{image} Einfuehrung/Untitled_7.png 
 ``` 
 ````
 
+## Mehrere Abbildungen in einer Figure Umgebung (subfigure)
 
-## Tabellen
+Es gibt verschiedene Variante wie man mehrere Bilder in einer `figure`-Umgebung platzieren kann. Hier ein Beispiel in dem das Paket `subcaption` benutzt wird und die Bilder in einer `\subcaptionbox` erstellt werden. In der ersten Variante werden die in der Mitte zusammengeführt, was meist nicht gewollt wird:
 
-Zugegeben, Tabellen sind nicht so einfach zu erstellen in LaTeX. Es ist weniger die Schwierigkeit, als mehr der Aufwand, den sie beim erstellen erzeugen. Aber es geht:
-
+````{panels}
+Input
+^^^
 ```latex
-... sunt in culpa qui officia deserunt mollit anim id est laborum (s. Tabelle \ref{tab:test}).
-%
-\begin{table}[h]
-    \centering
-    \caption{Tabellenbeschriftung}
-    \begin{tabular}{|l|r|r|}
-       \hline
-       awort  & cwörter mehr & das ist ein test.\\
-       \hline
-       bwort  & dwörter mehr & das ist ein test.\\
-       \hline
-    \end{tabular}
-    \label{tab:test}
+\usepackage{graphicx} % Grafiken
+\usepackage{subcaption} % subfigures
+
+\begin{document}
+
+\begin{figure}[h!]
+\centering
+\label{fig:HTWK_Logos}
+\subcaptionbox{HTWK}{\includegraphics[width=.45\linewidth]{HTWK.png}}
+\subcaptionbox{ING}{\includegraphics[width=.45\linewidth]{ING.png}}
+\caption{HTWK Logos ohne hfill}
+\end{figure}
+```
+---
+Output
+^^^
+```{image} Einfuehrung/subfig1.png 
+``` 
+````
+
+In der zweiten Variante wird nach der ersten `\subcaptionbox` ein `\hfill` verwendet wodurch sich der Inhalt auf der Seitenbreite gleich verteilt:
+
+
+````{panels}
+Input
+^^^
+```latex
+\usepackage{graphicx} % Grafiken
+\usepackage{subcaption} % subfigures
+
+\begin{document}
+
+\begin{figure}[h!]
+\centering
+\label{fig:HTWK_Logos}
+\subcaptionbox{HTWK}{\includegraphics[width=.45\linewidth]{HTWK.png}}\hfill
+\subcaptionbox{ING}{\includegraphics[width=.45\linewidth]{ING.png}}
+\caption{HTWK Logos ohne hfill}
+\end{figure}
+```
+---
+Output
+^^^
+```{image} Einfuehrung/subfig2.png 
+``` 
+````
+
+
+# Tabellen
+
+Zugegeben, Tabellen sind nicht so einfach zu erstellen in LaTeX. Es ist weniger die Schwierigkeit, als mehr der Aufwand, den sie beim erstellen erzeugen.
+
+## Tabellenlayout
+
+Wir starten mit einer einfachen 2 x 4 Tabelle. Dazu verwenden wir als äußere Klammer die `table`-Umgebung. Innerhalb dieser kann mit `\centering` die Tabelle zentriert werden. Der Inhalt der Tabelle wird im Inneren der `table`-Umgebung mittels der `tabular`-Umgebung definiert.
+
+
+Bei der Definition der `tabular`-Umgebung werden die Spalten und die Ausrichtung erstellt: 
+- `l` - links 
+- `r` - rechts 
+- `c` - mittig
+
+Für den ersten Fall mit zwei mittig zentrieren Spalten sieht es dann so aus: `\begin{tabular}{ c c }`
+
+Die gesamte Tabelle würde dann so aussehen:
+
+````{panels}
+Input
+^^^
+```latex
+\begin{table}
+ \centering
+ \begin{tabular}{ c c }
+   Zelle1 & Zelle2  \\ 
+   Zelle3 & Zelle4  \\  
+   Zelle5 & Zelle6  \\  
+   Zelle7 & Zelle8    
+ \end{tabular}
 \end{table}
 ```
-
-```{image} Einfuehrung/Untitled_12.png 
---- 
-width: 500px 
-align: center
+---
+Output
+^^^
+```{image} Einfuehrung/tab1.png 
 ``` 
+````
 
-- mit `&` werden die Inhalte zwischen den Spalten getrennt
-- mit `\\` wird ein Zeilenumbruch erzeugt
-- die vertikalen Linien in `\begin{tabular}{|l|r|r|}` sorgen dafür das vertikale Linien in der Tabelle erzeugt werden
-- ´\hline` führt dazu das eine horizontale Linie erzeugt wird
+Für eine 3x3 Tabelle sieht es dann so aus:
 
-## Übung (mathematische Umbgeung)
+
+````{panels}
+Input
+^^^
+```latex
+\begin{table}
+ \centering
+ \begin{tabular}{ c c c }
+   Zelle1 & Zelle2 & Zelle3 \\ 
+   Zelle4 & Zelle5 & Zelle6 \\  
+   Zelle7 & Zelle8 & Zelle9    
+ \end{tabular}
+\end{table}
+```
+---
+Output
+^^^
+```{image} Einfuehrung/tab2.png 
+``` 
+````
+
+Mit `|` zwischen den Spaltenausrichtungen können vertikale Linien eingefügt werden:
+
+
+````{panels}
+Input
+^^^
+```latex
+\begin{table}
+ \centering
+ \begin{tabular}{|c|c|c|}
+   Zelle1 & Zelle2 & Zelle3 \\ 
+   Zelle4 & Zelle5 & Zelle6 \\  
+   Zelle7 & Zelle8 & Zelle9    
+ \end{tabular}
+\end{table}
+```
+---
+Output
+^^^
+```{image} Einfuehrung/tab3.png 
+``` 
+````
+
+Mit `\hline` können horizontale Linien eingefügt werden:
+
+
+````{panels}
+Input
+^^^
+```latex
+\begin{table}
+ \centering
+ \begin{tabular}{|c|c|c|}
+   \hline
+   Zelle1 & Zelle2 & Zelle3 \\
+   \hline
+   Zelle4 & Zelle5 & Zelle6 \\  
+   \hline
+   Zelle7 & Zelle8 & Zelle9 \\ 
+   \hline
+ \end{tabular}
+\end{table}
+```
+---
+Output
+^^^
+```{image} Einfuehrung/tab4.png 
+``` 
+````
+
+Um ein Tabellenheader einzufügen könnte man z.B. die Schrift mit `\textbf{}` **fett** drucken um diese hervorzuheben:
+
+
+````{panels}
+Input
+^^^
+```latex
+\begin{table}
+ \centering
+ \begin{tabular}{|c|c|c|}
+   \hline
+   \textbf{Header1} & \textbf{Header2} & \textbf{Header3} \\
+   \hline
+   Zelle1 & Zelle2 & Zelle3 \\
+   \hline
+   Zelle4 & Zelle5 & Zelle6 \\  
+   \hline
+   Zelle7 & Zelle8 & Zelle9 \\ 
+   \hline
+ \end{tabular}
+\end{table}
+```
+---
+Output
+^^^
+```{image} Einfuehrung/tab5.png 
+``` 
+````
+
+## Tabellenüberschrift & Verweise
+
+Analog wie bei Abbildungen können mit `\label{name}` und  `\ref{name}` auf Tabellennummern verwiesen werden. Mit `\caption{Tabellenüberschrift}` kann die Tabellenüberschrift erstellt werden.
+
+
+````{panels}
+Input
+^^^
+```latex
+\begin{table}
+ \centering
+ \caption{Meine erste eigene Tabelle}
+ \label{tab:erste_Tabelle}
+ \begin{tabular}{|c|c|c|}
+  \hline
+  \textbf{Header1} & \textbf{Header2} & \textbf{Header3} \\
+  \hline
+  Zelle1 & Zelle2 & Zelle3 \\
+  \hline
+  Zelle4 & Zelle5 & Zelle6 \\  
+  \hline
+  Zelle7 & Zelle8 & Zelle9 \\ 
+  \hline
+ \end{tabular}
+\end{table}
+%
+... sind die Werte in Tabelle \ref{tab:erste_Tabelle} zusammengefasst.
+
+```
+---
+Output
+^^^
+```{image} Einfuehrung/tab5b.png 
+``` 
+````
+
+## Bildposition 
+
+Analog zu Abbildungen kann man LaTeX mit der Positionsangabe `[!h]` anschließend an `\begin{table}` die Positionswünsche übermitteln. Möglich sind:
+
+    - `h` - here - bitte versuche es genau an dieser Textstelle
+    - `t` - top - wenn möglich an Oberkante der Seite
+    - `b` - bottom - wenn möglich, an Unterkante der Seite
+    - `p` - page - nutze eine extra Seite für die Bilder
+    - Mit dem `!` erhöht man die Priorität seiner Forderung, man "zwingt" LaTeX zur Umsetzung.
+
+## Tabelle mit zusätzlichen Paketen 
+
+Um eine optisch ansprechende Tabelle zu erzeugen sind zusätzliche Pakete notwendig. Anschließend können mit `\toprule` , `\midrule` und `\bottomrule` horizontale Linien erstellt werden. Mittels Befehlsdefinition kann anschließend mit \thead{headername} die Tabellenüberschrift zentriert und **fett** dargestellt werden, auch wenn die Spalten z.B. eine linksseitige Ausrichtung besitzen:
+
+
+````{panels}
+Input
+^^^
+```latex
+
+\usepackage{array, booktabs, caption}
+\usepackage{makecell}
+\renewcommand\theadfont{\bfseries}
+\begin{document}
+
+\begin{table}
+ \centering
+ \caption{Meine erste eigene Tabelle}
+ \label{tab_erste_Tabelle}
+ \begin{tabular}{lll}
+  \toprule
+  \thead{Header1} & \thead{Header2} & \thead{Header3} \\
+  \midrule
+   Zelle1 & Zelle2 & Zelle3 \\
+   Zelle4 & Zelle5 & Zelle6 \\  
+   Zelle7 & Zelle8 & Zelle9 \\ 
+  \bottomrule
+ \end{tabular}
+\end{table}
+```
+---
+Output
+^^^
+```{image} Einfuehrung/tab6.png 
+``` 
+````
+
+# Übung (Text, Abbildungen, Tabelle)
 
 Um das nun gesehene selbst anzuwenden übertragen wir nun den Text, Abbildungen und die Tabelle von folgender Seite auf ein eigenes LaTeX Dokument:
 
@@ -256,11 +559,118 @@ Hinweise:
 - Erstellen Sie Bildunterschriften und Tabellenüberschriften
 
 
-## Mathematische Umgebungen
+# Textformatierung
 
-- Verwendung von Formelzeichen durch Einbettung mit $ Zeichen: z.B. $\alpha$
+- fettgedruck: **fettgedruckter** Text wird mit dem `\textbf{...}` erzeugt
+- kursiv: *kursiver* Text wird mit dem `\textit{...}` erzeugt
+- unterstrichen: unterstrichener Text wird mit dem `\underline{...}` erzeugt
 
-- Gleichungen zwischen `\begin{equation}` und `\end{equation}`  
+````{panels}
+Input
+^^^
+```latex
+Das ist ein \textbf{fettgedruckter Text} und das ein \textit{kursiver Text} und dieser \underline{Text ist unterstrichen}
+```
+---
+Output
+^^^
+```{image} Einfuehrung/Textformatierung.png 
+``` 
+````
+
+# Listen
+
+Aufählungen werden in der `itemize`-Umgebung erzeugt. Ein Listeneinträge startet immer mit `\item`. Der Text kann eine beliebige Länge haben und der Textumbruch erfolgt automatisch sobald nicht wieder ein neuer Anstrich mit \verb|\item| erfolgt
+
+````{panels}
+Input
+^^^
+```latex
+\begin{itemize}
+  \item Eintrag 1
+  \item Eintrag 2
+  \item Eintrag 3
+\end{itemize}
+```
+---
+Output
+^^^
+```{image} Einfuehrung/item1.png 
+``` 
+````
+
+Für Untereinträge wird jeweils eine neue `itemize`-Umgebung erzeugt
+
+````{panels}
+Input
+^^^
+```latex
+\begin{itemize}
+  \item Eintrag 1
+  \begin{itemize}
+   \item Untereintrag 1
+   \item Untereintrag 2
+   \item Untereintrag 3
+  \end{itemize}
+  \item Eintrag 2
+  \item Eintrag 3
+\end{itemize}
+```
+---
+Output
+^^^
+```{image} Einfuehrung/item2.png 
+``` 
+````
+
+Nummerierte Auflistungen werden mit der `enumerate`-Umgebung analog erzeugt:
+
+````{panels}
+Input
+^^^
+```latex
+\begin{enumerate}
+  \item Eintrag 1
+  \item Eintrag 2
+  \item Eintrag 3
+\end{enumerate}
+```
+---
+Output
+^^^
+```{image} Einfuehrung/item3.png 
+``` 
+````
+
+Für Untereinträge erfolgen hier analog:
+
+````{panels}
+Input
+^^^
+```latex
+\begin{enumerate}
+  \item Eintrag 1
+  \begin{enumerate}
+   \item Untereintrag 1
+   \item Untereintrag 2
+   \item Untereintrag 3
+  \end{enumerate}
+  \item Eintrag 2
+  \item Eintrag 3
+\end{enumerate}
+```
+---
+Output
+^^^
+```{image} Einfuehrung/item4.png 
+``` 
+````
+
+
+# Mathematische Umgebungen
+
+- Verwendung von Formelzeichen durch Einbettung mit `$` Zeichen: z.B. `$\alpha$`
+- Gleichungen zwischen `\begin{equation}` und `\end{equation}`
 
 ```latex
 \begin{equation}
@@ -281,7 +691,7 @@ Mathematische Objekte:
 
 [Zahlen und Einheiten](https://tobiw.de/tbdm/siunitx)
 
-## Übung (Text, Abbildungen, Tabelle)
+## Übung (mathematische Umbgeung)
 
 **Aufgabe**
 
