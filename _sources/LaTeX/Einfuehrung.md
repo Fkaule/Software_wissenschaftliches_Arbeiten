@@ -21,7 +21,7 @@ Für uns ist im Moment die Nutzung online am einfachsten und sehr direkt umsetzb
 
 ## Ein erstes "Hallo Welt"
 
-Nachfolgend erste und einfachste LaTeX Dokument. Es muss immer eine **Dokumenteklasse** definiert werden und der eigentliche Inhalt (in diesem Fall nur ein einfacher Text) steht immer innerhalb von **\begin{document}** und **\end{document}**
+Nachfolgend erste und einfachste LaTeX Dokument. Es muss immer eine **Dokumenteklasse** definiert werden und der eigentliche Inhalt (in diesem Fall nur ein einfacher Text) steht immer innerhalb von `\begin{document}` und `\end{document}`
 
 ````{panels}
 Input
@@ -228,11 +228,11 @@ Nachfolgend nun die Erklärungen zu den Befehlen:
 
 Mit der Positionsangabe `[!h]` kann man LaTeX Hinweise zu den Positionswünschen übermitteln. Möglich sind:
 
-    - `h` - here - bitte versuche es genau an dieser Textstelle
-    - `t` - top - wenn möglich an Oberkante der Seite
-    - `b` - bottom - wenn möglich, an Unterkante der Seite
-    - `p` - page - nutze eine extra Seite für die Bilder
-    - Mit dem `!` erhöht man die Priorität seiner Forderung, man "zwingt" LaTeX zur Umsetzung.
+- `h` - here - bitte versuche es genau an dieser Textstelle
+- `t` - top - wenn möglich an Oberkante der Seite
+- `b` - bottom - wenn möglich, an Unterkante der Seite
+- `p` - page - nutze eine extra Seite für die Bilder
+- Mit dem `!` erhöht man die Priorität seiner Forderung, man "zwingt" LaTeX zur Umsetzung.
     
 
 ## Bildgröße 
@@ -270,11 +270,15 @@ Hier der Unterschied zwischen der Standardvariante und der verbesserten Variante
 
 ## Mehrere Abbildungen in einer Figure Umgebung (subfigure)
 
-Es gibt verschiedene Variante wie man mehrere Bilder in einer `figure`-Umgebung platzieren kann. Hier ein Beispiel in dem das Paket `subcaption` benutzt wird und die Bilder in einer `\subcaptionbox` erstellt werden. In der ersten Variante werden die in der Mitte zusammengeführt, was meist nicht gewollt wird:
+Es gibt verschiedene Variante wie man mehrere Bilder in einer `figure`-Umgebung platzieren kann. Hier ein Beispiel in dem das Paket `subcaption` benutzt wird und die Bilder in einer `\subcaptionbox` erstellt werden:
 
-````{panels}
-Input
-^^^
+````{tabbed} ohne /hfill
+```{image} Einfuehrung/subfig1.png 
+--- 
+width: 500px 
+align: center
+
+``` 
 ```latex
 \usepackage{graphicx} % Grafiken
 \usepackage{subcaption} % subfigures
@@ -288,20 +292,19 @@ Input
 \subcaptionbox{ING}{\includegraphics[width=.45\linewidth]{ING.png}}
 \caption{HTWK Logos ohne hfill}
 \end{figure}
+
+\end{document}
 ```
----
-Output
-^^^
-```{image} Einfuehrung/subfig1.png 
-``` 
+- Bilder werden standardmäßig nebeinander ohne Abstand dargestellt (so nicht gewünscht)
 ````
 
-In der zweiten Variante wird nach der ersten `\subcaptionbox` ein `\hfill` verwendet wodurch sich der Inhalt auf der Seitenbreite gleich verteilt:
+````{tabbed} mit /hfill
+```{image} Einfuehrung/subfig2.png 
+--- 
+width: 500px 
+align: center
 
-
-````{panels}
-Input
-^^^
+``` 
 ```latex
 \usepackage{graphicx} % Grafiken
 \usepackage{subcaption} % subfigures
@@ -315,14 +318,11 @@ Input
 \subcaptionbox{ING}{\includegraphics[width=.45\linewidth]{ING.png}}
 \caption{HTWK Logos ohne hfill}
 \end{figure}
-```
----
-Output
-^^^
-```{image} Einfuehrung/subfig2.png 
-``` 
-````
 
+\end{document}
+```
+- wird nach der `\subcaptionbox` ein `\hfill` verwendet, verteilt sich der Inhalt auf der Seitenbreite
+````
 
 # Tabellen
 
@@ -360,6 +360,8 @@ Input
 Output
 ^^^
 ```{image} Einfuehrung/tab1.png 
+:width: 200px
+:align: center
 ``` 
 ````
 
@@ -383,6 +385,8 @@ Input
 Output
 ^^^
 ```{image} Einfuehrung/tab2.png 
+:width: 300px
+:align: center
 ``` 
 ````
 
@@ -406,6 +410,8 @@ Input
 Output
 ^^^
 ```{image} Einfuehrung/tab3.png 
+:width: 300px
+:align: center
 ``` 
 ````
 
@@ -433,6 +439,8 @@ Input
 Output
 ^^^
 ```{image} Einfuehrung/tab4.png 
+:width: 300px
+:align: center
 ``` 
 ````
 
@@ -462,6 +470,8 @@ Input
 Output
 ^^^
 ```{image} Einfuehrung/tab5.png 
+:width: 300px
+:align: center
 ``` 
 ````
 
@@ -501,7 +511,7 @@ Output
 ``` 
 ````
 
-## Bildposition 
+## Tabellenposition 
 
 Analog zu Abbildungen kann man LaTeX mit der Positionsangabe `[!h]` anschließend an `\begin{table}` die Positionswünsche übermitteln. Möglich sind:
 
@@ -513,15 +523,52 @@ Analog zu Abbildungen kann man LaTeX mit der Positionsangabe `[!h]` anschließen
 
 ## Tabelle mit zusätzlichen Paketen 
 
-Um eine optisch ansprechende Tabelle zu erzeugen sind zusätzliche Pakete notwendig. Anschließend können mit `\toprule` , `\midrule` und `\bottomrule` horizontale Linien erstellt werden. Mittels Befehlsdefinition kann anschließend mit \thead{headername} die Tabellenüberschrift zentriert und **fett** dargestellt werden, auch wenn die Spalten z.B. eine linksseitige Ausrichtung besitzen:
+Um eine optisch ansprechende Tabelle zu erzeugen sind zusätzliche Pakete notwendig. Nachfolgend zwei Beispiele:
 
 
-````{panels}
-Input
-^^^
+````{tabbed} Beispiel 1 
+```{image} Einfuehrung/nice_tab1.png 
+--- 
+width: 400px 
+align: center
+
+``` 
 ```latex
+\documentclass{scrreprt}
+\usepackage{booktabs}
+\begin{document}
 
-\usepackage{array, booktabs, caption}
+\begin{table}
+ \centering
+ \caption{Meine erste eigene Tabelle}
+ \label{tab_erste_Tabelle}
+ \begin{tabular}{lll}
+  \toprule
+  Header1 & Header2 & Header3 \\
+  \midrule
+   Zelle1 aber länger & Zelle2 & Zelle3 \\
+   Zelle4 & Zelle5 aber länger & Zelle6 \\  
+   Zelle7 & Zelle8 & Zelle9 aber länger \\ 
+  \bottomrule
+ \end{tabular}
+\end{table}
+
+\end{document}
+```
+- Verwendung des Pakets `booktabs` für `\toprule` , `\midrule` und `\bottomrule`
+- Überschriften aber in gleicher Ausrichtung wie Tabelleninhalt
+````
+
+````{tabbed} Beispiel 2
+```{image} Einfuehrung/nice_tab2.png 
+--- 
+width: 400px 
+align: center
+
+``` 
+```latex
+\documentclass{scrreprt}
+\usepackage{booktabs}
 \usepackage{makecell}
 \renewcommand\theadfont{\bfseries}
 \begin{document}
@@ -534,18 +581,19 @@ Input
   \toprule
   \thead{Header1} & \thead{Header2} & \thead{Header3} \\
   \midrule
-   Zelle1 & Zelle2 & Zelle3 \\
-   Zelle4 & Zelle5 & Zelle6 \\  
-   Zelle7 & Zelle8 & Zelle9 \\ 
+   Zelle1 aber länger & Zelle2 & Zelle3 \\
+   Zelle4 & Zelle5 aber länger & Zelle6 \\  
+   Zelle7 & Zelle8 & Zelle9 aber länger \\ 
   \bottomrule
  \end{tabular}
 \end{table}
+
+\end{document}
 ```
----
-Output
-^^^
-```{image} Einfuehrung/tab6.png 
-``` 
+- Verwendung des Pakets `booktabs` für `\toprule` , `\midrule` und `\bottomrule`
+- Verwendung des Pakets `makecell` und Erstellung des `\thead{}` Befehls der Überschriften zentriert und dick darstellt
+
+- Überschriften aber in gleicher Ausrichtung wie Tabelleninhalt
 ````
 
 # Übung (Text, Abbildungen, Tabelle)
@@ -596,6 +644,8 @@ Input
 Output
 ^^^
 ```{image} Einfuehrung/item1.png 
+:width: 150px
+:align: center
 ``` 
 ````
 
@@ -619,7 +669,9 @@ Input
 ---
 Output
 ^^^
-```{image} Einfuehrung/item2.png 
+```{image} Einfuehrung/item2.png
+:width: 250px
+:align: center
 ``` 
 ````
 
@@ -638,7 +690,9 @@ Input
 ---
 Output
 ^^^
-```{image} Einfuehrung/item3.png 
+```{image} Einfuehrung/item3.png
+:width: 150px
+:align: center
 ``` 
 ````
 
@@ -662,36 +716,157 @@ Input
 ---
 Output
 ^^^
-```{image} Einfuehrung/item4.png 
+```{image} Einfuehrung/item4.png
+:width: 250px
+:align: center
 ``` 
 ````
 
 
 # Mathematische Umgebungen
 
-- Verwendung von Formelzeichen durch Einbettung mit `$` Zeichen: z.B. `$\alpha$`
-- Gleichungen zwischen `\begin{equation}` und `\end{equation}`
+Mathematische Formeln können innerhalb des Textes oder als seperate Gleichung verwendet werden. Der verwendete Syntax ist bei beiden Fällen der gleiche. Zur Verwendung innerhalb des Textes wird dieser zwischen zwei Dollarzeichen eingebettet. Für eine Gleichung wird die `equation`-Umgebung verwendet, dort sind die Dollarzeichen nicht notwendig. Hier ein einfaches Beispiel mit beiden Anwendungen:
+
+Hier ein erstes Beispiel:
 
 ```latex
+\documentclass{scrreprt}
+\begin{document}
+
+Der Anstieg $m$ ergibt sich auf den Differenzen von $x$ und $y$ zu:
 \begin{equation}
-    f(x,\mu,\sigma^2)=\frac{1}{\sqrt{2\pi \sigma^2}}e^{-\frac{(x-\mu)^2}{2\sigma^2}}
-    \label{equ:glg1}
+    m=\frac{\Delta y}{\Delta x}=\frac{y_1 - y_0}{x_1 - x_0}
 \end{equation}
+
+\end{document}
 ```
 
-Mathematische Objekte:
+```{image} Einfuehrung/math1.png 
+--- 
+width: 700px 
+align: center
+
+``` 
+<br><br>
+Zur Erklärung:
+- Mit dem Befehl `\frac{Zähler}{Nenner}` können Brüche dargestellt werden. 
+- Mit `\Delta` wird der griechische Buchstabe Delta dargestellt. 
+- Mit `_` wird ein Text tiefgestellt (wenn mehrere Zeichen mit Leerzeichen tiefgestellt werden soll müssen diese in geschweiften Klammern gesetzt werden, z.B. `x_{0,init}`)
+
+Die Gleichung innerhalb der `equation`-Umgebung wird automatisch nummeriert. Da in diesem Fall kein Kapitel erstellt wird steht eine 0 in der Nummerierung. Mit einem Kapitel sieht es dann wie folgt aus:
+
+
+```latex
+\documentclass{scrreprt}
+\begin{document}
+
+\chapter{Einleitung}
+
+Der Anstieg $m$ ergibt sich auf den Differenzen von $x$ und $y$ zu:
+\begin{equation}
+    m=\frac{\Delta y}{\Delta x}=\frac{y_1 - y_0}{x_1 - x_0}
+\end{equation}
+
+\end{document}
+```
+
+```{image} Einfuehrung/math2.png 
+--- 
+width: 700px 
+align: center
+
+``` 
+
+## Zusammenfassung innerhalb der mathematischen Umgebung
 
 - griechische Buchstaben z.B. `\alpha` oder pi mit `\pi`
 - Quadratwurzel `\sqrt{}` .. kubische Wurzel `\sqrt[3]{}`
 - `\sin()` ,  `\cos()` ...
 - Brüche mit `\frac{}{}`
-- hochstellen mit `^`
-- tiefstellen mit `_`
-- Zahlen mit Einheiten mit `\mathrm{}` und halbes Leerzeichen `\,` und Komma mit `{,}` eingrenzen  also z.B. `15{,}4\,\mathrm{mm}`
+- hochstellen mit `^` bzw. `_{}`
+- tiefstellen mit `_` bzw. `_{}`
+- `\left(` und `\right(` große runde Klammern
+- `\left[` und `\right[` große eckige Klammern
 
-[Zahlen und Einheiten](https://tobiw.de/tbdm/siunitx)
+Weiterführendes Material dazu findet man in der [Overleaf Dokumentation](https://www.overleaf.com/learn/latex/Mathematical_expressions)^x
 
-## Übung (mathematische Umbgeung)
+## Gleitkommawerte und Einheiten
+
+Bei Gleitkommawerte und Einheiten werden standardmäßig von LaTeX nicht richtig dargestellt: 
+1. Bei Gleitkommawerten wird durch das `,` ein Leerzeichen eingefügt, weil LaTeX davon ausgeht, dass es sich um eine Auflistung handelt. 
+2. Einheiten werden ebenfalls kursiv dargestellt und ohne Leerzeichen. Dies entspricht jedoch nicht den gängigen Vorgaben. 
+
+Am nachfolgenden Beispiel kann man die falsche Darstellung (Standardvariante) und eine richtige Darstellung sehen:
+
+````{tabbed} falsche Darstellung (Standardausgabe)
+```{image} Einfuehrung/unit1.png 
+``` 
+````
+
+````{tabbed} richtige Darstellung
+```{image} Einfuehrung/unit2.png 
+``` 
+````
+
+Nachfolgend der Code für die Standardvariante und zwei Versionen mit der richtigen Darstellung:
+
+
+````{tabbed} falsche Darstellung (Standardausgabe)
+```latex
+\documentclass{scrreprt}
+\begin{document}
+$37,58 km/h$
+\end{document}
+```
+```{image} Einfuehrung/unit_wrong.png 
+--- 
+width: 100px 
+align: center
+
+``` 
+````
+
+````{tabbed} richtige Darstellung (händisch)
+```latex
+\documentclass{scrreprt}
+\begin{document}
+$37{,}58\,\mathrm{km/h}$
+\end{document}
+```
+```{image} Einfuehrung/unit_right.png 
+--- 
+width: 100px 
+align: center
+
+``` 
+
+- Komma in geschweiften Klammern `{,}`
+- halber Zeilenabstand nach Zahl mit `\,`
+- kursive Schrift entfernen für Einheiten mit `\mathrm{}`
+````
+
+````{tabbed}  richtige Darstellung (siunitx-Paket)
+```latex
+\documentclass{scrreprt}
+\usepackage{siunitx}
+\sisetup{locale = DE}
+\begin{document}
+$\SI{37,58}{km/h}$
+\end{document}
+```
+```{image} Einfuehrung/unit_right.png 
+--- 
+width: 100px 
+align: center
+
+``` 
+
+- Verwendung von `siunitx` - Paket und Einstellung auf deutsch mit `\sisetup{locale = DE}`
+- Syntax: $\SI{Zahl}{Einheit}
+- [Ausführlichen Erklärung zu dem Paket von Tobias Weh](https://tobiw.de/tbdm/siunitx)
+````
+
+# Übung (mathematische Umbgeung)
 
 **Aufgabe**
 
@@ -728,15 +903,15 @@ align: center
 ```
 ```` 
 
-## Literaturverzeichnis
+# Literaturverzeichnis
 
-### Literaturverwaltung mit Zotero
+## Literaturverwaltung mit Zotero
 
 Die HTWK Leipzig stellt für den Umgang mit Zotero selbst verschiedene Tutorial-Videos zur Verfügung:
 
 [](https://bibliothek.htwk-leipzig.de/kurse-und-beratung/online-tutorials/online-zotero-kurs/)
 
-### Einbindung der Literaturdatenbank in LaTeX
+## Einbindung der Literaturdatenbank in LaTeX
 
 Hinweis: In Overleaf lässt auch direkt der Zotero-Account verknüpfen, so dass Overleaf die BiB-Datei immer automatisch aktualisiert, wenn sich etwas in Zotero ändert. Dies ist aber wohl nur für Premium-Nutzer von Overleaf verfügbar, so dass wir hier nicht darauf eingehen.
 
@@ -750,7 +925,7 @@ align: center
 
 In diesem Fenter als `Format "BibLaTeX"` auswählen, mit OK bestätigen und dann die Bib-Datei im Ordner der LaTeX-Datei mit gewünschten Namen abspeichern (z.B. "mybib.bib").
 
-### Literatur in LaTeX
+## Literatur in LaTeX
 
 Es gibt verschiedene Literatur-Systeme in LaTeX. Wir nutzen BiBLaTeX, die moderne Form der Literaturreferenzierung. Dazu muss man
 

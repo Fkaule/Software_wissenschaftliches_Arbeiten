@@ -142,6 +142,16 @@
      9. Mathematische Umgebungen
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="#ubung-mathematische-umbgeung">
+     10. Übung (mathematische Umbgeung)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="#literaturverzeichnis">
+     11. Literaturverzeichnis
+    </a>
+   </li>
   </ul>
   <i class="fas fa-chevron-down">
   </i>
@@ -502,8 +512,8 @@
     </a>
    </li>
    <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
-     5.3. Bildposition
+    <a class="reference internal nav-link" href="#tabellenposition">
+     5.3. Tabellenposition
     </a>
    </li>
    <li class="toc-h2 nav-item toc-entry">
@@ -534,31 +544,41 @@
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#ubung-mathematische-umbgeung">
-     9.1. Übung (mathematische Umbgeung)
+    <a class="reference internal nav-link" href="#zusammenfassung-innerhalb-der-mathematischen-umgebung">
+     9.1. Zusammenfassung innerhalb der mathematischen Umgebung
     </a>
    </li>
    <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#literaturverzeichnis">
-     9.2. Literaturverzeichnis
+    <a class="reference internal nav-link" href="#gleitkommawerte-und-einheiten">
+     9.2. Gleitkommawerte und Einheiten
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#literaturverwaltung-mit-zotero">
-       9.2.1. Literaturverwaltung mit Zotero
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#einbindung-der-literaturdatenbank-in-latex">
-       9.2.2. Einbindung der Literaturdatenbank in LaTeX
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#literatur-in-latex">
-       9.2.3. Literatur in LaTeX
-      </a>
-     </li>
-    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ubung-mathematische-umbgeung">
+   10. Übung (mathematische Umbgeung)
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#literaturverzeichnis">
+   11. Literaturverzeichnis
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#literaturverwaltung-mit-zotero">
+     11.1. Literaturverwaltung mit Zotero
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#einbindung-der-literaturdatenbank-in-latex">
+     11.2. Einbindung der Literaturdatenbank in LaTeX
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#literatur-in-latex">
+     11.3. Literatur in LaTeX
+    </a>
    </li>
   </ul>
  </li>
@@ -602,7 +622,7 @@
 </div>
 <div class="section" id="ein-erstes-hallo-welt">
 <h2><span class="section-number">1.3. </span>Ein erstes “Hallo Welt”<a class="headerlink" href="#ein-erstes-hallo-welt" title="Permalink to this headline">¶</a></h2>
-<p>Nachfolgend erste und einfachste LaTeX Dokument. Es muss immer eine <strong>Dokumenteklasse</strong> definiert werden und der eigentliche Inhalt (in diesem Fall nur ein einfacher Text) steht immer innerhalb von <strong>\begin{document}</strong> und <strong>\end{document}</strong></p>
+<p>Nachfolgend erste und einfachste LaTeX Dokument. Es muss immer eine <strong>Dokumenteklasse</strong> definiert werden und der eigentliche Inhalt (in diesem Fall nur ein einfacher Text) steht immer innerhalb von <code class="docutils literal notranslate"><span class="pre">\begin{document}</span></code> und <code class="docutils literal notranslate"><span class="pre">\end{document}</span></code></p>
 <div class="sphinx-bs container pb-4 docutils">
 <div class="row docutils">
 <div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
@@ -842,13 +862,13 @@ Nachfolgend nun die Erklärungen zu den Befehlen:
 <div class="section" id="bildposition">
 <h2><span class="section-number">4.4. </span>Bildposition<a class="headerlink" href="#bildposition" title="Permalink to this headline">¶</a></h2>
 <p>Mit der Positionsangabe <code class="docutils literal notranslate"><span class="pre">[!h]</span></code> kann man LaTeX Hinweise zu den Positionswünschen übermitteln. Möglich sind:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- `h` - here - bitte versuche es genau an dieser Textstelle
-- `t` - top - wenn möglich an Oberkante der Seite
-- `b` - bottom - wenn möglich, an Unterkante der Seite
-- `p` - page - nutze eine extra Seite für die Bilder
-- Mit dem `!` erhöht man die Priorität seiner Forderung, man &quot;zwingt&quot; LaTeX zur Umsetzung.
-</pre></div>
-</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">h</span></code> - here - bitte versuche es genau an dieser Textstelle</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">t</span></code> - top - wenn möglich an Oberkante der Seite</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">b</span></code> - bottom - wenn möglich, an Unterkante der Seite</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">p</span></code> - page - nutze eine extra Seite für die Bilder</p></li>
+<li><p>Mit dem <code class="docutils literal notranslate"><span class="pre">!</span></code> erhöht man die Priorität seiner Forderung, man “zwingt” LaTeX zur Umsetzung.</p></li>
+</ul>
 </div>
 <div class="section" id="bildgrosze">
 <h2><span class="section-number">4.5. </span>Bildgröße<a class="headerlink" href="#bildgrosze" title="Permalink to this headline">¶</a></h2>
@@ -872,13 +892,13 @@ Nachfolgend nun die Erklärungen zu den Befehlen:
 </div>
 <p>Hier der Unterschied zwischen der Standardvariante und der verbesserten Variante:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="06b54958-e7e3-4bf3-8de8-66c083cb0b0a" name="8b4d7ddc-ec71-40ba-8a4e-f9b83ccfaa24" type="radio">
-</input><label class="tabbed-label" for="06b54958-e7e3-4bf3-8de8-66c083cb0b0a">
+<input checked="checked" id="ef4cb88b-dcc9-4bc4-96b7-3b039b1ddb2a" name="5a6fee2b-8b60-4ad1-ac28-f144078eb7cd" type="radio">
+</input><label class="tabbed-label" for="ef4cb88b-dcc9-4bc4-96b7-3b039b1ddb2a">
 Bildunterschrift Standard</label><div class="tabbed-content docutils">
 <img alt="../_images/Untitled_613.png" src="../_images/Untitled_613.png" />
 </div>
-<input id="118149aa-8fd4-4cdd-aace-22b39b28400d" name="8b4d7ddc-ec71-40ba-8a4e-f9b83ccfaa24" type="radio">
-</input><label class="tabbed-label" for="118149aa-8fd4-4cdd-aace-22b39b28400d">
+<input id="21b8376c-296d-4875-93c0-f30a76d5f535" name="5a6fee2b-8b60-4ad1-ac28-f144078eb7cd" type="radio">
+</input><label class="tabbed-label" for="21b8376c-296d-4875-93c0-f30a76d5f535">
 Bildunterschrift verbessert (mit caption-Paket)</label><div class="tabbed-content docutils">
 <img alt="../_images/Untitled_713.png" src="../_images/Untitled_713.png" />
 </div>
@@ -886,15 +906,12 @@ Bildunterschrift verbessert (mit caption-Paket)</label><div class="tabbed-conten
 </div>
 <div class="section" id="mehrere-abbildungen-in-einer-figure-umgebung-subfigure">
 <h2><span class="section-number">4.7. </span>Mehrere Abbildungen in einer Figure Umgebung (subfigure)<a class="headerlink" href="#mehrere-abbildungen-in-einer-figure-umgebung-subfigure" title="Permalink to this headline">¶</a></h2>
-<p>Es gibt verschiedene Variante wie man mehrere Bilder in einer <code class="docutils literal notranslate"><span class="pre">figure</span></code>-Umgebung platzieren kann. Hier ein Beispiel in dem das Paket <code class="docutils literal notranslate"><span class="pre">subcaption</span></code> benutzt wird und die Bilder in einer <code class="docutils literal notranslate"><span class="pre">\subcaptionbox</span></code> erstellt werden. In der ersten Variante werden die in der Mitte zusammengeführt, was meist nicht gewollt wird:</p>
-<div class="sphinx-bs container pb-4 docutils">
-<div class="row docutils">
-<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
-<div class="card w-100 shadow docutils">
-<div class="card-header docutils">
-<p class="card-text">Input</p>
-</div>
-<div class="card-body docutils">
+<p>Es gibt verschiedene Variante wie man mehrere Bilder in einer <code class="docutils literal notranslate"><span class="pre">figure</span></code>-Umgebung platzieren kann. Hier ein Beispiel in dem das Paket <code class="docutils literal notranslate"><span class="pre">subcaption</span></code> benutzt wird und die Bilder in einer <code class="docutils literal notranslate"><span class="pre">\subcaptionbox</span></code> erstellt werden:</p>
+<div class="tabbed-set docutils">
+<input checked="checked" id="58ce81b7-8030-4def-ac7f-c3c54d4addc2" name="3ea6fb6d-864f-4995-b2b5-05f5b01887f8" type="radio">
+</input><label class="tabbed-label" for="58ce81b7-8030-4def-ac7f-c3c54d4addc2">
+ohne /hfill</label><div class="tabbed-content docutils">
+<a class="reference internal image-reference" href="../_images/subfig1.png"><img alt="../_images/subfig1.png" class="align-center" src="../_images/subfig1.png" style="width: 500px;" /></a>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span><span class="k">\usepackage</span><span class="nb">{</span>graphicx<span class="nb">}</span> <span class="c">% Grafiken</span>
 <span class="k">\usepackage</span><span class="nb">{</span>subcaption<span class="nb">}</span> <span class="c">% subfigures</span>
 
@@ -907,32 +924,18 @@ Bildunterschrift verbessert (mit caption-Paket)</label><div class="tabbed-conten
 <span class="k">\subcaptionbox</span><span class="nb">{</span>ING<span class="nb">}{</span><span class="k">\includegraphics</span><span class="na">[width=.45\linewidth]</span><span class="nb">{</span>ING.png<span class="nb">}}</span>
 <span class="k">\caption</span><span class="nb">{</span>HTWK Logos ohne hfill<span class="nb">}</span>
 <span class="k">\end</span><span class="nb">{</span>figure<span class="nb">}</span>
+
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
 </pre></div>
 </div>
+<ul class="simple">
+<li><p>Bilder werden standardmäßig nebeinander ohne Abstand dargestellt (so nicht gewünscht)</p></li>
+</ul>
 </div>
-</div>
-</div>
-<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
-<div class="card w-100 shadow docutils">
-<div class="card-header docutils">
-<p class="card-text">Output</p>
-</div>
-<div class="card-body docutils">
-<img alt="../_images/subfig1.png" src="../_images/subfig1.png" />
-</div>
-</div>
-</div>
-</div>
-</div>
-<p>In der zweiten Variante wird nach der ersten <code class="docutils literal notranslate"><span class="pre">\subcaptionbox</span></code> ein <code class="docutils literal notranslate"><span class="pre">\hfill</span></code> verwendet wodurch sich der Inhalt auf der Seitenbreite gleich verteilt:</p>
-<div class="sphinx-bs container pb-4 docutils">
-<div class="row docutils">
-<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
-<div class="card w-100 shadow docutils">
-<div class="card-header docutils">
-<p class="card-text">Input</p>
-</div>
-<div class="card-body docutils">
+<input id="a246afba-330e-4490-b942-d3362c8dd362" name="3ea6fb6d-864f-4995-b2b5-05f5b01887f8" type="radio">
+</input><label class="tabbed-label" for="a246afba-330e-4490-b942-d3362c8dd362">
+mit /hfill</label><div class="tabbed-content docutils">
+<a class="reference internal image-reference" href="../_images/subfig2.png"><img alt="../_images/subfig2.png" class="align-center" src="../_images/subfig2.png" style="width: 500px;" /></a>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span><span class="k">\usepackage</span><span class="nb">{</span>graphicx<span class="nb">}</span> <span class="c">% Grafiken</span>
 <span class="k">\usepackage</span><span class="nb">{</span>subcaption<span class="nb">}</span> <span class="c">% subfigures</span>
 
@@ -945,21 +948,13 @@ Bildunterschrift verbessert (mit caption-Paket)</label><div class="tabbed-conten
 <span class="k">\subcaptionbox</span><span class="nb">{</span>ING<span class="nb">}{</span><span class="k">\includegraphics</span><span class="na">[width=.45\linewidth]</span><span class="nb">{</span>ING.png<span class="nb">}}</span>
 <span class="k">\caption</span><span class="nb">{</span>HTWK Logos ohne hfill<span class="nb">}</span>
 <span class="k">\end</span><span class="nb">{</span>figure<span class="nb">}</span>
+
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
 </pre></div>
 </div>
-</div>
-</div>
-</div>
-<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
-<div class="card w-100 shadow docutils">
-<div class="card-header docutils">
-<p class="card-text">Output</p>
-</div>
-<div class="card-body docutils">
-<img alt="../_images/subfig2.png" src="../_images/subfig2.png" />
-</div>
-</div>
-</div>
+<ul class="simple">
+<li><p>wird nach der <code class="docutils literal notranslate"><span class="pre">\subcaptionbox</span></code> ein <code class="docutils literal notranslate"><span class="pre">\hfill</span></code> verwendet, verteilt sich der Inhalt auf der Seitenbreite</p></li>
+</ul>
 </div>
 </div>
 </div>
@@ -1006,7 +1001,7 @@ Bildunterschrift verbessert (mit caption-Paket)</label><div class="tabbed-conten
 <p class="card-text">Output</p>
 </div>
 <div class="card-body docutils">
-<img alt="../_images/tab1.png" src="../_images/tab1.png" />
+<a class="reference internal image-reference" href="../_images/tab1.png"><img alt="../_images/tab1.png" class="align-center" src="../_images/tab1.png" style="width: 200px;" /></a>
 </div>
 </div>
 </div>
@@ -1040,7 +1035,7 @@ Bildunterschrift verbessert (mit caption-Paket)</label><div class="tabbed-conten
 <p class="card-text">Output</p>
 </div>
 <div class="card-body docutils">
-<img alt="../_images/tab2.png" src="../_images/tab2.png" />
+<a class="reference internal image-reference" href="../_images/tab2.png"><img alt="../_images/tab2.png" class="align-center" src="../_images/tab2.png" style="width: 300px;" /></a>
 </div>
 </div>
 </div>
@@ -1074,7 +1069,7 @@ Bildunterschrift verbessert (mit caption-Paket)</label><div class="tabbed-conten
 <p class="card-text">Output</p>
 </div>
 <div class="card-body docutils">
-<img alt="../_images/tab3.png" src="../_images/tab3.png" />
+<a class="reference internal image-reference" href="../_images/tab3.png"><img alt="../_images/tab3.png" class="align-center" src="../_images/tab3.png" style="width: 300px;" /></a>
 </div>
 </div>
 </div>
@@ -1112,7 +1107,7 @@ Bildunterschrift verbessert (mit caption-Paket)</label><div class="tabbed-conten
 <p class="card-text">Output</p>
 </div>
 <div class="card-body docutils">
-<img alt="../_images/tab4.png" src="../_images/tab4.png" />
+<a class="reference internal image-reference" href="../_images/tab4.png"><img alt="../_images/tab4.png" class="align-center" src="../_images/tab4.png" style="width: 300px;" /></a>
 </div>
 </div>
 </div>
@@ -1152,7 +1147,7 @@ Bildunterschrift verbessert (mit caption-Paket)</label><div class="tabbed-conten
 <p class="card-text">Output</p>
 </div>
 <div class="card-body docutils">
-<img alt="../_images/tab5.png" src="../_images/tab5.png" />
+<a class="reference internal image-reference" href="../_images/tab5.png"><img alt="../_images/tab5.png" class="align-center" src="../_images/tab5.png" style="width: 300px;" /></a>
 </div>
 </div>
 </div>
@@ -1206,8 +1201,8 @@ Bildunterschrift verbessert (mit caption-Paket)</label><div class="tabbed-conten
 </div>
 </div>
 </div>
-<div class="section" id="id1">
-<h2><span class="section-number">5.3. </span>Bildposition<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tabellenposition">
+<h2><span class="section-number">5.3. </span>Tabellenposition<a class="headerlink" href="#tabellenposition" title="Permalink to this headline">¶</a></h2>
 <p>Analog zu Abbildungen kann man LaTeX mit der Positionsangabe <code class="docutils literal notranslate"><span class="pre">[!h]</span></code> anschließend an <code class="docutils literal notranslate"><span class="pre">\begin{table}</span></code> die Positionswünsche übermitteln. Möglich sind:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- `h` - here - bitte versuche es genau an dieser Textstelle
 - `t` - top - wenn möglich an Oberkante der Seite
@@ -1219,16 +1214,45 @@ Bildunterschrift verbessert (mit caption-Paket)</label><div class="tabbed-conten
 </div>
 <div class="section" id="tabelle-mit-zusatzlichen-paketen">
 <h2><span class="section-number">5.4. </span>Tabelle mit zusätzlichen Paketen<a class="headerlink" href="#tabelle-mit-zusatzlichen-paketen" title="Permalink to this headline">¶</a></h2>
-<p>Um eine optisch ansprechende Tabelle zu erzeugen sind zusätzliche Pakete notwendig. Anschließend können mit <code class="docutils literal notranslate"><span class="pre">\toprule</span></code> , <code class="docutils literal notranslate"><span class="pre">\midrule</span></code> und <code class="docutils literal notranslate"><span class="pre">\bottomrule</span></code> horizontale Linien erstellt werden. Mittels Befehlsdefinition kann anschließend mit \thead{headername} die Tabellenüberschrift zentriert und <strong>fett</strong> dargestellt werden, auch wenn die Spalten z.B. eine linksseitige Ausrichtung besitzen:</p>
-<div class="sphinx-bs container pb-4 docutils">
-<div class="row docutils">
-<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
-<div class="card w-100 shadow docutils">
-<div class="card-header docutils">
-<p class="card-text">Input</p>
+<p>Um eine optisch ansprechende Tabelle zu erzeugen sind zusätzliche Pakete notwendig. Nachfolgend zwei Beispiele:</p>
+<div class="tabbed-set docutils">
+<input checked="checked" id="73e293e2-489c-4cf3-b2c6-db4b6b8608b5" name="e87638c6-83ab-42d1-8429-6324193581bc" type="radio">
+</input><label class="tabbed-label" for="73e293e2-489c-4cf3-b2c6-db4b6b8608b5">
+Beispiel 1</label><div class="tabbed-content docutils">
+<a class="reference internal image-reference" href="../_images/nice_tab1.png"><img alt="../_images/nice_tab1.png" class="align-center" src="../_images/nice_tab1.png" style="width: 400px;" /></a>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>scrreprt<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="nb">{</span>booktabs<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+
+<span class="k">\begin</span><span class="nb">{</span>table<span class="nb">}</span>
+ <span class="k">\centering</span>
+ <span class="k">\caption</span><span class="nb">{</span>Meine erste eigene Tabelle<span class="nb">}</span>
+ <span class="k">\label</span><span class="nb">{</span>tab<span class="nb">_</span>erste<span class="nb">_</span>Tabelle<span class="nb">}</span>
+ <span class="k">\begin</span><span class="nb">{</span>tabular<span class="nb">}{</span>lll<span class="nb">}</span>
+  <span class="k">\toprule</span>
+  Header1 <span class="nb">&amp;</span> Header2 <span class="nb">&amp;</span> Header3 <span class="k">\\</span>
+  <span class="k">\midrule</span>
+   Zelle1 aber länger <span class="nb">&amp;</span> Zelle2 <span class="nb">&amp;</span> Zelle3 <span class="k">\\</span>
+   Zelle4 <span class="nb">&amp;</span> Zelle5 aber länger <span class="nb">&amp;</span> Zelle6 <span class="k">\\</span>  
+   Zelle7 <span class="nb">&amp;</span> Zelle8 <span class="nb">&amp;</span> Zelle9 aber länger <span class="k">\\</span> 
+  <span class="k">\bottomrule</span>
+ <span class="k">\end</span><span class="nb">{</span>tabular<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>table<span class="nb">}</span>
+
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
 </div>
-<div class="card-body docutils">
-<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span><span class="k">\usepackage</span><span class="nb">{</span>array, booktabs, caption<span class="nb">}</span>
+<ul class="simple">
+<li><p>Verwendung des Pakets <code class="docutils literal notranslate"><span class="pre">booktabs</span></code> für <code class="docutils literal notranslate"><span class="pre">\toprule</span></code> , <code class="docutils literal notranslate"><span class="pre">\midrule</span></code> und <code class="docutils literal notranslate"><span class="pre">\bottomrule</span></code></p></li>
+<li><p>Überschriften aber in gleicher Ausrichtung wie Tabelleninhalt</p></li>
+</ul>
+</div>
+<input id="d1b51881-9d6d-4619-ad48-ed95251030d4" name="e87638c6-83ab-42d1-8429-6324193581bc" type="radio">
+</input><label class="tabbed-label" for="d1b51881-9d6d-4619-ad48-ed95251030d4">
+Beispiel 2</label><div class="tabbed-content docutils">
+<a class="reference internal image-reference" href="../_images/nice_tab2.png"><img alt="../_images/nice_tab2.png" class="align-center" src="../_images/nice_tab2.png" style="width: 400px;" /></a>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>scrreprt<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="nb">{</span>booktabs<span class="nb">}</span>
 <span class="k">\usepackage</span><span class="nb">{</span>makecell<span class="nb">}</span>
 <span class="k">\renewcommand\theadfont</span><span class="nb">{</span><span class="k">\bfseries</span><span class="nb">}</span>
 <span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
@@ -1241,27 +1265,21 @@ Bildunterschrift verbessert (mit caption-Paket)</label><div class="tabbed-conten
   <span class="k">\toprule</span>
   <span class="k">\thead</span><span class="nb">{</span>Header1<span class="nb">}</span> <span class="nb">&amp;</span> <span class="k">\thead</span><span class="nb">{</span>Header2<span class="nb">}</span> <span class="nb">&amp;</span> <span class="k">\thead</span><span class="nb">{</span>Header3<span class="nb">}</span> <span class="k">\\</span>
   <span class="k">\midrule</span>
-   Zelle1 <span class="nb">&amp;</span> Zelle2 <span class="nb">&amp;</span> Zelle3 <span class="k">\\</span>
-   Zelle4 <span class="nb">&amp;</span> Zelle5 <span class="nb">&amp;</span> Zelle6 <span class="k">\\</span>  
-   Zelle7 <span class="nb">&amp;</span> Zelle8 <span class="nb">&amp;</span> Zelle9 <span class="k">\\</span> 
+   Zelle1 aber länger <span class="nb">&amp;</span> Zelle2 <span class="nb">&amp;</span> Zelle3 <span class="k">\\</span>
+   Zelle4 <span class="nb">&amp;</span> Zelle5 aber länger <span class="nb">&amp;</span> Zelle6 <span class="k">\\</span>  
+   Zelle7 <span class="nb">&amp;</span> Zelle8 <span class="nb">&amp;</span> Zelle9 aber länger <span class="k">\\</span> 
   <span class="k">\bottomrule</span>
  <span class="k">\end</span><span class="nb">{</span>tabular<span class="nb">}</span>
 <span class="k">\end</span><span class="nb">{</span>table<span class="nb">}</span>
+
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
 </pre></div>
 </div>
-</div>
-</div>
-</div>
-<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
-<div class="card w-100 shadow docutils">
-<div class="card-header docutils">
-<p class="card-text">Output</p>
-</div>
-<div class="card-body docutils">
-<img alt="../_images/tab6.png" src="../_images/tab6.png" />
-</div>
-</div>
-</div>
+<ul class="simple">
+<li><p>Verwendung des Pakets <code class="docutils literal notranslate"><span class="pre">booktabs</span></code> für <code class="docutils literal notranslate"><span class="pre">\toprule</span></code> , <code class="docutils literal notranslate"><span class="pre">\midrule</span></code> und <code class="docutils literal notranslate"><span class="pre">\bottomrule</span></code></p></li>
+<li><p>Verwendung des Pakets <code class="docutils literal notranslate"><span class="pre">makecell</span></code> und Erstellung des <code class="docutils literal notranslate"><span class="pre">\thead{}</span></code> Befehls der Überschriften zentriert und dick darstellt</p></li>
+<li><p>Überschriften aber in gleicher Ausrichtung wie Tabelleninhalt</p></li>
+</ul>
 </div>
 </div>
 </div>
@@ -1337,7 +1355,7 @@ Bildunterschrift verbessert (mit caption-Paket)</label><div class="tabbed-conten
 <p class="card-text">Output</p>
 </div>
 <div class="card-body docutils">
-<img alt="../_images/item1.png" src="../_images/item1.png" />
+<a class="reference internal image-reference" href="../_images/item1.png"><img alt="../_images/item1.png" class="align-center" src="../_images/item1.png" style="width: 150px;" /></a>
 </div>
 </div>
 </div>
@@ -1373,7 +1391,7 @@ Bildunterschrift verbessert (mit caption-Paket)</label><div class="tabbed-conten
 <p class="card-text">Output</p>
 </div>
 <div class="card-body docutils">
-<img alt="../_images/item2.png" src="../_images/item2.png" />
+<a class="reference internal image-reference" href="../_images/item2.png"><img alt="../_images/item2.png" class="align-center" src="../_images/item2.png" style="width: 250px;" /></a>
 </div>
 </div>
 </div>
@@ -1404,7 +1422,7 @@ Bildunterschrift verbessert (mit caption-Paket)</label><div class="tabbed-conten
 <p class="card-text">Output</p>
 </div>
 <div class="card-body docutils">
-<img alt="../_images/item3.png" src="../_images/item3.png" />
+<a class="reference internal image-reference" href="../_images/item3.png"><img alt="../_images/item3.png" class="align-center" src="../_images/item3.png" style="width: 150px;" /></a>
 </div>
 </div>
 </div>
@@ -1440,7 +1458,7 @@ Bildunterschrift verbessert (mit caption-Paket)</label><div class="tabbed-conten
 <p class="card-text">Output</p>
 </div>
 <div class="card-body docutils">
-<img alt="../_images/item4.png" src="../_images/item4.png" />
+<a class="reference internal image-reference" href="../_images/item4.png"><img alt="../_images/item4.png" class="align-center" src="../_images/item4.png" style="width: 250px;" /></a>
 </div>
 </div>
 </div>
@@ -1449,29 +1467,128 @@ Bildunterschrift verbessert (mit caption-Paket)</label><div class="tabbed-conten
 </div>
 <div class="section" id="mathematische-umgebungen">
 <h1><span class="section-number">9. </span>Mathematische Umgebungen<a class="headerlink" href="#mathematische-umgebungen" title="Permalink to this headline">¶</a></h1>
-<ul class="simple">
-<li><p>Verwendung von Formelzeichen durch Einbettung mit <code class="docutils literal notranslate"><span class="pre">$</span></code> Zeichen: z.B. <code class="docutils literal notranslate"><span class="pre">$\alpha$</span></code></p></li>
-<li><p>Gleichungen zwischen <code class="docutils literal notranslate"><span class="pre">\begin{equation}</span></code> und <code class="docutils literal notranslate"><span class="pre">\end{equation}</span></code></p></li>
-</ul>
-<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span><span class="k">\begin</span><span class="nb">{</span>equation<span class="nb">}</span>
-    f(x,<span class="k">\mu</span>,<span class="k">\sigma</span><span class="nb">^</span>2)=<span class="k">\frac</span><span class="nb">{</span>1<span class="nb">}{</span><span class="k">\sqrt</span><span class="nb">{</span>2<span class="k">\pi</span> <span class="k">\sigma</span><span class="nb">^</span>2<span class="nb">}}</span>e<span class="nb">^{</span>-<span class="k">\frac</span><span class="nb">{</span>(x-<span class="k">\mu</span>)<span class="nb">^</span>2<span class="nb">}{</span>2<span class="k">\sigma</span><span class="nb">^</span>2<span class="nb">}}</span>
-    <span class="k">\label</span><span class="nb">{</span>equ:glg1<span class="nb">}</span>
+<p>Mathematische Formeln können innerhalb des Textes oder als seperate Gleichung verwendet werden. Der verwendete Syntax ist bei beiden Fällen der gleiche. Zur Verwendung innerhalb des Textes wird dieser zwischen zwei Dollarzeichen eingebettet. Für eine Gleichung wird die <code class="docutils literal notranslate"><span class="pre">equation</span></code>-Umgebung verwendet, dort sind die Dollarzeichen nicht notwendig. Hier ein einfaches Beispiel mit beiden Anwendungen:</p>
+<p>Hier ein erstes Beispiel:</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>scrreprt<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+
+Der Anstieg <span class="s">$</span><span class="nb">m</span><span class="s">$</span> ergibt sich auf den Differenzen von <span class="s">$</span><span class="nb">x</span><span class="s">$</span> und <span class="s">$</span><span class="nb">y</span><span class="s">$</span> zu:
+<span class="k">\begin</span><span class="nb">{</span>equation<span class="nb">}</span>
+    m=<span class="k">\frac</span><span class="nb">{</span><span class="k">\Delta</span> y<span class="nb">}{</span><span class="k">\Delta</span> x<span class="nb">}</span>=<span class="k">\frac</span><span class="nb">{</span>y<span class="nb">_</span>1 - y<span class="nb">_</span>0<span class="nb">}{</span>x<span class="nb">_</span>1 - x<span class="nb">_</span>0<span class="nb">}</span>
 <span class="k">\end</span><span class="nb">{</span>equation<span class="nb">}</span>
+
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
 </pre></div>
 </div>
-<p>Mathematische Objekte:</p>
+<a class="reference internal image-reference" href="../_images/math1.png"><img alt="../_images/math1.png" class="align-center" src="../_images/math1.png" style="width: 700px;" /></a>
+<p><br><br>
+Zur Erklärung:</p>
+<ul class="simple">
+<li><p>Mit dem Befehl <code class="docutils literal notranslate"><span class="pre">\frac{Zähler}{Nenner}</span></code> können Brüche dargestellt werden.</p></li>
+<li><p>Mit <code class="docutils literal notranslate"><span class="pre">\Delta</span></code> wird der griechische Buchstabe Delta dargestellt.</p></li>
+<li><p>Mit <code class="docutils literal notranslate"><span class="pre">_</span></code> wird ein Text tiefgestellt (wenn mehrere Zeichen mit Leerzeichen tiefgestellt werden soll müssen diese in geschweiften Klammern gesetzt werden, z.B. <code class="docutils literal notranslate"><span class="pre">x_{0,init}</span></code>)</p></li>
+</ul>
+<p>Die Gleichung innerhalb der <code class="docutils literal notranslate"><span class="pre">equation</span></code>-Umgebung wird automatisch nummeriert. Da in diesem Fall kein Kapitel erstellt wird steht eine 0 in der Nummerierung. Mit einem Kapitel sieht es dann wie folgt aus:</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>scrreprt<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+
+<span class="k">\chapter</span><span class="nb">{</span>Einleitung<span class="nb">}</span>
+
+Der Anstieg <span class="s">$</span><span class="nb">m</span><span class="s">$</span> ergibt sich auf den Differenzen von <span class="s">$</span><span class="nb">x</span><span class="s">$</span> und <span class="s">$</span><span class="nb">y</span><span class="s">$</span> zu:
+<span class="k">\begin</span><span class="nb">{</span>equation<span class="nb">}</span>
+    m=<span class="k">\frac</span><span class="nb">{</span><span class="k">\Delta</span> y<span class="nb">}{</span><span class="k">\Delta</span> x<span class="nb">}</span>=<span class="k">\frac</span><span class="nb">{</span>y<span class="nb">_</span>1 - y<span class="nb">_</span>0<span class="nb">}{</span>x<span class="nb">_</span>1 - x<span class="nb">_</span>0<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>equation<span class="nb">}</span>
+
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../_images/math2.png"><img alt="../_images/math2.png" class="align-center" src="../_images/math2.png" style="width: 700px;" /></a>
+<div class="section" id="zusammenfassung-innerhalb-der-mathematischen-umgebung">
+<h2><span class="section-number">9.1. </span>Zusammenfassung innerhalb der mathematischen Umgebung<a class="headerlink" href="#zusammenfassung-innerhalb-der-mathematischen-umgebung" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>griechische Buchstaben z.B. <code class="docutils literal notranslate"><span class="pre">\alpha</span></code> oder pi mit <code class="docutils literal notranslate"><span class="pre">\pi</span></code></p></li>
 <li><p>Quadratwurzel <code class="docutils literal notranslate"><span class="pre">\sqrt{}</span></code> .. kubische Wurzel <code class="docutils literal notranslate"><span class="pre">\sqrt[3]{}</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">\sin()</span></code> ,  <code class="docutils literal notranslate"><span class="pre">\cos()</span></code> …</p></li>
 <li><p>Brüche mit <code class="docutils literal notranslate"><span class="pre">\frac{}{}</span></code></p></li>
-<li><p>hochstellen mit <code class="docutils literal notranslate"><span class="pre">^</span></code></p></li>
-<li><p>tiefstellen mit <code class="docutils literal notranslate"><span class="pre">_</span></code></p></li>
-<li><p>Zahlen mit Einheiten mit <code class="docutils literal notranslate"><span class="pre">\mathrm{}</span></code> und halbes Leerzeichen <code class="docutils literal notranslate"><span class="pre">\,</span></code> und Komma mit <code class="docutils literal notranslate"><span class="pre">{,}</span></code> eingrenzen  also z.B. <code class="docutils literal notranslate"><span class="pre">15{,}4\,\mathrm{mm}</span></code></p></li>
+<li><p>hochstellen mit <code class="docutils literal notranslate"><span class="pre">^</span></code> bzw. <code class="docutils literal notranslate"><span class="pre">_{}</span></code></p></li>
+<li><p>tiefstellen mit <code class="docutils literal notranslate"><span class="pre">_</span></code> bzw. <code class="docutils literal notranslate"><span class="pre">_{}</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">\left(</span></code> und <code class="docutils literal notranslate"><span class="pre">\right(</span></code> große runde Klammern</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">\left[</span></code> und <code class="docutils literal notranslate"><span class="pre">\right[</span></code> große eckige Klammern</p></li>
 </ul>
-<p><a class="reference external" href="https://tobiw.de/tbdm/siunitx">Zahlen und Einheiten</a></p>
+<p>Weiterführendes Material dazu findet man in der <a class="reference external" href="https://www.overleaf.com/learn/latex/Mathematical_expressions">Overleaf Dokumentation</a>^x</p>
+</div>
+<div class="section" id="gleitkommawerte-und-einheiten">
+<h2><span class="section-number">9.2. </span>Gleitkommawerte und Einheiten<a class="headerlink" href="#gleitkommawerte-und-einheiten" title="Permalink to this headline">¶</a></h2>
+<p>Bei Gleitkommawerte und Einheiten werden standardmäßig von LaTeX nicht richtig dargestellt:</p>
+<ol class="simple">
+<li><p>Bei Gleitkommawerten wird durch das <code class="docutils literal notranslate"><span class="pre">,</span></code> ein Leerzeichen eingefügt, weil LaTeX davon ausgeht, dass es sich um eine Auflistung handelt.</p></li>
+<li><p>Einheiten werden ebenfalls kursiv dargestellt und ohne Leerzeichen. Dies entspricht jedoch nicht den gängigen Vorgaben.</p></li>
+</ol>
+<p>Am nachfolgenden Beispiel kann man die falsche Darstellung (Standardvariante) und eine richtige Darstellung sehen:</p>
+<div class="tabbed-set docutils">
+<input checked="checked" id="a9d6673e-e135-4004-a7a7-aed29bb8af18" name="c0de48ff-231e-4c66-af57-7aaeae2e6b3e" type="radio">
+</input><label class="tabbed-label" for="a9d6673e-e135-4004-a7a7-aed29bb8af18">
+falsche Darstellung (Standardausgabe)</label><div class="tabbed-content docutils">
+<img alt="../_images/unit1.png" src="../_images/unit1.png" />
+</div>
+<input id="ee9eeb90-aa2e-485d-b0a0-cd7e3927d2fa" name="c0de48ff-231e-4c66-af57-7aaeae2e6b3e" type="radio">
+</input><label class="tabbed-label" for="ee9eeb90-aa2e-485d-b0a0-cd7e3927d2fa">
+richtige Darstellung</label><div class="tabbed-content docutils">
+<img alt="../_images/unit2.png" src="../_images/unit2.png" />
+</div>
+</div>
+<p>Nachfolgend der Code für die Standardvariante und zwei Versionen mit der richtigen Darstellung:</p>
+<div class="tabbed-set docutils">
+<input checked="checked" id="03e7ffa1-be35-4c96-a219-467a81d51ce8" name="5e8fff32-4d9f-4a72-a206-5b0e4691fe1a" type="radio">
+</input><label class="tabbed-label" for="03e7ffa1-be35-4c96-a219-467a81d51ce8">
+falsche Darstellung (Standardausgabe)</label><div class="tabbed-content docutils">
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>scrreprt<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="s">$</span><span class="m">37</span><span class="nb">,</span><span class="m">58</span><span class="nb"> km</span><span class="o">/</span><span class="nb">h</span><span class="s">$</span>
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../_images/unit_wrong.png"><img alt="../_images/unit_wrong.png" class="align-center" src="../_images/unit_wrong.png" style="width: 100px;" /></a>
+</div>
+<input id="e57bb3fd-aa46-408d-aa30-89faeed238bb" name="5e8fff32-4d9f-4a72-a206-5b0e4691fe1a" type="radio">
+</input><label class="tabbed-label" for="e57bb3fd-aa46-408d-aa30-89faeed238bb">
+richtige Darstellung (händisch)</label><div class="tabbed-content docutils">
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>scrreprt<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="s">$</span><span class="m">37</span><span class="nb">{,}</span><span class="m">58</span><span class="nv">\,\mathrm</span><span class="nb">{km</span><span class="o">/</span><span class="nb">h}</span><span class="s">$</span>
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../_images/unit_right.png"><img alt="../_images/unit_right.png" class="align-center" src="../_images/unit_right.png" style="width: 100px;" /></a>
+<ul class="simple">
+<li><p>Komma in geschweiften Klammern <code class="docutils literal notranslate"><span class="pre">{,}</span></code></p></li>
+<li><p>halber Zeilenabstand nach Zahl mit <code class="docutils literal notranslate"><span class="pre">\,</span></code></p></li>
+<li><p>kursive Schrift entfernen für Einheiten mit <code class="docutils literal notranslate"><span class="pre">\mathrm{}</span></code></p></li>
+</ul>
+</div>
+<input id="09f17120-b7ad-4435-9071-5df5d54d60d2" name="5e8fff32-4d9f-4a72-a206-5b0e4691fe1a" type="radio">
+</input><label class="tabbed-label" for="09f17120-b7ad-4435-9071-5df5d54d60d2">
+richtige Darstellung (siunitx-Paket)</label><div class="tabbed-content docutils">
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>scrreprt<span class="nb">}</span>
+<span class="k">\usepackage</span><span class="nb">{</span>siunitx<span class="nb">}</span>
+<span class="k">\sisetup</span><span class="nb">{</span>locale = DE<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="s">$</span><span class="nv">\SI</span><span class="nb">{</span><span class="m">37</span><span class="nb">,</span><span class="m">58</span><span class="nb">}{km</span><span class="o">/</span><span class="nb">h}</span><span class="s">$</span>
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../_images/unit_right.png"><img alt="../_images/unit_right.png" class="align-center" src="../_images/unit_right.png" style="width: 100px;" /></a>
+<ul class="simple">
+<li><p>Verwendung von <code class="docutils literal notranslate"><span class="pre">siunitx</span></code> - Paket und Einstellung auf deutsch mit <code class="docutils literal notranslate"><span class="pre">\sisetup{locale</span> <span class="pre">=</span> <span class="pre">DE}</span></code></p></li>
+<li><p>Syntax: $\SI{Zahl}{Einheit}</p></li>
+<li><p><a class="reference external" href="https://tobiw.de/tbdm/siunitx">Ausführlichen Erklärung zu dem Paket von Tobias Weh</a></p></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
 <div class="section" id="ubung-mathematische-umbgeung">
-<h2><span class="section-number">9.1. </span>Übung (mathematische Umbgeung)<a class="headerlink" href="#ubung-mathematische-umbgeung" title="Permalink to this headline">¶</a></h2>
+<h1><span class="section-number">10. </span>Übung (mathematische Umbgeung)<a class="headerlink" href="#ubung-mathematische-umbgeung" title="Permalink to this headline">¶</a></h1>
 <p><strong>Aufgabe</strong></p>
 <p>Gegeben ist eine Gleichung von Wikipedia (<a class="reference external" href="https://de.wikipedia.org/wiki/Kontinuumsmechanik">https://de.wikipedia.org/wiki/Kontinuumsmechanik</a>).</p>
 <a class="reference internal image-reference" href="../_images/Untitled_132.png"><img alt="../_images/Untitled_132.png" class="align-center" src="../_images/Untitled_132.png" style="width: 500px;" /></a>
@@ -1494,21 +1611,21 @@ Bildunterschrift verbessert (mit caption-Paket)</label><div class="tabbed-conten
 </div>
 </div>
 <div class="section" id="literaturverzeichnis">
-<h2><span class="section-number">9.2. </span>Literaturverzeichnis<a class="headerlink" href="#literaturverzeichnis" title="Permalink to this headline">¶</a></h2>
+<h1><span class="section-number">11. </span>Literaturverzeichnis<a class="headerlink" href="#literaturverzeichnis" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="literaturverwaltung-mit-zotero">
-<h3><span class="section-number">9.2.1. </span>Literaturverwaltung mit Zotero<a class="headerlink" href="#literaturverwaltung-mit-zotero" title="Permalink to this headline">¶</a></h3>
+<h2><span class="section-number">11.1. </span>Literaturverwaltung mit Zotero<a class="headerlink" href="#literaturverwaltung-mit-zotero" title="Permalink to this headline">¶</a></h2>
 <p>Die HTWK Leipzig stellt für den Umgang mit Zotero selbst verschiedene Tutorial-Videos zur Verfügung:</p>
 <p><a class="reference external" href="https://bibliothek.htwk-leipzig.de/kurse-und-beratung/online-tutorials/online-zotero-kurs/"></a></p>
 </div>
 <div class="section" id="einbindung-der-literaturdatenbank-in-latex">
-<h3><span class="section-number">9.2.2. </span>Einbindung der Literaturdatenbank in LaTeX<a class="headerlink" href="#einbindung-der-literaturdatenbank-in-latex" title="Permalink to this headline">¶</a></h3>
+<h2><span class="section-number">11.2. </span>Einbindung der Literaturdatenbank in LaTeX<a class="headerlink" href="#einbindung-der-literaturdatenbank-in-latex" title="Permalink to this headline">¶</a></h2>
 <p>Hinweis: In Overleaf lässt auch direkt der Zotero-Account verknüpfen, so dass Overleaf die BiB-Datei immer automatisch aktualisiert, wenn sich etwas in Zotero ändert. Dies ist aber wohl nur für Premium-Nutzer von Overleaf verfügbar, so dass wir hier nicht darauf eingehen.</p>
 <p>Ist die Datenbank in Zotero gefüllt, kann direkt aus der Bibliothek im Zotero eine BIBLaTeX-Datei erzeugt werden. Dazu unter <code class="docutils literal notranslate"><span class="pre">Datei</span> <span class="pre">&gt;</span> <span class="pre">&quot;Bibliothek</span> <span class="pre">exportieren...</span></code>” anklicken. Dann erhält man ein Dialogfenster:</p>
 <a class="reference internal image-reference" href="../_images/Untitled_152.png"><img alt="../_images/Untitled_152.png" class="align-center" src="../_images/Untitled_152.png" style="width: 500px;" /></a>
 <p>In diesem Fenter als <code class="docutils literal notranslate"><span class="pre">Format</span> <span class="pre">&quot;BibLaTeX&quot;</span></code> auswählen, mit OK bestätigen und dann die Bib-Datei im Ordner der LaTeX-Datei mit gewünschten Namen abspeichern (z.B. “mybib.bib”).</p>
 </div>
 <div class="section" id="literatur-in-latex">
-<h3><span class="section-number">9.2.3. </span>Literatur in LaTeX<a class="headerlink" href="#literatur-in-latex" title="Permalink to this headline">¶</a></h3>
+<h2><span class="section-number">11.3. </span>Literatur in LaTeX<a class="headerlink" href="#literatur-in-latex" title="Permalink to this headline">¶</a></h2>
 <p>Es gibt verschiedene Literatur-Systeme in LaTeX. Wir nutzen BiBLaTeX, die moderne Form der Literaturreferenzierung. Dazu muss man</p>
 <ul class="simple">
 <li><p>das Package  <code class="docutils literal notranslate"><span class="pre">biblatex</span></code>laden</p></li>
@@ -1549,7 +1666,6 @@ Text ... <span class="k">\cite</span><span class="nb">{</span>abcd<span class="n
 </pre></div>
 </div>
 <p>Zitierung [1,2] und nicht [1][2]</p>
-</div>
 </div>
 </div>
 
