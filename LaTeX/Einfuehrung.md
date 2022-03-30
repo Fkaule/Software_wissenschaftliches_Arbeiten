@@ -866,6 +866,64 @@ align: center
 - [Ausführlichen Erklärung zu dem Paket von Tobias Weh](https://tobiw.de/tbdm/siunitx)
 ````
 
+## Einheiten in Tabellen
+
+[Auf der Seite von Tobias Weh](https://tobiw.de/tbdm/siunitx) zur dem Einheitenpaket `siunitx` gibt es noch ein schönes Beispiel für eine Tabelle mit Einheiten: 
+
+````{tabbed} Darstellung
+```{image} Einfuehrung/unit_tab.png 
+--- 
+width: 400px 
+align: center
+
+``` 
+````
+
+````{tabbed} Code
+```latex
+\documentclass{scrreprt}
+
+\usepackage{booktabs}
+\usepackage{siunitx}
+
+\sisetup{
+   locale = DE,
+   per-mode = fraction,% | reciprocal | fraction | …
+%   separate-uncertainty,
+%   exponent-to-prefix,
+   prefixes-as-symbols = false,
+   list-units = brackets,% | single | repeat
+   range-units = brackets,% | single | repeat
+   multi-part-units = brackets,% | single | repeat
+   table-unit-alignment = left,
+}
+
+\begin{document}
+
+\begin{table}[hb]
+   \centering
+   \caption{Naturkonstanten}
+   \begin{tabular}{
+      l
+      S[round-mode=places]
+      s[per-mode=symbol]
+   }
+      \toprule
+         {Name} & {Wert} & {Einheit} \\
+      \midrule
+         Lichtgeschwindigkeit $c$ & 2,99792458e8 & m/s \\
+         Gravitationskonstante $\gamma$ & 6,67428e-11 &
+            \N\m\squared\per\kg\squared \\
+         Elementarladung $e$ & 1,602176487e-19 & \coulomb \\
+      \bottomrule
+   \end{tabular}
+\end{table}
+
+\end{document}
+``` 
+````
+
+
 # Übung (mathematische Umbgeung)
 
 **Aufgabe**
