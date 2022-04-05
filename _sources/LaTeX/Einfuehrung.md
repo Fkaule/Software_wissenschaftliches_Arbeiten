@@ -578,7 +578,7 @@ align: center
 
 \end{document}
 ```
-+ Verwendung des Pakets `booktabs` für `\toprule` , `\midrule` und `\bottomrule` (verbesserte vertikale Linien)
++ Verwendung des Pakets `booktabs` für `\toprule` , `\midrule` und `\bottomrule` (verbesserte horizontale Linien)
 + `@{}` am Anfang und  `@{}` am Ende in `\begin{tabular}{}` verkürzt die Tabelle links und rechts auf das nötigste
 ````
 
