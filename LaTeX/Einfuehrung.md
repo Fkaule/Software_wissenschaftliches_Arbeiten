@@ -521,13 +521,13 @@ Analog zu Abbildungen kann man LaTeX mit der Positionsangabe `[!h]` anschließen
     - `p` - page - nutze eine extra Seite für die Bilder
     - Mit dem `!` erhöht man die Priorität seiner Forderung, man "zwingt" LaTeX zur Umsetzung.
 
-## Tabelle mit zusätzlichen Paketen 
+## komplexere Tabelle mit zusätzlichen Paketen 
 
-Um eine optisch ansprechende Tabelle zu erzeugen sind zusätzliche Pakete notwendig. Nachfolgend zwei Beispiele:
+Um komplexere Tabellen zu erzeugen sind zusätzliche Pakete wie `booktabs` , `multirow` und `makecell` notwendig. Nachfolgend wir dies an einem Beispiel dargestellt:
 
 
 ````{tabbed} Beispiel 1 
-```{image} Einfuehrung/nice_tab1.png 
+```{image} Einfuehrung/nice_tables1.png 
 --- 
 width: 400px 
 align: center
@@ -535,32 +535,26 @@ align: center
 ``` 
 ```latex
 \documentclass{scrreprt}
-\usepackage{booktabs}
 \begin{document}
 
 \begin{table}
- \centering
- \caption{Meine erste eigene Tabelle}
- \label{tab_erste_Tabelle}
- \begin{tabular}{lll}
-  \toprule
-  Header1 & Header2 & Header3 \\
-  \midrule
-   Zelle1 aber länger & Zelle2 & Zelle3 \\
-   Zelle4 & Zelle5 aber länger & Zelle6 \\  
-   Zelle7 & Zelle8 & Zelle9 aber länger \\ 
-  \bottomrule
+ \begin{tabular}{lcccc}
+ \hline
+ Name    & Header1  & Header2  & Header3  & Header4  \\ 
+ \hline
+ Name A & text text text & text text & text text & text text \\ 
+ Name B & text text & text text & text text text & text text \\ 
+ \hline
  \end{tabular}
 \end{table}
 
 \end{document}
 ```
-- Verwendung des Pakets `booktabs` für `\toprule` , `\midrule` und `\bottomrule`
-- Überschriften aber in gleicher Ausrichtung wie Tabelleninhalt
+- Ausgangsbeispiel ohne weitere Pakete
 ````
 
 ````{tabbed} Beispiel 2
-```{image} Einfuehrung/nice_tab2.png 
+```{image} Einfuehrung/nice_tables2.png 
 --- 
 width: 400px 
 align: center
@@ -569,31 +563,168 @@ align: center
 ```latex
 \documentclass{scrreprt}
 \usepackage{booktabs}
-\usepackage{makecell}
-\renewcommand\theadfont{\bfseries}
 \begin{document}
 
 \begin{table}
- \centering
- \caption{Meine erste eigene Tabelle}
- \label{tab_erste_Tabelle}
- \begin{tabular}{lll}
-  \toprule
-  \thead{Header1} & \thead{Header2} & \thead{Header3} \\
-  \midrule
-   Zelle1 aber länger & Zelle2 & Zelle3 \\
-   Zelle4 & Zelle5 aber länger & Zelle6 \\  
-   Zelle7 & Zelle8 & Zelle9 aber länger \\ 
-  \bottomrule
+\begin{tabular}{@{} lcccc @{}}
+ \toprule
+ Name    & Header1  & Header2  & Header3  & Header4  \\ 
+ \midrule
+ Name A & text text text & text text & text text & text text \\ 
+ Name B & text text & text text & text text text & text text \\ 
+ \bottomrule
  \end{tabular}
 \end{table}
 
 \end{document}
 ```
-- Verwendung des Pakets `booktabs` für `\toprule` , `\midrule` und `\bottomrule`
-- Verwendung des Pakets `makecell` und Erstellung des `\thead{}` Befehls der Überschriften zentriert und dick darstellt
++ Verwendung des Pakets `booktabs` für `\toprule` , `\midrule` und `\bottomrule` (verbesserte vertikale Linien)
++ `@{}` am Anfang und  `@{}` am Ende in `\begin{tabular}{}` verkürzt die Tabelle links und rechts auf das nötigste
+````
 
-- Überschriften aber in gleicher Ausrichtung wie Tabelleninhalt
+````{tabbed} Beispiel 3
+```{image} Einfuehrung/nice_tables3.png 
+--- 
+width: 400px 
+align: center
+
+``` 
+```latex
+\documentclass{scrreprt}
+\usepackage{booktabs}
+\begin{document}
+
+\begin{table}
+\begin{tabular}{@{} lcccc @{}}
+ \toprule
+ \multicolumn{1}{c}{Name} & Header1  & Header2  & Header3  & Header4  \\ 
+ \midrule
+ Name A & text text text & text text & text text & text text \\ 
+ Name B & text text & text text & text text text & text text \\ 
+ \bottomrule
+ \end{tabular}
+\end{table}
+
+\end{document}
+```
++ `\multicolumn{1}{c}{Name}` um die Überschrift `Name` zu zentrieren obwohl die Spalte eigentlich linksausgerichtet ist
+````
+
+````{tabbed} Beispiel 4
+```{image} Einfuehrung/nice_tables4.png 
+--- 
+width: 400px 
+align: center
+
+``` 
+```latex
+\documentclass{scrreprt}
+\usepackage{booktabs}
+\begin{document}
+
+\begin{table}
+\begin{tabular}{@{} lcccc @{}}
+ \toprule
+ \multicolumn{1}{c}{Name}    & \multicolumn{2}{c}{Overhead1}  & \multicolumn{2}{c}{Overhead2}  \\ 
+                             & Header1  & Header2  & Header3  & Header4  \\ 
+ \midrule
+ Name A & text text text & text text & text text & text text \\ 
+ Name B & text text & text text & text text text & text text \\ 
+ \bottomrule
+ \end{tabular}
+\end{table}
+
+\end{document}
+```
++ `\multicolumn{2}{c}{Text}` fasst zwei Spalten zusammen (in dem Beispiel für die Überschrift)
+````
+
+````{tabbed} Beispiel 5
+```{image} Einfuehrung/nice_tables5.png 
+--- 
+width: 400px 
+align: center
+
+``` 
+```latex
+\documentclass{scrreprt}
+\usepackage{booktabs, multirow}
+\begin{document}
+
+\begin{table}
+\begin{tabular}{@{} lcccc @{}}
+ \toprule
+ \hfil\multirow{2}{*}{Name}    & \multicolumn{2}{c}{Overhead1}  & \multicolumn{2}{c}{Overhead2}  \\ 
+                             & Header1  & Header2  & Header3  & Header4  \\ 
+ \midrule
+ Name A & text text text & text text & text text & text text \\ 
+ Name B & text text & text text & text text text & text text \\ 
+ \bottomrule
+ \end{tabular}
+\end{table}
+
+\end{document}
+```
++ `\multirow{2}{*}{Name}` zentriert Name vertikal in dem es zwei Zeilen zusammenfuegt (durch Paket `multirow`) 
++ `\hfil` vor `\multirow` sorgt dafür das Name horizontal wieder zentriert wird
+````
+
+````{tabbed} Beispiel 6
+```{image} Einfuehrung/nice_tables6.png 
+--- 
+width: 400px 
+align: center
+
+``` 
+```latex
+\documentclass{scrreprt}
+\usepackage{booktabs, multirow}
+\begin{document}
+
+\begin{table}
+\begin{tabular}{@{} lcccc @{}}
+ \toprule
+ \hfil\multirow{2}{*}{\textbf{Name}}    & \multicolumn{2}{c}{\textbf{Overhead1}}  & \multicolumn{2}{c}{\textbf{Overhead2}}  \\ 
+                             & Header1  & Header2  & Header3  & Header4  \\ 
+ \midrule
+ Name A & text text text & text text & text text & text text \\ 
+ Name B & text text & text text & text text text & text text \\ 
+ \bottomrule
+ \end{tabular}
+\end{table}
+
+\end{document}
+```
++ mit `\textbf{}` kann die Überschrift zusätzlich hervorgehoben werden
+````
+
+````{tabbed} Beispiel 7
+```{image} Einfuehrung/nice_tables7.png 
+--- 
+width: 400px 
+align: center
+
+``` 
+```latex
+\documentclass{scrreprt}
+\usepackage{booktabs, multirow, makecell}
+\begin{document}
+
+\begin{table}
+\begin{tabular}{@{} lcccc @{}}
+ \toprule
+ \hfil\multirow{2}{*}{\textbf{Name}}    & \multicolumn{2}{c}{\textbf{Overhead1}}  & \multicolumn{2}{c}{\textbf{Overhead2}}  \\ 
+                             & Header1  & Header2  & Header3  & Header4  \\ 
+ \midrule
+ Name A & \makecell[c]{text oben \\ text unten} & text text & text text & text text \\ 
+ Name B & text text & text text & text text text & text text \\ 
+ \bottomrule
+ \end{tabular}
+\end{table}
+
+\end{document}
+```
++ mit `\makecell[c]{text oben \\ text unten}` wurde ein Textumbruch innerhalb einer Zelle erzeugt (c=zentriert) (Paket `makecell`)
 ````
 
 # Übung (Text, Abbildungen, Tabelle)
