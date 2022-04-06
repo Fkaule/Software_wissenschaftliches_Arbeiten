@@ -727,6 +727,11 @@ align: center
 + mit `\makecell[c]{text oben \\ text unten}` wurde ein Textumbruch innerhalb einer Zelle erzeugt (c=zentriert) (Paket `makecell`)
 ````
 
+## Einheiten und Zahlenwerte in Tabellen
+
+In dem Abschnitt zur Verwendung von Einheiten gibt es Beispiel zur Verwendung von Einheiten und Zahlen in Tabellen mit dem Paket `unitx`. Dabei werden die Zahlen automatisch gerundet und entsprechend dem Dezimantrenner ausgerichtet ([Link](Einfuehrung.html#Tabelle_mit_Einheiten)).
+
+
 # Übung (Text, Abbildungen, Tabelle)
 
 Um das nun gesehene selbst anzuwenden übertragen wir nun den Text, Abbildungen und die Tabelle von folgender Seite auf ein eigenes LaTeX Dokument:
@@ -998,8 +1003,9 @@ align: center
 ````
 
 ## Einheiten in Tabellen
+<a id='Tabelle_mit_Einheiten'></a>
 
-[Auf der Seite von Tobias Weh](https://tobiw.de/tbdm/siunitx) zur dem Einheitenpaket `siunitx` gibt es noch ein schönes Beispiel für eine Tabelle mit Einheiten: 
+[Auf der Seite von Tobias Weh](https://tobiw.de/tbdm/siunitx) zur dem Einheitenpaket `siunitx` gibt es noch ein schönes Beispiel für eine Tabelle mit Einheiten. Dabei werden die Zahlen automatisch gerundet und entsprechend dem Dezimantrenner ausgerichtet. 
 
 ````{tabbed} Darstellung
 ```{image} Einfuehrung/unit_tab.png 
@@ -1036,7 +1042,7 @@ align: center
    \caption{Naturkonstanten}
    \begin{tabular}{
       l
-      S[round-mode=places]
+      S[round-mode=places, round-precision=2]
       s[per-mode=symbol]
    }
       \toprule
