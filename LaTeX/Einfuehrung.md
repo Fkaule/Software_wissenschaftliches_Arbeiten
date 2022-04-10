@@ -2,7 +2,7 @@
 
 ## Links
 
-[Overleaf Documentation (englisch)](https://www.overleaf.com/learn/latex/Main_Page)
+[Overleaf Dokumentation (englisch)](https://www.overleaf.com/learn/latex/Main_Page)
 
 ## Editor
 
@@ -17,7 +17,7 @@ Es gibt für LaTeX mittlerweile zwei prinzipielle Möglichkeiten:
     - Mac [MacTeX - TeX Users Group](https://tug.org/mactex/)
     - Linux [ubuntuusers.de](https://wiki.ubuntuusers.de/TeX_Live/)
 
-Für uns ist im Moment die Nutzung online am einfachsten und sehr direkt umsetzbar. Daher bitte bei overleaf einen Account (kostenlos) anlegen. Dann kann es losgehen ...
+Für uns ist im Moment die Nutzung online am einfachsten und sehr direkt umsetzbar. Daher bitte bei Overleaf einen Account (kostenlos) anlegen. Dann kann es losgehen ...
 
 ## Ein erstes "Hallo Welt"
 
@@ -42,14 +42,14 @@ Output
 
 # Präambel des Dokuments
 
-Die Präambel beschreibt alles was vor `\begin{document}` steht. Dabei geht es um die **Grundeinstellungen** des Dokumentes. Konrekt wird folgendes definiert:
+Die Präambel beschreibt alles was vor `\begin{document}` steht. Dabei geht es um die **Grundeinstellungen** des Dokumentes. Konkret wird folgendes definiert:
 
 1. Dokumentenklasse (Layout der Seite)
 2. Pakete (ermöglichen zusätzliche Funktionen)
 
 ## Dokumentklassen
 
-Mit der Definition der Dokumentenklasse beginnt das LaTeX Dokument. Mit der Dokumenteklasse wird das **Layout** des Dokuments bestimmt.
+Mit der Definition der Dokumentenklasse beginnt das LaTeX Dokument. Mit der Dokumentenklasse wird das **Layout** des Dokuments bestimmt.
 
 ```latex
 \documentclass{name}
@@ -90,7 +90,7 @@ In der Präambel nach der Dokumentenklasse können Pakete (packages) verwendet w
 Besonders sinnvolle packages sind hier zusammengefasst:
 
 ```latex
-\usepackage[ngerman]{babel} % Neue deutsche Silbentrennung
+\usepackage[ngerman]{babel} % deutsche Spracheinstellung
 \usepackage[utf8]{inputenc} % Zeichenkodierung für UTF-8 (Unicode) falls Editor es unterstützt (bevorzugt)
 % \usepackage[latin1]{inputenc} % Zeichenkodierung unter Windows für Umlaute und Sonderzeichen falls kein UTF-8 im Editor
 \usepackage[T1]{fontenc} % Korrektes Trennen von Wörtern mit Umlauten und Akzenten.
@@ -190,7 +190,7 @@ Um Bilder einzufügen muss das Paket `graphicx` verwendet werden. Dafür in die 
 
 ## Abbildung einfügen
 
-Innerhalb der `document`-Umgebung (nach `\begin{document}`) können Bilder eingefügt werden. Dafür wird eine `figure`-Umgebung erstellt (mit `\begin{figure}` und `\end{figure}`). Innerhalb dieser Umgebung kann dann mit \includegraphics{bild.png} z.B. eine Datei `bild.png` eingefügt  werden. Konrekt wird dies am nachfolgenden Beispiel verdeutlicht:
+Innerhalb der `document`-Umgebung (nach `\begin{document}`) können Bilder eingefügt werden. Dafür wird eine `figure`-Umgebung erstellt (mit `\begin{figure}` und `\end{figure}`). Innerhalb dieser Umgebung kann dann mit \includegraphics{bild.png} z.B. eine Datei `bild.png` eingefügt  werden. Konkret wird dies am nachfolgenden Beispiel verdeutlicht:
 
 
 ```latex
@@ -1102,15 +1102,13 @@ align: center
 
 ## Literaturverwaltung mit Zotero
 
-Die HTWK Leipzig stellt für den Umgang mit Zotero selbst verschiedene Tutorial-Videos zur Verfügung:
-
-[](https://bibliothek.htwk-leipzig.de/kurse-und-beratung/online-tutorials/online-zotero-kurs/)
+Die HTWK Leipzig stellt für den Umgang mit Zotero selbst verschiedene [Tutorial-Videos zur Verfügung](https://bibliothek.htwk-leipzig.de/kurse-und-beratung/online-tutorials/online-zotero-kurs/).
 
 ## Einbindung der Literaturdatenbank in LaTeX
 
 Hinweis: In Overleaf lässt auch direkt der Zotero-Account verknüpfen, so dass Overleaf die BiB-Datei immer automatisch aktualisiert, wenn sich etwas in Zotero ändert. Dies ist aber wohl nur für Premium-Nutzer von Overleaf verfügbar, so dass wir hier nicht darauf eingehen.
 
-Ist die Datenbank in Zotero gefüllt, kann direkt aus der Bibliothek im Zotero eine BIBLaTeX-Datei erzeugt werden. Dazu unter `Datei > "Bibliothek exportieren...`" anklicken. Dann erhält man ein Dialogfenster:
+Ist die Datenbank in Zotero gefüllt, kann direkt aus der Bibliothek im Zotero eine BIBLaTeX-Datei erzeugt werden. Dazu unter `Datei` > `Bibliothek exportieren...` anklicken. Dann erhält man ein Dialogfenster:
 
 ```{image} Einfuehrung/Untitled_15.png 
 --- 
@@ -1118,50 +1116,201 @@ width: 500px
 align: center
 ``` 
 
-In diesem Fenter als `Format "BibLaTeX"` auswählen, mit OK bestätigen und dann die Bib-Datei im Ordner der LaTeX-Datei mit gewünschten Namen abspeichern (z.B. "mybib.bib").
+In diesem Fenter als Format `BibLaTeX` auswählen, mit OK bestätigen und dann die Bib-Datei im Ordner der LaTeX-Datei mit gewünschten Namen abspeichern (z.B. "mybib.bib").
 
 ## Literatur in LaTeX
 
-Es gibt verschiedene Literatur-Systeme in LaTeX. Wir nutzen BiBLaTeX, die moderne Form der Literaturreferenzierung. Dazu muss man
+Eine sehr gute Zusammenfassung zur Literatur in LaTeX gibt es in der [Overleaf Dokumentation (englisch)](https://de.overleaf.com/learn/latex/Bibliography_management_in_LaTeX). Im folgenden werden ein paar Grundlagen vermittelt:
 
-- das Package  `biblatex`laden
-- die Bib-Datei einbinden mit `\addbibresource`
+Wir nutzen das Paket `BiBLaTeX`, die moderne Form der Literaturreferenzierung. Dazu muss man
+
+- das Paket  `biblatex` laden
+- die Bib-Datei einbinden mit `\addbibresource{name.bib}` (dort stehen alle Quellen drin)
 - am Ende des Dokumentes das Literaturverzeichnis einbinden (mit Option im Inhaltsverzeichnis sichtbar zu machen) mit `\printbibliography[heading=bibintoc]`
 
-```latex
-...
-\usepackage{biblatex}
-\addbibresource{mybib.bib}
+Um erstmal anzufangen erstellen wir eine Beispiel Bib-Datei die auch in der Ovearleaf Dokumentation verwendet wird. In dieser sind 4 verschiedene Quellen eingetragen. Wir erzeugen eine Datei mit dem Namen `sample.bib` und fügen folgenden Inhalt ein:
 
-...
-Text ... \cite{abcd} ... Text
-...
-\printbibliography[heading=bibintoc]
+
+````latex
+@article{einstein,
+    author = "Albert Einstein",
+    title = "{Zur Elektrodynamik bewegter K{\"o}rper}. ({German})
+    [{On} the electrodynamics of moving bodies]",
+    journal = "Annalen der Physik",
+    volume = "322",
+    number = "10",
+    pages = "891--921",
+    year = "1905",
+    DOI = "http://dx.doi.org/10.1002/andp.19053221004",
+    keywords = "physics"
+}
+
+@book{dirac,
+    title = {The Principles of Quantum Mechanics},
+    author = {Paul Adrien Maurice Dirac},
+    isbn = {9780198520115},
+    series = {International series of monographs on physics},
+    year = {1981},
+    publisher = {Clarendon Press},
+    keywords = {physics}
+}
+
+@online{knuthwebsite,
+    author = "Donald Knuth",
+    title = "Knuth: Computers and Typesetting",
+    url  = "http://www-cs-faculty.stanford.edu/~uno/abcde.html",
+    addendum = "(accessed: 01.09.2016)",
+    keywords = "latex,knuth"
+}
+
+@inbook{knuth-fa,
+    author = "Donald E. Knuth",
+    title = "Fundamental Algorithms",
+    publisher = "Addison-Wesley",
+    year = "1973",
+    chapter = "1.2",
+    keywords  = "knuth,programming"
+}
+````
+
+Der komplette Workflow wird nun an zwei verschiedenen Zitierstilen (`numeric` und `alphabetic`) dargestellt:
+
+
+
+
+
+
+`````{tabbed} Stil=numeric
+````{panels}
+Input
+^^^
+```latex
+\documentclass{article}
+
+\usepackage[
+backend=biber,
+style=numeric,
+sorting=none
+]{biblatex} % Literatur-Paket mit Einstellungen
+\usepackage[ngerman]{babel} % deutsches Sprachpaket
+\addbibresource{sample.bib} % import Bib-Datei
+
+\begin{document}
+
+Quelle1 (Einstein) \cite{einstein} ... Quelle2 (Dirac) \cite{dirac} ... Quelle1 (Einstein) noch mal  \cite{einstein} ... Quelle3 (Knuth) \cite{knuthwebsite}
+
+\printbibliography % Literaturverzeichnis einfügen
 
 \end{document}
 ```
+---
+Output
+^^^
+```{image} Einfuehrung/Bib_numeric.png
+:width: 300px
+:align: center
+``` 
+__________________________________
+- mit \cite{label} wird die Quelle zitiert
+- Einstellungen im Paket `biblatex`
+    - `style=numeric` numerischer Stil (Quellen mit Zahl indiziert)
+    - `sorting=none` Sortierung nach Verwendung im Literaturverzeichnis
+````
+`````
 
-Dann kann man mit `\cite{KEY}` die Literaturreferenzen einfügen. Dabei ist der KEY der verwendete Schlüssel in der Bib-Datei. Dieser steht immer ganz oben im Bib-Eintrag (hier im Beispiel farblich markiert):
+`````{tabbed} Stil=alphabetic
+````{panels}
+Input
+^^^
+```latex
+\documentclass{article}
+
+\usepackage[
+backend=biber,
+style=alphabetic,
+sorting=nyt
+]{biblatex} % Literatur-Paket mit Einstellungen
+\usepackage[ngerman]{babel} % deutsches Sprachpaket
+\addbibresource{sample.bib} % import Bib-Datei
+
+\begin{document}
+
+Quelle1 (Einstein) \cite{einstein} ... Quelle2 (Dirac) \cite{dirac} ... Quelle1 (Einstein) noch mal  \cite{einstein} ... Quelle3 (Knuth) \cite{knuthwebsite}
+
+\printbibliography % Literaturverzeichnis einfügen
+
+\end{document}
+```
+---
+Output
+^^^
+```{image} Einfuehrung/Bib_alphabetic.png
+:width: 300px
+:align: center
+``` 
+__________________________________
+- mit \cite{label} wird die Quelle zitiert
+- Einstellungen im Paket `biblatex`
+    - `style=alphabetic` alphabetischer Stil (Quellen mit Autornamen und Jahr indiziert, hilft dem Leser die Quellen besser zuzuordnen ohne ins Literaturverzeichnis zu schauen)
+    - `sorting=nyt` Sortierung nach Name, Jahr und Titel im Literaturverzeichnis
+````
+`````
+
+Nur die Quellen aus der Bib-Datei die mit `\cite{}` referenziert werden, werden auch im Literaturverzeichnis dargestellt. Die Bib-Datei kann dabei also auch viel größer sein und nicht verwendete Quellen werden einfach nicht angezeigt.
+
+Um mehrere Quellen (z.B. label1, label2 und label3) zu zitieren werden diese per Komma in `\cite{label1,label2,label3}` Befehl getrennt:
+
+````{panels}
+Input
+^^^
+```latex
+Mehrere Quellen \cite{einstein,dirac,knuth-fa} 
+```
+---
+Output
+^^^
+```{image} Einfuehrung/Bib_numeric2.png
+:width: 300px
+:align: center
+``` 
+````
+
+Um auf eine bestimmte Seite innerhalb der Quelle zu referenzieren kann dies mit eckigen Klammern als Option an den `\cite[]{}` Befehl verwendet werden:
+
+````{panels}
+Input
+^^^
+```latex
+siehe \cite[S. 6]{dirac} 
+```
+---
+Output
+^^^
+```{image} Einfuehrung/Bib_numeric3.png
+:width: 300px
+:align: center
+``` 
+````
+
+
+Um das Literaturverzeichnis im Inhaltsverzeichnis anzuzeigen gibt es eine Option im Befehl `\printbibliography` :
 
 ```latex
-@article{wallburg_material_2019,
-	title = {Material Removal Simulation in Sawing Processes of Photovoltaic Silicon},
-	volume = {4},
-	rights = {All rights reserved},
-	issn = {2059-8521},
-	url = {https://www.cambridge.org/core/product/identifier/S2059852119000951/type/journal_article},
-	doi = {10.1557/adv.2019.95},
-	abstract = {...},
-	pages = {761--768},
-	number = {13},
-	journaltitle = {{MRS} Advances},
-	shortjournal = {{MRS} Adv.},
-	author = {Wallburg, F. and Kuna, M. and Schoenfelder, S.},
-	urldate = {2019-08-13},
-	date = {2019},
-	langid = {english},
-	file = {Wallburg et al. - 2019 - Material Removal Simulation in Sawing Processes of.pdf:.../Wallburg et al. - 2019 - Material Removal Simulation in Sawing Processes of.pdf:application/pdf}
+\printbibliography[heading=bibintoc]
+```
+
+Zusätzlich können mit dem Befehl `\ExecuteBibliographyOption{}` Einstellungen vorgenommen werden um z.B. ISBN und URLs zu deaktivieren:
+
+```latex
+\usepackage[
+backend=biber,
+style=numeric,
+sorting=none
+]{biblatex}
+\ExecuteBibliographyOptions{
+isbn=false, %keine isbn anzeigen
+url=false %keine url anzeigen
 }
 ```
 
-Zitierung [1,2] und nicht [1][2]
+Noch mehr Informationen finden sich in der [offizielen Dokumentation zum Paket biblatex](http://mirrors.ibiblio.org/CTAN/macros/latex/contrib/biblatex/doc/biblatex.pdf).
