@@ -2,7 +2,7 @@
 
 ## Links
 
-[Overleaf Documentation (englisch)](https://www.overleaf.com/learn/latex/Main_Page)
+[Overleaf Dokumentation (englisch)](https://www.overleaf.com/learn/latex/Main_Page)
 
 ## Editor
 
@@ -17,7 +17,7 @@ Es gibt für LaTeX mittlerweile zwei prinzipielle Möglichkeiten:
     - Mac [MacTeX - TeX Users Group](https://tug.org/mactex/)
     - Linux [ubuntuusers.de](https://wiki.ubuntuusers.de/TeX_Live/)
 
-Für uns ist im Moment die Nutzung online am einfachsten und sehr direkt umsetzbar. Daher bitte bei overleaf einen Account (kostenlos) anlegen. Dann kann es losgehen ...
+Für uns ist im Moment die Nutzung online am einfachsten und sehr direkt umsetzbar. Daher bitte bei Overleaf einen Account (kostenlos) anlegen. Dann kann es losgehen ...
 
 ## Ein erstes "Hallo Welt"
 
@@ -42,14 +42,14 @@ Output
 
 # Präambel des Dokuments
 
-Die Präambel beschreibt alles was vor `\begin{document}` steht. Dabei geht es um die **Grundeinstellungen** des Dokumentes. Konrekt wird folgendes definiert:
+Die Präambel beschreibt alles was vor `\begin{document}` steht. Dabei geht es um die **Grundeinstellungen** des Dokumentes. Konkret wird folgendes definiert:
 
 1. Dokumentenklasse (Layout der Seite)
 2. Pakete (ermöglichen zusätzliche Funktionen)
 
 ## Dokumentklassen
 
-Mit der Definition der Dokumentenklasse beginnt das LaTeX Dokument. Mit der Dokumenteklasse wird das **Layout** des Dokuments bestimmt.
+Mit der Definition der Dokumentenklasse beginnt das LaTeX Dokument. Mit der Dokumentenklasse wird das **Layout** des Dokuments bestimmt.
 
 ```latex
 \documentclass{name}
@@ -190,7 +190,7 @@ Um Bilder einzufügen muss das Paket `graphicx` verwendet werden. Dafür in die 
 
 ## Abbildung einfügen
 
-Innerhalb der `document`-Umgebung (nach `\begin{document}`) können Bilder eingefügt werden. Dafür wird eine `figure`-Umgebung erstellt (mit `\begin{figure}` und `\end{figure}`). Innerhalb dieser Umgebung kann dann mit \includegraphics{bild.png} z.B. eine Datei `bild.png` eingefügt  werden. Konrekt wird dies am nachfolgenden Beispiel verdeutlicht:
+Innerhalb der `document`-Umgebung (nach `\begin{document}`) können Bilder eingefügt werden. Dafür wird eine `figure`-Umgebung erstellt (mit `\begin{figure}` und `\end{figure}`). Innerhalb dieser Umgebung kann dann mit \includegraphics{bild.png} z.B. eine Datei `bild.png` eingefügt  werden. Konkret wird dies am nachfolgenden Beispiel verdeutlicht:
 
 
 ```latex
