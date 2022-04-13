@@ -1313,4 +1313,16 @@ url=false %keine url anzeigen
 }
 ```
 
+Die Option `url=false` zeigt weiterhin alle Quellen an die mit `@online` gekennzeichnet sind. Wenn man jedoch den Typ `Webseite` von **Zotero** exportiert, wird dieser als Typ `@misc` umgewandelt und die URL wird nicht mit ausgegeben. Folgender Code vom [User mit dem Namen moewe von stackexchange.com](https://tex.stackexchange.com/a/429112) kann in LaTeX eingefügt werden um den Typ `@misc` in Typ `@online` zu ändern, vorrausgesetzt man hat keine Quelle die wirklich als `@misc` gekennzeichnet werden sollte:
+
+```latex
+\DeclareSourcemap{
+  \maps[datatype=bibtex, overwrite=true]{
+    \map{
+      \step[typesource=misc, typetarget=online]
+    }
+  }
+}
+```
+
 Noch mehr Informationen finden sich in der [offizielen Dokumentation zum Paket biblatex](http://mirrors.ibiblio.org/CTAN/macros/latex/contrib/biblatex/doc/biblatex.pdf).
