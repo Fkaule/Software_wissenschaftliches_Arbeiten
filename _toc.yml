@@ -11,7 +11,7 @@
   sections:
   - title: Einführung
     file: LaTeX/Einfuehrung
-
+    
 - title: Literatur mit Zotero
   file: Zotero/Zotero_Uebersicht
   
@@ -45,6 +45,8 @@
     - title: Übungsbeispiele
       file: Inkscape/Advanced/Uebungen.md
 
+  - title: griechische Buchstaben
+    file: Inkscape/greek.md
   - title: Weiterführendes Material (Links)
     file: Inkscape/Links.md
 
