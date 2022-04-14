@@ -1002,6 +1002,59 @@ align: center
 - [Ausführlichen Erklärung zu dem Paket von Tobias Weh](https://tobiw.de/tbdm/siunitx)
 ````
 
+## Wertebereiche
+
+Mit `\SIrange{}{}` können Wertebereiche dargestellt werden. Damit diese im Deutschen mit dem Wort `bis` richtig dargestellt werden, muss der Parameter `ngerman` in der Klassendefinition übergeben werden:
+
+````{tabbed} falsche Darstellung (ngerman in Paket babel)
+```latex
+\documentclass{scrreprt}
+
+\usepackage[ngerman]{babel}
+\usepackage{siunitx}
+\sisetup{locale=DE}
+
+\begin{document}
+
+Eine Kraft von \SIrange{100}{400}{\newton}
+
+\end{document}
+```
+```{image} Einfuehrung/siunitx_range_wrong.png 
+--- 
+width: 300px 
+align: center
+
+``` 
+---
+- `ngerman` im `Paket` (`babel`) übergeben führt nicht zum gewollten Ergebnis
+````
+
+````{tabbed} richtige Darstellung (ngerman in Klasse)
+```latex
+\documentclass[ngerman]{scrreprt}
+
+\usepackage{babel}
+\usepackage{siunitx}
+\sisetup{locale=DE}
+
+\begin{document}
+
+Eine Kraft von \SIrange{100}{400}{\newton}
+
+\end{document}
+```
+```{image} Einfuehrung/siunitx_range_right.png 
+--- 
+width: 300px 
+align: center
+
+``` 
+---
+- `ngerman` in der `Klasse` übergeben führt zum gewollten Ergebnis
+````
+
+
 ## Einheiten in Tabellen
 <a id='Tabelle_mit_Einheiten'></a>
 
@@ -1059,6 +1112,10 @@ align: center
 \end{document}
 ``` 
 ````
+
+
+
+
 
 
 # Übung (mathematische Umbgeung)
