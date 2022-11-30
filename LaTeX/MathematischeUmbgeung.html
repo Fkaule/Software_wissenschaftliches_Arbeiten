@@ -1,0 +1,680 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>1.10. Mathematische Umgebungen &#8212; Software für wissenschaftliches Arbeiten</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="1.11. Übung (mathematische Umbgeung)" href="Uebung2.html" />
+    <link rel="prev" title="1.9. Listen" href="Listen.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/Logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Software für wissenschaftliches Arbeiten</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../Readme.html">
+                    Startseite
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="LaTeX_Uebersicht.html">
+   1. Text mit LaTeX
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="Einfuehrung.html">
+     1.2. Einführung
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Praeambel.html">
+     1.3. Präambel des Dokuments
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Verzeichnisse.html">
+     1.4. Gliederung und Verzeichnisse
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Abbildungen.html">
+     1.5. Abbildungen
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Tabellen.html">
+     1.6. Tabellen
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Uebung1.html">
+     1.7. Übung (Text, Abbildungen, Tabelle)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Textformatierung.html">
+     1.8. Textformatierung
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Listen.html">
+     1.9. Listen
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     1.10. Mathematische Umgebungen
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Uebung2.html">
+     1.11. Übung (mathematische Umbgeung)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Literatur.html">
+     1.12. Literaturverzeichnis
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Zotero/Zotero_Uebersicht.html">
+   2. Literatur mit Zotero
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Python/Python_Uebersicht.html">
+   3. Datenvisualisierung mit Python
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Python/01-JupyterNotebooks.html">
+     3.1. Einführung in Jupyter Notebooks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Python/02-Biegebalken.html">
+     3.2. Erste Berechnungen und Visualiserung
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Python/03-Kraftmessung.html">
+     3.3. Übungsaufgaben: Kraft-Weg Messungen
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Python/03b-Ploteinstellungen.html">
+     3.4. Allgemeine Ploteinstellungen
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Python/04-Klimawandel.html">
+     3.5. Daten einlesen und verarbeiten
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Python/05-API.html">
+     3.6. API Unterschied
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Python/06-Subplots.html">
+     3.7. Subplots
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Python/07-RKI-Corona.html">
+     3.8. RKI Corona Plots
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Python/Links.html">
+     3.9. Weiterführendes Material (Links)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Inkscape/Inkscape_Uebersicht.html">
+   4. Grafiken mit Inkscape
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Inkscape/Grundlagen/Grundlagen.html">
+     4.1. Grundlagen
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Inkscape/Grundlagen/Voreinstellungen.html">
+     4.2. Voreinstellungen
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Inkscape/Grundlagen/Erstellung-Solarzelle.html">
+     4.3. Erstellung der Solarzelle
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Inkscape/Grundlagen/Erstellung-Sonne.html">
+     4.4. Erstellung der Sonne
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Inkscape/Grundlagen/Beschriftung.html">
+     4.5. Beschriftung
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Inkscape/Grundlagen/Export.html">
+     4.6. Vorbereitungen zum Export
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Inkscape/Grundlagen/Uebungen.html">
+     4.7. Übungsbeispiele
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Inkscape/Advanced/Advanced.html">
+     4.8. Inkscape Advanced
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Inkscape/Advanced/Inkscape_%28Advanced%29.html">
+     4.9. Advanced Inkscape Tipps
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Inkscape/Advanced/Uebungen.html">
+     4.10. Übungsbeispiele
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Inkscape/greek.html">
+     4.11. Griechische Buchstaben in Inkscape
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Inkscape/Links.html">
+     4.12. Links
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Hinweise_Abschlussarbeiten/Hinweise_Uebersicht.html">
+   5. Hinweise zum Schreiben von Abschlussarbeiten
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Hinweise_Abschlussarbeiten/Software.html">
+     5.1. Software
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Hinweise_Abschlussarbeiten/Formatierung.html">
+     5.2. Formatierung
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/LaTeX/MathematischeUmbgeung.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#zusammenfassung-innerhalb-der-mathematischen-umgebung">
+   1.10.1. Zusammenfassung innerhalb der mathematischen Umgebung
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gleitkommawerte-und-einheiten">
+   1.10.2. Gleitkommawerte und Einheiten
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#wertebereiche">
+   1.10.3. Wertebereiche
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#einheiten-in-tabellen">
+   1.10.4. Einheiten in Tabellen
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Mathematische Umgebungen</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#zusammenfassung-innerhalb-der-mathematischen-umgebung">
+   1.10.1. Zusammenfassung innerhalb der mathematischen Umgebung
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gleitkommawerte-und-einheiten">
+   1.10.2. Gleitkommawerte und Einheiten
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#wertebereiche">
+   1.10.3. Wertebereiche
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#einheiten-in-tabellen">
+   1.10.4. Einheiten in Tabellen
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="mathematische-umgebungen">
+<h1><span class="section-number">1.10. </span>Mathematische Umgebungen<a class="headerlink" href="#mathematische-umgebungen" title="Permalink to this headline">#</a></h1>
+<p>Mathematische Formeln können innerhalb des Textes oder als seperate Gleichung verwendet werden. Der verwendete Syntax ist bei beiden Fällen der gleiche. Zur Verwendung innerhalb des Textes wird dieser zwischen zwei Dollarzeichen eingebettet. Für eine Gleichung wird die <code class="docutils literal notranslate"><span class="pre">equation</span></code>-Umgebung verwendet, dort sind die Dollarzeichen nicht notwendig. Hier ein einfaches Beispiel mit beiden Anwendungen:</p>
+<p>Hier ein erstes Beispiel:</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>scrreprt<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+
+Der Anstieg <span class="s">$</span><span class="nb">m</span><span class="s">$</span> ergibt sich auf den Differenzen von <span class="s">$</span><span class="nb">x</span><span class="s">$</span> und <span class="s">$</span><span class="nb">y</span><span class="s">$</span> zu:
+<span class="k">\begin</span><span class="nb">{</span>equation<span class="nb">}</span>
+    m=<span class="k">\frac</span><span class="nb">{</span><span class="k">\Delta</span> y<span class="nb">}{</span><span class="k">\Delta</span> x<span class="nb">}</span>=<span class="k">\frac</span><span class="nb">{</span>y<span class="nb">_</span>1 - y<span class="nb">_</span>0<span class="nb">}{</span>x<span class="nb">_</span>1 - x<span class="nb">_</span>0<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>equation<span class="nb">}</span>
+
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../_images/math1.png"><img alt="../_images/math1.png" class="align-center" src="../_images/math1.png" style="width: 700px;" /></a>
+<p><br><br>
+Zur Erklärung:</p>
+<ul class="simple">
+<li><p>Mit dem Befehl <code class="docutils literal notranslate"><span class="pre">\frac{Zähler}{Nenner}</span></code> können Brüche dargestellt werden.</p></li>
+<li><p>Mit <code class="docutils literal notranslate"><span class="pre">\Delta</span></code> wird der griechische Buchstabe Delta dargestellt.</p></li>
+<li><p>Mit <code class="docutils literal notranslate"><span class="pre">_</span></code> wird ein Text tiefgestellt (wenn mehrere Zeichen mit Leerzeichen tiefgestellt werden soll müssen diese in geschweiften Klammern gesetzt werden, z.B. <code class="docutils literal notranslate"><span class="pre">x_{0,init}</span></code>)</p></li>
+</ul>
+<p>Die Gleichung innerhalb der <code class="docutils literal notranslate"><span class="pre">equation</span></code>-Umgebung wird automatisch nummeriert. Da in diesem Fall kein Kapitel erstellt wird steht eine 0 in der Nummerierung. Mit einem Kapitel sieht es dann wie folgt aus:</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>scrreprt<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+
+<span class="k">\chapter</span><span class="nb">{</span>Einleitung<span class="nb">}</span>
+
+Der Anstieg <span class="s">$</span><span class="nb">m</span><span class="s">$</span> ergibt sich auf den Differenzen von <span class="s">$</span><span class="nb">x</span><span class="s">$</span> und <span class="s">$</span><span class="nb">y</span><span class="s">$</span> zu:
+<span class="k">\begin</span><span class="nb">{</span>equation<span class="nb">}</span>
+    m=<span class="k">\frac</span><span class="nb">{</span><span class="k">\Delta</span> y<span class="nb">}{</span><span class="k">\Delta</span> x<span class="nb">}</span>=<span class="k">\frac</span><span class="nb">{</span>y<span class="nb">_</span>1 - y<span class="nb">_</span>0<span class="nb">}{</span>x<span class="nb">_</span>1 - x<span class="nb">_</span>0<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>equation<span class="nb">}</span>
+
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../_images/math2.png"><img alt="../_images/math2.png" class="align-center" src="../_images/math2.png" style="width: 700px;" /></a>
+<section id="zusammenfassung-innerhalb-der-mathematischen-umgebung">
+<h2><span class="section-number">1.10.1. </span>Zusammenfassung innerhalb der mathematischen Umgebung<a class="headerlink" href="#zusammenfassung-innerhalb-der-mathematischen-umgebung" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>griechische Buchstaben z.B. <code class="docutils literal notranslate"><span class="pre">\alpha</span></code> oder pi mit <code class="docutils literal notranslate"><span class="pre">\pi</span></code></p></li>
+<li><p>Quadratwurzel <code class="docutils literal notranslate"><span class="pre">\sqrt{}</span></code> .. kubische Wurzel <code class="docutils literal notranslate"><span class="pre">\sqrt[3]{}</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">\sin()</span></code> ,  <code class="docutils literal notranslate"><span class="pre">\cos()</span></code> …</p></li>
+<li><p>Brüche mit <code class="docutils literal notranslate"><span class="pre">\frac{}{}</span></code></p></li>
+<li><p>hochstellen mit <code class="docutils literal notranslate"><span class="pre">^</span></code> bzw. <code class="docutils literal notranslate"><span class="pre">_{}</span></code></p></li>
+<li><p>tiefstellen mit <code class="docutils literal notranslate"><span class="pre">_</span></code> bzw. <code class="docutils literal notranslate"><span class="pre">_{}</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">\left(</span></code> und <code class="docutils literal notranslate"><span class="pre">\right(</span></code> große runde Klammern</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">\left[</span></code> und <code class="docutils literal notranslate"><span class="pre">\right[</span></code> große eckige Klammern</p></li>
+</ul>
+<p>Weiterführendes Material dazu findet man in der <a class="reference external" href="https://www.overleaf.com/learn/latex/Mathematical_expressions">Overleaf Dokumentation</a>^x</p>
+</section>
+<section id="gleitkommawerte-und-einheiten">
+<h2><span class="section-number">1.10.2. </span>Gleitkommawerte und Einheiten<a class="headerlink" href="#gleitkommawerte-und-einheiten" title="Permalink to this headline">#</a></h2>
+<p>Bei Gleitkommawerte und Einheiten werden standardmäßig von LaTeX nicht richtig dargestellt:</p>
+<ol class="simple">
+<li><p>Bei Gleitkommawerten wird durch das <code class="docutils literal notranslate"><span class="pre">,</span></code> ein Leerzeichen eingefügt, weil LaTeX davon ausgeht, dass es sich um eine Auflistung handelt.</p></li>
+<li><p>Einheiten werden ebenfalls kursiv dargestellt und ohne Leerzeichen. Dies entspricht jedoch nicht den gängigen Vorgaben.</p></li>
+</ol>
+<p>Am nachfolgenden Beispiel kann man die falsche Darstellung (Standardvariante) und eine richtige Darstellung sehen:</p>
+<p>Nachfolgend der Code für die Standardvariante und zwei Versionen mit der richtigen Darstellung:</p>
+</section>
+<section id="wertebereiche">
+<h2><span class="section-number">1.10.3. </span>Wertebereiche<a class="headerlink" href="#wertebereiche" title="Permalink to this headline">#</a></h2>
+<p>Mit <code class="docutils literal notranslate"><span class="pre">\SIrange{}{}</span></code> können Wertebereiche dargestellt werden. Damit diese im Deutschen mit dem Wort <code class="docutils literal notranslate"><span class="pre">bis</span></code> richtig dargestellt werden, muss der Parameter <code class="docutils literal notranslate"><span class="pre">ngerman</span></code> in der Klassendefinition übergeben werden:</p>
+</section>
+<section id="einheiten-in-tabellen">
+<h2><span class="section-number">1.10.4. </span>Einheiten in Tabellen<a class="headerlink" href="#einheiten-in-tabellen" title="Permalink to this headline">#</a></h2>
+<p><a id='Tabelle_mit_Einheiten'></a></p>
+<p><a class="reference external" href="https://tobiw.de/tbdm/siunitx">Auf der Seite von Tobias Weh</a> zur dem Einheitenpaket <code class="docutils literal notranslate"><span class="pre">siunitx</span></code> gibt es noch ein schönes Beispiel für eine Tabelle mit Einheiten. Dabei werden die Zahlen automatisch gerundet und entsprechend dem Dezimantrenner ausgerichtet.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./LaTeX"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="Listen.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">1.9. </span>Listen</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="Uebung2.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">1.11. </span>Übung (mathematische Umbgeung)</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Felix Kaule / Stephan Schoenfelder<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

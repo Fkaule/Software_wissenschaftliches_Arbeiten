@@ -1,11 +1,10 @@
 # Text mit LaTeX
 
-Für das Verfassen längerer Texte bietet sich **LaTeX** (gesprochen **LateCH**, da der letzte Buchstabe ein griechisches Chi darstellt) an. Dabei handelt es sich um eine **Markup language**, ähnlich wie HTML, in der man den Text als einfaches Textdokument mit entsprechenden Befehlen “programmiert”. 
+Für das Verfassen längerer Texte bietet sich **LaTeX** (gesprochen **LateCH**, da der letzte Buchstabe ein griechisches Chi darstellt) an. Dabei handelt es sich um eine **Markup language**, ähnlich wie HTML, in der man den Text als einfaches Textdokument mit entsprechenden Befehlen “programmiert”.
 
-````{panels}
+::::{grid}
 
-Input
-^^^
+:::{grid-item-card} Input
 
 ```latex
 \documentclass{article}
@@ -14,34 +13,35 @@ Input
 
 \section{Überschrift}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
 \subsection{Unterüberschrift}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
 \subsubsection{Unterunterüberschrift}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
 \paragraph{Letzte Chance}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
 \end{document}
 ```
 
----
+:::
 
-Output
-^^^
+:::{grid-item-card} Output
 
 ```{image} Example.png
-:width: 300px
+:width: 500px
 :name: output
 ```
 
-````
+:::
+
+::::
 
 ## Was kann LaTeX?
 
@@ -53,10 +53,10 @@ Output
 - mathematische Formeln sehr gut darstellbar
 - kostenlos und plattformübergreifend verfügbar
 
-
 Für den Einstieg ist die webbasierte LaTeX-Umgebung [www.overleaf.com](overleaf.com) zu empfehlen. Man kann sich kostenfrei registrieren und ohne Installation und viel Hilfe und Vorlagen einarbeiten. Auch eine Installation auf den eigenen Rechner kann für alle Plattformen, Win, Mac, Linux, erfolgen.
 
 Allgemeine Hinweise zum Erstellung von wissenschaftlichen Arbeiten finden Sie hier:
+
 - [Allgemein](../Hinweise_Abschlussarbeiten/Formatierung.html#Allgemein)
 - [Rechtschreibung und Ausdruck](../Hinweise_Abschlussarbeiten/Formatierung.html#Rechtschreibung_Ausdruck)
 - [Struktur oder Gliederung](../Hinweise_Abschlussarbeiten/Formatierung.html#Struktur_Gliederung)
