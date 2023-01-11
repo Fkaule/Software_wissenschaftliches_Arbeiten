@@ -17,51 +17,14 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-import os
-import sys
-sys.path.insert(0, os.path.abspath('../'))
-from learntools.core import binder;binder.bind(globals())
-from learntools import *
-from learntools_HTWK.python.ex1 import *
+# Lösung hier eintragen
+I = 
 ------------------
 
-[0;31m---------------------------------------------------------------------------[0m
-[0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
-Cell [0;32mIn [1], line 4[0m
-[1;32m      2[0m [38;5;28;01mimport[39;00m [38;5;21;01msys[39;00m
-[1;32m      3[0m sys[38;5;241m.[39mpath[38;5;241m.[39minsert([38;5;241m0[39m, os[38;5;241m.[39mpath[38;5;241m.[39mabspath([38;5;124m'[39m[38;5;124m../[39m[38;5;124m'[39m))
-[0;32m----> 4[0m [38;5;28;01mfrom[39;00m [38;5;21;01mlearntools[39;00m[38;5;21;01m.[39;00m[38;5;21;01mcore[39;00m [38;5;28;01mimport[39;00m binder;binder[38;5;241m.[39mbind([38;5;28mglobals[39m())
-[1;32m      5[0m [38;5;28;01mfrom[39;00m [38;5;21;01mlearntools[39;00m [38;5;28;01mimport[39;00m [38;5;241m*[39m
-[1;32m      6[0m [38;5;28;01mfrom[39;00m [38;5;21;01mlearntools_HTWK[39;00m[38;5;21;01m.[39;00m[38;5;21;01mpython[39;00m[38;5;21;01m.[39;00m[38;5;21;01mex1[39;00m [38;5;28;01mimport[39;00m [38;5;241m*[39m
+[0;36m  Cell [0;32mIn [2], line 2[0;36m[0m
+[0;31m    I =[0m
+[0m        ^[0m
+[0;31mSyntaxError[0m[0;31m:[0m invalid syntax
 
-File [0;32m~/Documents/05_GITHUB/Software_wissenschaftliches_Arbeiten/learntools/__init__.py:1[0m
-[0;32m----> 1[0m [38;5;28;01mfrom[39;00m [38;5;21;01m.[39;00m [38;5;28;01mimport[39;00m core, data_viz_to_coder, deep_learning, embeddings, gans, \
-[1;32m      2[0m               machine_learning, ml_explainability, ml_intermediate, python, \
-[1;32m      3[0m               sql
-[1;32m      5[0m __version__ [38;5;241m=[39m [38;5;124m'[39m[38;5;124m0.3.4[39m[38;5;124m'[39m
-
-File [0;32m~/Documents/05_GITHUB/Software_wissenschaftliches_Arbeiten/learntools/core/__init__.py:16[0m
-[1;32m     14[0m [38;5;28;01mfrom[39;00m [38;5;21;01mlearntools[39;00m[38;5;21;01m.[39;00m[38;5;21;01mcore[39;00m[38;5;21;01m.[39;00m[38;5;21;01mutils[39;00m [38;5;28;01mimport[39;00m bind_exercises
-[1;32m     15[0m [38;5;66;03m# Problem and all its subclasses (e.g. EqualityCheckProblem, ThoughtExperiment)[39;00m
-[0;32m---> 16[0m [38;5;28;01mfrom[39;00m [38;5;21;01mlearntools[39;00m[38;5;21;01m.[39;00m[38;5;21;01mcore[39;00m[38;5;21;01m.[39;00m[38;5;21;01mproblem[39;00m [38;5;28;01mimport[39;00m [38;5;241m*[39m
-[1;32m     17[0m [38;5;28;01mfrom[39;00m [38;5;21;01mlearntools[39;00m[38;5;21;01m.[39;00m[38;5;21;01mcore[39;00m[38;5;21;01m.[39;00m[38;5;21;01mmultiproblem[39;00m [38;5;28;01mimport[39;00m MultipartProblem
-[1;32m     18[0m [38;5;66;03m# This is used so frequently, it's worth giving it a short alias.[39;00m
-
-File [0;32m~/Documents/05_GITHUB/Software_wissenschaftliches_Arbeiten/learntools/core/problem.py:7[0m
-[1;32m      5[0m [38;5;28;01mfrom[39;00m [38;5;21;01mlearntools[39;00m[38;5;21;01m.[39;00m[38;5;21;01mcore[39;00m[38;5;21;01m.[39;00m[38;5;21;01mrichtext[39;00m [38;5;28;01mimport[39;00m [38;5;241m*[39m
-[1;32m      6[0m [38;5;28;01mfrom[39;00m [38;5;21;01mlearntools[39;00m[38;5;21;01m.[39;00m[38;5;21;01mcore[39;00m[38;5;21;01m.[39;00m[38;5;21;01mexceptions[39;00m [38;5;28;01mimport[39;00m NotAttempted, Uncheckable, UserlandExceptionIncorrect
-[0;32m----> 7[0m [38;5;28;01mfrom[39;00m [38;5;21;01mlearntools[39;00m[38;5;21;01m.[39;00m[38;5;21;01mcore[39;00m [38;5;28;01mimport[39;00m utils, asserts, constants
-[1;32m      9[0m [38;5;66;03m# I'm sure there's a more elegant way to do this.[39;00m
-[1;32m     10[0m [38;5;66;03m# Some kind of decorator on top of property?[39;00m
-[1;32m     11[0m [38;5;28;01mdef[39;00m [38;5;21moptionally_plural_property[39m(obj, name):
-
-File [0;32m~/Documents/05_GITHUB/Software_wissenschaftliches_Arbeiten/learntools/core/asserts.py:15[0m
-[1;32m     12[0m [38;5;28;01mimport[39;00m [38;5;21;01mfunctools[39;00m
-[1;32m     13[0m [38;5;28;01mimport[39;00m [38;5;21;01mlogging[39;00m
-[0;32m---> 15[0m [38;5;28;01mimport[39;00m [38;5;21;01mpandas[39;00m [38;5;28;01mas[39;00m [38;5;21;01mpd[39;00m
-[1;32m     16[0m [38;5;28;01mimport[39;00m [38;5;21;01mnumpy[39;00m [38;5;28;01mas[39;00m [38;5;21;01mnp[39;00m
-[1;32m     18[0m [38;5;28;01mdef[39;00m [38;5;21mname_or_var[39m(assert_fn):
-
-[0;31mModuleNotFoundError[0m: No module named 'pandas'
-ModuleNotFoundError: No module named 'pandas'
+SyntaxError: invalid syntax (2011498837.py, line 2)
 
